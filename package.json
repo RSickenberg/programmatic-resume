@@ -1,0 +1,18 @@
+{
+  "name": "programmatic-resume",
+  "private": true,
+  "scripts": {
+    "release": "dotenv release-it"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "dotenv-cli": "^11.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "release-it": "^21.0.2"
+  },
+  "version": "1.0.0-0"
+}
