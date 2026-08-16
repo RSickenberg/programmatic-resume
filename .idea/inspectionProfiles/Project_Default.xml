@@ -1,0 +1,11 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="HtmlFormInputWithoutLabel" enabled="true" level="TEXT ATTRIBUTES" enabled_by_default="true" editorAttributes="CONSIDERATION_ATTRIBUTES" />
+    <inspection_tool class="PhpCSFixerValidationInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="ShadcnAccessibility" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="ShadcnAccessibilityJS" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="ShadcnComponentComposition" enabled="false" level="WARNING" enabled_by_default="false" />
+  </profile>
+</component>
