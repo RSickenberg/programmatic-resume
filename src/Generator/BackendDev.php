@@ -23,9 +23,13 @@ final class BackendDev extends BaseResume
 
     private const bool ADD_ALL_WORK_EXPERIENCES = true;
 
+    /**
+     * @throws \JsonException | \RuntimeException
+     */
     #[\Override]
     public function __invoke(): void
     {
+        /** @var ResumeBuilder $resume */
         $resume = new ResumeBuilder()
             ->basics($this->basics())
             |> $this->addLanguages(...)
@@ -34,10 +38,15 @@ final class BackendDev extends BaseResume
             |> $this->addSkills(...)
             |> $this->addAwards(...)
             |> $this->addInterests(...)
-            |> $this->addProjects(...)
-        ;
+            |> $this->addProjects(...);
 
-        $resume->build();
+        $resume = $resume->build();
+
+        if (!$resume->validate()) {
+            throw new \RuntimeException('Resume validation failed');
+        }
+
+        echo json_encode($resume, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT);
     }
 
     #[\Override]
