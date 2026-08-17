@@ -64,19 +64,24 @@ final class BackendDev extends BaseResume
         );
     }
 
-    public function addWorks(ResumeBuilder $builder): void
+    public function addWorks(ResumeBuilder $builder): ResumeBuilder
     {
-        $experiences = $this->getAllWorkExperiences();
-        foreach ($experiences as $field => $experience) {
+        $experiencesWithSectors = $this->getAllWorkExperiences();
+        foreach ($experiencesWithSectors as $field => $experiences) {
             if (! self::ADD_ALL_WORK_EXPERIENCES && $field !== self::RELATED_TYPE->value) {
                 continue;
             }
 
-            $builder->addWork($experience);
+            /** @var \JustSteveKing\Resume\DataObjects\Work $experience */
+            foreach ($experiences as $experience) {
+                $builder->addWork($experience);
+            }
         }
+
+        return $builder;
     }
 
-    public function addSkills(ResumeBuilder $builder): void
+    public function addSkills(ResumeBuilder $builder): ResumeBuilder
     {
         $builder
             ->addSkill(
@@ -129,9 +134,11 @@ final class BackendDev extends BaseResume
                     ]
                 )
             );
+
+        return $builder;
     }
 
-    public function addAwards(ResumeBuilder $builder): void
+    public function addAwards(ResumeBuilder $builder): ResumeBuilder
     {
         $builder
             ->addAward(new Award(
@@ -140,12 +147,13 @@ final class BackendDev extends BaseResume
                 awarder: 'RA \ VR Hackathon',
                 summary: 'Built a "digital museum" in Virtual reality. Won the first place in VR experiences, built with SteamVR and Unity.'
             ));
+
+        return $builder;
     }
 
     protected function getSummary(): string
     {
-        return 'Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker.
-         Hands-on experience in CI/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects.';
+        return 'Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker. Hands-on experience in CI/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects.';
     }
 
     protected function getRelatedProfiles(): array
@@ -156,7 +164,7 @@ final class BackendDev extends BaseResume
         ];
     }
 
-    public function addProjects(ResumeBuilder $builder): void
+    public function addProjects(ResumeBuilder $builder): ResumeBuilder
     {
         $builder
             ->addProject(new Project(
@@ -177,5 +185,7 @@ final class BackendDev extends BaseResume
                     'Fortnite companion app with 100,000+ downloads, 4.6* rating (340+ reviews) and a peak ranking of #19 in the App Store Reference category.',
                 ],
             ));
+
+        return $builder;
     }
 }

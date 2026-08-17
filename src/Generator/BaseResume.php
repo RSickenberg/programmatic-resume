@@ -43,7 +43,7 @@ abstract class BaseResume implements AbstractResume
         );
     }
 
-    public function addLanguages(ResumeBuilder $builder): void
+    public function addLanguages(ResumeBuilder $builder): ResumeBuilder
     {
         $builder
             ->addLanguage(new Language(
@@ -58,9 +58,11 @@ abstract class BaseResume implements AbstractResume
                 language: 'German',
                 fluency: 'Intermediate (B1)',
             ));
+
+        return $builder;
     }
 
-    public function addInterests(ResumeBuilder $builder): void
+    public function addInterests(ResumeBuilder $builder): ResumeBuilder
     {
         $builder
             ->addInterest(new Interest(
@@ -73,6 +75,8 @@ abstract class BaseResume implements AbstractResume
                 name: 'Photography',
                 keywords: ['Drone', 'DSLR', 'Astro-photography']
             ));
+
+        return $builder;
     }
 
     /**
@@ -172,7 +176,7 @@ abstract class BaseResume implements AbstractResume
         ];
     }
 
-    public function addEducation(ResumeBuilder $builder): void
+    public function addEducation(ResumeBuilder $builder): ResumeBuilder
     {
         $builder
             ->addEducation(new Education(
@@ -228,6 +232,8 @@ abstract class BaseResume implements AbstractResume
                     '254 - Describe business processes in your own professional environment.',
                 ],
             ));
+
+        return $builder;
     }
 
     abstract protected function getSummary(): string;

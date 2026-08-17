@@ -12,7 +12,12 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "release-it": "^21.0.2"
+    "jsonresume-theme-even": "^0.26.1",
+    "jsonresume-theme-straightforward-extra": "^0.1.4",
+    "jsonresume-theme-waterfall": "^1.0.2",
+    "puppeteer": "^25.8.0",
+    "release-it": "^21.0.2",
+    "resumed": "^6.1.0"
   },
   "version": "1.0.0-0"
 }

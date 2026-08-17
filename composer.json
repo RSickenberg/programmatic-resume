@@ -4,7 +4,8 @@
     "type": "project",
     "require": {
         "php": "^8.5",
-        "juststeveking/resume-php": "^1.0"
+        "juststeveking/resume-php": "^1.0",
+        "doctrine/collections": "*"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.95"
