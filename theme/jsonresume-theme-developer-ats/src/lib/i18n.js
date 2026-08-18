@@ -33,10 +33,12 @@ const UI_STRINGS = {
   en: {
     present: 'Present',
     coursework: 'Relevant Coursework',
+    in: 'in'
   },
   fr: {
     present: 'Présent',
     coursework: 'Cours pertinents',
+    in: 'dans'
   },
 }
 

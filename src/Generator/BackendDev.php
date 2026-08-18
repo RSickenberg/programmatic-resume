@@ -110,7 +110,7 @@ final class BackendDev extends BaseResume
                     level: SkillLevel::Expert,
                     keywords: [
                         'TypeScript & JavaScript',
-                        'React, Next.js, Nuxt.js, Node, NPM & Bun',
+                        'React, Next.js, Nuxt.js, NPM & Bun',
                         'HTML5 & CSS, Sass',
                         'Tailwind CSS',
                         'Alpine.js',

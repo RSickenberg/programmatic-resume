@@ -38,17 +38,6 @@ export function displayUrl (url) {
   return url.replace(/^https?:\/\//, '').replace(/\/$/, '')
 }
 
-/**
- * Strips the leading internal module code ("100 - ", "226A - ") and
- * trailing period from a course entry, e.g. "100 - Prepare Data,
- * distinguish and evaluate." -> "Prepare Data, distinguish and evaluate".
- * The code is meaningless to an outside reader; dropping it keeps a long
- * coursework list scannable instead of cluttered with reference numbers.
- */
-export function formatCourseName (course) {
-  return course.replace(/^\S+\s*-\s*/, '').replace(/\.$/, '')
-}
-
 export function formatLocation (location = {}) {
   return [location.city, location.region, location.countryCode]
     .filter(Boolean)

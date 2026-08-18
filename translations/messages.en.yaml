@@ -76,6 +76,24 @@ work:
 education:
   institution: 'Swiss Confederation | EPSIC @ Lausanne & CFPT @ Geneva'
   area: 'Federal VET Diploma in Information Technology (CFC)'
+  courses:
+    build_website: 'Publishing a website'
+    data_modeling: 'Data modeling'
+    security_encryption: 'Coding, compression and encryption systems'
+    oop_principles: 'Object-oriented programming principles'
+    gui_development: 'Graphical interfaces for applications'
+    automation_tasks: 'Automation tasks'
+    scripting: 'Scripting and procedure automation'
+    web_client_side: 'Client-side web development'
+    interactive_web_pages: 'Interactive web pages'
+    oop_components: 'Object-oriented component design'
+    data_structures_algorithms: 'Data structures and algorithms'
+    agile_methods: 'Agile software development'
+    sql_databases: 'SQL databases'
+    session_handling: 'Session handling in web applications'
+    database_integration: 'Database integration into web applications'
+    deployment: 'Application deployment'
+    app_security: 'Application security'
 
 skills:
   backend_name: 'Backend'

@@ -222,53 +222,54 @@ abstract class BaseResume implements AbstractResume
                 institution: $this->trans('education.institution'),
                 url: new Url('https://www.bit.admin.ch/fr/informaticienne-cfc-developpement-applications'),
                 area: $this->trans('education.area'),
-                studyType: EducationLevel::HighSchool,
                 startDate: '2016-08-01',
                 endDate: '2020-06-31',
                 score: '4.4',
+                // Curated for relevance to a Backend Software Engineer profile.
+                // Excluded modules (kept here for reference, not shown on the resume):
+                // '100 - Prepare Data, distinguish and evaluate.',
+                // '117 - Establish the IT and network infrastructure of a small business.',
+                // '123 - Activate server services.',
+                // '253 - Visualize sensor signals.',
+                // '301 - Apply office software tools.',
+                // '302 - Use advanced Office functions.',
+                // '304 - Install and configure a standalone computer.',
+                // '305 - Install, configure and administer an operating system.',
+                // '403 - Procedurally implement program workflows.',
+                // '431 - Execute tasks autonomously in a professional environment.',
+                // '129 - Commission network components.',
+                // '213 - Develop team spirit.',
+                // '214 - Instruct users on the proper use of IT resources.',
+                // '226A - Implement object-oriented programming without inheritance.',
+                // '226B - Implement object-oriented programming with inheritance.',
+                // '242 - Develop applications for microcontrollers.',
+                // '306 - Carry out small projects in your own professional environment.',
+                // '326 - Develop and implement object-oriented programming.',
+                // '335 - Develop a mobile application.',
+                // '150 - Adapt an e-commerce application.',
+                // '152 - Integrate multimedia content into web applications.',
+                // '153 - Develop data models.',
+                // '155 - Develop real-time procedures.',
+                // '223 - Develop multi-user object-oriented applications.',
+                // '254 - Describe business processes in your own professional environment.',
                 courses: [
-                    '100 - Prepare Data, distinguish and evaluate.',
-                    '101 - Do and publish a web site.',
-                    '104 - Data model implementations.',
-                    '114 - Implement coding, compression and encryption systems.',
-                    '117 - Establish the IT and network infrastructure of a small business.',
-                    '123 - Activate server services.',
-                    '253 - Visualize sensor signals.',
-                    '301 - Apply office software tools.',
-                    '302 - Use advanced Office functions.',
-                    '304 - Install and configure a standalone computer.',
-                    '305 - Install, configure and administer an operating system.',
-                    '403 - Procedurally implement program workflows.',
-                    '404 - Program according to object-oriented principles.',
-                    '431 - Execute tasks autonomously in a professional environment.',
-                    '120 - Implement graphical interfaces for applications.',
-                    '121 - Develop automation tasks.',
-                    '122 - Automate procedures using scripts.',
-                    '129 - Commission network components.',
-                    '213 - Develop team spirit.',
-                    '214 - Instruct users on the proper use of IT resources.',
-                    '226A - Implement object-oriented programming without inheritance.',
-                    '226B - Implement object-oriented programming with inheritance.',
-                    '242 - Develop applications for microcontrollers.',
-                    '256 - Develop the client side of web applications.',
-                    '307 - Develop interactive web pages.',
-                    '318 - Analyze and program object-oriented components.',
-                    '411 - Develop and apply data structures and algorithms.',
-                    '426 - Develop software using agile methods.',
-                    '105 - Work with a database using SQL.',
-                    '133 - Develop web applications using session handling.',
-                    '151 - Integrate databases into web applications.',
-                    '306 - Carry out small projects in your own professional environment.',
-                    '326 - Develop and implement object-oriented programming.',
-                    '335 - Develop a mobile application.',
-                    '150 - Adapt an e-commerce application.',
-                    '152 - Integrate multimedia content into web applications.',
-                    '153 - Develop data models.',
-                    '154 - Organize the deployment of applications.',
-                    '155 - Develop real-time procedures.',
-                    '183 - Implement application security.',
-                    '223 - Develop multi-user object-oriented applications.',
-                    '254 - Describe business processes in your own professional environment.',
+                    $this->trans('education.courses.build_website'), // 101
+                    $this->trans('education.courses.data_modeling'), // 104
+                    $this->trans('education.courses.security_encryption'), // 114
+                    $this->trans('education.courses.oop_principles'), // 404
+                    $this->trans('education.courses.gui_development'), // 120
+                    $this->trans('education.courses.automation_tasks'), // 121
+                    $this->trans('education.courses.scripting'), // 122
+                    $this->trans('education.courses.web_client_side'), // 256
+                    $this->trans('education.courses.interactive_web_pages'), // 307
+                    $this->trans('education.courses.oop_components'), // 318
+                    $this->trans('education.courses.data_structures_algorithms'), // 411
+                    $this->trans('education.courses.agile_methods'), // 426
+                    $this->trans('education.courses.sql_databases'), // 105
+                    $this->trans('education.courses.session_handling'), // 133
+                    $this->trans('education.courses.database_integration'), // 151
+                    $this->trans('education.courses.deployment'), // 154
+                    $this->trans('education.courses.app_security'), // 183
                 ],
             ));
 
