@@ -37,7 +37,7 @@ work:
   antistatique:
     position: 'Ingénieur Logiciel Backend'
     summary: 'De développeur junior à confirmé : la plus forte progression de ma carrière !'
-    highlight_1: "Développé et maintenu des applications d'entreprise sous Symfony 6, avec PHP 7.4/8.0, API Platform, Doctrine ORM, PostgreSQL et GitHub Actions."
+    highlight_1: "Développé et maintenu des applications d'entreprise sous Symfony 6, avec PHP 7.4 / 8.0, API Platform, Doctrine ORM, PostgreSQL et GitHub Actions."
     highlight_2: 'Intervenu en tant que Lead Developer PHP sur un projet client Symfony avec 4 autres développeurs.'
     highlight_3: 'Développé et maintenu des solutions basées sur des CMS (Drupal, WordPress).'
     highlight_4: "Réduit de 75% le temps d'exécution des GitHub Actions grâce à la mise en cache des dépendances et à l'optimisation des workflows."

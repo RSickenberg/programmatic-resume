@@ -51,7 +51,9 @@ final class GenerateResumeCommand extends Command
 
         $locale = $input->getOption('locale');
         if (!\in_array($locale, self::LOCALES, true)) {
-            $io->error(\sprintf('Unknown locale "%s". Available: %s.', $locale, implode(', ', self::LOCALES)));
+            implode(', ', self::LOCALES)
+                |> (static fn($x) => \sprintf('Unknown locale "%s". Available: %s.', $locale, $x))
+                |> $io(...);
 
             return Command::FAILURE;
         }

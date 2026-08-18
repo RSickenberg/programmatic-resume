@@ -23,3 +23,6 @@ backend-fr: ## Generate the backend-dev resume (French)
 	@$(PHP_EXEC) entrypoint.php backend-dev --locale fr -o resume.fr.json
 	@bunx resuml render -t jsonresume-theme-developer-ats -r resume.fr.json --language fr -o resume.fr.html
 	@bunx resuml pdf -t jsonresume-theme-developer-ats -r resume.fr.json --language fr -o resume.fr.pdf
+
+
+backends: backend backend-fr ## Generate all variants (en, fr)
