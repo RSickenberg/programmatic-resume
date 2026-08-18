@@ -1,5 +1,6 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { jsx, jsxs } from "react/jsx-runtime";
+import { createContext, useContext } from "react";
 //#region node_modules/@jsonresume/utils/src/url.js
 /**
 * URL safety utilities for JSON Resume.
@@ -69,12 +70,12 @@ function yearMonth(dateStr) {
 * on the page (e.g. "PHP 7.4/8.0"), and adjacent entries sharing an exact
 * boundary date can get their ranges cross-attributed.
 */
-function formatDateRange({ startDate, endDate }) {
+function formatDateRange({ startDate, endDate, presentLabel = "Present" }) {
 	if (!startDate) return "";
 	const start = yearMonth(startDate);
 	if (!start) return "";
 	if (endDate === void 0) return start;
-	return `${start} - ${(endDate ? yearMonth(endDate) : null) || "Present"}`;
+	return `${start} - ${(endDate ? yearMonth(endDate) : null) || presentLabel}`;
 }
 function displayUrl(url) {
 	return url.replace(/^https?:\/\//, "").replace(/\/$/, "");
@@ -219,11 +220,64 @@ function Entry({ title, titleHref, meta, subtitle, description, highlights, clas
 	});
 }
 //#endregion
+//#region src/lib/locale.jsx
+var LocaleContext = createContext("en");
+function LocaleProvider({ locale, children }) {
+	return /* @__PURE__ */ jsx(LocaleContext.Provider, {
+		value: locale,
+		children
+	});
+}
+function useLocale() {
+	return useContext(LocaleContext);
+}
+//#endregion
+//#region src/lib/i18n.js
+var SECTION_TITLES = {
+	en: {
+		experience: "Experience",
+		skills: "Skills",
+		education: "Education",
+		projects: "Projects",
+		volunteer: "Volunteer",
+		awards: "Awards",
+		certificates: "Certificates",
+		publications: "Publications",
+		languages: "Languages",
+		interests: "Interests",
+		references: "References"
+	},
+	fr: {
+		experience: "Expérience",
+		skills: "Compétences",
+		education: "Formation",
+		projects: "Projets",
+		volunteer: "Bénévolat",
+		awards: "Distinctions",
+		certificates: "Certifications",
+		publications: "Publications",
+		languages: "Langues",
+		interests: "Centres d'intérêt",
+		references: "Références"
+	}
+};
+var UI_STRINGS = {
+	en: { present: "Present" },
+	fr: { present: "Présent" }
+};
+function useSectionTitle(key) {
+	return SECTION_TITLES[useLocale()]?.[key] ?? SECTION_TITLES.en[key];
+}
+function usePresentLabel() {
+	return UI_STRINGS[useLocale()]?.present ?? UI_STRINGS.en.present;
+}
+//#endregion
 //#region src/components/DateRange.jsx
 function DateRange({ startDate, endDate, className }) {
 	const formatted = formatDateRange({
 		startDate,
-		endDate
+		endDate,
+		presentLabel: usePresentLabel()
 	});
 	if (!formatted) return null;
 	return /* @__PURE__ */ jsx("span", {
@@ -234,9 +288,10 @@ function DateRange({ startDate, endDate, className }) {
 //#endregion
 //#region src/components/WorkExperience.jsx
 function WorkExperience({ work = [] }) {
+	const title = useSectionTitle("experience");
 	if (work.length === 0) return null;
 	return /* @__PURE__ */ jsx(Section, {
-		title: "Experience",
+		title,
 		children: work.map((job, index) => /* @__PURE__ */ jsx(Entry, {
 			title: job.position || job.name,
 			subtitle: job.name,
@@ -252,9 +307,10 @@ function WorkExperience({ work = [] }) {
 //#endregion
 //#region src/components/Skills.jsx
 function Skills({ skills = [] }) {
+	const title = useSectionTitle("skills");
 	if (skills.length === 0) return null;
 	return /* @__PURE__ */ jsx(Section, {
-		title: "Skills",
+		title,
 		children: /* @__PURE__ */ jsx("div", {
 			className: "grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 sm:auto-rows-fr print:break-inside-avoid",
 			children: skills.map((skill, index) => /* @__PURE__ */ jsxs("div", {
@@ -273,9 +329,10 @@ function Skills({ skills = [] }) {
 //#endregion
 //#region src/components/Projects.jsx
 function Projects({ projects = [] }) {
+	const title = useSectionTitle("projects");
 	if (projects.length === 0) return null;
 	return /* @__PURE__ */ jsx(Section, {
-		title: "Projects",
+		title,
 		children: projects.map((project, index) => /* @__PURE__ */ jsx(Entry, {
 			title: project.name,
 			titleHref: project.url,
@@ -291,9 +348,10 @@ function Projects({ projects = [] }) {
 //#endregion
 //#region src/components/Education.jsx
 function Education({ education = [] }) {
+	const title = useSectionTitle("education");
 	if (education.length === 0) return null;
 	return /* @__PURE__ */ jsx(Section, {
-		title: "Education",
+		title,
 		children: education.map((edu, index) => /* @__PURE__ */ jsx(Entry, {
 			title: edu.institution,
 			titleHref: edu.url,
@@ -309,9 +367,10 @@ function Education({ education = [] }) {
 //#endregion
 //#region src/components/Volunteer.jsx
 function Volunteer({ volunteer = [] }) {
+	const title = useSectionTitle("volunteer");
 	if (volunteer.length === 0) return null;
 	return /* @__PURE__ */ jsx(Section, {
-		title: "Volunteer",
+		title,
 		children: volunteer.map((vol, index) => /* @__PURE__ */ jsx(Entry, {
 			title: vol.position,
 			subtitle: vol.organization,
@@ -335,9 +394,10 @@ function SimpleList({ children }) {
 //#endregion
 //#region src/components/Awards.jsx
 function Awards({ awards = [] }) {
+	const title = useSectionTitle("awards");
 	if (awards.length === 0) return null;
 	return /* @__PURE__ */ jsx(Section, {
-		title: "Awards",
+		title,
 		children: /* @__PURE__ */ jsx(SimpleList, { children: awards.map((award, index) => /* @__PURE__ */ jsx(Entry, {
 			title: award.title,
 			subtitle: award.awarder,
@@ -382,9 +442,10 @@ function SimpleItem({ label, labelHref, meta, date, keywords }) {
 //#endregion
 //#region src/components/Certificates.jsx
 function Certificates({ certificates = [] }) {
+	const title = useSectionTitle("certificates");
 	if (certificates.length === 0) return null;
 	return /* @__PURE__ */ jsx(Section, {
-		title: "Certificates",
+		title,
 		children: /* @__PURE__ */ jsx(SimpleList, { children: certificates.map((cert, index) => /* @__PURE__ */ jsx(SimpleItem, {
 			label: cert.name,
 			labelHref: cert.url,
@@ -396,9 +457,10 @@ function Certificates({ certificates = [] }) {
 //#endregion
 //#region src/components/Publications.jsx
 function Publications({ publications = [] }) {
+	const title = useSectionTitle("publications");
 	if (publications.length === 0) return null;
 	return /* @__PURE__ */ jsx(Section, {
-		title: "Publications",
+		title,
 		children: /* @__PURE__ */ jsx(SimpleList, { children: publications.map((pub, index) => /* @__PURE__ */ jsx(SimpleItem, {
 			label: pub.name,
 			labelHref: pub.url,
@@ -410,9 +472,10 @@ function Publications({ publications = [] }) {
 //#endregion
 //#region src/components/Languages.jsx
 function Languages({ languages = [] }) {
+	const title = useSectionTitle("languages");
 	if (languages.length === 0) return null;
 	return /* @__PURE__ */ jsx(Section, {
-		title: "Languages",
+		title,
 		children: /* @__PURE__ */ jsx(SimpleList, { children: languages.map((lang, index) => /* @__PURE__ */ jsx(SimpleItem, {
 			label: lang.language,
 			meta: lang.fluency
@@ -422,9 +485,10 @@ function Languages({ languages = [] }) {
 //#endregion
 //#region src/components/Interests.jsx
 function Interests({ interests = [] }) {
+	const title = useSectionTitle("interests");
 	if (interests.length === 0) return null;
 	return /* @__PURE__ */ jsx(Section, {
-		title: "Interests",
+		title,
 		children: /* @__PURE__ */ jsx(SimpleList, { children: interests.map((interest, index) => /* @__PURE__ */ jsx(SimpleItem, {
 			label: interest.name,
 			keywords: interest.keywords
@@ -434,9 +498,10 @@ function Interests({ interests = [] }) {
 //#endregion
 //#region src/components/References.jsx
 function References({ references = [] }) {
+	const title = useSectionTitle("references");
 	if (references.length === 0) return null;
 	return /* @__PURE__ */ jsx(Section, {
-		title: "References",
+		title,
 		children: references.map((ref, index) => /* @__PURE__ */ jsx(Entry, {
 			title: ref.name,
 			description: ref.reference
@@ -445,25 +510,28 @@ function References({ references = [] }) {
 }
 //#endregion
 //#region src/Resume.jsx
-function Resume({ resume }) {
+function Resume({ resume, locale = "en" }) {
 	const { basics = {}, work = [], education = [], skills = [], projects = [], volunteer = [], awards = [], certificates = [], publications = [], languages = [], interests = [], references = [] } = resume;
-	return /* @__PURE__ */ jsxs("main", {
-		className: ["mx-auto w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] font-sans text-[10pt] leading-[1.5] text-ink shadow-lg", "print:m-0 print:w-auto print:min-h-0 print:p-0 print:shadow-none"].join(" "),
-		children: [
-			/* @__PURE__ */ jsx(Header, { basics }),
-			/* @__PURE__ */ jsx(Summary, { summary: basics.summary }),
-			/* @__PURE__ */ jsx(WorkExperience, { work }),
-			/* @__PURE__ */ jsx(Skills, { skills }),
-			/* @__PURE__ */ jsx(Projects, { projects }),
-			/* @__PURE__ */ jsx(Education, { education }),
-			/* @__PURE__ */ jsx(Volunteer, { volunteer }),
-			/* @__PURE__ */ jsx(Awards, { awards }),
-			/* @__PURE__ */ jsx(Certificates, { certificates }),
-			/* @__PURE__ */ jsx(Publications, { publications }),
-			/* @__PURE__ */ jsx(Languages, { languages }),
-			/* @__PURE__ */ jsx(Interests, { interests }),
-			/* @__PURE__ */ jsx(References, { references })
-		]
+	return /* @__PURE__ */ jsx(LocaleProvider, {
+		locale,
+		children: /* @__PURE__ */ jsxs("main", {
+			className: ["mx-auto w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] font-sans text-[10pt] leading-[1.5] text-ink shadow-lg", "print:m-0 print:w-auto print:min-h-0 print:p-0 print:shadow-none"].join(" "),
+			children: [
+				/* @__PURE__ */ jsx(Header, { basics }),
+				/* @__PURE__ */ jsx(Summary, { summary: basics.summary }),
+				/* @__PURE__ */ jsx(WorkExperience, { work }),
+				/* @__PURE__ */ jsx(Skills, { skills }),
+				/* @__PURE__ */ jsx(Education, { education }),
+				/* @__PURE__ */ jsx(Projects, { projects }),
+				/* @__PURE__ */ jsx(Volunteer, { volunteer }),
+				/* @__PURE__ */ jsx(Awards, { awards }),
+				/* @__PURE__ */ jsx(Certificates, { certificates }),
+				/* @__PURE__ */ jsx(Publications, { publications }),
+				/* @__PURE__ */ jsx(Languages, { languages }),
+				/* @__PURE__ */ jsx(Interests, { interests }),
+				/* @__PURE__ */ jsx(References, { references })
+			]
+		})
 	});
 }
 //#endregion
@@ -471,10 +539,14 @@ function Resume({ resume }) {
 var tailwind_default = "/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */\n@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-space-y-reverse:0;--tw-border-style:solid;--tw-leading:initial;--tw-font-weight:initial;--tw-tracking:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-blur:initial;--tw-brightness:initial;--tw-contrast:initial;--tw-grayscale:initial;--tw-hue-rotate:initial;--tw-invert:initial;--tw-opacity:initial;--tw-saturate:initial;--tw-sepia:initial;--tw-drop-shadow:initial;--tw-drop-shadow-color:initial;--tw-drop-shadow-alpha:100%;--tw-drop-shadow-size:initial}}}@layer theme{:root,:host{--font-sans:Inter, \"Segoe UI\", ui-sans-serif, system-ui, -apple-system, sans-serif;--font-mono:\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, \"Liberation Mono\", monospace;--color-white:#fff;--spacing:.25rem;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--tracking-tight:-.025em;--tracking-wider:.05em;--tracking-widest:.1em;--leading-relaxed:1.625;--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono);--color-ink:#18181b;--color-muted:#52525b;--color-subtle:#71717a;--color-accent:#2563eb;--color-subaccent:#092564;--color-border:#e4e4e7;--color-surface:#f7f8fa}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;tab-size:4;line-height:1.5;font-family:var(--default-font-family,-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring:where(:not(iframe)){outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab, red, red)){::placeholder{color:color-mix(in oklab, currentcolor 50%, transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}*,:before,:after{box-sizing:border-box}html,body{background:#fff;margin:0;padding:0}body{-webkit-font-smoothing:antialiased}h1,h2,h3,h4{break-after:avoid}a{color:inherit}@page{size:A4;margin:14mm 16mm}@media print{html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact}a[href]:after{content:none}}}@layer components;@layer utilities{.static{position:static}.mx-auto{margin-inline:auto}.mt-0{margin-top:0}.mt-0\\.5{margin-top:calc(var(--spacing) * .5)}.mt-1{margin-top:var(--spacing)}.mt-1\\.5{margin-top:calc(var(--spacing) * 1.5)}.mt-2{margin-top:calc(var(--spacing) * 2)}.mt-3{margin-top:calc(var(--spacing) * 3)}.mb-1{margin-bottom:var(--spacing)}.mb-1\\.5{margin-bottom:calc(var(--spacing) * 1.5)}.mb-3{margin-bottom:calc(var(--spacing) * 3)}.mb-6{margin-bottom:calc(var(--spacing) * 6)}.block{display:block}.flex{display:flex}.grid{display:grid}.inline{display:inline}.table{display:table}.min-h-\\[297mm\\]{min-height:297mm}.w-\\[210mm\\]{width:210mm}.flex-1{flex:1}.shrink{flex-shrink:1}.grow{flex-grow:1}.transform{transform:var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,)}.list-outside{list-style-position:outside}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-baseline{align-items:baseline}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-1{gap:var(--spacing)}.gap-1\\.5{gap:calc(var(--spacing) * 1.5)}:where(.space-y-1>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(var(--spacing) * var(--tw-space-y-reverse));margin-block-end:calc(var(--spacing) * calc(1 - var(--tw-space-y-reverse)))}.gap-x-4{column-gap:calc(var(--spacing) * 4)}.gap-x-6{column-gap:calc(var(--spacing) * 6)}.gap-y-0{row-gap:0}.gap-y-0\\.5{row-gap:calc(var(--spacing) * .5)}.gap-y-1{row-gap:var(--spacing)}.gap-y-4{row-gap:calc(var(--spacing) * 4)}.rounded{border-radius:.25rem}.rounded-full{border-radius:3.40282e38px}.border{border-style:var(--tw-border-style);border-width:1px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.border-b-2{border-bottom-style:var(--tw-border-style);border-bottom-width:2px}.border-l-2{border-left-style:var(--tw-border-style);border-left-width:2px}.border-accent{border-color:var(--color-accent)}.border-border{border-color:var(--color-border)}.border-subaccent{border-color:var(--color-subaccent)}.bg-surface{background-color:var(--color-surface)}.bg-white{background-color:var(--color-white)}.px-2{padding-inline:calc(var(--spacing) * 2)}.px-3{padding-inline:calc(var(--spacing) * 3)}.px-\\[16mm\\]{padding-inline:16mm}.py-0{padding-block:0}.py-0\\.5{padding-block:calc(var(--spacing) * .5)}.py-2{padding-block:calc(var(--spacing) * 2)}.py-\\[14mm\\]{padding-block:14mm}.pb-1{padding-bottom:var(--spacing)}.pb-3{padding-bottom:calc(var(--spacing) * 3)}.pb-4{padding-bottom:calc(var(--spacing) * 4)}.pl-0{padding-left:0}.pl-0\\.5{padding-left:calc(var(--spacing) * .5)}.pl-4{padding-left:calc(var(--spacing) * 4)}.font-mono{font-family:var(--font-mono)}.font-sans{font-family:var(--font-sans)}.text-\\[8\\.5pt\\]{font-size:8.5pt}.text-\\[8pt\\]{font-size:8pt}.text-\\[9pt\\]{font-size:9pt}.text-\\[10pt\\]{font-size:10pt}.text-\\[11pt\\]{font-size:11pt}.text-\\[12pt\\]{font-size:12pt}.text-\\[26pt\\]{font-size:26pt}.leading-\\[1\\.5\\]{--tw-leading:1.5;line-height:1.5}.leading-none{--tw-leading:1;line-height:1}.leading-relaxed{--tw-leading:var(--leading-relaxed);line-height:var(--leading-relaxed)}.font-bold{--tw-font-weight:var(--font-weight-bold);font-weight:var(--font-weight-bold)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.tracking-tight{--tw-tracking:var(--tracking-tight);letter-spacing:var(--tracking-tight)}.tracking-wider{--tw-tracking:var(--tracking-wider);letter-spacing:var(--tracking-wider)}.tracking-widest{--tw-tracking:var(--tracking-widest);letter-spacing:var(--tracking-widest)}.whitespace-nowrap{white-space:nowrap}.whitespace-pre-line{white-space:pre-line}.text-accent{color:var(--color-accent)}.text-ink{color:var(--color-ink)}.text-ink\\/80{color:#18181bcc}@supports (color:color-mix(in lab, red, red)){.text-ink\\/80{color:color-mix(in oklab, var(--color-ink) 80%, transparent)}}.text-muted{color:var(--color-muted)}.text-subaccent{color:var(--color-subaccent)}.text-subtle{color:var(--color-subtle)}.uppercase{text-transform:uppercase}.underline{text-decoration-line:underline}.decoration-accent{-webkit-text-decoration-color:var(--color-accent);-webkit-text-decoration-color:var(--color-accent);text-decoration-color:var(--color-accent)}.decoration-accent\\/30{text-decoration-color:#2563eb4d}@supports (color:color-mix(in lab, red, red)){.decoration-accent\\/30{-webkit-text-decoration-color:color-mix(in oklab, var(--color-accent) 30%, transparent);-webkit-text-decoration-color:color-mix(in oklab, var(--color-accent) 30%, transparent);text-decoration-color:color-mix(in oklab, var(--color-accent) 30%, transparent)}}.underline-offset-2{text-underline-offset:2px}.shadow-lg{--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,#0000001a), 0 4px 6px -4px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.filter{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.marker\\:text-accent ::marker{color:var(--color-accent)}.marker\\:text-accent::marker{color:var(--color-accent)}.marker\\:text-accent ::-webkit-details-marker{color:var(--color-accent)}.marker\\:text-accent::-webkit-details-marker{color:var(--color-accent)}.last\\:mb-0:last-child{margin-bottom:0}.last\\:border-b-0:last-child{border-bottom-style:var(--tw-border-style);border-bottom-width:0}.last\\:pb-0:last-child{padding-bottom:0}@media (hover:hover){.hover\\:decoration-accent:hover{-webkit-text-decoration-color:var(--color-accent);-webkit-text-decoration-color:var(--color-accent);text-decoration-color:var(--color-accent)}}@media (min-width:40rem){.sm\\:auto-rows-fr{grid-auto-rows:minmax(0,1fr)}.sm\\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.print\\:m-0{margin:0}.print\\:min-h-0{min-height:0}.print\\:w-auto{width:auto}.print\\:break-inside-avoid{break-inside:avoid}.print\\:break-after-avoid{break-after:avoid}.print\\:grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.print\\:gap-y-3{row-gap:calc(var(--spacing) * 3)}.print\\:p-0{padding:0}.print\\:decoration-ink\\/40{text-decoration-color:#18181b66}@supports (color:color-mix(in lab, red, red)){.print\\:decoration-ink\\/40{-webkit-text-decoration-color:color-mix(in oklab, var(--color-ink) 40%, transparent);-webkit-text-decoration-color:color-mix(in oklab, var(--color-ink) 40%, transparent);text-decoration-color:color-mix(in oklab, var(--color-ink) 40%, transparent)}}.print\\:shadow-none{--tw-shadow:0 0 #0000;box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}}}@property --tw-rotate-x{syntax:\"*\";inherits:false}@property --tw-rotate-y{syntax:\"*\";inherits:false}@property --tw-rotate-z{syntax:\"*\";inherits:false}@property --tw-skew-x{syntax:\"*\";inherits:false}@property --tw-skew-y{syntax:\"*\";inherits:false}@property --tw-space-y-reverse{syntax:\"*\";inherits:false;initial-value:0}@property --tw-border-style{syntax:\"*\";inherits:false;initial-value:solid}@property --tw-leading{syntax:\"*\";inherits:false}@property --tw-font-weight{syntax:\"*\";inherits:false}@property --tw-tracking{syntax:\"*\";inherits:false}@property --tw-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:\"*\";inherits:false}@property --tw-shadow-alpha{syntax:\"<percentage>\";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:\"*\";inherits:false}@property --tw-inset-shadow-alpha{syntax:\"<percentage>\";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:\"*\";inherits:false}@property --tw-ring-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:\"*\";inherits:false}@property --tw-inset-ring-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:\"*\";inherits:false}@property --tw-ring-offset-width{syntax:\"<length>\";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:\"*\";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-blur{syntax:\"*\";inherits:false}@property --tw-brightness{syntax:\"*\";inherits:false}@property --tw-contrast{syntax:\"*\";inherits:false}@property --tw-grayscale{syntax:\"*\";inherits:false}@property --tw-hue-rotate{syntax:\"*\";inherits:false}@property --tw-invert{syntax:\"*\";inherits:false}@property --tw-opacity{syntax:\"*\";inherits:false}@property --tw-saturate{syntax:\"*\";inherits:false}@property --tw-sepia{syntax:\"*\";inherits:false}@property --tw-drop-shadow{syntax:\"*\";inherits:false}@property --tw-drop-shadow-color{syntax:\"*\";inherits:false}@property --tw-drop-shadow-alpha{syntax:\"<percentage>\";inherits:false;initial-value:100%}@property --tw-drop-shadow-size{syntax:\"*\";inherits:false}";
 //#endregion
 //#region src/index.jsx
-function render(resume) {
-	const html = renderToStaticMarkup(/* @__PURE__ */ jsx(Resume, { resume }));
+function render(resume, options = {}) {
+	const locale = options.locale || "en";
+	const html = renderToStaticMarkup(/* @__PURE__ */ jsx(Resume, {
+		resume,
+		locale
+	}));
 	return `<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="${locale}" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

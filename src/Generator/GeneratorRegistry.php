@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Romainsickenberg\ProgrammaticResume\Generator;
 
+use Symfony\Contracts\Translation\TranslatorInterface;
+
 /**
  * Single place to register a resume profile generator.
  * Add a new class implementing AbstractResume, then add one line here to
@@ -24,7 +26,7 @@ final class GeneratorRegistry
         return self::PROFILES;
     }
 
-    public static function resolve(string $slug): AbstractResume
+    public static function resolve(string $slug, TranslatorInterface $translator, string $locale = 'en'): AbstractResume
     {
         $class = self::PROFILES[$slug] ?? throw new \InvalidArgumentException(\sprintf(
             'Unknown resume profile "%s". Available: %s.',
@@ -32,6 +34,6 @@ final class GeneratorRegistry
             implode(', ', array_keys(self::PROFILES)),
         ));
 
-        return new $class();
+        return new $class($translator, $locale);
     }
 }

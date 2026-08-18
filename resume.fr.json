@@ -2,11 +2,11 @@
     "$schema": "https:\/\/jsonresume.org\/schema\/schema.json",
     "basics": {
         "name": "Romain Sickenberg",
-        "label": "Backend-Software Engineer",
+        "label": "Ing\u00e9nieur Logiciel Backend",
         "email": "r.sickenberg@gmail.com",
         "phone": "+41 78 907 32 02",
         "url": "https:\/\/rsickenberg.me",
-        "summary": "Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker.\n\nHands-on experience in CI\/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects.\n\nWork authorization: Swiss Citizen. Available now.",
+        "summary": "Ing\u00e9nieur logiciel orient\u00e9 backend avec plus de 5 ans d'exp\u00e9rience professionnelle dans la conception et la maintenance d'applications web critiques pour l'activit\u00e9, avec PHP, Symfony, Laravel, React et Docker.\n\nExp\u00e9rience concr\u00e8te en optimisation CI\/CD, revues de code, d\u00e9ploiements en production et leadership technique sur des projets de taille moyenne.\n\nAutorisation de travail : citoyen suisse. Disponible imm\u00e9diatement.",
         "location": {
             "address": "Chemin de la creuse 6",
             "postalCode": "1027",
@@ -30,97 +30,97 @@
     "work": [
         {
             "name": "Academic Work SA",
-            "position": "Full-Stack Software Developer",
+            "position": "D\u00e9veloppeur Full-Stack",
             "location": "Lausanne",
             "url": "https:\/\/www.academicwork.ch\/",
             "startDate": "2024-03-01",
             "endDate": "2025-12-31",
-            "summary": "IT Consulting for diverse clients via Academic Work.",
+            "summary": "Conseil informatique pour divers clients via Academic Work.",
             "highlights": [
-                "Developed full-stack web applications using Vue (Nuxt.JS) & Backend in Python (Django) for the SIL in Lausanne.",
-                "Built a React (Next.JS) application with GitHub Actions CI\/CD, Docker containerization and automated deployments to Jelastic."
+                "D\u00e9velopp\u00e9 des applications web full-stack avec Vue (Nuxt.JS) et un backend en Python (Django) pour le SIL \u00e0 Lausanne.",
+                "D\u00e9velopp\u00e9 une application React (Next.JS) avec int\u00e9gration continue GitHub Actions, conteneurisation Docker et d\u00e9ploiements automatis\u00e9s sur Jelastic."
             ]
         },
         {
             "name": "Securitas AG",
-            "position": "Security Agent",
+            "position": "Agent de s\u00e9curit\u00e9",
             "location": "Lausanne",
             "url": "https:\/\/www.securitas.ch",
             "startDate": "2023-07-01",
             "endDate": "2024-03-31",
-            "summary": "Part-time security agent in the event sector."
+            "summary": "Agent de s\u00e9curit\u00e9 \u00e0 temps partiel dans le secteur \u00e9v\u00e9nementiel."
         },
         {
-            "name": "Personal Break",
-            "position": "Solo World Travel & Personal Development",
+            "name": "Pause personnelle",
+            "position": "Voyage en solo autour du monde & d\u00e9veloppement personnel",
             "startDate": "2023-02-01",
             "endDate": "2023-06-30",
-            "summary": "Planned career break: Solo travel and personal development."
+            "summary": "Pause de carri\u00e8re planifi\u00e9e : voyage en solo et d\u00e9veloppement personnel."
         },
         {
             "name": "Antistatique SA",
-            "position": "Backend Software Engineer",
+            "position": "Ing\u00e9nieur Logiciel Backend",
             "location": "Lausanne",
             "url": "https:\/\/antistatique.net\/",
             "startDate": "2021-10-31",
             "endDate": "2023-01-31",
-            "summary": "From Junior to mid-level Software Engineer & highest skill jump !",
+            "summary": "De d\u00e9veloppeur junior \u00e0 confirm\u00e9 : la plus forte progression de ma carri\u00e8re !",
             "highlights": [
-                "Developed and maintained enterprise Symfony 6 applications, using PHP 7.4\/8.0, API Platform, Doctrine ORM, PostgreSQL and GitHub Actions.",
-                "Involved as PHP Lead Developer for a client project in Symfony with 4 other devs.",
-                "Built and maintained CMS-based solutions (Drupal, WordPress).",
-                "Reduced GitHub Actions execution time by 75% through dependency caching and workflow optimization.",
-                "Deployed projects to production using structured deployment processes.",
-                "Led code reviews to improve maintainability and enforce development standards.",
-                "Collaborated within a multidisciplinary development team using Scrum.",
-                "Took technical responsibility for small to medium-sized projects.",
-                "Managed and optimized local development environments using Docker and modern IDE tooling.",
-                "Analyzed project requirements and contributed to technical estimations."
+                "D\u00e9velopp\u00e9 et maintenu des applications d'entreprise sous Symfony 6, avec PHP 7.4\/8.0, API Platform, Doctrine ORM, PostgreSQL et GitHub Actions.",
+                "Intervenu en tant que Lead Developer PHP sur un projet client Symfony avec 4 autres d\u00e9veloppeurs.",
+                "D\u00e9velopp\u00e9 et maintenu des solutions bas\u00e9es sur des CMS (Drupal, WordPress).",
+                "R\u00e9duit de 75% le temps d'ex\u00e9cution des GitHub Actions gr\u00e2ce \u00e0 la mise en cache des d\u00e9pendances et \u00e0 l'optimisation des workflows.",
+                "D\u00e9ploy\u00e9 des projets en production selon des processus de d\u00e9ploiement structur\u00e9s.",
+                "Men\u00e9 des revues de code pour am\u00e9liorer la maintenabilit\u00e9 et faire respecter les standards de d\u00e9veloppement.",
+                "Collabor\u00e9 au sein d'une \u00e9quipe de d\u00e9veloppement pluridisciplinaire en m\u00e9thode Scrum.",
+                "Assum\u00e9 la responsabilit\u00e9 technique de projets de petite \u00e0 moyenne envergure.",
+                "G\u00e9r\u00e9 et optimis\u00e9 les environnements de d\u00e9veloppement locaux avec Docker et des outils IDE modernes.",
+                "Analys\u00e9 les besoins des projets et contribu\u00e9 aux estimations techniques."
             ]
         },
         {
             "name": "Ilem Group",
-            "position": "Junior Backend Software Engineer",
-            "location": "Geneva & Ecublens",
+            "position": "Ing\u00e9nieur Logiciel Backend Junior",
+            "location": "Gen\u00e8ve & Ecublens",
             "url": "https:\/\/new.ilemgroup.com\/",
             "startDate": "2021-02-01",
             "endDate": "2021-10-31",
-            "summary": "IT Consulting to an external client named Berdoz Vision & Audition.",
+            "summary": "Conseil informatique pour un client externe, Berdoz Vision & Audition.",
             "highlights": [
-                "Secured a custom highly critical ERP, migrated it to a newer PHP version and contributed to the development of its Laravel replacement.",
-                "Configured a fleet of 44 iPads and set up CI servers to run complex test suites with Codeception and Cypress.",
-                "Improved security and developed critical components of existing in-house CRM solution for multiple shops around Switzerland.",
-                "Built internal tools for automated testing, monitoring, and deployment, while ensuring high-quality standards with Sentry."
+                "S\u00e9curis\u00e9 un ERP sur mesure hautement critique, migr\u00e9 vers une version PHP plus r\u00e9cente, et contribu\u00e9 au d\u00e9veloppement de son rempla\u00e7ant sous Laravel.",
+                "Configur\u00e9 une flotte de 44 iPad et mis en place des serveurs CI pour ex\u00e9cuter des suites de tests complexes avec Codeception et Cypress.",
+                "Am\u00e9lior\u00e9 la s\u00e9curit\u00e9 et d\u00e9velopp\u00e9 des composants critiques du CRM interne existant pour plusieurs magasins \u00e0 travers la Suisse.",
+                "D\u00e9velopp\u00e9 des outils internes pour les tests automatis\u00e9s, le monitoring et le d\u00e9ploiement, tout en garantissant des standards de qualit\u00e9 \u00e9lev\u00e9s avec Sentry."
             ]
         },
         {
-            "name": "Personal Break",
-            "position": "Swiss Armed Forces",
+            "name": "Pause personnelle",
+            "position": "Arm\u00e9e suisse",
             "startDate": "2020-07-01",
             "endDate": "2020-11-30",
-            "summary": "Mandatory obligations."
+            "summary": "Obligations militaires."
         },
         {
             "name": "Liip AG",
-            "position": "Apprentice Software Engineer",
+            "position": "Apprenti D\u00e9veloppeur de Logiciels",
             "location": "Lausanne",
             "url": "https:\/\/www.liip.ch",
             "startDate": "2016-06-01",
             "endDate": "2020-06-30",
-            "summary": "Started my IT career while studying 2 days per week at school.",
+            "summary": "D\u00e9but\u00e9 ma carri\u00e8re en informatique tout en \u00e9tudiant 2 jours par semaine \u00e0 l'\u00e9cole.",
             "highlights": [
-                "Developed and enhanced internal web applications using PHP and JavaScript.",
-                "Collaborated within an Agile development team using Git and modern web development practices.",
-                "Developed custom Moodle plugins with PHP 5.4.",
-                "Used Scrum in an Holacratic environment."
+                "D\u00e9velopp\u00e9 et am\u00e9lior\u00e9 des applications web internes avec PHP et JavaScript.",
+                "Collabor\u00e9 au sein d'une \u00e9quipe de d\u00e9veloppement Agile avec Git et des pratiques modernes de d\u00e9veloppement web.",
+                "D\u00e9velopp\u00e9 des plugins Moodle sur mesure avec PHP 5.4.",
+                "Travaill\u00e9 en Scrum au sein d\u2019un environnement holacratique."
             ]
         }
     ],
     "education": [
         {
-            "institution": "Swiss Confederation | EPSIC @ Lausanne & CFPT @ Geneva",
+            "institution": "Conf\u00e9d\u00e9ration suisse | EPSIC \u00e0 Lausanne & CFPT \u00e0 Gen\u00e8ve",
             "url": "https:\/\/www.bit.admin.ch\/fr\/informaticienne-cfc-developpement-applications",
-            "area": "Federal VET Diploma in Information Technology (CFC)",
+            "area": "Certificat f\u00e9d\u00e9ral de capacit\u00e9 (CFC) en informatique",
             "studyType": "High School",
             "startDate": "2016-08-01",
             "endDate": "2020-07-01",
@@ -176,7 +176,7 @@
             "title": "EPFL Hackathon AR\/VR Game Experiences",
             "date": "2019-12-24",
             "awarder": "RA \\ VR Hackathon",
-            "summary": "Built a \"digital museum\" in Virtual reality. Won the first place in VR experiences, built with SteamVR and Unity."
+            "summary": "D\u00e9velopp\u00e9 un \u00ab mus\u00e9e num\u00e9rique \u00bb en r\u00e9alit\u00e9 virtuelle. Remport\u00e9 la premi\u00e8re place en exp\u00e9riences VR, r\u00e9alis\u00e9 avec SteamVR et Unity."
         }
     ],
     "skills": [
@@ -205,7 +205,7 @@
             ]
         },
         {
-            "name": "Lower Level",
+            "name": "Bas niveau",
             "level": "Expert",
             "keywords": [
                 "Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)",
@@ -213,7 +213,7 @@
             ]
         },
         {
-            "name": "Databases",
+            "name": "Bases de donn\u00e9es",
             "level": "Expert",
             "keywords": [
                 "PostgreSQL",
@@ -240,7 +240,7 @@
             ]
         },
         {
-            "name": "Tools",
+            "name": "Outils",
             "level": "Advanced",
             "keywords": [
                 "Git",
@@ -255,40 +255,40 @@
     ],
     "languages": [
         {
-            "language": "French",
-            "fluency": "Native"
+            "language": "Fran\u00e7ais",
+            "fluency": "Langue maternelle"
         },
         {
-            "language": "English",
-            "fluency": "Fluent (C2)"
+            "language": "Anglais",
+            "fluency": "Courant (C2)"
         },
         {
-            "language": "German",
-            "fluency": "Intermediate (B1)"
+            "language": "Allemand",
+            "fluency": "Interm\u00e9diaire (B1)"
         }
     ],
     "interests": [
         {
-            "name": "Video Games, Movies, Music",
+            "name": "Jeux vid\u00e9o, Films, Musique",
             "keywords": [
-                "PC Gamer",
-                "Sci-Fi",
+                "Joueur PC",
+                "Science-fiction",
                 "House"
             ]
         },
         {
-            "name": "Travel",
+            "name": "Voyage",
             "keywords": [
-                "Backpacking",
-                "Solo Adventures"
+                "Voyage sac \u00e0 dos",
+                "Aventures en solo"
             ]
         },
         {
-            "name": "Photography",
+            "name": "Photographie",
             "keywords": [
                 "Drone",
-                "DSLR",
-                "Astro-photography"
+                "Reflex num\u00e9rique",
+                "Astrophotographie"
             ]
         }
     ],
@@ -297,18 +297,18 @@
             "name": "Tesla Companion",
             "startDate": "2018-01-01",
             "endDate": "2023-01-01",
-            "description": "Paid iOS & WatchOS App to work around Tesla cars.",
+            "description": "Application iOS et watchOS payante pour interagir avec les v\u00e9hicules Tesla.",
             "highlights": [
-                "Built and published a commercial iOS and watchOS application integrating Tesla APIs reaching over 1,000 daily active users and ranking #5 in the App Store Trips category."
+                "D\u00e9velopp\u00e9 et publi\u00e9 une application commerciale iOS et watchOS int\u00e9grant les API Tesla, atteignant plus de 1 000 utilisateurs actifs quotidiens et class\u00e9e 5e de la cat\u00e9gorie Voyages de l\u2019App Store."
             ]
         },
         {
             "name": "Fort-To-Nite",
             "startDate": "2017-01-01",
             "endDate": "2019-01-01",
-            "description": "Free iOS wiki around Fortnite with live in-game shop indications and Django back-end.",
+            "description": "Wiki iOS gratuit d\u00e9di\u00e9 \u00e0 Fortnite avec indications en temps r\u00e9el de la boutique in-game et un backend Django.",
             "highlights": [
-                "Fortnite companion app with 100,000+ downloads, 4.6* rating (340+ reviews) and a peak ranking of #19 in the App Store Reference category."
+                "Application compagnon Fortnite avec plus de 100 000 t\u00e9l\u00e9chargements, une note de 4,6\u2605 (340+ avis) et un classement maximal de 19e dans la cat\u00e9gorie R\u00e9f\u00e9rence de l\u2019App Store."
             ]
         }
     ]

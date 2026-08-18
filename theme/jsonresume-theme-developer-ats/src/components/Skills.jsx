@@ -1,10 +1,13 @@
 import Section from './Section.jsx'
+import { useSectionTitle } from '../lib/i18n.js'
 
 export default function Skills ({ skills = [] }) {
+  const title = useSectionTitle('skills')
+
   if (skills.length === 0) return null
 
   return (
-    <Section title="Skills">
+    <Section title={title}>
       <div className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 sm:auto-rows-fr print:break-inside-avoid">
         {skills.map((skill, index) => (
           <div key={index} className="flex flex-col print:break-inside-avoid">

@@ -1,7 +1,9 @@
 import { formatDateRange, cx } from '../lib/format.js'
+import { usePresentLabel } from '../lib/i18n.js'
 
 export default function DateRange ({ startDate, endDate, className }) {
-  const formatted = formatDateRange({ startDate, endDate })
+  const presentLabel = usePresentLabel()
+  const formatted = formatDateRange({ startDate, endDate, presentLabel })
 
   if (!formatted) return null
 

@@ -1,0 +1,97 @@
+basics:
+  backend_dev_position: 'Backend-Software Engineer'
+  summary_role: "Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker."
+  summary_experience: 'Hands-on experience in CI/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects.'
+  summary_authorization: 'Work authorization: Swiss Citizen. Available now.'
+
+languages:
+  french: 'French'
+  english: 'English'
+  german: 'German'
+  fluency_native: 'Native'
+  fluency_fluent_c2: 'Fluent (C2)'
+  fluency_intermediate_b1: 'Intermediate (B1)'
+
+interests:
+  gaming_name: 'Video Games, Movies, Music'
+  gaming_kw_pc_gamer: 'PC Gamer'
+  gaming_kw_scifi: 'Sci-Fi'
+  gaming_kw_house: 'House'
+  travel_name: 'Travel'
+  travel_kw_backpacking: 'Backpacking'
+  travel_kw_solo: 'Solo Adventures'
+  photography_name: 'Photography'
+  photography_kw_drone: 'Drone'
+  photography_kw_dslr: 'DSLR'
+  photography_kw_astro: 'Astro-photography'
+
+location:
+  geneva_ecublens: 'Geneva & Ecublens'
+
+work:
+  academic_work:
+    position: 'Full-Stack Software Developer'
+    summary: 'IT Consulting for diverse clients via Academic Work.'
+    highlight_1: 'Developed full-stack web applications using Vue (Nuxt.JS) & Backend in Python (Django) for the SIL in Lausanne.'
+    highlight_2: 'Built a React (Next.JS) application with GitHub Actions CI/CD, Docker containerization and automated deployments to Jelastic.'
+  antistatique:
+    position: 'Backend Software Engineer'
+    summary: 'From Junior to mid-level Software Engineer & highest skill jump !'
+    highlight_1: 'Developed and maintained enterprise Symfony 6 applications, using PHP 7.4/8.0, API Platform, Doctrine ORM, PostgreSQL and GitHub Actions.'
+    highlight_2: 'Involved as PHP Lead Developer for a client project in Symfony with 4 other devs.'
+    highlight_3: 'Built and maintained CMS-based solutions (Drupal, WordPress).'
+    highlight_4: 'Reduced GitHub Actions execution time by 75% through dependency caching and workflow optimization.'
+    highlight_5: 'Deployed projects to production using structured deployment processes.'
+    highlight_6: 'Led code reviews to improve maintainability and enforce development standards.'
+    highlight_7: 'Collaborated within a multidisciplinary development team using Scrum.'
+    highlight_8: 'Took technical responsibility for small to medium-sized projects.'
+    highlight_9: 'Managed and optimized local development environments using Docker and modern IDE tooling.'
+    highlight_10: 'Analyzed project requirements and contributed to technical estimations.'
+  ilem:
+    position: 'Junior Backend Software Engineer'
+    summary: 'IT Consulting to an external client named Berdoz Vision & Audition.'
+    highlight_1: 'Secured a custom highly critical ERP, migrated it to a newer PHP version and contributed to the development of its Laravel replacement.'
+    highlight_2: 'Configured a fleet of 44 iPads and set up CI servers to run complex test suites with Codeception and Cypress.'
+    highlight_3: 'Improved security and developed critical components of existing in-house CRM solution for multiple shops around Switzerland.'
+    highlight_4: 'Built internal tools for automated testing, monitoring, and deployment, while ensuring high-quality standards with Sentry.'
+  liip:
+    position: 'Apprentice Software Engineer'
+    summary: 'Started my IT career while studying 2 days per week at school.'
+    highlight_1: 'Developed and enhanced internal web applications using PHP and JavaScript.'
+    highlight_2: 'Collaborated within an Agile development team using Git and modern web development practices.'
+    highlight_3: 'Developed custom Moodle plugins with PHP 5.4.'
+    highlight_4: 'Used Scrum in an Holacratic environment.'
+  securitas:
+    position: 'Security Agent'
+    summary: 'Part-time security agent in the event sector.'
+  break_travel:
+    name: 'Personal Break'
+    position: 'Solo World Travel & Personal Development'
+    summary: 'Planned career break: Solo travel and personal development.'
+  break_military:
+    name: 'Personal Break'
+    position: 'Swiss Armed Forces'
+    summary: 'Mandatory obligations.'
+
+education:
+  institution: 'Swiss Confederation | EPSIC @ Lausanne & CFPT @ Geneva'
+  area: 'Federal VET Diploma in Information Technology (CFC)'
+
+skills:
+  backend_name: 'Backend'
+  frontend_name: 'Frontend'
+  lower_level_name: 'Lower Level'
+  databases_name: 'Databases'
+  cloud_devops_name: 'Cloud & DevOps'
+  tools_name: 'Tools'
+
+awards:
+  epfl_summary: 'Built a "digital museum" in Virtual reality. Won the first place in VR experiences, built with SteamVR and Unity.'
+
+projects:
+  tesla:
+    description: 'Paid iOS & WatchOS App to work around Tesla cars.'
+    highlight_1: 'Built and published a commercial iOS and watchOS application integrating Tesla APIs reaching over 1,000 daily active users and ranking #5 in the App Store Trips category.'
+  fort_to_nite:
+    description: 'Free iOS wiki around Fortnite with live in-game shop indications and Django back-end.'
+    highlight_1: 'Fortnite companion app with 100,000+ downloads, 4.6* rating (340+ reviews) and a peak ranking of #19 in the App Store Reference category.'
