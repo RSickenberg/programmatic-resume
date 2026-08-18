@@ -15,7 +15,7 @@ export default function SimpleItem ({ label, labelHref, meta, date, keywords }) 
           {keywords.map((keyword, index) => (
             <li
               key={index}
-              className="rounded-full border border-border px-2 py-0.5 font-mono text-[8pt] text-muted"
+              className="rounded-full border border-accent px-2 py-0.5 font-mono text-[8pt] text-muted"
             >
               {keyword}
             </li>

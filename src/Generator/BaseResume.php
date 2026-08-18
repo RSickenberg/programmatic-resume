@@ -150,7 +150,7 @@ abstract class BaseResume implements AbstractResume
                     location: 'Lausanne',
                     url: new Url('https://www.liip.ch'),
                     startDate: '2016-06-01',
-                    endDate: '2020-06-31',
+                    endDate: '2020-06-30',
                     summary: 'Started my IT career while studying 2 days per week at school.',
                     highlights: [
                         'Developed and enhanced internal web applications using PHP and JavaScript.',
@@ -168,7 +168,7 @@ abstract class BaseResume implements AbstractResume
                     url: new Url('https://www.securitas.ch'),
                     startDate: '2023-07-01',
                     endDate: '2024-03-31',
-                    summary: 'Part-time security agent for Securitas in the event sector.'
+                    summary: 'Part-time security agent in the event sector.'
                 ),
             ],
             WorkTypes::PILOT->value => [],
@@ -178,15 +178,15 @@ abstract class BaseResume implements AbstractResume
                 new Work(
                     name: 'Personal Break',
                     position: 'Solo World Travel & Personal Development',
-                    startDate: '2023-01-31',
-                    endDate: '2023-07-01',
+                    startDate: '2023-02-01',
+                    endDate: '2023-06-30',
                     summary: 'Planned career break: Solo travel and personal development.',
                 ),
                 new Work(
                     name: 'Personal Break',
                     position: 'Swiss Armed Forces',
-                    startDate: '2020-06-31',
-                    endDate: '2020-11-31',
+                    startDate: '2020-07-01',
+                    endDate: '2020-11-30',
                     summary: 'Mandatory obligations.',
                 ),
             ],

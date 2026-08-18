@@ -13,7 +13,7 @@ export default function Header ({ basics = {} }) {
       {label && (
         <p className="mt-1.5 font-mono text-[12pt] font-semibold text-accent">{label}</p>
       )}
-      <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[9pt] text-muted">
+      <div className="mt-3 flex flex-col gap-y-0.5 text-[9pt] text-muted">
         {locationStr && <span>{locationStr}</span>}
         {email && <Link href={`mailto:${email}`} underline={false}>{email}</Link>}
         {phone && <Link href={`tel:${phone}`} underline={false}>{phone}</Link>}

@@ -6,8 +6,8 @@ export default function DateRange ({ startDate, endDate, className }) {
   if (!formatted) return null
 
   return (
-    <span className={cx('whitespace-nowrap font-mono text-[8.5pt] font-medium text-subtle', className)}>
-      {formatted}
+    <span className={ cx('whitespace-nowrap font-mono text-[8.5pt] font-medium text-subtle', className) }>
+      { formatted }
     </span>
   )
 }

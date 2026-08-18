@@ -112,7 +112,7 @@ final class BackendDev extends BaseResume
                     keywords: [
                         'TypeScript & JavaScript',
                         'React, Next.js, Nuxt.js, Node, NPM & Bun',
-                        'HTML5 & CSS5, Sass',
+                        'HTML5 & CSS, Sass',
                         'Tailwind CSS',
                         'Alpine.js',
                         '...',
