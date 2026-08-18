@@ -21,7 +21,7 @@ function yearMonth (dateStr) {
  * on the page (e.g. "PHP 7.4/8.0"), and adjacent entries sharing an exact
  * boundary date can get their ranges cross-attributed.
  */
-export function formatDateRange ({ startDate, endDate }) {
+export function formatDateRange ({ startDate, endDate, presentLabel = 'Present' }) {
   if (!startDate) return ''
 
   const start = yearMonth(startDate)
@@ -31,7 +31,7 @@ export function formatDateRange ({ startDate, endDate }) {
 
   const end = endDate ? yearMonth(endDate) : null
 
-  return `${start} - ${end || 'Present'}`
+  return `${start} - ${end || presentLabel}`
 }
 
 export function displayUrl (url) {

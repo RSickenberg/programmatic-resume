@@ -1,0 +1,97 @@
+basics:
+  backend_dev_position: 'Ingénieur Logiciel Backend'
+  summary_role: "Ingénieur logiciel orienté backend avec plus de 5 ans d'expérience professionnelle dans la conception et la maintenance d'applications web critiques pour l'activité, avec PHP, Symfony, Laravel, React et Docker."
+  summary_experience: "Expérience concrète en optimisation CI/CD, revues de code, déploiements en production et leadership technique sur des projets de taille moyenne."
+  summary_authorization: 'Autorisation de travail : citoyen suisse. Disponible immédiatement.'
+
+languages:
+  french: 'Français'
+  english: 'Anglais'
+  german: 'Allemand'
+  fluency_native: 'Langue maternelle'
+  fluency_fluent_c2: 'Courant (C2)'
+  fluency_intermediate_b1: 'Intermédiaire (B1)'
+
+interests:
+  gaming_name: 'Jeux vidéo, Films, Musique'
+  gaming_kw_pc_gamer: 'Joueur PC'
+  gaming_kw_scifi: 'Science-fiction'
+  gaming_kw_house: 'House'
+  travel_name: 'Voyage'
+  travel_kw_backpacking: 'Voyage sac à dos'
+  travel_kw_solo: 'Aventures en solo'
+  photography_name: 'Photographie'
+  photography_kw_drone: 'Drone'
+  photography_kw_dslr: 'Reflex numérique'
+  photography_kw_astro: 'Astrophotographie'
+
+location:
+  geneva_ecublens: 'Genève & Ecublens'
+
+work:
+  academic_work:
+    position: 'Développeur Full-Stack'
+    summary: 'Conseil informatique pour divers clients via Academic Work.'
+    highlight_1: 'Développé des applications web full-stack avec Vue (Nuxt.JS) et un backend en Python (Django) pour le SIL à Lausanne.'
+    highlight_2: 'Développé une application React (Next.JS) avec intégration continue GitHub Actions, conteneurisation Docker et déploiements automatisés sur Jelastic.'
+  antistatique:
+    position: 'Ingénieur Logiciel Backend'
+    summary: 'De développeur junior à confirmé : la plus forte progression de ma carrière !'
+    highlight_1: "Développé et maintenu des applications d'entreprise sous Symfony 6, avec PHP 7.4 / 8.0, API Platform, Doctrine ORM, PostgreSQL et GitHub Actions."
+    highlight_2: 'Intervenu en tant que Lead Developer PHP sur un projet client Symfony avec 4 autres développeurs.'
+    highlight_3: 'Développé et maintenu des solutions basées sur des CMS (Drupal, WordPress).'
+    highlight_4: "Réduit de 75% le temps d'exécution des GitHub Actions grâce à la mise en cache des dépendances et à l'optimisation des workflows."
+    highlight_5: 'Déployé des projets en production selon des processus de déploiement structurés.'
+    highlight_6: 'Mené des revues de code pour améliorer la maintenabilité et faire respecter les standards de développement.'
+    highlight_7: "Collaboré au sein d'une équipe de développement pluridisciplinaire en méthode Scrum."
+    highlight_8: 'Assumé la responsabilité technique de projets de petite à moyenne envergure.'
+    highlight_9: "Géré et optimisé les environnements de développement locaux avec Docker et des outils IDE modernes."
+    highlight_10: 'Analysé les besoins des projets et contribué aux estimations techniques.'
+  ilem:
+    position: 'Ingénieur Logiciel Backend Junior'
+    summary: 'Conseil informatique pour un client externe, Berdoz Vision & Audition.'
+    highlight_1: "Sécurisé un ERP sur mesure hautement critique, migré vers une version PHP plus récente, et contribué au développement de son remplaçant sous Laravel."
+    highlight_2: 'Configuré une flotte de 44 iPad et mis en place des serveurs CI pour exécuter des suites de tests complexes avec Codeception et Cypress.'
+    highlight_3: 'Amélioré la sécurité et développé des composants critiques du CRM interne existant pour plusieurs magasins à travers la Suisse.'
+    highlight_4: 'Développé des outils internes pour les tests automatisés, le monitoring et le déploiement, tout en garantissant des standards de qualité élevés avec Sentry.'
+  liip:
+    position: 'Apprenti Développeur de Logiciels'
+    summary: "Débuté ma carrière en informatique tout en étudiant 2 jours par semaine à l'école."
+    highlight_1: 'Développé et amélioré des applications web internes avec PHP et JavaScript.'
+    highlight_2: "Collaboré au sein d'une équipe de développement Agile avec Git et des pratiques modernes de développement web."
+    highlight_3: 'Développé des plugins Moodle sur mesure avec PHP 5.4.'
+    highlight_4: 'Travaillé en Scrum au sein d’un environnement holacratique.'
+  securitas:
+    position: 'Agent de sécurité'
+    summary: 'Agent de sécurité à temps partiel dans le secteur événementiel.'
+  break_travel:
+    name: 'Pause personnelle'
+    position: 'Voyage en solo autour du monde & développement personnel'
+    summary: 'Pause de carrière planifiée : voyage en solo et développement personnel.'
+  break_military:
+    name: 'Pause personnelle'
+    position: 'Armée suisse'
+    summary: 'Obligations militaires.'
+
+education:
+  institution: 'Confédération suisse | EPSIC à Lausanne & CFPT à Genève'
+  area: "Certificat fédéral de capacité (CFC) en informatique"
+
+skills:
+  backend_name: 'Backend'
+  frontend_name: 'Frontend'
+  lower_level_name: 'Bas niveau'
+  databases_name: 'Bases de données'
+  cloud_devops_name: 'Cloud & DevOps'
+  tools_name: 'Outils'
+
+awards:
+  epfl_summary: 'Développé un « musée numérique » en réalité virtuelle. Remporté la première place en expériences VR, réalisé avec SteamVR et Unity.'
+
+projects:
+  tesla:
+    description: 'Application iOS et watchOS payante pour interagir avec les véhicules Tesla.'
+    highlight_1: 'Développé et publié une application commerciale iOS et watchOS intégrant les API Tesla, atteignant plus de 1 000 utilisateurs actifs quotidiens et classée 5e de la catégorie Voyages de l’App Store.'
+  fort_to_nite:
+    description: 'Wiki iOS gratuit dédié à Fortnite avec indications en temps réel de la boutique in-game et un backend Django.'
+    highlight_1: 'Application compagnon Fortnite avec plus de 100 000 téléchargements, une note de 4,6★ (340+ avis) et un classement maximal de 19e dans la catégorie Référence de l’App Store.'

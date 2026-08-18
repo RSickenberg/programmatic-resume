@@ -20,7 +20,6 @@ use JustSteveKing\Resume\ValueObjects\Url;
 
 final class BackendDev extends BaseResume
 {
-    private const string POSITION = 'Backend-Software Engineer';
     private const string GITHUB_URL = 'https://github.com/rsickenberg';
     private const WorkTypes RELATED_TYPE = WorkTypes::IT;
 
@@ -49,7 +48,7 @@ final class BackendDev extends BaseResume
     {
         return new Basics(
             name: self::FULL_NAME,
-            label: self::POSITION,
+            label: $this->trans('basics.backend_dev_position'),
             email: new Email(self::EMAIL),
             phone: self::PHONE,
             url: new Url(self::URL),
@@ -93,7 +92,7 @@ final class BackendDev extends BaseResume
         $builder
             ->addSkill(
                 new Skill(
-                    name: 'Backend',
+                    name: $this->trans('skills.backend_name'),
                     level: SkillLevel::Expert,
                     keywords: [
                         'PHP',
@@ -107,7 +106,7 @@ final class BackendDev extends BaseResume
             )
             ->addSkill(
                 new Skill(
-                    name: 'Frontend',
+                    name: $this->trans('skills.frontend_name'),
                     level: SkillLevel::Expert,
                     keywords: [
                         'TypeScript & JavaScript',
@@ -121,7 +120,7 @@ final class BackendDev extends BaseResume
             )
             ->addSkill(
                 new Skill(
-                    name: 'Lower Level',
+                    name: $this->trans('skills.lower_level_name'),
                     level: SkillLevel::Expert,
                     keywords: [
                         'Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)',
@@ -131,7 +130,7 @@ final class BackendDev extends BaseResume
             )
             ->addSkill(
                 new Skill(
-                    name: 'Databases',
+                    name: $this->trans('skills.databases_name'),
                     level: SkillLevel::Expert,
                     keywords: [
                         'PostgreSQL',
@@ -145,7 +144,7 @@ final class BackendDev extends BaseResume
             )
             ->addSkill(
                 new Skill(
-                    name: 'Cloud & DevOps',
+                    name: $this->trans('skills.cloud_devops_name'),
                     level: SkillLevel::Advanced,
                     keywords: [
                         'Docker',
@@ -162,7 +161,7 @@ final class BackendDev extends BaseResume
             )
             ->addSkill(
                 new Skill(
-                    name: 'Tools',
+                    name: $this->trans('skills.tools_name'),
                     level: SkillLevel::Advanced,
                     keywords: [
                         'Git',
@@ -186,7 +185,7 @@ final class BackendDev extends BaseResume
                 title: 'EPFL Hackathon AR/VR Game Experiences',
                 date: '2019-12-24',
                 awarder: 'RA \ VR Hackathon',
-                summary: 'Built a "digital museum" in Virtual reality. Won the first place in VR experiences, built with SteamVR and Unity.'
+                summary: $this->trans('awards.epfl_summary')
             ));
 
         return $builder;
@@ -194,7 +193,11 @@ final class BackendDev extends BaseResume
 
     protected function getSummary(): string
     {
-        return "Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker. \n Hands-on experience in CI/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects. \n Work authorization: Swiss Citizen. Available now.";
+        return implode("\n\n", [
+            $this->trans('basics.summary_role'),
+            $this->trans('basics.summary_experience'),
+            $this->trans('basics.summary_authorization'),
+        ]);
     }
 
     protected function getRelatedProfiles(): array
@@ -212,18 +215,18 @@ final class BackendDev extends BaseResume
                 name: 'Tesla Companion',
                 startDate: '2018-01-01',
                 endDate: '2023-01-01',
-                description: 'Paid iOS & WatchOS App to work around Tesla cars.',
+                description: $this->trans('projects.tesla.description'),
                 highlights: [
-                    'Built and published a commercial iOS and watchOS application integrating Tesla APIs reaching over 1,000 daily active users and ranking #5 in the App Store Trips category.',
+                    $this->trans('projects.tesla.highlight_1'),
                 ],
             ))
             ->addProject(new Project(
                 name: 'Fort-To-Nite',
                 startDate: '2017-01-01',
                 endDate: '2019-01-01',
-                description: 'Free iOS wiki around Fortnite with live in-game shop indications and Django back-end.',
+                description: $this->trans('projects.fort_to_nite.description'),
                 highlights: [
-                    'Fortnite companion app with 100,000+ downloads, 4.6* rating (340+ reviews) and a peak ranking of #19 in the App Store Reference category.',
+                    $this->trans('projects.fort_to_nite.highlight_1'),
                 ],
             ));
 

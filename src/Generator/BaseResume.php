@@ -16,6 +16,7 @@ use JustSteveKing\Resume\DataObjects\Resume;
 use JustSteveKing\Resume\DataObjects\Work;
 use JustSteveKing\Resume\Enums\EducationLevel;
 use JustSteveKing\Resume\ValueObjects\Url;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 abstract class BaseResume implements AbstractResume
 {
@@ -24,6 +25,16 @@ abstract class BaseResume implements AbstractResume
     public const string URL = 'https://rsickenberg.me';
     public const string PHONE = '+41 78 907 32 02';
     public const string LINKEDIN_URL = 'https://linkedin.com/in/a320rsck';
+
+    public function __construct(
+        protected readonly TranslatorInterface $translator,
+        protected readonly string $locale = 'en',
+    ) {}
+
+    protected function trans(string $id): string
+    {
+        return $this->translator->trans($id, locale: $this->locale);
+    }
 
     public function __invoke(): Resume
     {
@@ -50,16 +61,16 @@ abstract class BaseResume implements AbstractResume
     {
         $builder
             ->addLanguage(new Language(
-                language: 'French',
-                fluency: 'Native',
+                language: $this->trans('languages.french'),
+                fluency: $this->trans('languages.fluency_native'),
             ))
             ->addLanguage(new Language(
-                language: 'English',
-                fluency: 'Fluent (C2)',
+                language: $this->trans('languages.english'),
+                fluency: $this->trans('languages.fluency_fluent_c2'),
             ))
             ->addLanguage(new Language(
-                language: 'German',
-                fluency: 'Intermediate (B1)',
+                language: $this->trans('languages.german'),
+                fluency: $this->trans('languages.fluency_intermediate_b1'),
             ));
 
         return $builder;
@@ -69,16 +80,27 @@ abstract class BaseResume implements AbstractResume
     {
         $builder
             ->addInterest(new Interest(
-                name: 'Video Games, Movies, Music',
-                keywords: ['PC Gamer', 'Sci-Fi', 'House']
+                name: $this->trans('interests.gaming_name'),
+                keywords: [
+                    $this->trans('interests.gaming_kw_pc_gamer'),
+                    $this->trans('interests.gaming_kw_scifi'),
+                    $this->trans('interests.gaming_kw_house'),
+                ]
             ))
             ->addInterest(new Interest(
-                name: 'Travel',
-                keywords: ['Backpacking', 'Solo Adventures']
+                name: $this->trans('interests.travel_name'),
+                keywords: [
+                    $this->trans('interests.travel_kw_backpacking'),
+                    $this->trans('interests.travel_kw_solo'),
+                ]
             ))
             ->addInterest(new Interest(
-                name: 'Photography',
-                keywords: ['Drone', 'DSLR', 'Astro-photography']
+                name: $this->trans('interests.photography_name'),
+                keywords: [
+                    $this->trans('interests.photography_kw_drone'),
+                    $this->trans('interests.photography_kw_dslr'),
+                    $this->trans('interests.photography_kw_astro'),
+                ]
             ));
 
         return $builder;
@@ -93,82 +115,82 @@ abstract class BaseResume implements AbstractResume
             WorkTypes::IT->value => [
                 new Work(
                     name: 'Academic Work SA',
-                    position: 'Full-Stack Software Developer',
+                    position: $this->trans('work.academic_work.position'),
                     location: 'Lausanne',
                     url: new Url('https://www.academicwork.ch/'),
                     startDate: '2024-03-01',
                     endDate: '2025-12-31',
-                    summary: 'IT Consulting for diverse clients via Academic Work.',
+                    summary: $this->trans('work.academic_work.summary'),
                     highlights: [
-                        'Developed full-stack web applications using Vue (Nuxt.JS) & Backend in Python (Django) for the SIL in Lausanne.',
-                        'Built a React (Next.JS) application with GitHub Actions CI/CD, Docker containerization and automated deployments to Jelastic.',
+                        $this->trans('work.academic_work.highlight_1'),
+                        $this->trans('work.academic_work.highlight_2'),
                     ]
                 ),
                 // Antistatique
                 new Work(
                     name: 'Antistatique SA',
-                    position: 'Backend Software Engineer',
+                    position: $this->trans('work.antistatique.position'),
                     location: 'Lausanne',
                     url: new Url('https://antistatique.net/'),
                     startDate: '2021-10-31',
                     endDate: '2023-01-31',
-                    summary: 'From Junior to mid-level Software Engineer & highest skill jump !',
+                    summary: $this->trans('work.antistatique.summary'),
                     highlights: [
-                        'Developed and maintained enterprise Symfony 6 applications, using PHP 7.4/8.0, API Platform, Doctrine ORM, PostgreSQL and GitHub Actions.',
-                        'Involved as PHP Lead Developer for a client project in Symfony with 4 other devs.',
-                        'Built and maintained CMS-based solutions (Drupal, WordPress).',
-                        'Reduced GitHub Actions execution time by 75% through dependency caching and workflow optimization.',
-                        'Deployed projects to production using structured deployment processes.',
-                        'Led code reviews to improve maintainability and enforce development standards.',
-                        'Collaborated within a multidisciplinary development team using Scrum.',
-                        'Took technical responsibility for small to medium-sized projects.',
-                        'Managed and optimized local development environments using Docker and modern IDE tooling.',
-                        'Analyzed project requirements and contributed to technical estimations.',
+                        $this->trans('work.antistatique.highlight_1'),
+                        $this->trans('work.antistatique.highlight_2'),
+                        $this->trans('work.antistatique.highlight_3'),
+                        $this->trans('work.antistatique.highlight_4'),
+                        $this->trans('work.antistatique.highlight_5'),
+                        $this->trans('work.antistatique.highlight_6'),
+                        $this->trans('work.antistatique.highlight_7'),
+                        $this->trans('work.antistatique.highlight_8'),
+                        $this->trans('work.antistatique.highlight_9'),
+                        $this->trans('work.antistatique.highlight_10'),
                     ],
                 ),
                 // Consulting @ Berdoz Vision via Ilem
                 new Work(
                     name: 'Ilem Group',
-                    position: 'Junior Backend Software Engineer',
-                    location: 'Geneva & Ecublens',
+                    position: $this->trans('work.ilem.position'),
+                    location: $this->trans('location.geneva_ecublens'),
                     url: new Url('https://new.ilemgroup.com/'),
                     startDate: '2021-02-01',
                     endDate: '2021-10-31',
-                    summary: 'IT Consulting to an external client named Berdoz Vision & Audition.',
+                    summary: $this->trans('work.ilem.summary'),
                     highlights: [
-                        'Secured a custom highly critical ERP, migrated it to a newer PHP version and contributed to the development of its Laravel replacement.',
-                        'Configured a fleet of 44 iPads and set up CI servers to run complex test suites with Codeception and Cypress.',
-                        'Improved security and developed critical components of existing in-house CRM solution for multiple shops around Switzerland.',
-                        'Built internal tools for automated testing, monitoring, and deployment, while ensuring high-quality standards with Sentry.',
+                        $this->trans('work.ilem.highlight_1'),
+                        $this->trans('work.ilem.highlight_2'),
+                        $this->trans('work.ilem.highlight_3'),
+                        $this->trans('work.ilem.highlight_4'),
                     ],
                 ),
                 // --------- CARRER BREAK : Swiss Military School ---------------
                 // Apprenticeship.
                 new Work(
                     name: 'Liip AG',
-                    position: 'Apprentice Software Engineer',
+                    position: $this->trans('work.liip.position'),
                     location: 'Lausanne',
                     url: new Url('https://www.liip.ch'),
                     startDate: '2016-06-01',
                     endDate: '2020-06-30',
-                    summary: 'Started my IT career while studying 2 days per week at school.',
+                    summary: $this->trans('work.liip.summary'),
                     highlights: [
-                        'Developed and enhanced internal web applications using PHP and JavaScript.',
-                        'Collaborated within an Agile development team using Git and modern web development practices.',
-                        'Developed custom Moodle plugins with PHP 5.4.',
-                        'Used Scrum in an Holacratic environment.',
+                        $this->trans('work.liip.highlight_1'),
+                        $this->trans('work.liip.highlight_2'),
+                        $this->trans('work.liip.highlight_3'),
+                        $this->trans('work.liip.highlight_4'),
                     ],
                 ),
             ],
             WorkTypes::SECURITY->value => [
                 new Work(
                     name: 'Securitas AG',
-                    position: 'Security Agent',
+                    position: $this->trans('work.securitas.position'),
                     location: 'Lausanne',
                     url: new Url('https://www.securitas.ch'),
                     startDate: '2023-07-01',
                     endDate: '2024-03-31',
-                    summary: 'Part-time security agent in the event sector.'
+                    summary: $this->trans('work.securitas.summary')
                 ),
             ],
             WorkTypes::PILOT->value => [],
@@ -176,18 +198,18 @@ abstract class BaseResume implements AbstractResume
             WorkTypes::BREAKS->value => [
                 // 01.2026 | Studies & Job Search
                 new Work(
-                    name: 'Personal Break',
-                    position: 'Solo World Travel & Personal Development',
+                    name: $this->trans('work.break_travel.name'),
+                    position: $this->trans('work.break_travel.position'),
                     startDate: '2023-02-01',
                     endDate: '2023-06-30',
-                    summary: 'Planned career break: Solo travel and personal development.',
+                    summary: $this->trans('work.break_travel.summary'),
                 ),
                 new Work(
-                    name: 'Personal Break',
-                    position: 'Swiss Armed Forces',
+                    name: $this->trans('work.break_military.name'),
+                    position: $this->trans('work.break_military.position'),
                     startDate: '2020-07-01',
                     endDate: '2020-11-30',
-                    summary: 'Mandatory obligations.',
+                    summary: $this->trans('work.break_military.summary'),
                 ),
             ],
         ]);
@@ -197,9 +219,9 @@ abstract class BaseResume implements AbstractResume
     {
         $builder
             ->addEducation(new Education(
-                institution: 'Swiss Confederation | EPSIC @ Lausanne & CFPT @ Geneva',
+                institution: $this->trans('education.institution'),
                 url: new Url('https://www.bit.admin.ch/fr/informaticienne-cfc-developpement-applications'),
-                area: 'Federal VET Diploma in Information Technology (CFC)',
+                area: $this->trans('education.area'),
                 studyType: EducationLevel::HighSchool,
                 startDate: '2016-08-01',
                 endDate: '2020-06-31',
