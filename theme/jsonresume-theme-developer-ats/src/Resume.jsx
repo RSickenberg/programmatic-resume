@@ -39,8 +39,8 @@ export default function Resume ({ resume }) {
       <Summary summary={basics.summary} />
       <WorkExperience work={work} />
       <Skills skills={skills} />
-      <Projects projects={projects} />
       <Education education={education} />
+      <Projects projects={projects} />
       <Volunteer volunteer={volunteer} />
       <Awards awards={awards} />
       <Certificates certificates={certificates} />
