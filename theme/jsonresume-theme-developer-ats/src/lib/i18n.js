@@ -30,8 +30,14 @@ const SECTION_TITLES = {
 }
 
 const UI_STRINGS = {
-  en: { present: 'Present' },
-  fr: { present: 'Présent' },
+  en: {
+    present: 'Present',
+    coursework: 'Relevant Coursework',
+  },
+  fr: {
+    present: 'Présent',
+    coursework: 'Cours pertinents',
+  },
 }
 
 export function useSectionTitle (key) {
@@ -39,7 +45,11 @@ export function useSectionTitle (key) {
   return SECTION_TITLES[locale]?.[key] ?? SECTION_TITLES.en[key]
 }
 
-export function usePresentLabel () {
+export function useUiString (key) {
   const locale = useLocale()
-  return UI_STRINGS[locale]?.present ?? UI_STRINGS.en.present
+  return UI_STRINGS[locale]?.[key] ?? UI_STRINGS.en[key]
+}
+
+export function usePresentLabel () {
+  return useUiString('present')
 }
