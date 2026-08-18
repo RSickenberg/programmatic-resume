@@ -5,8 +5,8 @@
   "type": "module",
   "main": "./dist/index.js",
   "peerDependencies": {
-    "react": "^18.0.0 || ^19.0.0",
-    "react-dom": "^18.0.0 || ^19.0.0"
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "dependencies": {
     "@jsonresume/utils": "^0.2.2"
