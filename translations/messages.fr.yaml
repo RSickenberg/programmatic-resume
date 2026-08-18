@@ -74,8 +74,26 @@ work:
     summary: 'Obligations militaires.'
 
 education:
-  institution: 'Confédération suisse | EPSIC à Lausanne & CFPT à Genève'
+  institution: 'Confédération Suisse | EPSIC à Lausanne & CFPT à Genève'
   area: "Certificat fédéral de capacité (CFC) en informatique"
+  courses:
+    build_website: 'Publication de sites web'
+    data_modeling: 'Modélisation de données'
+    security_encryption: 'Codage, compression et systèmes de chiffrement'
+    oop_principles: 'Principes de programmation orientée objet'
+    gui_development: 'Interfaces graphiques pour applications'
+    automation_tasks: "Tâches d'automatisation"
+    scripting: 'Scripts et automatisation de procédures'
+    web_client_side: 'Développement web côté client'
+    interactive_web_pages: 'Pages web interactives'
+    oop_components: 'Conception de composants orientés objet'
+    data_structures_algorithms: 'Structures de données et algorithmes'
+    agile_methods: 'Développement logiciel agile'
+    sql_databases: 'Bases de données SQL'
+    session_handling: 'Gestion de sessions dans les applications web'
+    database_integration: 'Intégration de bases de données aux applications web'
+    deployment: "Déploiement d'applications"
+    app_security: 'Sécurité applicative'
 
 skills:
   backend_name: 'Backend'

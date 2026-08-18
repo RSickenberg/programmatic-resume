@@ -118,56 +118,30 @@
     ],
     "education": [
         {
-            "institution": "Conf\u00e9d\u00e9ration suisse | EPSIC \u00e0 Lausanne & CFPT \u00e0 Gen\u00e8ve",
+            "institution": "Conf\u00e9d\u00e9ration Suisse | EPSIC \u00e0 Lausanne & CFPT \u00e0 Gen\u00e8ve",
             "url": "https:\/\/www.bit.admin.ch\/fr\/informaticienne-cfc-developpement-applications",
             "area": "Certificat f\u00e9d\u00e9ral de capacit\u00e9 (CFC) en informatique",
-            "studyType": "High School",
             "startDate": "2016-08-01",
             "endDate": "2020-07-01",
             "score": "4.4",
             "courses": [
-                "100 - Prepare Data, distinguish and evaluate.",
-                "101 - Do and publish a web site.",
-                "104 - Data model implementations.",
-                "114 - Implement coding, compression and encryption systems.",
-                "117 - Establish the IT and network infrastructure of a small business.",
-                "123 - Activate server services.",
-                "253 - Visualize sensor signals.",
-                "301 - Apply office software tools.",
-                "302 - Use advanced Office functions.",
-                "304 - Install and configure a standalone computer.",
-                "305 - Install, configure and administer an operating system.",
-                "403 - Procedurally implement program workflows.",
-                "404 - Program according to object-oriented principles.",
-                "431 - Execute tasks autonomously in a professional environment.",
-                "120 - Implement graphical interfaces for applications.",
-                "121 - Develop automation tasks.",
-                "122 - Automate procedures using scripts.",
-                "129 - Commission network components.",
-                "213 - Develop team spirit.",
-                "214 - Instruct users on the proper use of IT resources.",
-                "226A - Implement object-oriented programming without inheritance.",
-                "226B - Implement object-oriented programming with inheritance.",
-                "242 - Develop applications for microcontrollers.",
-                "256 - Develop the client side of web applications.",
-                "307 - Develop interactive web pages.",
-                "318 - Analyze and program object-oriented components.",
-                "411 - Develop and apply data structures and algorithms.",
-                "426 - Develop software using agile methods.",
-                "105 - Work with a database using SQL.",
-                "133 - Develop web applications using session handling.",
-                "151 - Integrate databases into web applications.",
-                "306 - Carry out small projects in your own professional environment.",
-                "326 - Develop and implement object-oriented programming.",
-                "335 - Develop a mobile application.",
-                "150 - Adapt an e-commerce application.",
-                "152 - Integrate multimedia content into web applications.",
-                "153 - Develop data models.",
-                "154 - Organize the deployment of applications.",
-                "155 - Develop real-time procedures.",
-                "183 - Implement application security.",
-                "223 - Develop multi-user object-oriented applications.",
-                "254 - Describe business processes in your own professional environment."
+                "Publication de sites web",
+                "Mod\u00e9lisation de donn\u00e9es",
+                "Codage, compression et syst\u00e8mes de chiffrement",
+                "Principes de programmation orient\u00e9e objet",
+                "Interfaces graphiques pour applications",
+                "T\u00e2ches d'automatisation",
+                "Scripts et automatisation de proc\u00e9dures",
+                "D\u00e9veloppement web c\u00f4t\u00e9 client",
+                "Pages web interactives",
+                "Conception de composants orient\u00e9s objet",
+                "Structures de donn\u00e9es et algorithmes",
+                "D\u00e9veloppement logiciel agile",
+                "Bases de donn\u00e9es SQL",
+                "Gestion de sessions dans les applications web",
+                "Int\u00e9gration de bases de donn\u00e9es aux applications web",
+                "D\u00e9ploiement d'applications",
+                "S\u00e9curit\u00e9 applicative"
             ]
         }
     ],
@@ -188,8 +162,7 @@
                 "Python",
                 "Node.js",
                 "C#",
-                "Java",
-                "..."
+                "Java"
             ]
         },
         {
@@ -197,19 +170,17 @@
             "level": "Expert",
             "keywords": [
                 "TypeScript & JavaScript",
-                "React, Next.js, Nuxt.js, Node, NPM & Bun",
+                "React, Next.js, Nuxt.js, NPM & Bun",
                 "HTML5 & CSS, Sass",
                 "Tailwind CSS",
-                "Alpine.js",
-                "..."
+                "Alpine.js"
             ]
         },
         {
             "name": "Bas niveau",
             "level": "Expert",
             "keywords": [
-                "Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)",
-                "..."
+                "Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)"
             ]
         },
         {
@@ -220,8 +191,7 @@
                 "MySQL",
                 "MariaDB",
                 "Prisma \/ Supabase",
-                "Redis",
-                "..."
+                "Redis"
             ]
         },
         {
@@ -235,8 +205,7 @@
                 "Apache & Nginx",
                 "Google Cloud Platform (GCP)",
                 "AWS",
-                "Serverless",
-                "..."
+                "Serverless"
             ]
         },
         {
@@ -248,8 +217,7 @@
                 "Jira, Confluence & Scrum",
                 "Rest APIs",
                 "Sentry",
-                "Bash",
-                "..."
+                "Bash"
             ]
         }
     ],
