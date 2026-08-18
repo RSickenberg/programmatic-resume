@@ -100,7 +100,6 @@ final class BackendDev extends BaseResume
                         'Node.js',
                         'C#',
                         'Java',
-                        '...',
                     ]
                 )
             )
@@ -114,7 +113,6 @@ final class BackendDev extends BaseResume
                         'HTML5 & CSS, Sass',
                         'Tailwind CSS',
                         'Alpine.js',
-                        '...',
                     ]
                 )
             )
@@ -124,7 +122,6 @@ final class BackendDev extends BaseResume
                     level: SkillLevel::Expert,
                     keywords: [
                         'Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)',
-                        '...',
                     ]
                 )
             )
@@ -138,7 +135,6 @@ final class BackendDev extends BaseResume
                         'MariaDB',
                         'Prisma / Supabase',
                         'Redis',
-                        '...',
                     ]
                 )
             )
@@ -155,7 +151,6 @@ final class BackendDev extends BaseResume
                         'Google Cloud Platform (GCP)',
                         'AWS',
                         'Serverless',
-                        '...',
                     ]
                 )
             )
@@ -170,7 +165,6 @@ final class BackendDev extends BaseResume
                         'Rest APIs',
                         'Sentry',
                         'Bash',
-                        '...',
                     ]
                 )
             );

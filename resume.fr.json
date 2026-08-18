@@ -162,8 +162,7 @@
                 "Python",
                 "Node.js",
                 "C#",
-                "Java",
-                "..."
+                "Java"
             ]
         },
         {
@@ -174,16 +173,14 @@
                 "React, Next.js, Nuxt.js, NPM & Bun",
                 "HTML5 & CSS, Sass",
                 "Tailwind CSS",
-                "Alpine.js",
-                "..."
+                "Alpine.js"
             ]
         },
         {
             "name": "Bas niveau",
             "level": "Expert",
             "keywords": [
-                "Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)",
-                "..."
+                "Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)"
             ]
         },
         {
@@ -194,8 +191,7 @@
                 "MySQL",
                 "MariaDB",
                 "Prisma \/ Supabase",
-                "Redis",
-                "..."
+                "Redis"
             ]
         },
         {
@@ -209,8 +205,7 @@
                 "Apache & Nginx",
                 "Google Cloud Platform (GCP)",
                 "AWS",
-                "Serverless",
-                "..."
+                "Serverless"
             ]
         },
         {
@@ -222,8 +217,7 @@
                 "Jira, Confluence & Scrum",
                 "Rest APIs",
                 "Sentry",
-                "Bash",
-                "..."
+                "Bash"
             ]
         }
     ],
