@@ -45,9 +45,16 @@
     color: inherit;
   }
 
+  /*
+   * Padding on the page element only applies at the very start/end of the
+   * flow, not on every page fragment — a forced page break would otherwise
+   * land content flush against the physical page edge. @page margin repeats
+   * on every printed page, so print spacing lives here instead of on the
+   * element (see Resume.jsx's print:p-0).
+   */
   @page {
     size: A4;
-    margin: 0;
+    margin: 14mm 16mm;
   }
 
   @media print {

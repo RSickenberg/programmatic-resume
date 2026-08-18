@@ -19,7 +19,7 @@ export default function Header ({ basics = {} }) {
         {phone && <Link href={`tel:${phone}`} underline={false}>{phone}</Link>}
         {url && <Link href={url} underline={false}>{displayUrl(url)}</Link>}
         {profiles.filter((profile) => profile.url).map((profile, index) => (
-          <Link key={index} href={profile.url} underline={false}>{profile.network || profile.username}</Link>
+          <Link key={index} href={profile.url} underline={false}>{displayUrl(profile.url)}</Link>
         ))}
       </div>
     </header>

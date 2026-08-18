@@ -13,4 +13,4 @@ help: ## Outputs this help screen
 backend:
 	@cd theme/jsonresume-theme-developer-ats && $(BUN_EXEC) run build
 	@$(BUN_EXEC) i
-	@$(PHP_EXEC) entrypoint.php > resume.json && bunx resuml render -t jsonresume-theme-developer-ats -r resume.json
+	@$(PHP_EXEC) entrypoint.php backend-dev > resume.json && bunx resuml render -t jsonresume-theme-developer-ats -r resume.json && bunx resuml pdf -t jsonresume-theme-developer-ats -r resume.json

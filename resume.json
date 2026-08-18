@@ -6,7 +6,7 @@
         "email": "r.sickenberg@gmail.com",
         "phone": "+41 78 907 32 02",
         "url": "https:\/\/rsickenberg.me",
-        "summary": "Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker. \n\n Hands-on experience in CI\/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects.",
+        "summary": "Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker. \n Hands-on experience in CI\/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects. \n Work authorization: Swiss Citizen. Available now.",
         "location": {
             "address": "Chemin de la creuse 6",
             "postalCode": "1027",
@@ -51,6 +51,13 @@
             "summary": "Part-time security agent for Securitas in the event sector."
         },
         {
+            "name": "Personal Break",
+            "position": "Solo World Travel & Personal Development",
+            "startDate": "2023-01-31",
+            "endDate": "2023-07-01",
+            "summary": "Planned career break: Solo travel and personal development."
+        },
+        {
             "name": "Antistatique SA",
             "position": "Backend Software Engineer",
             "location": "Lausanne",
@@ -85,6 +92,13 @@
                 "Improved security and developed critical components of existing in-house CRM solution for multiple shops around Switzerland.",
                 "Built internal tools for automated testing, monitoring, and deployment, while ensuring high-quality standards with Sentry."
             ]
+        },
+        {
+            "name": "Personal Break",
+            "position": "Swiss Armed Forces",
+            "startDate": "2020-07-01",
+            "endDate": "2020-12-01",
+            "summary": "Mandatory obligations."
         },
         {
             "name": "Liip AG",

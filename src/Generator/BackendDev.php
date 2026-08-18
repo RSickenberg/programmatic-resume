@@ -10,6 +10,7 @@ use JustSteveKing\Resume\DataObjects\Award;
 use JustSteveKing\Resume\DataObjects\Basics;
 use JustSteveKing\Resume\DataObjects\Profile;
 use JustSteveKing\Resume\DataObjects\Project;
+use JustSteveKing\Resume\DataObjects\Resume;
 use JustSteveKing\Resume\DataObjects\Skill;
 use JustSteveKing\Resume\DataObjects\Work;
 use JustSteveKing\Resume\Enums\Network;
@@ -24,12 +25,10 @@ final class BackendDev extends BaseResume
     private const WorkTypes RELATED_TYPE = WorkTypes::IT;
 
     private const bool ADD_ALL_WORK_EXPERIENCES = true;
+    private const bool ADD_CAREER_BRAKES = true;
 
-    /**
-     * @throws \JsonException | \RuntimeException
-     */
     #[\Override]
-    public function __invoke(): void
+    public function __invoke(): Resume
     {
         /** @var ResumeBuilder $resume */
         $resume = new ResumeBuilder()
@@ -42,13 +41,7 @@ final class BackendDev extends BaseResume
             |> $this->addInterests(...)
             |> $this->addProjects(...);
 
-        $resume = $resume->build();
-
-        if (!$resume->validate()) {
-            throw new \RuntimeException('Resume validation failed');
-        }
-
-        echo json_encode($resume, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT);
+        return $resume->build();
     }
 
     #[\Override]
@@ -73,7 +66,10 @@ final class BackendDev extends BaseResume
         /** @var \JustSteveKing\Resume\DataObjects\Work[] $experiences */
         $experiences = [];
         foreach ($experiencesBySector as $field => $sectorExperiences) {
-            if (! self::ADD_ALL_WORK_EXPERIENCES && $field !== self::RELATED_TYPE->value) {
+            if (!self::ADD_ALL_WORK_EXPERIENCES && $field !== self::RELATED_TYPE->value) {
+                continue;
+            }
+            if (!self::ADD_CAREER_BRAKES && $field === WorkTypes::BREAKS->value) {
                 continue;
             }
 
@@ -82,7 +78,7 @@ final class BackendDev extends BaseResume
 
         usort(
             $experiences,
-            static fn (Work $a, Work $b): int => ($b->startDate) <=> ($a->startDate),
+            static fn(Work $a, Work $b): int => ($b->startDate) <=> ($a->startDate),
         );
 
         foreach ($experiences as $experience) {
@@ -105,7 +101,7 @@ final class BackendDev extends BaseResume
                         'Node.js',
                         'C#',
                         'Java',
-                        '...'
+                        '...',
                     ]
                 )
             )
@@ -119,7 +115,7 @@ final class BackendDev extends BaseResume
                         'HTML5 & CSS5, Sass',
                         'Tailwind CSS',
                         'Alpine.js',
-                        '...'
+                        '...',
                     ]
                 )
             )
@@ -129,7 +125,7 @@ final class BackendDev extends BaseResume
                     level: SkillLevel::Expert,
                     keywords: [
                         'Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)',
-                        '...'
+                        '...',
                     ]
                 )
             )
@@ -143,7 +139,7 @@ final class BackendDev extends BaseResume
                         'MariaDB',
                         'Prisma / Supabase',
                         'Redis',
-                        '...'
+                        '...',
                     ]
                 )
             )
@@ -160,7 +156,7 @@ final class BackendDev extends BaseResume
                         'Google Cloud Platform (GCP)',
                         'AWS',
                         'Serverless',
-                        '...'
+                        '...',
                     ]
                 )
             )
@@ -175,7 +171,7 @@ final class BackendDev extends BaseResume
                         'Rest APIs',
                         'Sentry',
                         'Bash',
-                        '...'
+                        '...',
                     ]
                 )
             );
@@ -198,7 +194,7 @@ final class BackendDev extends BaseResume
 
     protected function getSummary(): string
     {
-        return "Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker. \n\n Hands-on experience in CI/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects.";
+        return "Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker. \n Hands-on experience in CI/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects. \n Work authorization: Swiss Citizen. Available now.";
     }
 
     protected function getRelatedProfiles(): array

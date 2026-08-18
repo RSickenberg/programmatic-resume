@@ -3,13 +3,14 @@
     "description": "Programmatic resume writen in PHP",
     "type": "project",
     "config": {
-        "source-fallback": true,
+        "source-fallback": false,
         "optimize-autoloader": true
     },
     "require": {
         "php": "^8.5",
         "juststeveking/resume-php": "^1.0",
-        "doctrine/collections": "*"
+        "doctrine/collections": "*",
+        "symfony/console": "^8.1"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.95"

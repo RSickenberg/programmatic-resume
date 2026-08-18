@@ -12,6 +12,7 @@ use JustSteveKing\Resume\DataObjects\Education;
 use JustSteveKing\Resume\DataObjects\Interest;
 use JustSteveKing\Resume\DataObjects\Language;
 use JustSteveKing\Resume\DataObjects\Location;
+use JustSteveKing\Resume\DataObjects\Resume;
 use JustSteveKing\Resume\DataObjects\Work;
 use JustSteveKing\Resume\Enums\EducationLevel;
 use JustSteveKing\Resume\ValueObjects\Url;
@@ -24,7 +25,7 @@ abstract class BaseResume implements AbstractResume
     public const string PHONE = '+41 78 907 32 02';
     public const string LINKEDIN_URL = 'https://linkedin.com/in/a320rsck';
 
-    public function __invoke(): void
+    public function __invoke(): Resume
     {
         throw new \RuntimeException(\sprintf('Cannot invoke %s resume on its own.', __FUNCTION__));
     }
@@ -174,8 +175,20 @@ abstract class BaseResume implements AbstractResume
             WorkTypes::MISC->value => [],
             WorkTypes::BREAKS->value => [
                 // 01.2026 | Studies & Job Search
-                // 01.2023 - 07.2023 | SOLO WORLD TRAVEL AND PERSONAL DEVELOPMENT
-                // 06.2020 - 11.2020 | SWISS ARMED FORCES
+                new Work(
+                    name: 'Personal Break',
+                    position: 'Solo World Travel & Personal Development',
+                    startDate: '2023-01-31',
+                    endDate: '2023-07-01',
+                    summary: 'Planned career break: Solo travel and personal development.',
+                ),
+                new Work(
+                    name: 'Personal Break',
+                    position: 'Swiss Armed Forces',
+                    startDate: '2020-06-31',
+                    endDate: '2020-11-31',
+                    summary: 'Mandatory obligations.',
+                ),
             ],
         ]);
     }

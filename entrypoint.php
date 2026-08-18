@@ -3,12 +3,16 @@
 declare(strict_types=1);
 
 namespace Romainsickenberg\ProgrammaticResume;
-use Romainsickenberg\ProgrammaticResume\Generator\BackendDev;
+
+use Romainsickenberg\ProgrammaticResume\Console\GenerateResumeCommand;
+use Symfony\Component\Console\Application;
 
 require __DIR__ . '/vendor/autoload.php';
 
-try {
-    new BackendDev()();
-} catch (\JsonException $e) {
-    throw new \RuntimeException('Could not read backend dev json: ' . $e->getMessage());
-}
+$command = new GenerateResumeCommand();
+
+$application = new Application('programmatic-resume');
+$application->addCommand($command);
+$application->setDefaultCommand($command->getName(), true);
+
+exit($application->run());

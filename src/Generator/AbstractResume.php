@@ -6,10 +6,15 @@ namespace Romainsickenberg\ProgrammaticResume\Generator;
 
 use JustSteveKing\Resume\Builders\ResumeBuilder;
 use JustSteveKing\Resume\DataObjects\Basics;
+use JustSteveKing\Resume\DataObjects\Resume;
 
 interface AbstractResume
 {
-    public function __invoke();
+    /**
+     * Build the résumé. Callers (the console command) are responsible for
+     * validating and encoding the result.
+     */
+    public function __invoke(): Resume;
 
     public function basics(): Basics;
 
