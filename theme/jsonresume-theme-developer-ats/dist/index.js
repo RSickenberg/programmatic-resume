@@ -1,0 +1,550 @@
+import { renderToStaticMarkup } from "react-dom/server";
+import { jsx, jsxs } from "react/jsx-runtime";
+//#region node_modules/@jsonresume/utils/src/url.js
+/**
+* URL safety utilities for JSON Resume.
+*
+* Framework-free. Prevents XSS attacks and ensures safe URL handling.
+*
+* @module @jsonresume/utils/url
+*/
+/**
+* Sanitizes URLs to prevent XSS attacks
+* - Blocks javascript:, data:, vbscript: schemes
+* - Allows http:, https:, mailto:, tel: schemes
+* - Returns null for invalid/dangerous URLs
+*
+* @param {string} url - The URL to sanitize
+* @returns {string|null} - Safe URL or null if dangerous
+*
+* @example
+* safeUrl('https://example.com') // 'https://example.com'
+* safeUrl('javascript:alert(1)') // null
+* safeUrl('mailto:user@example.com') // 'mailto:user@example.com'
+*/
+function safeUrl(url) {
+	if (!url || typeof url !== "string") return null;
+	const trimmed = url.trim();
+	if (/^(javascript|data|vbscript|file|about):/i.test(trimmed)) return null;
+	if (/^(https?|mailto|tel|sms|ftp):/i.test(trimmed)) return trimmed;
+	if (trimmed.startsWith("/") || trimmed.startsWith(".")) return trimmed;
+	if (/^www\./i.test(trimmed)) return `https://${trimmed}`;
+	if (/^[a-z0-9][a-z0-9.-]+\.[a-z]{2,}$/i.test(trimmed)) return `https://${trimmed}`;
+	return trimmed;
+}
+/**
+* Returns proper rel attribute for external links
+* Adds security attributes for links opening in new windows
+*
+* @param {string} url - The URL to check
+* @param {boolean} [openInNewTab=false] - Whether link opens in new tab
+* @returns {string} - rel attribute value
+*
+* @example
+* getLinkRel('https://example.com', true) // 'noopener noreferrer'
+* getLinkRel('mailto:user@example.com', false) // ''
+*/
+function getLinkRel(url, openInNewTab = false) {
+	if (!url || typeof url !== "string") return "";
+	if (openInNewTab && /^https?:/i.test(url)) return "noopener noreferrer";
+	return "";
+}
+//#endregion
+//#region node_modules/@jsonresume/utils/src/dates.js
+/**
+* Pure date utilities for JSON Resume.
+*
+* Framework-free: no React, no styled-components. The styled DateRange /
+* RelativeDate components in @jsonresume/core import these functions back.
+*
+* @module @jsonresume/utils/dates
+*/
+/**
+* Date formatting utility with Intl.DateTimeFormat
+* Formats date ranges for work/education experience with full locale support
+*
+* @param {Object} options - DateRange options
+* @param {string|Date} options.startDate - Start date (ISO string or Date object)
+* @param {string|Date} [options.endDate] - End date (ISO string, Date object, or null/undefined for "Present")
+* @param {string} [options.format='short'] - Format style: 'short' (default), 'long', 'numeric'
+* @param {string} [options.locale='en-US'] - BCP 47 locale (e.g., 'en-US', 'fr-FR', 'ar-SA')
+* @param {string} [options.numberingSystem] - Numbering system (e.g., 'arab', 'latn', 'hanidec')
+* @param {string} [options.presentLabel] - Custom label for present/ongoing (defaults to localized)
+* @returns {string} Formatted date range
+*
+* @example
+* formatDateRange({ startDate: '2020-01-15', endDate: null })
+* // 'Jan 2020 - Present'
+*
+* @example
+* formatDateRange({
+*   startDate: '2020-01-15',
+*   locale: 'fr-FR',
+*   format: 'long'
+* })
+* // 'janvier 2020 - Présent'
+*
+* @example
+* formatDateRange({
+*   startDate: '2020-01-15',
+*   locale: 'ar-SA',
+*   numberingSystem: 'arab'
+* })
+* // With Arabic numerals
+*/
+function formatDateRange({ startDate, endDate, format = "short", locale = "en-US", numberingSystem, presentLabel }) {
+	if (!startDate) return "";
+	const getPresentLabel = () => {
+		if (presentLabel) return presentLabel;
+		const labels = {
+			en: "Present",
+			"en-US": "Present",
+			"en-GB": "Present",
+			fr: "Présent",
+			"fr-FR": "Présent",
+			es: "Presente",
+			"es-ES": "Presente",
+			de: "Heute",
+			"de-DE": "Heute",
+			it: "Presente",
+			"it-IT": "Presente",
+			pt: "Presente",
+			"pt-BR": "Presente",
+			ja: "現在",
+			"ja-JP": "現在",
+			zh: "至今",
+			"zh-CN": "至今",
+			"zh-TW": "至今",
+			ko: "현재",
+			"ko-KR": "현재",
+			ar: "حاضر",
+			"ar-SA": "حاضر"
+		};
+		return labels[locale] || labels[locale.split("-")[0]] || "Present";
+	};
+	const formatDate = (dateStr) => {
+		if (!dateStr) return getPresentLabel();
+		const isDateOnlyIso = typeof dateStr === "string" && /^\d{4}(-\d{2}){0,2}$/.test(dateStr);
+		const date = typeof dateStr === "string" ? new Date(dateStr) : dateStr;
+		if (isNaN(date.getTime())) return dateStr;
+		const options = {
+			...{
+				short: { month: "short" },
+				long: { month: "long" },
+				numeric: { month: "2-digit" }
+			}[format],
+			year: "numeric"
+		};
+		if (isDateOnlyIso) options.timeZone = "UTC";
+		if (numberingSystem) options.numberingSystem = numberingSystem;
+		return new Intl.DateTimeFormat(locale, options).format(date);
+	};
+	const start = formatDate(startDate);
+	if (endDate === void 0) return start;
+	return `${start} - ${formatDate(endDate)}`;
+}
+//#endregion
+//#region src/lib/format.js
+function displayUrl(url) {
+	return url.replace(/^https?:\/\//, "").replace(/\/$/, "");
+}
+function formatLocation(location = {}) {
+	return [
+		location.city,
+		location.region,
+		location.countryCode
+	].filter(Boolean).join(", ");
+}
+function cx(...classes) {
+	return classes.filter(Boolean).join(" ");
+}
+//#endregion
+//#region src/components/Link.jsx
+function Link({ href, children, className, underline = true, ...rest }) {
+	const safeHref = safeUrl(href);
+	if (!safeHref) return /* @__PURE__ */ jsx("span", {
+		className,
+		children
+	});
+	const isExternal = /^https?:/i.test(safeHref);
+	return /* @__PURE__ */ jsx("a", {
+		href: safeHref,
+		className: cx("text-accent", underline && "underline decoration-accent/30 underline-offset-2 hover:decoration-accent print:decoration-ink/40", className),
+		...isExternal ? {
+			target: "_blank",
+			rel: getLinkRel(safeHref, true)
+		} : {},
+		...rest,
+		children
+	});
+}
+//#endregion
+//#region src/components/Header.jsx
+function Header({ basics = {} }) {
+	const { name, label, email, phone, url, location, profiles = [] } = basics;
+	const locationStr = formatLocation(location);
+	return /* @__PURE__ */ jsxs("header", {
+		className: "mb-6 border-b border-border pb-4",
+		children: [
+			name && /* @__PURE__ */ jsx("h1", {
+				className: "font-mono text-[26pt] font-bold leading-none tracking-tight text-ink",
+				children: name
+			}),
+			label && /* @__PURE__ */ jsx("p", {
+				className: "mt-1.5 font-mono text-[12pt] font-semibold text-accent",
+				children: label
+			}),
+			/* @__PURE__ */ jsxs("div", {
+				className: "mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[9pt] text-muted",
+				children: [
+					locationStr && /* @__PURE__ */ jsx("span", { children: locationStr }),
+					email && /* @__PURE__ */ jsx(Link, {
+						href: `mailto:${email}`,
+						underline: false,
+						children: email
+					}),
+					phone && /* @__PURE__ */ jsx(Link, {
+						href: `tel:${phone}`,
+						underline: false,
+						children: phone
+					}),
+					url && /* @__PURE__ */ jsx(Link, {
+						href: url,
+						underline: false,
+						children: displayUrl(url)
+					}),
+					profiles.filter((profile) => profile.url).map((profile, index) => /* @__PURE__ */ jsx(Link, {
+						href: profile.url,
+						underline: false,
+						children: profile.network || profile.username
+					}, index))
+				]
+			})
+		]
+	});
+}
+//#endregion
+//#region src/components/Summary.jsx
+function Summary({ summary }) {
+	if (!summary) return null;
+	return /* @__PURE__ */ jsx("section", {
+		className: "mb-6 print:break-inside-avoid",
+		children: /* @__PURE__ */ jsx("p", {
+			className: "text-[10pt] leading-relaxed whitespace-pre-line text-ink/80",
+			children: summary
+		})
+	});
+}
+//#endregion
+//#region src/components/Section.jsx
+function Section({ title, children, className }) {
+	return /* @__PURE__ */ jsxs("section", {
+		className: cx("mb-6 last:mb-0", className),
+		children: [/* @__PURE__ */ jsx("h2", {
+			className: "mb-3 border-b-2 border-accent pb-1 font-mono text-[11pt] font-bold uppercase tracking-widest text-muted print:break-after-avoid",
+			children: title
+		}), children]
+	});
+}
+//#endregion
+//#region src/components/HighlightList.jsx
+function HighlightList({ items }) {
+	if (!items || items.length === 0) return null;
+	return /* @__PURE__ */ jsx("ul", {
+		className: "mt-2 list-outside list-disc space-y-1 pl-4 marker:text-accent",
+		children: items.map((item, index) => /* @__PURE__ */ jsx("li", {
+			className: "pl-0.5 text-[10pt] leading-relaxed text-ink/80",
+			children: item
+		}, index))
+	});
+}
+//#endregion
+//#region src/components/Entry.jsx
+function Entry({ title, titleHref, meta, subtitle, description, highlights, className }) {
+	return /* @__PURE__ */ jsxs("article", {
+		className: cx("mb-3 border-b border-border pb-3 last:mb-0 last:border-b-0 last:pb-0 print:break-inside-avoid", className),
+		children: [
+			/* @__PURE__ */ jsxs("div", {
+				className: "flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1",
+				children: [/* @__PURE__ */ jsx("h3", {
+					className: "font-mono text-[12pt] font-semibold text-ink",
+					children: titleHref ? /* @__PURE__ */ jsx(Link, {
+						href: titleHref,
+						underline: false,
+						children: title
+					}) : title
+				}), meta]
+			}),
+			subtitle && /* @__PURE__ */ jsx("p", {
+				className: "mt-0.5 text-[10pt] font-semibold text-subaccent",
+				children: subtitle
+			}),
+			description && /* @__PURE__ */ jsx("p", {
+				className: "mt-2 text-[10pt] leading-relaxed text-ink/80",
+				children: description
+			}),
+			/* @__PURE__ */ jsx(HighlightList, { items: highlights })
+		]
+	});
+}
+//#endregion
+//#region src/components/DateRange.jsx
+function DateRange({ startDate, endDate, className }) {
+	const formatted = formatDateRange({
+		startDate,
+		endDate
+	});
+	if (!formatted) return null;
+	return /* @__PURE__ */ jsx("span", {
+		className: cx("whitespace-nowrap font-mono text-[8.5pt] font-medium text-subtle", className),
+		children: formatted
+	});
+}
+//#endregion
+//#region src/components/WorkExperience.jsx
+function WorkExperience({ work = [] }) {
+	if (work.length === 0) return null;
+	return /* @__PURE__ */ jsx(Section, {
+		title: "Experience",
+		children: work.map((job, index) => /* @__PURE__ */ jsx(Entry, {
+			title: job.position || job.name,
+			subtitle: job.name,
+			meta: /* @__PURE__ */ jsx(DateRange, {
+				startDate: job.startDate,
+				endDate: job.endDate
+			}),
+			description: job.summary,
+			highlights: job.highlights
+		}, index))
+	});
+}
+//#endregion
+//#region src/components/Skills.jsx
+function Skills({ skills = [] }) {
+	if (skills.length === 0) return null;
+	return /* @__PURE__ */ jsx(Section, {
+		title: "Skills",
+		children: /* @__PURE__ */ jsx("div", {
+			className: "grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2",
+			children: skills.map((skill, index) => /* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("h3", {
+				className: "mb-1.5 font-mono text-[9pt] font-bold uppercase tracking-wider text-accent",
+				children: skill.name
+			}), skill.keywords && skill.keywords.length > 0 && /* @__PURE__ */ jsx("p", {
+				className: "rounded border-l-2 border-accent bg-surface px-3 py-2 font-mono text-[9pt] leading-relaxed text-muted",
+				children: skill.keywords.join(", ")
+			})] }, index))
+		})
+	});
+}
+//#endregion
+//#region src/components/Projects.jsx
+function Projects({ projects = [] }) {
+	if (projects.length === 0) return null;
+	return /* @__PURE__ */ jsx(Section, {
+		title: "Projects",
+		children: projects.map((project, index) => /* @__PURE__ */ jsx(Entry, {
+			title: project.name,
+			titleHref: project.url,
+			meta: (project.startDate || project.endDate) && /* @__PURE__ */ jsx(DateRange, {
+				startDate: project.startDate,
+				endDate: project.endDate
+			}),
+			description: project.description,
+			highlights: project.highlights
+		}, index))
+	});
+}
+//#endregion
+//#region src/components/Education.jsx
+function Education({ education = [] }) {
+	if (education.length === 0) return null;
+	return /* @__PURE__ */ jsx(Section, {
+		title: "Education",
+		children: education.map((edu, index) => /* @__PURE__ */ jsx(Entry, {
+			title: edu.institution,
+			titleHref: edu.url,
+			subtitle: edu.studyType && edu.area ? `${edu.studyType} in ${edu.area}` : edu.studyType || edu.area,
+			meta: /* @__PURE__ */ jsx(DateRange, {
+				startDate: edu.startDate,
+				endDate: edu.endDate
+			}),
+			description: edu.score ? `GPA: ${edu.score}` : void 0
+		}, index))
+	});
+}
+//#endregion
+//#region src/components/Volunteer.jsx
+function Volunteer({ volunteer = [] }) {
+	if (volunteer.length === 0) return null;
+	return /* @__PURE__ */ jsx(Section, {
+		title: "Volunteer",
+		children: volunteer.map((vol, index) => /* @__PURE__ */ jsx(Entry, {
+			title: vol.position,
+			subtitle: vol.organization,
+			meta: /* @__PURE__ */ jsx(DateRange, {
+				startDate: vol.startDate,
+				endDate: vol.endDate
+			}),
+			description: vol.summary,
+			highlights: vol.highlights
+		}, index))
+	});
+}
+//#endregion
+//#region src/components/SimpleList.jsx
+function SimpleList({ children }) {
+	return /* @__PURE__ */ jsx("div", {
+		className: "grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 print:grid-cols-1 print:gap-y-3",
+		children
+	});
+}
+//#endregion
+//#region src/components/SimpleItem.jsx
+function SimpleItem({ label, labelHref, meta, date, keywords }) {
+	return /* @__PURE__ */ jsxs("div", {
+		className: "border-b border-border pb-3 last:border-b-0 last:pb-0 print:break-inside-avoid",
+		children: [
+			/* @__PURE__ */ jsxs("p", {
+				className: "text-[10pt] leading-relaxed text-ink/80",
+				children: [/* @__PURE__ */ jsx("span", {
+					className: "font-semibold text-ink",
+					children: labelHref ? /* @__PURE__ */ jsx(Link, {
+						href: labelHref,
+						children: label
+					}) : label
+				}), meta && /* @__PURE__ */ jsxs("span", { children: [" — ", meta] })]
+			}),
+			date && /* @__PURE__ */ jsx("p", {
+				className: "mt-1 font-mono text-[8.5pt] text-subtle",
+				children: date
+			}),
+			keywords && keywords.length > 0 && /* @__PURE__ */ jsx("ul", {
+				className: "mt-1.5 flex flex-wrap gap-1.5",
+				children: keywords.map((keyword, index) => /* @__PURE__ */ jsx("li", {
+					className: "rounded-full border border-border px-2 py-0.5 font-mono text-[8pt] text-muted",
+					children: keyword
+				}, index))
+			})
+		]
+	});
+}
+//#endregion
+//#region src/components/Awards.jsx
+function Awards({ awards = [] }) {
+	if (awards.length === 0) return null;
+	return /* @__PURE__ */ jsx(Section, {
+		title: "Awards",
+		children: /* @__PURE__ */ jsx(SimpleList, { children: awards.map((award, index) => /* @__PURE__ */ jsx(SimpleItem, {
+			label: award.title,
+			meta: award.awarder,
+			date: award.date
+		}, index)) })
+	});
+}
+//#endregion
+//#region src/components/Certificates.jsx
+function Certificates({ certificates = [] }) {
+	if (certificates.length === 0) return null;
+	return /* @__PURE__ */ jsx(Section, {
+		title: "Certificates",
+		children: /* @__PURE__ */ jsx(SimpleList, { children: certificates.map((cert, index) => /* @__PURE__ */ jsx(SimpleItem, {
+			label: cert.name,
+			labelHref: cert.url,
+			meta: cert.issuer,
+			date: cert.date
+		}, index)) })
+	});
+}
+//#endregion
+//#region src/components/Publications.jsx
+function Publications({ publications = [] }) {
+	if (publications.length === 0) return null;
+	return /* @__PURE__ */ jsx(Section, {
+		title: "Publications",
+		children: /* @__PURE__ */ jsx(SimpleList, { children: publications.map((pub, index) => /* @__PURE__ */ jsx(SimpleItem, {
+			label: pub.name,
+			labelHref: pub.url,
+			meta: pub.publisher,
+			date: pub.releaseDate
+		}, index)) })
+	});
+}
+//#endregion
+//#region src/components/Languages.jsx
+function Languages({ languages = [] }) {
+	if (languages.length === 0) return null;
+	return /* @__PURE__ */ jsx(Section, {
+		title: "Languages",
+		children: /* @__PURE__ */ jsx(SimpleList, { children: languages.map((lang, index) => /* @__PURE__ */ jsx(SimpleItem, {
+			label: lang.language,
+			meta: lang.fluency
+		}, index)) })
+	});
+}
+//#endregion
+//#region src/components/Interests.jsx
+function Interests({ interests = [] }) {
+	if (interests.length === 0) return null;
+	return /* @__PURE__ */ jsx(Section, {
+		title: "Interests",
+		children: /* @__PURE__ */ jsx(SimpleList, { children: interests.map((interest, index) => /* @__PURE__ */ jsx(SimpleItem, {
+			label: interest.name,
+			keywords: interest.keywords
+		}, index)) })
+	});
+}
+//#endregion
+//#region src/components/References.jsx
+function References({ references = [] }) {
+	if (references.length === 0) return null;
+	return /* @__PURE__ */ jsx(Section, {
+		title: "References",
+		children: references.map((ref, index) => /* @__PURE__ */ jsx(Entry, {
+			title: ref.name,
+			description: ref.reference
+		}, index))
+	});
+}
+//#endregion
+//#region src/Resume.jsx
+function Resume({ resume }) {
+	const { basics = {}, work = [], education = [], skills = [], projects = [], volunteer = [], awards = [], certificates = [], publications = [], languages = [], interests = [], references = [] } = resume;
+	return /* @__PURE__ */ jsxs("main", {
+		className: ["mx-auto w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] font-sans text-[10pt] leading-[1.5] text-ink shadow-lg", "print:m-0 print:w-auto print:min-h-0 print:shadow-none"].join(" "),
+		children: [
+			/* @__PURE__ */ jsx(Header, { basics }),
+			/* @__PURE__ */ jsx(Summary, { summary: basics.summary }),
+			/* @__PURE__ */ jsx(WorkExperience, { work }),
+			/* @__PURE__ */ jsx(Skills, { skills }),
+			/* @__PURE__ */ jsx(Projects, { projects }),
+			/* @__PURE__ */ jsx(Education, { education }),
+			/* @__PURE__ */ jsx(Volunteer, { volunteer }),
+			/* @__PURE__ */ jsx(Awards, { awards }),
+			/* @__PURE__ */ jsx(Certificates, { certificates }),
+			/* @__PURE__ */ jsx(Publications, { publications }),
+			/* @__PURE__ */ jsx(Languages, { languages }),
+			/* @__PURE__ */ jsx(Interests, { interests }),
+			/* @__PURE__ */ jsx(References, { references })
+		]
+	});
+}
+//#endregion
+//#region src/generated/tailwind.css?raw
+var tailwind_default = "/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */\n@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-space-y-reverse:0;--tw-border-style:solid;--tw-leading:initial;--tw-font-weight:initial;--tw-tracking:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-blur:initial;--tw-brightness:initial;--tw-contrast:initial;--tw-grayscale:initial;--tw-hue-rotate:initial;--tw-invert:initial;--tw-opacity:initial;--tw-saturate:initial;--tw-sepia:initial;--tw-drop-shadow:initial;--tw-drop-shadow-color:initial;--tw-drop-shadow-alpha:100%;--tw-drop-shadow-size:initial}}}@layer theme{:root,:host{--font-sans:Inter, \"Segoe UI\", ui-sans-serif, system-ui, -apple-system, sans-serif;--font-mono:\"JetBrains Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, \"Liberation Mono\", monospace;--color-white:#fff;--spacing:.25rem;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--tracking-tight:-.025em;--tracking-wider:.05em;--tracking-widest:.1em;--leading-relaxed:1.625;--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono);--color-ink:#18181b;--color-muted:#52525b;--color-subtle:#71717a;--color-accent:#2563eb;--color-subaccent:#092564;--color-border:#e4e4e7;--color-surface:#f7f8fa}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;tab-size:4;line-height:1.5;font-family:var(--default-font-family,-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring:where(:not(iframe)){outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab, red, red)){::placeholder{color:color-mix(in oklab, currentcolor 50%, transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}*,:before,:after{box-sizing:border-box}html,body{background:#fff;margin:0;padding:0}body{-webkit-font-smoothing:antialiased}h1,h2,h3,h4{break-after:avoid}a{color:inherit}@page{size:A4;margin:0}@media print{html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact}a[href]:after{content:none}}}@layer components;@layer utilities{.static{position:static}.mx-auto{margin-inline:auto}.mt-0{margin-top:0}.mt-0\\.5{margin-top:calc(var(--spacing) * .5)}.mt-1{margin-top:var(--spacing)}.mt-1\\.5{margin-top:calc(var(--spacing) * 1.5)}.mt-2{margin-top:calc(var(--spacing) * 2)}.mt-3{margin-top:calc(var(--spacing) * 3)}.mb-1{margin-bottom:var(--spacing)}.mb-1\\.5{margin-bottom:calc(var(--spacing) * 1.5)}.mb-3{margin-bottom:calc(var(--spacing) * 3)}.mb-6{margin-bottom:calc(var(--spacing) * 6)}.block{display:block}.flex{display:flex}.grid{display:grid}.inline{display:inline}.table{display:table}.min-h-\\[297mm\\]{min-height:297mm}.w-\\[210mm\\]{width:210mm}.shrink{flex-shrink:1}.grow{flex-grow:1}.transform{transform:var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,)}.list-outside{list-style-position:outside}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-wrap{flex-wrap:wrap}.items-baseline{align-items:baseline}.justify-between{justify-content:space-between}.gap-1{gap:var(--spacing)}.gap-1\\.5{gap:calc(var(--spacing) * 1.5)}:where(.space-y-1>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(var(--spacing) * var(--tw-space-y-reverse));margin-block-end:calc(var(--spacing) * calc(1 - var(--tw-space-y-reverse)))}.gap-x-4{column-gap:calc(var(--spacing) * 4)}.gap-x-6{column-gap:calc(var(--spacing) * 6)}.gap-y-1{row-gap:var(--spacing)}.gap-y-4{row-gap:calc(var(--spacing) * 4)}.rounded{border-radius:.25rem}.rounded-full{border-radius:3.40282e38px}.border{border-style:var(--tw-border-style);border-width:1px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.border-b-2{border-bottom-style:var(--tw-border-style);border-bottom-width:2px}.border-l-2{border-left-style:var(--tw-border-style);border-left-width:2px}.border-accent{border-color:var(--color-accent)}.border-border{border-color:var(--color-border)}.bg-surface{background-color:var(--color-surface)}.bg-white{background-color:var(--color-white)}.px-2{padding-inline:calc(var(--spacing) * 2)}.px-3{padding-inline:calc(var(--spacing) * 3)}.px-\\[16mm\\]{padding-inline:16mm}.py-0{padding-block:0}.py-0\\.5{padding-block:calc(var(--spacing) * .5)}.py-2{padding-block:calc(var(--spacing) * 2)}.py-\\[14mm\\]{padding-block:14mm}.pb-1{padding-bottom:var(--spacing)}.pb-3{padding-bottom:calc(var(--spacing) * 3)}.pb-4{padding-bottom:calc(var(--spacing) * 4)}.pl-0{padding-left:0}.pl-0\\.5{padding-left:calc(var(--spacing) * .5)}.pl-4{padding-left:calc(var(--spacing) * 4)}.font-mono{font-family:var(--font-mono)}.font-sans{font-family:var(--font-sans)}.text-\\[8\\.5pt\\]{font-size:8.5pt}.text-\\[8pt\\]{font-size:8pt}.text-\\[9pt\\]{font-size:9pt}.text-\\[10pt\\]{font-size:10pt}.text-\\[11pt\\]{font-size:11pt}.text-\\[12pt\\]{font-size:12pt}.text-\\[26pt\\]{font-size:26pt}.leading-\\[1\\.5\\]{--tw-leading:1.5;line-height:1.5}.leading-none{--tw-leading:1;line-height:1}.leading-relaxed{--tw-leading:var(--leading-relaxed);line-height:var(--leading-relaxed)}.font-bold{--tw-font-weight:var(--font-weight-bold);font-weight:var(--font-weight-bold)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.tracking-tight{--tw-tracking:var(--tracking-tight);letter-spacing:var(--tracking-tight)}.tracking-wider{--tw-tracking:var(--tracking-wider);letter-spacing:var(--tracking-wider)}.tracking-widest{--tw-tracking:var(--tracking-widest);letter-spacing:var(--tracking-widest)}.whitespace-nowrap{white-space:nowrap}.whitespace-pre-line{white-space:pre-line}.text-accent{color:var(--color-accent)}.text-ink{color:var(--color-ink)}.text-ink\\/80{color:#18181bcc}@supports (color:color-mix(in lab, red, red)){.text-ink\\/80{color:color-mix(in oklab, var(--color-ink) 80%, transparent)}}.text-muted{color:var(--color-muted)}.text-subaccent{color:var(--color-subaccent)}.text-subtle{color:var(--color-subtle)}.uppercase{text-transform:uppercase}.underline{text-decoration-line:underline}.decoration-accent{-webkit-text-decoration-color:var(--color-accent);-webkit-text-decoration-color:var(--color-accent);text-decoration-color:var(--color-accent)}.decoration-accent\\/30{text-decoration-color:#2563eb4d}@supports (color:color-mix(in lab, red, red)){.decoration-accent\\/30{-webkit-text-decoration-color:color-mix(in oklab, var(--color-accent) 30%, transparent);-webkit-text-decoration-color:color-mix(in oklab, var(--color-accent) 30%, transparent);text-decoration-color:color-mix(in oklab, var(--color-accent) 30%, transparent)}}.underline-offset-2{text-underline-offset:2px}.shadow-lg{--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,#0000001a), 0 4px 6px -4px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.filter{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.marker\\:text-accent ::marker{color:var(--color-accent)}.marker\\:text-accent::marker{color:var(--color-accent)}.marker\\:text-accent ::-webkit-details-marker{color:var(--color-accent)}.marker\\:text-accent::-webkit-details-marker{color:var(--color-accent)}.last\\:mb-0:last-child{margin-bottom:0}.last\\:border-b-0:last-child{border-bottom-style:var(--tw-border-style);border-bottom-width:0}.last\\:pb-0:last-child{padding-bottom:0}@media (hover:hover){.hover\\:decoration-accent:hover{-webkit-text-decoration-color:var(--color-accent);-webkit-text-decoration-color:var(--color-accent);text-decoration-color:var(--color-accent)}}@media (min-width:40rem){.sm\\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.print\\:m-0{margin:0}.print\\:min-h-0{min-height:0}.print\\:w-auto{width:auto}.print\\:break-inside-avoid{break-inside:avoid}.print\\:break-after-avoid{break-after:avoid}.print\\:grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.print\\:gap-y-3{row-gap:calc(var(--spacing) * 3)}.print\\:decoration-ink\\/40{text-decoration-color:#18181b66}@supports (color:color-mix(in lab, red, red)){.print\\:decoration-ink\\/40{-webkit-text-decoration-color:color-mix(in oklab, var(--color-ink) 40%, transparent);-webkit-text-decoration-color:color-mix(in oklab, var(--color-ink) 40%, transparent);text-decoration-color:color-mix(in oklab, var(--color-ink) 40%, transparent)}}.print\\:shadow-none{--tw-shadow:0 0 #0000;box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}}}@property --tw-rotate-x{syntax:\"*\";inherits:false}@property --tw-rotate-y{syntax:\"*\";inherits:false}@property --tw-rotate-z{syntax:\"*\";inherits:false}@property --tw-skew-x{syntax:\"*\";inherits:false}@property --tw-skew-y{syntax:\"*\";inherits:false}@property --tw-space-y-reverse{syntax:\"*\";inherits:false;initial-value:0}@property --tw-border-style{syntax:\"*\";inherits:false;initial-value:solid}@property --tw-leading{syntax:\"*\";inherits:false}@property --tw-font-weight{syntax:\"*\";inherits:false}@property --tw-tracking{syntax:\"*\";inherits:false}@property --tw-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:\"*\";inherits:false}@property --tw-shadow-alpha{syntax:\"<percentage>\";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:\"*\";inherits:false}@property --tw-inset-shadow-alpha{syntax:\"<percentage>\";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:\"*\";inherits:false}@property --tw-ring-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:\"*\";inherits:false}@property --tw-inset-ring-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:\"*\";inherits:false}@property --tw-ring-offset-width{syntax:\"<length>\";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:\"*\";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-blur{syntax:\"*\";inherits:false}@property --tw-brightness{syntax:\"*\";inherits:false}@property --tw-contrast{syntax:\"*\";inherits:false}@property --tw-grayscale{syntax:\"*\";inherits:false}@property --tw-hue-rotate{syntax:\"*\";inherits:false}@property --tw-invert{syntax:\"*\";inherits:false}@property --tw-opacity{syntax:\"*\";inherits:false}@property --tw-saturate{syntax:\"*\";inherits:false}@property --tw-sepia{syntax:\"*\";inherits:false}@property --tw-drop-shadow{syntax:\"*\";inherits:false}@property --tw-drop-shadow-color{syntax:\"*\";inherits:false}@property --tw-drop-shadow-alpha{syntax:\"<percentage>\";inherits:false;initial-value:100%}@property --tw-drop-shadow-size{syntax:\"*\";inherits:false}";
+//#endregion
+//#region src/index.jsx
+function render(resume) {
+	const html = renderToStaticMarkup(/* @__PURE__ */ jsx(Resume, { resume }));
+	return `<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${resume.basics?.name ? `${resume.basics.name} - Resume` : "Resume"}</title>
+<style>${tailwind_default}</style>
+</head>
+<body>${html}</body>
+</html>`;
+}
+//#endregion
+export { render };

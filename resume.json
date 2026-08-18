@@ -6,7 +6,7 @@
         "email": "r.sickenberg@gmail.com",
         "phone": "+41 78 907 32 02",
         "url": "https:\/\/rsickenberg.me",
-        "summary": "Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker. Hands-on experience in CI\/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects.",
+        "summary": "Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker. \n\n Hands-on experience in CI\/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects.",
         "location": {
             "address": "Chemin de la creuse 6",
             "postalCode": "1027",
@@ -22,8 +22,8 @@
             },
             {
                 "network": "linkedin",
-                "username": "rsickenberg",
-                "url": "https:\/\/www.linkedin.com\/in\/a320rsck\/"
+                "username": "a320rsck",
+                "url": "https:\/\/linkedin.com\/in\/a320rsck"
             }
         ]
     },
@@ -40,6 +40,15 @@
                 "Developed full-stack web applications using Vue (Nuxt.JS) & Backend in Python (Django) for the SIL in Lausanne.",
                 "Built a React (Next.JS) application with GitHub Actions CI\/CD, Docker containerization and automated deployments to Jelastic."
             ]
+        },
+        {
+            "name": "Securitas AG",
+            "position": "Security Agent",
+            "location": "Lausanne",
+            "url": "https:\/\/www.securitas.ch",
+            "startDate": "2023-07-01",
+            "endDate": "2024-03-31",
+            "summary": "Part-time security agent for Securitas in the event sector."
         },
         {
             "name": "Antistatique SA",
@@ -69,7 +78,7 @@
             "url": "https:\/\/new.ilemgroup.com\/",
             "startDate": "2021-02-01",
             "endDate": "2021-10-31",
-            "summary": "IT Consulting to an external client named Berdoz Vision & Audition",
+            "summary": "IT Consulting to an external client named Berdoz Vision & Audition.",
             "highlights": [
                 "Secured a custom highly critical ERP, migrated it to a newer PHP version and contributed to the development of its Laravel replacement.",
                 "Configured a fleet of 44 iPads and set up CI servers to run complex test suites with Codeception and Cypress.",
@@ -91,15 +100,6 @@
                 "Developed custom Moodle plugins with PHP 5.4.",
                 "Used Scrum in an Holacratic environment."
             ]
-        },
-        {
-            "name": "Securitas AG",
-            "position": "Security Agent",
-            "location": "Lausanne",
-            "url": "https:\/\/www.securitas.ch",
-            "startDate": "2023-07-01",
-            "endDate": "2024-03-31",
-            "summary": "Part-time security agent for Securitas in the event sector."
         }
     ],
     "education": [
@@ -107,7 +107,7 @@
             "institution": "Swiss Confederation | EPSIC @ Lausanne & CFPT @ Geneva",
             "url": "https:\/\/www.bit.admin.ch\/fr\/informaticienne-cfc-developpement-applications",
             "area": "Federal VET Diploma in Information Technology (CFC)",
-            "studyType": "Other",
+            "studyType": "High School",
             "startDate": "2016-08-01",
             "endDate": "2020-07-01",
             "score": "4.4",
@@ -167,13 +167,35 @@
     ],
     "skills": [
         {
-            "name": "Programming Languages",
+            "name": "Backend",
             "level": "Expert",
             "keywords": [
-                "PHP (Symfony, Laravel, Drupal)",
-                "TypeScript & JavaScript (Next.js, Nuxt.js, Node, NPM & Bun)",
+                "PHP",
                 "Python",
-                "Swift 6 (iOS, WatchOS, App Intents, Alamofire, Combine, ...)"
+                "Node.js",
+                "C#",
+                "Java",
+                "..."
+            ]
+        },
+        {
+            "name": "Frontend",
+            "level": "Expert",
+            "keywords": [
+                "TypeScript & JavaScript",
+                "React, Next.js, Nuxt.js, Node, NPM & Bun",
+                "HTML5 & CSS5, Sass",
+                "Tailwind CSS",
+                "Alpine.js",
+                "..."
+            ]
+        },
+        {
+            "name": "Lower Level",
+            "level": "Expert",
+            "keywords": [
+                "Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)",
+                "..."
             ]
         },
         {
@@ -183,18 +205,24 @@
                 "PostgreSQL",
                 "MySQL",
                 "MariaDB",
-                "Redis"
+                "Prisma \/ Supabase",
+                "Redis",
+                "..."
             ]
         },
         {
-            "name": "DevOps",
+            "name": "Cloud & DevOps",
             "level": "Advanced",
             "keywords": [
                 "Docker",
                 "GitHub Actions",
                 "CI\/CD",
                 "Linux",
-                "Apache & Nginx"
+                "Apache & Nginx",
+                "Google Cloud Platform (GCP)",
+                "AWS",
+                "Serverless",
+                "..."
             ]
         },
         {
@@ -205,7 +233,9 @@
                 "Composer",
                 "Jira, Confluence & Scrum",
                 "Rest APIs",
-                "Sentry"
+                "Sentry",
+                "Bash",
+                "..."
             ]
         }
     ],
@@ -225,10 +255,19 @@
     ],
     "interests": [
         {
-            "name": "Video Games, Movies, Music"
+            "name": "Video Games, Movies, Music",
+            "keywords": [
+                "PC Gamer",
+                "Sci-Fi",
+                "House"
+            ]
         },
         {
-            "name": "Travel"
+            "name": "Travel",
+            "keywords": [
+                "Backpacking",
+                "Solo Adventures"
+            ]
         },
         {
             "name": "Photography",
@@ -242,8 +281,8 @@
     "projects": [
         {
             "name": "Tesla Companion",
-            "startDate": "2026-08-17",
-            "endDate": "2026-08-17",
+            "startDate": "2018-01-01",
+            "endDate": "2023-01-01",
             "description": "Paid iOS & WatchOS App to work around Tesla cars.",
             "highlights": [
                 "Built and published a commercial iOS and watchOS application integrating Tesla APIs reaching over 1,000 daily active users and ranking #5 in the App Store Trips category."
@@ -251,8 +290,8 @@
         },
         {
             "name": "Fort-To-Nite",
-            "startDate": "2026-08-17",
-            "endDate": "2026-08-17",
+            "startDate": "2017-01-01",
+            "endDate": "2019-01-01",
             "description": "Free iOS wiki around Fortnite with live in-game shop indications and Django back-end.",
             "highlights": [
                 "Fortnite companion app with 100,000+ downloads, 4.6* rating (340+ reviews) and a peak ranking of #19 in the App Store Reference category."

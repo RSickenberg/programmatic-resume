@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace Romainsickenberg\ProgrammaticResume\Generator;
 
+use DateTimeImmutable;
 use JustSteveKing\Resume\Builders\ResumeBuilder;
 use JustSteveKing\Resume\DataObjects\Award;
 use JustSteveKing\Resume\DataObjects\Basics;
 use JustSteveKing\Resume\DataObjects\Profile;
 use JustSteveKing\Resume\DataObjects\Project;
 use JustSteveKing\Resume\DataObjects\Skill;
+use JustSteveKing\Resume\DataObjects\Work;
 use JustSteveKing\Resume\Enums\Network;
 use JustSteveKing\Resume\Enums\SkillLevel;
 use JustSteveKing\Resume\ValueObjects\Email;
@@ -66,16 +68,25 @@ final class BackendDev extends BaseResume
 
     public function addWorks(ResumeBuilder $builder): ResumeBuilder
     {
-        $experiencesWithSectors = $this->getAllWorkExperiences();
-        foreach ($experiencesWithSectors as $field => $experiences) {
+        $experiencesBySector = $this->getAllWorkExperiences();
+
+        /** @var \JustSteveKing\Resume\DataObjects\Work[] $experiences */
+        $experiences = [];
+        foreach ($experiencesBySector as $field => $sectorExperiences) {
             if (! self::ADD_ALL_WORK_EXPERIENCES && $field !== self::RELATED_TYPE->value) {
                 continue;
             }
 
-            /** @var \JustSteveKing\Resume\DataObjects\Work $experience */
-            foreach ($experiences as $experience) {
-                $builder->addWork($experience);
-            }
+            array_push($experiences, ...$sectorExperiences);
+        }
+
+        usort(
+            $experiences,
+            static fn (Work $a, Work $b): int => ($b->startDate) <=> ($a->startDate),
+        );
+
+        foreach ($experiences as $experience) {
+            $builder->addWork($experience);
         }
 
         return $builder;
@@ -86,13 +97,39 @@ final class BackendDev extends BaseResume
         $builder
             ->addSkill(
                 new Skill(
-                    name: 'Programming Languages',
+                    name: 'Backend',
                     level: SkillLevel::Expert,
                     keywords: [
-                        'PHP (Symfony, Laravel, Drupal)',
-                        'TypeScript & JavaScript (Next.js, Nuxt.js, Node, NPM & Bun)',
+                        'PHP',
                         'Python',
-                        'Swift 6 (iOS, WatchOS, App Intents, Alamofire, Combine, ...)',
+                        'Node.js',
+                        'C#',
+                        'Java',
+                        '...'
+                    ]
+                )
+            )
+            ->addSkill(
+                new Skill(
+                    name: 'Frontend',
+                    level: SkillLevel::Expert,
+                    keywords: [
+                        'TypeScript & JavaScript',
+                        'React, Next.js, Nuxt.js, Node, NPM & Bun',
+                        'HTML5 & CSS5, Sass',
+                        'Tailwind CSS',
+                        'Alpine.js',
+                        '...'
+                    ]
+                )
+            )
+            ->addSkill(
+                new Skill(
+                    name: 'Lower Level',
+                    level: SkillLevel::Expert,
+                    keywords: [
+                        'Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)',
+                        '...'
                     ]
                 )
             )
@@ -104,13 +141,15 @@ final class BackendDev extends BaseResume
                         'PostgreSQL',
                         'MySQL',
                         'MariaDB',
+                        'Prisma / Supabase',
                         'Redis',
+                        '...'
                     ]
                 )
             )
             ->addSkill(
                 new Skill(
-                    name: 'DevOps',
+                    name: 'Cloud & DevOps',
                     level: SkillLevel::Advanced,
                     keywords: [
                         'Docker',
@@ -118,6 +157,10 @@ final class BackendDev extends BaseResume
                         'CI/CD',
                         'Linux',
                         'Apache & Nginx',
+                        'Google Cloud Platform (GCP)',
+                        'AWS',
+                        'Serverless',
+                        '...'
                     ]
                 )
             )
@@ -131,6 +174,8 @@ final class BackendDev extends BaseResume
                         'Jira, Confluence & Scrum',
                         'Rest APIs',
                         'Sentry',
+                        'Bash',
+                        '...'
                     ]
                 )
             );
@@ -153,14 +198,14 @@ final class BackendDev extends BaseResume
 
     protected function getSummary(): string
     {
-        return 'Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker. Hands-on experience in CI/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects.';
+        return "Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker. \n\n Hands-on experience in CI/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects.";
     }
 
     protected function getRelatedProfiles(): array
     {
         return [
             new Profile(Network::GitHub, 'rsickenberg', new Url(self::GITHUB_URL)),
-            new Profile(Network::LinkedIn, 'rsickenberg', new Url(self::LINKEDIN_URL)),
+            new Profile(Network::LinkedIn, 'a320rsck', new Url(self::LINKEDIN_URL)),
         ];
     }
 
@@ -169,8 +214,8 @@ final class BackendDev extends BaseResume
         $builder
             ->addProject(new Project(
                 name: 'Tesla Companion',
-                startDate: '2018',
-                endDate: '2023',
+                startDate: '2018-01-01',
+                endDate: '2023-01-01',
                 description: 'Paid iOS & WatchOS App to work around Tesla cars.',
                 highlights: [
                     'Built and published a commercial iOS and watchOS application integrating Tesla APIs reaching over 1,000 daily active users and ranking #5 in the App Store Trips category.',
@@ -178,8 +223,8 @@ final class BackendDev extends BaseResume
             ))
             ->addProject(new Project(
                 name: 'Fort-To-Nite',
-                startDate: '2017',
-                endDate: '2019',
+                startDate: '2017-01-01',
+                endDate: '2019-01-01',
                 description: 'Free iOS wiki around Fortnite with live in-game shop indications and Django back-end.',
                 highlights: [
                     'Fortnite companion app with 100,000+ downloads, 4.6* rating (340+ reviews) and a peak ranking of #19 in the App Store Reference category.',

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Romainsickenberg\ProgrammaticResume\Generator;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use JustSteveKing\Resume\Builders\ResumeBuilder;
 use JustSteveKing\Resume\DataObjects\Basics;
 use JustSteveKing\Resume\DataObjects\Education;
@@ -20,7 +22,7 @@ abstract class BaseResume implements AbstractResume
     public const string EMAIL = 'r.sickenberg@gmail.com';
     public const string URL = 'https://rsickenberg.me';
     public const string PHONE = '+41 78 907 32 02';
-    public const string LINKEDIN_URL = 'https://www.linkedin.com/in/a320rsck/';
+    public const string LINKEDIN_URL = 'https://linkedin.com/in/a320rsck';
 
     public function __invoke(): void
     {
@@ -67,9 +69,11 @@ abstract class BaseResume implements AbstractResume
         $builder
             ->addInterest(new Interest(
                 name: 'Video Games, Movies, Music',
+                keywords: ['PC Gamer', 'Sci-Fi', 'House']
             ))
             ->addInterest(new Interest(
                 name: 'Travel',
+                keywords: ['Backpacking', 'Solo Adventures']
             ))
             ->addInterest(new Interest(
                 name: 'Photography',
@@ -80,11 +84,11 @@ abstract class BaseResume implements AbstractResume
     }
 
     /**
-     * @return array<\Romainsickenberg\ProgrammaticResume\Generator\WorkTypes, \JustSteveKing\Resume\DataObjects\Work>
+     * @return \Doctrine\Common\Collections\Collection<\Romainsickenberg\ProgrammaticResume\Generator\WorkTypes, array<Work>
      */
-    public function getAllWorkExperiences(): array
+    public function getAllWorkExperiences(): Collection
     {
-        return [
+        return new ArrayCollection([
             WorkTypes::IT->value => [
                 new Work(
                     name: 'Academic Work SA',
@@ -129,7 +133,7 @@ abstract class BaseResume implements AbstractResume
                     url: new Url('https://new.ilemgroup.com/'),
                     startDate: '2021-02-01',
                     endDate: '2021-10-31',
-                    summary: 'IT Consulting to an external client named Berdoz Vision & Audition',
+                    summary: 'IT Consulting to an external client named Berdoz Vision & Audition.',
                     highlights: [
                         'Secured a custom highly critical ERP, migrated it to a newer PHP version and contributed to the development of its Laravel replacement.',
                         'Configured a fleet of 44 iPads and set up CI servers to run complex test suites with Codeception and Cypress.',
@@ -173,7 +177,7 @@ abstract class BaseResume implements AbstractResume
                 // 01.2023 - 07.2023 | SOLO WORLD TRAVEL AND PERSONAL DEVELOPMENT
                 // 06.2020 - 11.2020 | SWISS ARMED FORCES
             ],
-        ];
+        ]);
     }
 
     public function addEducation(ResumeBuilder $builder): ResumeBuilder
@@ -183,7 +187,7 @@ abstract class BaseResume implements AbstractResume
                 institution: 'Swiss Confederation | EPSIC @ Lausanne & CFPT @ Geneva',
                 url: new Url('https://www.bit.admin.ch/fr/informaticienne-cfc-developpement-applications'),
                 area: 'Federal VET Diploma in Information Technology (CFC)',
-                studyType: EducationLevel::Other,
+                studyType: EducationLevel::HighSchool,
                 startDate: '2016-08-01',
                 endDate: '2020-06-31',
                 score: '4.4',
