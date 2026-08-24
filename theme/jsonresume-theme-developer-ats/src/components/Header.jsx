@@ -1,5 +1,6 @@
 import Link from './Link.jsx'
 import { displayUrl, formatLocation } from '../lib/format.js'
+import { renderRichText } from '../lib/richText.jsx'
 
 export default function Header ({ basics = {} }) {
   const { name, label, email, phone, url, location, profiles = [] } = basics
@@ -11,7 +12,7 @@ export default function Header ({ basics = {} }) {
         <h1 className="font-mono text-[26pt] font-bold leading-none tracking-tight text-ink">{name}</h1>
       )}
       {label && (
-        <p className="mt-1.5 font-mono text-[12pt] font-semibold text-accent">{label}</p>
+        <p className="mt-1.5 font-mono text-[12pt] font-semibold text-accent">{renderRichText(label)}</p>
       )}
       <div className="mt-3 flex flex-col gap-y-0.5 text-[9pt] text-muted">
         {locationStr && <span>{locationStr}</span>}

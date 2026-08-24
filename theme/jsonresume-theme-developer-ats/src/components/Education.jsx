@@ -2,6 +2,7 @@ import Section from './Section.jsx'
 import Entry from './Entry.jsx'
 import DateRange from './DateRange.jsx'
 import { useSectionTitle, useUiString } from '../lib/i18n.js'
+import { renderRichText } from '../lib/richText.jsx'
 
 export default function Education ({ education = [] }) {
   const title = useSectionTitle('education')
@@ -25,7 +26,7 @@ export default function Education ({ education = [] }) {
             <div className="mt-2 print:break-inside-avoid">
               <p className="text-[8pt] font-semibold uppercase tracking-wide text-subtle">{courseworkLabel}</p>
               <p className="mt-1 text-[8pt] leading-snug text-ink/70">
-                {edu.courses.join(', ')}
+                {renderRichText(edu.courses.join(', '))}
               </p>
             </div>
           )}

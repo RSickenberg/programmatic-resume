@@ -1,6 +1,6 @@
 basics:
   backend_dev_position: 'Ingénieur Logiciel Backend'
-  summary_role: "Ingénieur logiciel orienté backend avec plus de 5 ans d'expérience professionnelle dans la conception et la maintenance d'applications web critiques pour l'activité, avec PHP, Symfony, Laravel, React et Docker."
+  summary_role: "Ingénieur logiciel agile orienté backend avec plus de 5 ans d'expérience professionnelle dans la conception et la maintenance d'applications web critiques pour l'activité, avec PHP, Symfony, Laravel, React et Docker."
   summary_experience: "Expérience concrète en conception et développement d'applications, intégration des composants et déploiement de la solution (CI/CD), incluant revues de code, déploiements en production et leadership technique sur des projets de taille moyenne."
   summary_authorization: 'Autorisation de travail : citoyen suisse. Disponible immédiatement.'
   support_position: 'Technicien Support Informatique (N1/N2)'
@@ -35,7 +35,7 @@ work:
   academic_work:
     position: 'Développeur Full-Stack'
     summary: 'Conseil informatique pour divers clients via Academic Work.'
-    highlight_1: 'Développé des applications web full-stack avec Vue (Nuxt.JS) et un backend en Python (Django) pour le SIL à Lausanne.'
+    highlight_1: 'Développé des applications web full-stack avec Vue (Nuxt.JS) et un backend en Python (Django) pour les Services Industriels (SIL) à Lausanne.'
     highlight_2: 'Développé une application React (Next.JS) avec intégration continue GitHub Actions, conteneurisation Docker et déploiements automatisés sur Jelastic.'
   antistatique:
     position: 'Ingénieur Logiciel Backend'
