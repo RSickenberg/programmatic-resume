@@ -3378,6 +3378,126 @@
         <option name="homepage" value="https://remotionui.com" />
         <option name="urlTemplate" value="https://remotionui.com/r/{name}.json" />
       </RegistryConfigState>
+      <RegistryConfigState>
+        <option name="id" value="central-better-auth-ui" />
+        <option name="name" value="Better-auth-ui" />
+        <option name="namespace" value="@better-auth-ui" />
+        <option name="baseUrl" value="https://better-auth-ui.com/r/{style}" />
+        <option name="stylePath" value="/{name}.json" />
+        <option name="type" value="community" />
+        <option name="enabled" value="false" />
+        <option name="description" value="Drop-in authentication components for Better Auth applications." />
+        <option name="homepage" value="https://better-auth-ui.com" />
+        <option name="urlTemplate" value="https://better-auth-ui.com/r/{style}/{name}.json" />
+      </RegistryConfigState>
+      <RegistryConfigState>
+        <option name="id" value="central-blode" />
+        <option name="name" value="Blode" />
+        <option name="namespace" value="@blode" />
+        <option name="baseUrl" value="https://blode.co/ui/r" />
+        <option name="stylePath" value="/{name}.json" />
+        <option name="type" value="community" />
+        <option name="enabled" value="false" />
+        <option name="description" value="An open-source registry of accessible React components built on Base UI and Tailwind CSS v4. Install with one command, then own the source." />
+        <option name="homepage" value="https://blode.co/ui" />
+        <option name="urlTemplate" value="https://blode.co/ui/r/{name}.json" />
+      </RegistryConfigState>
+      <RegistryConfigState>
+        <option name="id" value="central-brut-ui" />
+        <option name="name" value="Brut-ui" />
+        <option name="namespace" value="@brut-ui" />
+        <option name="baseUrl" value="https://www.brut-ui.site/r" />
+        <option name="stylePath" value="/{name}.json" />
+        <option name="type" value="community" />
+        <option name="enabled" value="false" />
+        <option name="description" value="Production-minded neo-brutalist shadcn components with three configurable flavours, strengths, and radius modes." />
+        <option name="homepage" value="https://www.brut-ui.site" />
+        <option name="urlTemplate" value="https://www.brut-ui.site/r/{name}.json" />
+      </RegistryConfigState>
+      <RegistryConfigState>
+        <option name="id" value="central-honestui" />
+        <option name="name" value="Honestui" />
+        <option name="namespace" value="@honestui" />
+        <option name="baseUrl" value="https://www.honestui.com/r" />
+        <option name="stylePath" value="/{name}.json" />
+        <option name="type" value="community" />
+        <option name="enabled" value="false" />
+        <option name="description" value="React UI components, animated interactions, shaders, and charts distributed as editable source." />
+        <option name="homepage" value="https://www.honestui.com" />
+        <option name="urlTemplate" value="https://www.honestui.com/r/{name}.json" />
+      </RegistryConfigState>
+      <RegistryConfigState>
+        <option name="id" value="central-ilinxa" />
+        <option name="name" value="Ilinxa" />
+        <option name="namespace" value="@ilinxa" />
+        <option name="baseUrl" value="https://ui.ilinxa.com/r" />
+        <option name="stylePath" value="/{name}.json" />
+        <option name="type" value="community" />
+        <option name="enabled" value="false" />
+        <option name="description" value="High-level composed components for shadcn/ui — kanban, gantt, calendar, media editors, story viewers, flow canvas, forms, and more, each with optional demo fixtures." />
+        <option name="homepage" value="https://ui.ilinxa.com" />
+        <option name="urlTemplate" value="https://ui.ilinxa.com/r/{name}.json" />
+      </RegistryConfigState>
+      <RegistryConfigState>
+        <option name="id" value="central-motion-lexicon" />
+        <option name="name" value="Motion-lexicon" />
+        <option name="namespace" value="@motion-lexicon" />
+        <option name="baseUrl" value="https://motion-lexicon.pages.dev/r" />
+        <option name="stylePath" value="/{name}.json" />
+        <option name="type" value="community" />
+        <option name="enabled" value="false" />
+        <option name="description" value="Copy-ready React page blocks and motion components with bilingual previews, reduced-motion paths, and shadcn Registry delivery." />
+        <option name="homepage" value="https://motion-lexicon.pages.dev" />
+        <option name="urlTemplate" value="https://motion-lexicon.pages.dev/r/{name}.json" />
+      </RegistryConfigState>
+      <RegistryConfigState>
+        <option name="id" value="central-persianlabsui" />
+        <option name="name" value="Persianlabsui" />
+        <option name="namespace" value="@persianlabsui" />
+        <option name="baseUrl" value="https://ui.persian-labs.ir/r" />
+        <option name="stylePath" value="/{name}.json" />
+        <option name="type" value="community" />
+        <option name="enabled" value="false" />
+        <option name="description" value="RTL-first, copy-paste React components and UI blocks for Persian interfaces, built on Base UI and Tailwind CSS. Includes unique Persian-focused patterns with full LTR support." />
+        <option name="homepage" value="https://ui.persian-labs.ir" />
+        <option name="urlTemplate" value="https://ui.persian-labs.ir/r/{name}.json" />
+      </RegistryConfigState>
+      <RegistryConfigState>
+        <option name="id" value="central-snapcn" />
+        <option name="name" value="Snapcn" />
+        <option name="namespace" value="@snapcn" />
+        <option name="baseUrl" value="https://snapcn.dev/r" />
+        <option name="stylePath" value="/{name}.json" />
+        <option name="type" value="community" />
+        <option name="enabled" value="false" />
+        <option name="description" value="Remotion video components for React. Text reveals, karaoke captions, device mockups, logo stings and full scenes, installed with the CLI and owned as source." />
+        <option name="homepage" value="https://snapcn.dev" />
+        <option name="urlTemplate" value="https://snapcn.dev/r/{name}.json" />
+      </RegistryConfigState>
+      <RegistryConfigState>
+        <option name="id" value="central-washiveil" />
+        <option name="name" value="Washiveil" />
+        <option name="namespace" value="@washiveil" />
+        <option name="baseUrl" value="https://washiveil.alexchih.com/r" />
+        <option name="stylePath" value="/{name}.json" />
+        <option name="type" value="community" />
+        <option name="enabled" value="false" />
+        <option name="description" value="Washi at the ground, veils above, three lights beneath. A design system with Chinese &amp; Japanese typography considered from the start." />
+        <option name="homepage" value="https://washiveil.alexchih.com" />
+        <option name="urlTemplate" value="https://washiveil.alexchih.com/r/{name}.json" />
+      </RegistryConfigState>
+      <RegistryConfigState>
+        <option name="id" value="central-vernostudio" />
+        <option name="name" value="Vernostudio" />
+        <option name="namespace" value="@vernostudio" />
+        <option name="baseUrl" value="https://verno-studio.vercel.app/r" />
+        <option name="stylePath" value="/{name}.json" />
+        <option name="type" value="community" />
+        <option name="enabled" value="false" />
+        <option name="description" value="The full OKLCH scale plus every variable shadcn components read, so anything you install lands on the same tokens instead of its own colors." />
+        <option name="homepage" value="https://verno-studio.vercel.app/components" />
+        <option name="urlTemplate" value="https://verno-studio.vercel.app/r/{name}.json" />
+      </RegistryConfigState>
     </registryConfigs>
   </component>
 </project>
