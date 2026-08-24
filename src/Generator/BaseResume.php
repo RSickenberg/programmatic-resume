@@ -147,6 +147,7 @@ abstract class BaseResume implements AbstractResume
                 keywords: [
                     $this->trans('interests.travel_kw_backpacking'),
                     $this->trans('interests.travel_kw_solo'),
+                    $this->trans('interests.travel_kw_diving'),
                 ]
             ))
             ->addInterest(new Interest(
