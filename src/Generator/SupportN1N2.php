@@ -7,20 +7,13 @@ namespace Romainsickenberg\ProgrammaticResume\Generator;
 use JustSteveKing\Resume\Builders\ResumeBuilder;
 use JustSteveKing\Resume\DataObjects\Basics;
 use JustSteveKing\Resume\DataObjects\Skill;
+use JustSteveKing\Resume\DataObjects\Work;
 use JustSteveKing\Resume\Enums\SkillLevel;
 use JustSteveKing\Resume\ValueObjects\Email;
 use JustSteveKing\Resume\ValueObjects\Url;
 
 final class SupportN1N2 extends BaseResume
 {
-    /**
-     * Companies whose work experience reads as support/helpdesk-relevant
-     * (device fleet management, monitoring, customer-facing procedures),
-     * as opposed to the software-engineering-heavy roles.
-     * @var list<string>
-     */
-    private const array RELEVANT_COMPANIES = ['Ilem Group', 'Securitas AG'];
-
     #[\Override]
     public function basics(): Basics
     {
@@ -36,24 +29,27 @@ final class SupportN1N2 extends BaseResume
         );
     }
 
+    /**
+     * None of the individual IT-sector jobs (backend/full-stack development)
+     * are directly relevant to an IT Support N1/N2 role, and the Security
+     * sector (Securitas) isn't either. Rather than listing them with
+     * dev-specific highlights, fold them into a single placeholder entry
+     * that acknowledges the software engineering background exists without
+     * claiming support-specific relevance for it.
+     */
     public function addWorks(ResumeBuilder $builder): ResumeBuilder
     {
-        $experiences = [];
-        foreach ($this->getAllWorkExperiences() as $sectorExperiences) {
-            foreach ($sectorExperiences as $experience) {
-                if (\in_array($experience->name, self::RELEVANT_COMPANIES, true)) {
-                    $experiences[] = $experience;
-                }
-            }
-        }
+        $itExperiences = $this->getAllWorkExperiences()->get(WorkTypes::IT->value);
 
-        if (\count($experiences) !== \count(self::RELEVANT_COMPANIES)) {
-            throw new \RuntimeException(
-                'SupportN1N2::RELEVANT_COMPANIES no longer matches the company names in BaseResume::getAllWorkExperiences().',
-            );
-        }
+        $builder->addWork(new Work(
+            name: $this->trans('work.software_engineering_summary.name'),
+            position: $this->trans('work.software_engineering_summary.position'),
+            startDate: min(array_map(static fn(Work $w) => $w->startDate, $itExperiences)),
+            endDate: max(array_map(static fn(Work $w) => $w->endDate, $itExperiences)),
+            summary: $this->trans('work.software_engineering_summary.summary'),
+        ));
 
-        return $this->addSortedWorks($builder, $experiences);
+        return $builder;
     }
 
     public function addSkills(ResumeBuilder $builder): ResumeBuilder

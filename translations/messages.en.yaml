@@ -5,7 +5,7 @@ basics:
   summary_authorization: 'Work authorization: Swiss Citizen. Available now.'
   support_position: 'IT Support Technician (N1/N2)'
   support_summary_role: 'IT Support Technician with a Software Engineering background, comfortable handling incidents from first-line triage (N1) through in-depth technical troubleshooting (N2) across workstations, identity/directory services and networking.'
-  support_summary_experience: 'Hands-on experience managing device fleets, monitoring production systems and following structured, customer-facing procedures under time pressure.'
+  support_summary_experience: 'A rigorous, process-driven engineering background paired with strong troubleshooting instincts and a genuine interest in helping end users resolve technical issues.'
 
 languages:
   french: 'French'
@@ -75,6 +75,10 @@ work:
     name: 'Personal Break'
     position: 'Swiss Armed Forces'
     summary: 'Mandatory obligations.'
+  software_engineering_summary:
+    name: 'Various Companies'
+    position: 'Software Engineer'
+    summary: 'Software Engineering experience (backend development, IT consulting, CI/CD) across multiple companies, included here for career continuity rather than direct support relevance.'
 
 education:
   institution: 'Swiss Confederation | EPSIC @ Lausanne & CFPT @ Geneva'

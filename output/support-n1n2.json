@@ -6,7 +6,7 @@
         "email": "r.sickenberg@gmail.com",
         "phone": "+41 78 907 32 02",
         "url": "https:\/\/rsickenberg.me",
-        "summary": "IT Support Technician with a Software Engineering background, comfortable handling incidents from first-line triage (N1) through in-depth technical troubleshooting (N2) across workstations, identity\/directory services and networking.\n\nHands-on experience managing device fleets, monitoring production systems and following structured, customer-facing procedures under time pressure.\n\nWork authorization: Swiss Citizen. Available now.",
+        "summary": "IT Support Technician with a Software Engineering background, comfortable handling incidents from first-line triage (N1) through in-depth technical troubleshooting (N2) across workstations, identity\/directory services and networking.\n\nA rigorous, process-driven engineering background paired with strong troubleshooting instincts and a genuine interest in helping end users resolve technical issues.\n\nWork authorization: Swiss Citizen. Available now.",
         "location": {
             "address": "Chemin de la creuse 6",
             "postalCode": "1027",
@@ -29,28 +29,11 @@
     },
     "work": [
         {
-            "name": "Securitas AG",
-            "position": "Security Agent",
-            "location": "Lausanne",
-            "url": "https:\/\/www.securitas.ch",
-            "startDate": "2023-07-01",
-            "endDate": "2024-03-31",
-            "summary": "Part-time security agent in the event sector."
-        },
-        {
-            "name": "Ilem Group",
-            "position": "Junior Backend Software Engineer",
-            "location": "Geneva & Ecublens",
-            "url": "https:\/\/new.ilemgroup.com\/",
-            "startDate": "2021-02-01",
-            "endDate": "2021-10-31",
-            "summary": "IT Consulting to an external client named Berdoz Vision & Audition.",
-            "highlights": [
-                "Secured a custom highly critical ERP, migrated it to a newer PHP version and contributed to the development of its Laravel replacement.",
-                "Configured a fleet of 44 iPads and set up CI servers to run complex test suites with Codeception and Cypress.",
-                "Improved security and developed critical components of existing in-house CRM solution for multiple shops around Switzerland.",
-                "Built internal tools for automated testing, monitoring, and deployment, while ensuring high-quality standards with Sentry."
-            ]
+            "name": "Various Companies",
+            "position": "Software Engineer",
+            "startDate": "2016-06-01",
+            "endDate": "2025-12-31",
+            "summary": "Software Engineering experience (backend development, IT consulting, CI\/CD) across multiple companies, included here for career continuity rather than direct support relevance."
         }
     ],
     "education": [

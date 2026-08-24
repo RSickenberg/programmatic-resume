@@ -6,7 +6,7 @@
         "email": "r.sickenberg@gmail.com",
         "phone": "+41 78 907 32 02",
         "url": "https:\/\/rsickenberg.me",
-        "summary": "Technicien support informatique avec un profil d'ing\u00e9nieur logiciel, \u00e0 l'aise pour traiter les incidents du premier niveau (N1) jusqu'au d\u00e9pannage technique approfondi (N2), sur postes de travail, services d'annuaire\/identit\u00e9 et r\u00e9seaux.\n\nExp\u00e9rience concr\u00e8te en gestion de flottes d'appareils, supervision de syst\u00e8mes en production et respect de proc\u00e9dures structur\u00e9es face aux utilisateurs, sous contrainte de temps.\n\nAutorisation de travail : citoyen suisse. Disponible imm\u00e9diatement.",
+        "summary": "Technicien support informatique avec un profil d'ing\u00e9nieur logiciel, \u00e0 l'aise pour traiter les incidents du premier niveau (N1) jusqu'au d\u00e9pannage technique approfondi (N2), sur postes de travail, services d'annuaire\/identit\u00e9 et r\u00e9seaux.\n\nUn parcours d'ing\u00e9nieur rigoureux et m\u00e9thodique, associ\u00e9 \u00e0 un vrai sens du d\u00e9pannage et \u00e0 l'envie d'aider les utilisateurs \u00e0 r\u00e9soudre leurs probl\u00e8mes techniques.\n\nAutorisation de travail : citoyen suisse. Disponible imm\u00e9diatement.",
         "location": {
             "address": "Chemin de la creuse 6",
             "postalCode": "1027",
@@ -29,28 +29,11 @@
     },
     "work": [
         {
-            "name": "Securitas AG",
-            "position": "Agent de s\u00e9curit\u00e9",
-            "location": "Lausanne",
-            "url": "https:\/\/www.securitas.ch",
-            "startDate": "2023-07-01",
-            "endDate": "2024-03-31",
-            "summary": "Agent de s\u00e9curit\u00e9 \u00e0 temps partiel dans le secteur \u00e9v\u00e9nementiel."
-        },
-        {
-            "name": "Ilem Group",
-            "position": "Ing\u00e9nieur Logiciel Backend Junior",
-            "location": "Gen\u00e8ve & Ecublens",
-            "url": "https:\/\/new.ilemgroup.com\/",
-            "startDate": "2021-02-01",
-            "endDate": "2021-10-31",
-            "summary": "Conseil informatique pour un client externe, Berdoz Vision & Audition.",
-            "highlights": [
-                "S\u00e9curis\u00e9 un ERP sur mesure hautement critique, migr\u00e9 vers une version PHP plus r\u00e9cente, et contribu\u00e9 au d\u00e9veloppement de son rempla\u00e7ant sous Laravel.",
-                "Configur\u00e9 une flotte de 44 iPad et mis en place des serveurs CI pour ex\u00e9cuter des suites de tests complexes avec Codeception et Cypress.",
-                "Am\u00e9lior\u00e9 la s\u00e9curit\u00e9 et d\u00e9velopp\u00e9 des composants critiques du CRM interne existant pour plusieurs magasins \u00e0 travers la Suisse.",
-                "D\u00e9velopp\u00e9 des outils internes pour les tests automatis\u00e9s, le monitoring et le d\u00e9ploiement, tout en garantissant des standards de qualit\u00e9 \u00e9lev\u00e9s avec Sentry."
-            ]
+            "name": "Plusieurs entreprises",
+            "position": "Ing\u00e9nieur logiciel",
+            "startDate": "2016-06-01",
+            "endDate": "2025-12-31",
+            "summary": "Exp\u00e9rience en ing\u00e9nierie logicielle (d\u00e9veloppement backend, conseil informatique, CI\/CD) aupr\u00e8s de plusieurs entreprises, mentionn\u00e9e ici pour la continuit\u00e9 de carri\u00e8re plut\u00f4t que pour sa pertinence directe avec le support."
         }
     ],
     "education": [

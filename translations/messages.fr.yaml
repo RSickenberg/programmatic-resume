@@ -5,7 +5,7 @@ basics:
   summary_authorization: 'Autorisation de travail : citoyen suisse. Disponible immédiatement.'
   support_position: 'Technicien Support Informatique (N1/N2)'
   support_summary_role: "Technicien support informatique avec un profil d'ingénieur logiciel, à l'aise pour traiter les incidents du premier niveau (N1) jusqu'au dépannage technique approfondi (N2), sur postes de travail, services d'annuaire/identité et réseaux."
-  support_summary_experience: "Expérience concrète en gestion de flottes d'appareils, supervision de systèmes en production et respect de procédures structurées face aux utilisateurs, sous contrainte de temps."
+  support_summary_experience: "Un parcours d'ingénieur rigoureux et méthodique, associé à un vrai sens du dépannage et à l'envie d'aider les utilisateurs à résoudre leurs problèmes techniques."
 
 languages:
   french: 'Français'
@@ -75,6 +75,10 @@ work:
     name: 'Pause personnelle'
     position: 'Armée suisse'
     summary: 'Obligations militaires.'
+  software_engineering_summary:
+    name: 'Plusieurs entreprises'
+    position: 'Ingénieur logiciel'
+    summary: "Expérience en ingénierie logicielle (développement backend, conseil informatique, CI/CD) auprès de plusieurs entreprises, mentionnée ici pour la continuité de carrière plutôt que pour sa pertinence directe avec le support."
 
 education:
   institution: 'Confédération Suisse | EPSIC à Lausanne & CFPT à Genève'
