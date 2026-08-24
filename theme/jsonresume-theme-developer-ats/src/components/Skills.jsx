@@ -1,5 +1,6 @@
 import Section from './Section.jsx'
 import { useSectionTitle } from '../lib/i18n.js'
+import { renderRichText } from '../lib/richText.jsx'
 
 export default function Skills ({ skills = [] }) {
   const title = useSectionTitle('skills')
@@ -12,11 +13,11 @@ export default function Skills ({ skills = [] }) {
         {skills.map((skill, index) => (
           <div key={index} className="flex flex-col print:break-inside-avoid">
             <h3 className="mb-1.5 font-mono text-[9pt] font-bold uppercase tracking-wider text-accent">
-              {skill.name}
+              {renderRichText(skill.name)}
             </h3>
             {skill.keywords && skill.keywords.length > 0 && (
               <p className="flex-1 rounded border-l-2 border-accent bg-surface px-3 py-2 font-mono text-[9pt] leading-relaxed text-muted">
-                {skill.keywords.join(', ')}
+                {renderRichText(skill.keywords.join(', '))}
               </p>
             )}
           </div>

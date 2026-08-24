@@ -1,8 +1,11 @@
 basics:
   backend_dev_position: 'Backend-Software Engineer'
-  summary_role: "Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker."
-  summary_experience: 'Hands-on experience in CI/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects.'
+  summary_role: "Backend-oriented Software Engineer with **5+ years** of professional experience building and maintaining business-critical web applications with **PHP**, **Symfony**, **Laravel**, **React** and **Docker**."
+  summary_experience: 'Hands-on experience across application design and development, component integration and solution deployment (**CI/CD**), including code reviews, production releases and technical leadership of medium-sized projects.'
   summary_authorization: 'Work authorization: Swiss Citizen. Available now.'
+  support_position: 'IT Support Technician (N1/N2)'
+  support_summary_role: 'IT Support Technician with a Software Engineering background, covering user support and problem management from first-line triage (N1) through in-depth technical troubleshooting (N2) across workstations, identity/directory services and networking.'
+  support_summary_experience: 'A rigorous, process-driven engineering background paired with strong troubleshooting instincts, systems management discipline and a genuine interest in helping end users resolve technical issues.'
 
 languages:
   french: 'French'
@@ -20,6 +23,7 @@ interests:
   travel_name: 'Travel'
   travel_kw_backpacking: 'Backpacking'
   travel_kw_solo: 'Solo Adventures'
+  travel_kw_diving: 'Diving'
   photography_name: 'Photography'
   photography_kw_drone: 'Drone'
   photography_kw_dslr: 'DSLR'
@@ -32,35 +36,35 @@ work:
   academic_work:
     position: 'Full-Stack Software Developer'
     summary: 'IT Consulting for diverse clients via Academic Work.'
-    highlight_1: 'Developed full-stack web applications using Vue (Nuxt.JS) & Backend in Python (Django) for the SIL in Lausanne.'
-    highlight_2: 'Built a React (Next.JS) application with GitHub Actions CI/CD, Docker containerization and automated deployments to Jelastic.'
+    highlight_1: 'Developed full-stack web applications using **Vue** (**Nuxt.JS**) & Backend in **Python** (**Django**) for the SIL in Lausanne.'
+    highlight_2: 'Built a **React** (**Next.JS**) application with **GitHub Actions** **CI/CD**, **Docker** containerization and automated deployments to Jelastic.'
   antistatique:
     position: 'Backend Software Engineer'
     summary: 'From Junior to mid-level Software Engineer & highest skill jump !'
-    highlight_1: 'Developed and maintained enterprise Symfony 6 applications, using PHP 7.4/8.0, API Platform, Doctrine ORM, PostgreSQL and GitHub Actions.'
-    highlight_2: 'Involved as PHP Lead Developer for a client project in Symfony with 4 other devs.'
-    highlight_3: 'Built and maintained CMS-based solutions (Drupal, WordPress).'
-    highlight_4: 'Reduced GitHub Actions execution time by 75% through dependency caching and workflow optimization.'
+    highlight_1: 'Developed and maintained enterprise **Symfony 6** applications, using **PHP 7.4/8.0**, **API Platform**, **Doctrine ORM**, **PostgreSQL** and **GitHub Actions**.'
+    highlight_2: 'Involved as **PHP** Lead Developer for a client project in **Symfony** with 4 other devs.'
+    highlight_3: 'Built and maintained CMS-based solutions (**Drupal**, **WordPress**).'
+    highlight_4: 'Reduced **GitHub Actions** execution time by **75%** through dependency caching and workflow optimization.'
     highlight_5: 'Deployed projects to production using structured deployment processes.'
     highlight_6: 'Led code reviews to improve maintainability and enforce development standards.'
-    highlight_7: 'Collaborated within a multidisciplinary development team using Scrum.'
+    highlight_7: 'Collaborated within a multidisciplinary development team using **Scrum**.'
     highlight_8: 'Took technical responsibility for small to medium-sized projects.'
-    highlight_9: 'Managed and optimized local development environments using Docker and modern IDE tooling.'
+    highlight_9: 'Managed and optimized local development environments using **Docker** and modern IDE tooling.'
     highlight_10: 'Analyzed project requirements and contributed to technical estimations.'
   ilem:
     position: 'Junior Backend Software Engineer'
     summary: 'IT Consulting to an external client named Berdoz Vision & Audition.'
-    highlight_1: 'Secured a custom highly critical ERP, migrated it to a newer PHP version and contributed to the development of its Laravel replacement.'
-    highlight_2: 'Configured a fleet of 44 iPads and set up CI servers to run complex test suites with Codeception and Cypress.'
+    highlight_1: 'Secured a custom highly critical ERP, migrated it to a newer **PHP** version and contributed to the development of its **Laravel** replacement.'
+    highlight_2: 'Configured a fleet of **44 iPads** and set up CI servers to run complex test suites with **Codeception** and **Cypress**.'
     highlight_3: 'Improved security and developed critical components of existing in-house CRM solution for multiple shops around Switzerland.'
-    highlight_4: 'Built internal tools for automated testing, monitoring, and deployment, while ensuring high-quality standards with Sentry.'
+    highlight_4: 'Built internal tools for automated testing, monitoring, and deployment, while ensuring high-quality standards with **Sentry**.'
   liip:
     position: 'Apprentice Software Engineer'
     summary: 'Started my IT career while studying 2 days per week at school.'
-    highlight_1: 'Developed and enhanced internal web applications using PHP and JavaScript.'
-    highlight_2: 'Collaborated within an Agile development team using Git and modern web development practices.'
-    highlight_3: 'Developed custom Moodle plugins with PHP 5.4.'
-    highlight_4: 'Used Scrum in an Holacratic environment.'
+    highlight_1: 'Developed and enhanced internal web applications using **PHP** and **JavaScript**.'
+    highlight_2: 'Collaborated within an **Agile** development team using **Git** and modern web development practices.'
+    highlight_3: 'Developed custom **Moodle** plugins with **PHP 5.4**.'
+    highlight_4: 'Used **Scrum** in an Holacratic environment.'
   securitas:
     position: 'Security Agent'
     summary: 'Part-time security agent in the event sector.'
@@ -72,6 +76,10 @@ work:
     name: 'Personal Break'
     position: 'Swiss Armed Forces'
     summary: 'Mandatory obligations.'
+  software_engineering_summary:
+    name: 'Various Companies'
+    position: 'Software Engineer'
+    summary: 'Software Engineering experience (backend development, IT consulting, CI/CD) across multiple companies, included here for career continuity rather than direct support relevance.'
 
 education:
   institution: 'Swiss Confederation | EPSIC @ Lausanne & CFPT @ Geneva'
@@ -94,6 +102,16 @@ education:
     database_integration: 'Database integration into web applications'
     deployment: 'Application deployment'
     app_security: 'Application security'
+    small_business_it_infra: 'Establishing the IT and network infrastructure of a small business'
+    server_services: 'Activating server services'
+    office_tools: 'Office software tools'
+    office_advanced: 'Advanced Office functions'
+    workstation_setup: 'Installing and configuring a standalone computer'
+    os_administration: 'Installing, configuring and administering an operating system'
+    network_components: 'Commissioning network components'
+    user_instruction: 'Instructing users on the proper use of IT resources'
+    teamwork: 'Developing team spirit'
+    small_projects: 'Carrying out small projects in a professional environment'
 
 skills:
   backend_name: 'Backend'
@@ -102,14 +120,29 @@ skills:
   databases_name: 'Databases'
   cloud_devops_name: 'Cloud & DevOps'
   tools_name: 'Tools'
+  support_os_name: 'Operating Systems'
+  support_os_linux_basics: 'Linux (basics)'
+  support_directory_name: 'Identity & Directory Services'
+  support_ticketing_name: 'Ticketing & ITSM'
+  support_ticketing_itil: 'ITIL Fundamentals'
+  support_ticketing_incident_mgmt: 'Incident & Problem Management'
+  support_networking_name: 'Networking'
+  support_networking_wifi_troubleshooting: 'Wi-Fi troubleshooting'
+  support_hardware_name: 'Hardware & Devices'
+  support_hardware_workstation_troubleshooting: 'Workstation & peripheral troubleshooting'
+  support_hardware_printer_support: 'Printer & network device support'
+  support_collaboration_name: 'Office & Collaboration Tools'
+  support_collaboration_office_tools: 'Office software tools'
+  support_collaboration_office_advanced: 'Advanced Office functions'
+  support_collaboration_remote_tools: 'Remote support tools (RDP, TeamViewer)'
 
 awards:
-  epfl_summary: 'Built a "digital museum" in Virtual reality. Won the first place in VR experiences, built with SteamVR and Unity.'
+  epfl_summary: 'Built a "digital museum" in Virtual reality. Won the **first place** in VR experiences, built with **SteamVR** and **Unity**.'
 
 projects:
   tesla:
-    description: 'Paid iOS & WatchOS App to work around Tesla cars.'
-    highlight_1: 'Built and published a commercial iOS and watchOS application integrating Tesla APIs reaching over 1,000 daily active users and ranking #5 in the App Store Trips category.'
+    description: 'Paid **iOS** & **WatchOS** App to work around Tesla cars.'
+    highlight_1: 'Built and published a commercial **iOS** and **watchOS** application integrating **Tesla APIs** reaching over **1,000 daily active users** and ranking **#5** in the App Store Trips category.'
   fort_to_nite:
-    description: 'Free iOS wiki around Fortnite with live in-game shop indications and Django back-end.'
-    highlight_1: 'Fortnite companion app with 100,000+ downloads, 4.6* rating (340+ reviews) and a peak ranking of #19 in the App Store Reference category.'
+    description: 'Free **iOS** wiki around Fortnite with live in-game shop indications and **Django** back-end.'
+    highlight_1: 'Fortnite companion app with **100,000+ downloads**, **4.6* rating (340+ reviews)** and a peak ranking of **#19** in the App Store Reference category.'

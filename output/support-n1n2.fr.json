@@ -1,0 +1,164 @@
+{
+    "$schema": "https:\/\/jsonresume.org\/schema\/schema.json",
+    "basics": {
+        "name": "Romain Sickenberg",
+        "label": "Technicien Support Informatique (N1\/N2)",
+        "email": "r.sickenberg@gmail.com",
+        "phone": "+41 78 907 32 02",
+        "url": "https:\/\/rsickenberg.me",
+        "summary": "Technicien support informatique avec un profil d'ing\u00e9nieur logiciel, couvrant le support utilisateur et la gestion des probl\u00e8mes, du traitement de premier niveau (N1) jusqu'au d\u00e9pannage technique approfondi (N2), sur postes de travail, services d'annuaire\/identit\u00e9 et r\u00e9seaux.\n\nUn parcours d'ing\u00e9nieur rigoureux et m\u00e9thodique, associ\u00e9 \u00e0 un vrai sens du d\u00e9pannage, \u00e0 la gestion des syst\u00e8mes et \u00e0 l'envie d'aider les utilisateurs \u00e0 r\u00e9soudre leurs probl\u00e8mes techniques.\n\nAutorisation de travail : citoyen suisse. Disponible imm\u00e9diatement.",
+        "location": {
+            "address": "Chemin de la creuse 6",
+            "postalCode": "1027",
+            "city": "Lonay",
+            "countryCode": "CH",
+            "region": "VD"
+        },
+        "profiles": [
+            {
+                "network": "github",
+                "username": "rsickenberg",
+                "url": "https:\/\/github.com\/rsickenberg"
+            },
+            {
+                "network": "linkedin",
+                "username": "a320rsck",
+                "url": "https:\/\/linkedin.com\/in\/a320rsck"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Plusieurs entreprises",
+            "position": "Ing\u00e9nieur logiciel",
+            "startDate": "2016-06-01",
+            "endDate": "2025-12-31",
+            "summary": "Exp\u00e9rience en ing\u00e9nierie logicielle (d\u00e9veloppement backend, conseil informatique, CI\/CD) aupr\u00e8s de plusieurs entreprises, mentionn\u00e9e ici pour la continuit\u00e9 de carri\u00e8re plut\u00f4t que pour sa pertinence directe avec le support."
+        }
+    ],
+    "education": [
+        {
+            "institution": "Conf\u00e9d\u00e9ration Suisse | EPSIC \u00e0 Lausanne & CFPT \u00e0 Gen\u00e8ve",
+            "url": "https:\/\/www.bit.admin.ch\/fr\/informaticienne-cfc-developpement-applications",
+            "area": "Certificat f\u00e9d\u00e9ral de capacit\u00e9 (CFC) en informatique",
+            "startDate": "2016-08-01",
+            "endDate": "2020-07-01",
+            "score": "4.4",
+            "courses": [
+                "Mise en place de l'infrastructure informatique et r\u00e9seau d'une petite entreprise",
+                "Activation des services serveurs",
+                "Installation et configuration d'un poste de travail",
+                "Installation, configuration et administration d'un syst\u00e8me d'exploitation",
+                "Mise en service de composants r\u00e9seau",
+                "Outils bureautiques",
+                "Fonctions avanc\u00e9es des outils bureautiques",
+                "Instruction des utilisateurs \u00e0 l'usage correct des ressources informatiques",
+                "Codage, compression et syst\u00e8mes de chiffrement",
+                "S\u00e9curit\u00e9 applicative",
+                "T\u00e2ches d'automatisation",
+                "Scripts et automatisation de proc\u00e9dures",
+                "D\u00e9veloppement de l'esprit d'\u00e9quipe",
+                "R\u00e9alisation de petits projets en environnement professionnel"
+            ]
+        }
+    ],
+    "skills": [
+        {
+            "name": "Syst\u00e8mes d'exploitation",
+            "level": "Advanced",
+            "keywords": [
+                "Windows 10 \/ 11",
+                "Windows Server",
+                "macOS",
+                "Linux (bases)"
+            ]
+        },
+        {
+            "name": "Identit\u00e9 & services d'annuaire",
+            "level": "Advanced",
+            "keywords": [
+                "Active Directory",
+                "Microsoft Entra ID (Azure AD)",
+                "Group Policy (GPO)"
+            ]
+        },
+        {
+            "name": "Ticketing & ITSM",
+            "level": "Advanced",
+            "keywords": [
+                "Jira Service Management",
+                "Fondamentaux ITIL",
+                "Gestion des incidents et des probl\u00e8mes"
+            ]
+        },
+        {
+            "name": "R\u00e9seau",
+            "level": "Advanced",
+            "keywords": [
+                "TCP\/IP",
+                "DNS & DHCP",
+                "VPN",
+                "D\u00e9pannage Wi-Fi"
+            ]
+        },
+        {
+            "name": "Mat\u00e9riel & appareils",
+            "level": "Advanced",
+            "keywords": [
+                "D\u00e9pannage postes de travail & p\u00e9riph\u00e9riques",
+                "Mobile Device Management (MDM)",
+                "Support imprimantes & \u00e9quipements r\u00e9seau"
+            ]
+        },
+        {
+            "name": "Outils bureautiques & collaboratifs",
+            "level": "Advanced",
+            "keywords": [
+                "Microsoft 365 (Outlook, Teams, SharePoint)",
+                "Outils bureautiques",
+                "Fonctions avanc\u00e9es des outils bureautiques",
+                "Outils de prise en main \u00e0 distance (RDP, TeamViewer)"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Fran\u00e7ais",
+            "fluency": "Langue maternelle"
+        },
+        {
+            "language": "Anglais",
+            "fluency": "Courant (C2)"
+        },
+        {
+            "language": "Allemand",
+            "fluency": "Interm\u00e9diaire (B1)"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Jeux vid\u00e9o, Films, Musique",
+            "keywords": [
+                "Joueur PC",
+                "Science-fiction",
+                "House"
+            ]
+        },
+        {
+            "name": "Voyage",
+            "keywords": [
+                "Voyage sac \u00e0 dos",
+                "Aventures en solo",
+                "Plong\u00e9e"
+            ]
+        },
+        {
+            "name": "Photographie",
+            "keywords": [
+                "Drone",
+                "Reflex num\u00e9rique",
+                "Astrophotographie"
+            ]
+        }
+    ]
+}

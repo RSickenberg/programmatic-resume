@@ -12,9 +12,11 @@ use JustSteveKing\Resume\DataObjects\Education;
 use JustSteveKing\Resume\DataObjects\Interest;
 use JustSteveKing\Resume\DataObjects\Language;
 use JustSteveKing\Resume\DataObjects\Location;
+use JustSteveKing\Resume\DataObjects\Profile;
 use JustSteveKing\Resume\DataObjects\Resume;
 use JustSteveKing\Resume\DataObjects\Work;
 use JustSteveKing\Resume\Enums\EducationLevel;
+use JustSteveKing\Resume\Enums\Network;
 use JustSteveKing\Resume\ValueObjects\Url;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
@@ -25,6 +27,7 @@ abstract class BaseResume implements AbstractResume
     public const string URL = 'https://rsickenberg.me';
     public const string PHONE = '+41 78 907 32 02';
     public const string LINKEDIN_URL = 'https://linkedin.com/in/a320rsck';
+    public const string GITHUB_URL = 'https://github.com/rsickenberg';
 
     public function __construct(
         protected readonly TranslatorInterface $translator,
@@ -38,12 +41,64 @@ abstract class BaseResume implements AbstractResume
 
     public function __invoke(): Resume
     {
-        throw new \RuntimeException(\sprintf('Cannot invoke %s resume on its own.', __FUNCTION__));
+        /** @var ResumeBuilder $resume */
+        $resume = new ResumeBuilder()
+            ->basics($this->basics())
+            |> $this->addLanguages(...)
+            |> $this->addWorks(...)
+            |> $this->addEducation(...)
+            |> $this->addSkills(...)
+            |> $this->addAwards(...)
+            |> $this->addInterests(...)
+            |> $this->addProjects(...);
+
+        return $resume->build();
     }
 
     public function basics(): Basics
     {
         throw new \RuntimeException(\sprintf('Cannot invoke %s resume on its own.', __FUNCTION__));
+    }
+
+    public function addAwards(ResumeBuilder $builder): ResumeBuilder
+    {
+        return $builder;
+    }
+
+    public function addProjects(ResumeBuilder $builder): ResumeBuilder
+    {
+        return $builder;
+    }
+
+    /**
+     * Add every work experience, from every sector, most recent first.
+     */
+    protected function addAllWorkExperiences(ResumeBuilder $builder): ResumeBuilder
+    {
+        $experiences = [];
+        foreach ($this->getAllWorkExperiences() as $sectorExperiences) {
+            array_push($experiences, ...$sectorExperiences);
+        }
+
+        return $this->addSortedWorks($builder, $experiences);
+    }
+
+    /**
+     * Sort work experiences by most recent first and add them to the builder.
+     * @param list<Work> $experiences
+     */
+    protected function addSortedWorks(ResumeBuilder $builder, array $experiences): ResumeBuilder
+    {
+        usort(
+            $experiences,
+            static fn(Work $a, Work $b): int => ($b->startDate) <=> ($a->startDate),
+        );
+
+        foreach ($experiences as $experience) {
+            $builder->addWork($experience);
+        }
+
+        return $builder;
     }
 
     public function getLocation(): Location
@@ -92,6 +147,7 @@ abstract class BaseResume implements AbstractResume
                 keywords: [
                     $this->trans('interests.travel_kw_backpacking'),
                     $this->trans('interests.travel_kw_solo'),
+                    $this->trans('interests.travel_kw_diving'),
                 ]
             ))
             ->addInterest(new Interest(
@@ -225,55 +281,63 @@ abstract class BaseResume implements AbstractResume
                 startDate: '2016-08-01',
                 endDate: '2020-06-31',
                 score: '4.4',
-                // Curated for relevance to a Backend Software Engineer profile.
-                // Excluded modules (kept here for reference, not shown on the resume):
-                // '100 - Prepare Data, distinguish and evaluate.',
-                // '117 - Establish the IT and network infrastructure of a small business.',
-                // '123 - Activate server services.',
-                // '253 - Visualize sensor signals.',
-                // '301 - Apply office software tools.',
-                // '302 - Use advanced Office functions.',
-                // '304 - Install and configure a standalone computer.',
-                // '305 - Install, configure and administer an operating system.',
-                // '403 - Procedurally implement program workflows.',
-                // '431 - Execute tasks autonomously in a professional environment.',
-                // '129 - Commission network components.',
-                // '213 - Develop team spirit.',
-                // '214 - Instruct users on the proper use of IT resources.',
-                // '226A - Implement object-oriented programming without inheritance.',
-                // '226B - Implement object-oriented programming with inheritance.',
-                // '242 - Develop applications for microcontrollers.',
-                // '306 - Carry out small projects in your own professional environment.',
-                // '326 - Develop and implement object-oriented programming.',
-                // '335 - Develop a mobile application.',
-                // '150 - Adapt an e-commerce application.',
-                // '152 - Integrate multimedia content into web applications.',
-                // '153 - Develop data models.',
-                // '155 - Develop real-time procedures.',
-                // '223 - Develop multi-user object-oriented applications.',
-                // '254 - Describe business processes in your own professional environment.',
-                courses: [
-                    $this->trans('education.courses.build_website'), // 101
-                    $this->trans('education.courses.data_modeling'), // 104
-                    $this->trans('education.courses.security_encryption'), // 114
-                    $this->trans('education.courses.oop_principles'), // 404
-                    $this->trans('education.courses.gui_development'), // 120
-                    $this->trans('education.courses.automation_tasks'), // 121
-                    $this->trans('education.courses.scripting'), // 122
-                    $this->trans('education.courses.web_client_side'), // 256
-                    $this->trans('education.courses.interactive_web_pages'), // 307
-                    $this->trans('education.courses.oop_components'), // 318
-                    $this->trans('education.courses.data_structures_algorithms'), // 411
-                    $this->trans('education.courses.agile_methods'), // 426
-                    $this->trans('education.courses.sql_databases'), // 105
-                    $this->trans('education.courses.session_handling'), // 133
-                    $this->trans('education.courses.database_integration'), // 151
-                    $this->trans('education.courses.deployment'), // 154
-                    $this->trans('education.courses.app_security'), // 183
-                ],
+                courses: $this->getRelevantCourses(),
             ));
 
         return $builder;
+    }
+
+    /**
+     * Curated for relevance to a Backend Software Engineer profile.
+     * Excluded modules (kept here for reference, not shown on the resume):
+     * '100 - Prepare Data, distinguish and evaluate.',
+     * '117 - Establish the IT and network infrastructure of a small business.',
+     * '123 - Activate server services.',
+     * '253 - Visualize sensor signals.',
+     * '301 - Apply office software tools.',
+     * '302 - Use advanced Office functions.',
+     * '304 - Install and configure a standalone computer.',
+     * '305 - Install, configure and administer an operating system.',
+     * '403 - Procedurally implement program workflows.',
+     * '431 - Execute tasks autonomously in a professional environment.',
+     * '129 - Commission network components.',
+     * '213 - Develop team spirit.',
+     * '214 - Instruct users on the proper use of IT resources.',
+     * '226A - Implement object-oriented programming without inheritance.',
+     * '226B - Implement object-oriented programming with inheritance.',
+     * '242 - Develop applications for microcontrollers.',
+     * '306 - Carry out small projects in your own professional environment.',
+     * '326 - Develop and implement object-oriented programming.',
+     * '335 - Develop a mobile application.',
+     * '150 - Adapt an e-commerce application.',
+     * '152 - Integrate multimedia content into web applications.',
+     * '153 - Develop data models.',
+     * '155 - Develop real-time procedures.',
+     * '223 - Develop multi-user object-oriented applications.',
+     * '254 - Describe business processes in your own professional environment.',
+     * @return list<string>
+     */
+    protected function getRelevantCourses(): array
+    {
+        return [
+            $this->trans('education.courses.build_website'), // 101
+            $this->trans('education.courses.data_modeling'), // 104
+            $this->trans('education.courses.security_encryption'), // 114
+            $this->trans('education.courses.oop_principles'), // 404
+            $this->trans('education.courses.gui_development'), // 120
+            $this->trans('education.courses.automation_tasks'), // 121
+            $this->trans('education.courses.scripting'), // 122
+            $this->trans('education.courses.web_client_side'), // 256
+            $this->trans('education.courses.interactive_web_pages'), // 307
+            $this->trans('education.courses.oop_components'), // 318
+            $this->trans('education.courses.data_structures_algorithms'), // 411
+            $this->trans('education.courses.agile_methods'), // 426
+            $this->trans('education.courses.sql_databases'), // 105
+            $this->trans('education.courses.session_handling'), // 133
+            $this->trans('education.courses.database_integration'), // 151
+            $this->trans('education.courses.deployment'), // 154
+            $this->trans('education.courses.app_security'), // 183
+        ];
     }
 
     abstract protected function getSummary(): string;
@@ -282,5 +346,11 @@ abstract class BaseResume implements AbstractResume
      * Return a list of related Resume profiles needed.
      * @return array<\JustSteveKing\Resume\DataObjects\Profile>
      */
-    abstract protected function getRelatedProfiles(): array;
+    protected function getRelatedProfiles(): array
+    {
+        return [
+            new Profile(Network::GitHub, 'rsickenberg', new Url(self::GITHUB_URL)),
+            new Profile(Network::LinkedIn, 'a320rsck', new Url(self::LINKEDIN_URL)),
+        ];
+    }
 }

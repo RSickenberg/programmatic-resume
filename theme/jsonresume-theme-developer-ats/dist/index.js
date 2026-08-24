@@ -111,6 +111,20 @@ function Link({ href, children, className, underline = true, ...rest }) {
 	});
 }
 //#endregion
+//#region src/lib/richText.jsx
+/**
+* Renders `**word**` as bold, a minimal Markdown-style convention so resume
+* content (translations) can emphasize a word without the theme needing to
+* know why — e.g. `education.courses.*` or `basics.summary_role` keys.
+*/
+function renderRichText(text) {
+	if (typeof text !== "string" || !text.includes("**")) return text;
+	return text.split(/\*\*(.+?)\*\*/g).map((part, index) => index % 2 === 1 ? /* @__PURE__ */ jsx("strong", {
+		className: "font-semibold text-ink",
+		children: part
+	}, index) : part);
+}
+//#endregion
 //#region src/components/Header.jsx
 function Header({ basics = {} }) {
 	const { name, label, email, phone, url, location, profiles = [] } = basics;
@@ -124,7 +138,7 @@ function Header({ basics = {} }) {
 			}),
 			label && /* @__PURE__ */ jsx("p", {
 				className: "mt-1.5 font-mono text-[12pt] font-semibold text-accent",
-				children: label
+				children: renderRichText(label)
 			}),
 			/* @__PURE__ */ jsxs("div", {
 				className: "mt-3 flex flex-col gap-y-0.5 text-[9pt] text-muted",
@@ -163,7 +177,7 @@ function Summary({ summary }) {
 		className: "mb-6 print:break-inside-avoid",
 		children: /* @__PURE__ */ jsx("p", {
 			className: "text-[10pt] leading-relaxed whitespace-pre-line text-ink/80",
-			children: summary
+			children: renderRichText(summary)
 		})
 	});
 }
@@ -186,7 +200,7 @@ function HighlightList({ items }) {
 		className: "mt-2 list-outside list-disc space-y-1 pl-4 marker:text-accent",
 		children: items.map((item, index) => /* @__PURE__ */ jsx("li", {
 			className: "pl-0.5 text-[10pt] leading-relaxed text-ink/80",
-			children: item
+			children: renderRichText(item)
 		}, index))
 	});
 }
@@ -204,16 +218,16 @@ function Entry({ title, titleHref, meta, subtitle, description, highlights, chil
 						href: titleHref,
 						underline: false,
 						children: title
-					}) : title
+					}) : renderRichText(title)
 				}), meta]
 			}),
 			subtitle && /* @__PURE__ */ jsx("p", {
 				className: "mt-0.5 text-[10pt] font-semibold text-subaccent",
-				children: subtitle
+				children: renderRichText(subtitle)
 			}),
 			description && /* @__PURE__ */ jsx("p", {
 				className: "mt-2 text-[10pt] leading-relaxed text-ink/80",
-				children: description
+				children: renderRichText(description)
 			}),
 			/* @__PURE__ */ jsx(HighlightList, { items: highlights }),
 			children
@@ -329,10 +343,10 @@ function Skills({ skills = [] }) {
 				className: "flex flex-col print:break-inside-avoid",
 				children: [/* @__PURE__ */ jsx("h3", {
 					className: "mb-1.5 font-mono text-[9pt] font-bold uppercase tracking-wider text-accent",
-					children: skill.name
+					children: renderRichText(skill.name)
 				}), skill.keywords && skill.keywords.length > 0 && /* @__PURE__ */ jsx("p", {
 					className: "flex-1 rounded border-l-2 border-accent bg-surface px-3 py-2 font-mono text-[9pt] leading-relaxed text-muted",
-					children: skill.keywords.join(", ")
+					children: renderRichText(skill.keywords.join(", "))
 				})]
 			}, index))
 		})
@@ -382,7 +396,7 @@ function Education({ education = [] }) {
 					children: courseworkLabel
 				}), /* @__PURE__ */ jsx("p", {
 					className: "mt-1 text-[8pt] leading-snug text-ink/70",
-					children: edu.courses.join(", ")
+					children: renderRichText(edu.courses.join(", "))
 				})]
 			})
 		}, index))
@@ -446,8 +460,8 @@ function SimpleItem({ label, labelHref, meta, date, keywords }) {
 					children: labelHref ? /* @__PURE__ */ jsx(Link, {
 						href: labelHref,
 						children: label
-					}) : label
-				}), meta && /* @__PURE__ */ jsxs("span", { children: [" — ", meta] })]
+					}) : renderRichText(label)
+				}), meta && /* @__PURE__ */ jsxs("span", { children: [" — ", renderRichText(meta)] })]
 			}),
 			date && /* @__PURE__ */ jsx("p", {
 				className: "mt-1 font-mono text-[8.5pt] text-subtle",
@@ -457,7 +471,7 @@ function SimpleItem({ label, labelHref, meta, date, keywords }) {
 				className: "mt-1.5 flex flex-wrap gap-1.5",
 				children: keywords.map((keyword, index) => /* @__PURE__ */ jsx("li", {
 					className: "rounded-full border border-accent px-2 py-0.5 font-mono text-[8pt] text-muted",
-					children: keyword
+					children: renderRichText(keyword)
 				}, index))
 			})
 		]

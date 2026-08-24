@@ -6,7 +6,7 @@
         "email": "r.sickenberg@gmail.com",
         "phone": "+41 78 907 32 02",
         "url": "https:\/\/rsickenberg.me",
-        "summary": "Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker.\n\nHands-on experience in CI\/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects.\n\nWork authorization: Swiss Citizen. Available now.",
+        "summary": "Backend-oriented Software Engineer with **5+ years** of professional experience building and maintaining business-critical web applications with **PHP**, **Symfony**, **Laravel**, **React** and **Docker**.\n\nHands-on experience across application design and development, component integration and solution deployment (**CI\/CD**), including code reviews, production releases and technical leadership of medium-sized projects.\n\nWork authorization: Swiss Citizen. Available now.",
         "location": {
             "address": "Chemin de la creuse 6",
             "postalCode": "1027",
@@ -37,8 +37,8 @@
             "endDate": "2025-12-31",
             "summary": "IT Consulting for diverse clients via Academic Work.",
             "highlights": [
-                "Developed full-stack web applications using Vue (Nuxt.JS) & Backend in Python (Django) for the SIL in Lausanne.",
-                "Built a React (Next.JS) application with GitHub Actions CI\/CD, Docker containerization and automated deployments to Jelastic."
+                "Developed full-stack web applications using **Vue** (**Nuxt.JS**) & Backend in **Python** (**Django**) for the SIL in Lausanne.",
+                "Built a **React** (**Next.JS**) application with **GitHub Actions** **CI\/CD**, **Docker** containerization and automated deployments to Jelastic."
             ]
         },
         {
@@ -66,15 +66,15 @@
             "endDate": "2023-01-31",
             "summary": "From Junior to mid-level Software Engineer & highest skill jump !",
             "highlights": [
-                "Developed and maintained enterprise Symfony 6 applications, using PHP 7.4\/8.0, API Platform, Doctrine ORM, PostgreSQL and GitHub Actions.",
-                "Involved as PHP Lead Developer for a client project in Symfony with 4 other devs.",
-                "Built and maintained CMS-based solutions (Drupal, WordPress).",
-                "Reduced GitHub Actions execution time by 75% through dependency caching and workflow optimization.",
+                "Developed and maintained enterprise **Symfony 6** applications, using **PHP 7.4\/8.0**, **API Platform**, **Doctrine ORM**, **PostgreSQL** and **GitHub Actions**.",
+                "Involved as **PHP** Lead Developer for a client project in **Symfony** with 4 other devs.",
+                "Built and maintained CMS-based solutions (**Drupal**, **WordPress**).",
+                "Reduced **GitHub Actions** execution time by **75%** through dependency caching and workflow optimization.",
                 "Deployed projects to production using structured deployment processes.",
                 "Led code reviews to improve maintainability and enforce development standards.",
-                "Collaborated within a multidisciplinary development team using Scrum.",
+                "Collaborated within a multidisciplinary development team using **Scrum**.",
                 "Took technical responsibility for small to medium-sized projects.",
-                "Managed and optimized local development environments using Docker and modern IDE tooling.",
+                "Managed and optimized local development environments using **Docker** and modern IDE tooling.",
                 "Analyzed project requirements and contributed to technical estimations."
             ]
         },
@@ -87,10 +87,10 @@
             "endDate": "2021-10-31",
             "summary": "IT Consulting to an external client named Berdoz Vision & Audition.",
             "highlights": [
-                "Secured a custom highly critical ERP, migrated it to a newer PHP version and contributed to the development of its Laravel replacement.",
-                "Configured a fleet of 44 iPads and set up CI servers to run complex test suites with Codeception and Cypress.",
+                "Secured a custom highly critical ERP, migrated it to a newer **PHP** version and contributed to the development of its **Laravel** replacement.",
+                "Configured a fleet of **44 iPads** and set up CI servers to run complex test suites with **Codeception** and **Cypress**.",
                 "Improved security and developed critical components of existing in-house CRM solution for multiple shops around Switzerland.",
-                "Built internal tools for automated testing, monitoring, and deployment, while ensuring high-quality standards with Sentry."
+                "Built internal tools for automated testing, monitoring, and deployment, while ensuring high-quality standards with **Sentry**."
             ]
         },
         {
@@ -109,10 +109,10 @@
             "endDate": "2020-06-30",
             "summary": "Started my IT career while studying 2 days per week at school.",
             "highlights": [
-                "Developed and enhanced internal web applications using PHP and JavaScript.",
-                "Collaborated within an Agile development team using Git and modern web development practices.",
-                "Developed custom Moodle plugins with PHP 5.4.",
-                "Used Scrum in an Holacratic environment."
+                "Developed and enhanced internal web applications using **PHP** and **JavaScript**.",
+                "Collaborated within an **Agile** development team using **Git** and modern web development practices.",
+                "Developed custom **Moodle** plugins with **PHP 5.4**.",
+                "Used **Scrum** in an Holacratic environment."
             ]
         }
     ],
@@ -150,7 +150,7 @@
             "title": "EPFL Hackathon AR\/VR Game Experiences",
             "date": "2019-12-24",
             "awarder": "RA \\ VR Hackathon",
-            "summary": "Built a \"digital museum\" in Virtual reality. Won the first place in VR experiences, built with SteamVR and Unity."
+            "summary": "Built a \"digital museum\" in Virtual reality. Won the **first place** in VR experiences, built with **SteamVR** and **Unity**."
         }
     ],
     "skills": [
@@ -248,7 +248,8 @@
             "name": "Travel",
             "keywords": [
                 "Backpacking",
-                "Solo Adventures"
+                "Solo Adventures",
+                "Diving"
             ]
         },
         {
@@ -265,18 +266,18 @@
             "name": "Tesla Companion",
             "startDate": "2018-01-01",
             "endDate": "2023-01-01",
-            "description": "Paid iOS & WatchOS App to work around Tesla cars.",
+            "description": "Paid **iOS** & **WatchOS** App to work around Tesla cars.",
             "highlights": [
-                "Built and published a commercial iOS and watchOS application integrating Tesla APIs reaching over 1,000 daily active users and ranking #5 in the App Store Trips category."
+                "Built and published a commercial **iOS** and **watchOS** application integrating **Tesla APIs** reaching over **1,000 daily active users** and ranking **#5** in the App Store Trips category."
             ]
         },
         {
             "name": "Fort-To-Nite",
             "startDate": "2017-01-01",
             "endDate": "2019-01-01",
-            "description": "Free iOS wiki around Fortnite with live in-game shop indications and Django back-end.",
+            "description": "Free **iOS** wiki around Fortnite with live in-game shop indications and **Django** back-end.",
             "highlights": [
-                "Fortnite companion app with 100,000+ downloads, 4.6* rating (340+ reviews) and a peak ranking of #19 in the App Store Reference category."
+                "Fortnite companion app with **100,000+ downloads**, **4.6* rating (340+ reviews)** and a peak ranking of **#19** in the App Store Reference category."
             ]
         }
     ]
