@@ -129,6 +129,8 @@ final class SupportN1N2 extends BaseResume
                     level: SkillLevel::Advanced,
                     keywords: [
                         'Microsoft 365 (Outlook, Teams, SharePoint)',
+                        $this->trans('skills.support_collaboration_office_tools'),
+                        $this->trans('skills.support_collaboration_office_advanced'),
                         $this->trans('skills.support_collaboration_remote_tools'),
                     ]
                 )

@@ -131,6 +131,8 @@ skills:
   support_hardware_workstation_troubleshooting: 'Workstation & peripheral troubleshooting'
   support_hardware_printer_support: 'Printer & network device support'
   support_collaboration_name: 'Office & Collaboration Tools'
+  support_collaboration_office_tools: 'Office software tools'
+  support_collaboration_office_advanced: 'Advanced Office functions'
   support_collaboration_remote_tools: 'Remote support tools (RDP, TeamViewer)'
 
 awards:

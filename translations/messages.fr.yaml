@@ -131,6 +131,8 @@ skills:
   support_hardware_workstation_troubleshooting: 'Dépannage postes de travail & périphériques'
   support_hardware_printer_support: 'Support imprimantes & équipements réseau'
   support_collaboration_name: 'Outils bureautiques & collaboratifs'
+  support_collaboration_office_tools: 'Outils bureautiques'
+  support_collaboration_office_advanced: 'Fonctions avancées des outils bureautiques'
   support_collaboration_remote_tools: 'Outils de prise en main à distance (RDP, TeamViewer)'
 
 awards:
