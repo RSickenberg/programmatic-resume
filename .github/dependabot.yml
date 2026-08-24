@@ -3,14 +3,14 @@ updates:
   - package-ecosystem: "composer"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
-  - package-ecosystem: "npm"
+  - package-ecosystem: "bun"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
-  - package-ecosystem: "npm"
+  - package-ecosystem: "bun"
     directory: "/theme/jsonresume-theme-developer-ats"
     schedule:
-      interval: "weekly"
+      interval: "daily"
