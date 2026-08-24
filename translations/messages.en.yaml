@@ -3,6 +3,9 @@ basics:
   summary_role: "Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker."
   summary_experience: 'Hands-on experience in CI/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects.'
   summary_authorization: 'Work authorization: Swiss Citizen. Available now.'
+  support_position: 'IT Support Technician (N1/N2)'
+  support_summary_role: 'IT Support Technician with a Software Engineering background, comfortable handling incidents from first-line triage (N1) through in-depth technical troubleshooting (N2) across workstations, identity/directory services and networking.'
+  support_summary_experience: 'Hands-on experience managing device fleets, monitoring production systems and following structured, customer-facing procedures under time pressure.'
 
 languages:
   french: 'French'
@@ -102,6 +105,19 @@ skills:
   databases_name: 'Databases'
   cloud_devops_name: 'Cloud & DevOps'
   tools_name: 'Tools'
+  support_os_name: 'Operating Systems'
+  support_os_linux_basics: 'Linux (basics)'
+  support_directory_name: 'Identity & Directory Services'
+  support_ticketing_name: 'Ticketing & ITSM'
+  support_ticketing_itil: 'ITIL Fundamentals'
+  support_ticketing_incident_mgmt: 'Incident & Problem Management'
+  support_networking_name: 'Networking'
+  support_networking_wifi_troubleshooting: 'Wi-Fi troubleshooting'
+  support_hardware_name: 'Hardware & Devices'
+  support_hardware_workstation_troubleshooting: 'Workstation & peripheral troubleshooting'
+  support_hardware_printer_support: 'Printer & network device support'
+  support_collaboration_name: 'Office & Collaboration Tools'
+  support_collaboration_remote_tools: 'Remote support tools (RDP, TeamViewer)'
 
 awards:
   epfl_summary: 'Built a "digital museum" in Virtual reality. Won the first place in VR experiences, built with SteamVR and Unity.'

@@ -1,0 +1,181 @@
+{
+    "$schema": "https:\/\/jsonresume.org\/schema\/schema.json",
+    "basics": {
+        "name": "Romain Sickenberg",
+        "label": "Technicien Support Informatique (N1\/N2)",
+        "email": "r.sickenberg@gmail.com",
+        "phone": "+41 78 907 32 02",
+        "url": "https:\/\/rsickenberg.me",
+        "summary": "Technicien support informatique avec un profil d'ing\u00e9nieur logiciel, \u00e0 l'aise pour traiter les incidents du premier niveau (N1) jusqu'au d\u00e9pannage technique approfondi (N2), sur postes de travail, services d'annuaire\/identit\u00e9 et r\u00e9seaux.\n\nExp\u00e9rience concr\u00e8te en gestion de flottes d'appareils, supervision de syst\u00e8mes en production et respect de proc\u00e9dures structur\u00e9es face aux utilisateurs, sous contrainte de temps.\n\nAutorisation de travail : citoyen suisse. Disponible imm\u00e9diatement.",
+        "location": {
+            "address": "Chemin de la creuse 6",
+            "postalCode": "1027",
+            "city": "Lonay",
+            "countryCode": "CH",
+            "region": "VD"
+        },
+        "profiles": [
+            {
+                "network": "github",
+                "username": "rsickenberg",
+                "url": "https:\/\/github.com\/rsickenberg"
+            },
+            {
+                "network": "linkedin",
+                "username": "a320rsck",
+                "url": "https:\/\/linkedin.com\/in\/a320rsck"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Securitas AG",
+            "position": "Agent de s\u00e9curit\u00e9",
+            "location": "Lausanne",
+            "url": "https:\/\/www.securitas.ch",
+            "startDate": "2023-07-01",
+            "endDate": "2024-03-31",
+            "summary": "Agent de s\u00e9curit\u00e9 \u00e0 temps partiel dans le secteur \u00e9v\u00e9nementiel."
+        },
+        {
+            "name": "Ilem Group",
+            "position": "Ing\u00e9nieur Logiciel Backend Junior",
+            "location": "Gen\u00e8ve & Ecublens",
+            "url": "https:\/\/new.ilemgroup.com\/",
+            "startDate": "2021-02-01",
+            "endDate": "2021-10-31",
+            "summary": "Conseil informatique pour un client externe, Berdoz Vision & Audition.",
+            "highlights": [
+                "S\u00e9curis\u00e9 un ERP sur mesure hautement critique, migr\u00e9 vers une version PHP plus r\u00e9cente, et contribu\u00e9 au d\u00e9veloppement de son rempla\u00e7ant sous Laravel.",
+                "Configur\u00e9 une flotte de 44 iPad et mis en place des serveurs CI pour ex\u00e9cuter des suites de tests complexes avec Codeception et Cypress.",
+                "Am\u00e9lior\u00e9 la s\u00e9curit\u00e9 et d\u00e9velopp\u00e9 des composants critiques du CRM interne existant pour plusieurs magasins \u00e0 travers la Suisse.",
+                "D\u00e9velopp\u00e9 des outils internes pour les tests automatis\u00e9s, le monitoring et le d\u00e9ploiement, tout en garantissant des standards de qualit\u00e9 \u00e9lev\u00e9s avec Sentry."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Conf\u00e9d\u00e9ration Suisse | EPSIC \u00e0 Lausanne & CFPT \u00e0 Gen\u00e8ve",
+            "url": "https:\/\/www.bit.admin.ch\/fr\/informaticienne-cfc-developpement-applications",
+            "area": "Certificat f\u00e9d\u00e9ral de capacit\u00e9 (CFC) en informatique",
+            "startDate": "2016-08-01",
+            "endDate": "2020-07-01",
+            "score": "4.4",
+            "courses": [
+                "Publication de sites web",
+                "Mod\u00e9lisation de donn\u00e9es",
+                "Codage, compression et syst\u00e8mes de chiffrement",
+                "Principes de programmation orient\u00e9e objet",
+                "Interfaces graphiques pour applications",
+                "T\u00e2ches d'automatisation",
+                "Scripts et automatisation de proc\u00e9dures",
+                "D\u00e9veloppement web c\u00f4t\u00e9 client",
+                "Pages web interactives",
+                "Conception de composants orient\u00e9s objet",
+                "Structures de donn\u00e9es et algorithmes",
+                "D\u00e9veloppement logiciel agile",
+                "Bases de donn\u00e9es SQL",
+                "Gestion de sessions dans les applications web",
+                "Int\u00e9gration de bases de donn\u00e9es aux applications web",
+                "D\u00e9ploiement d'applications",
+                "S\u00e9curit\u00e9 applicative"
+            ]
+        }
+    ],
+    "skills": [
+        {
+            "name": "Syst\u00e8mes d'exploitation",
+            "level": "Advanced",
+            "keywords": [
+                "Windows 10 \/ 11",
+                "Windows Server",
+                "macOS",
+                "Linux (bases)"
+            ]
+        },
+        {
+            "name": "Identit\u00e9 & services d'annuaire",
+            "level": "Advanced",
+            "keywords": [
+                "Active Directory",
+                "Microsoft Entra ID (Azure AD)",
+                "Group Policy (GPO)"
+            ]
+        },
+        {
+            "name": "Ticketing & ITSM",
+            "level": "Advanced",
+            "keywords": [
+                "Jira Service Management",
+                "Fondamentaux ITIL",
+                "Gestion des incidents et des probl\u00e8mes"
+            ]
+        },
+        {
+            "name": "R\u00e9seau",
+            "level": "Advanced",
+            "keywords": [
+                "TCP\/IP",
+                "DNS & DHCP",
+                "VPN",
+                "D\u00e9pannage Wi-Fi"
+            ]
+        },
+        {
+            "name": "Mat\u00e9riel & appareils",
+            "level": "Advanced",
+            "keywords": [
+                "D\u00e9pannage postes de travail & p\u00e9riph\u00e9riques",
+                "Mobile Device Management (MDM)",
+                "Support imprimantes & \u00e9quipements r\u00e9seau"
+            ]
+        },
+        {
+            "name": "Outils bureautiques & collaboratifs",
+            "level": "Advanced",
+            "keywords": [
+                "Microsoft 365 (Outlook, Teams, SharePoint)",
+                "Outils de prise en main \u00e0 distance (RDP, TeamViewer)"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Fran\u00e7ais",
+            "fluency": "Langue maternelle"
+        },
+        {
+            "language": "Anglais",
+            "fluency": "Courant (C2)"
+        },
+        {
+            "language": "Allemand",
+            "fluency": "Interm\u00e9diaire (B1)"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Jeux vid\u00e9o, Films, Musique",
+            "keywords": [
+                "Joueur PC",
+                "Science-fiction",
+                "House"
+            ]
+        },
+        {
+            "name": "Voyage",
+            "keywords": [
+                "Voyage sac \u00e0 dos",
+                "Aventures en solo"
+            ]
+        },
+        {
+            "name": "Photographie",
+            "keywords": [
+                "Drone",
+                "Reflex num\u00e9rique",
+                "Astrophotographie"
+            ]
+        }
+    ]
+}

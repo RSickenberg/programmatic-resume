@@ -12,7 +12,7 @@
               <option name="patterns">
                 <list>
                   <Item>
-                    <option name="path" value="resume.json" />
+                    <option name="path" value="output/*.json" />
                   </Item>
                 </list>
               </option>

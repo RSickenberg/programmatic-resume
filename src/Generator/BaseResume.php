@@ -12,9 +12,11 @@ use JustSteveKing\Resume\DataObjects\Education;
 use JustSteveKing\Resume\DataObjects\Interest;
 use JustSteveKing\Resume\DataObjects\Language;
 use JustSteveKing\Resume\DataObjects\Location;
+use JustSteveKing\Resume\DataObjects\Profile;
 use JustSteveKing\Resume\DataObjects\Resume;
 use JustSteveKing\Resume\DataObjects\Work;
 use JustSteveKing\Resume\Enums\EducationLevel;
+use JustSteveKing\Resume\Enums\Network;
 use JustSteveKing\Resume\ValueObjects\Url;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
@@ -25,6 +27,7 @@ abstract class BaseResume implements AbstractResume
     public const string URL = 'https://rsickenberg.me';
     public const string PHONE = '+41 78 907 32 02';
     public const string LINKEDIN_URL = 'https://linkedin.com/in/a320rsck';
+    public const string GITHUB_URL = 'https://github.com/rsickenberg';
 
     public function __construct(
         protected readonly TranslatorInterface $translator,
@@ -38,12 +41,51 @@ abstract class BaseResume implements AbstractResume
 
     public function __invoke(): Resume
     {
-        throw new \RuntimeException(\sprintf('Cannot invoke %s resume on its own.', __FUNCTION__));
+        /** @var ResumeBuilder $resume */
+        $resume = new ResumeBuilder()
+            ->basics($this->basics())
+            |> $this->addLanguages(...)
+            |> $this->addWorks(...)
+            |> $this->addEducation(...)
+            |> $this->addSkills(...)
+            |> $this->addAwards(...)
+            |> $this->addInterests(...)
+            |> $this->addProjects(...);
+
+        return $resume->build();
     }
 
     public function basics(): Basics
     {
         throw new \RuntimeException(\sprintf('Cannot invoke %s resume on its own.', __FUNCTION__));
+    }
+
+    public function addAwards(ResumeBuilder $builder): ResumeBuilder
+    {
+        return $builder;
+    }
+
+    public function addProjects(ResumeBuilder $builder): ResumeBuilder
+    {
+        return $builder;
+    }
+
+    /**
+     * Sort work experiences by most recent first and add them to the builder.
+     * @param list<Work> $experiences
+     */
+    protected function addSortedWorks(ResumeBuilder $builder, array $experiences): ResumeBuilder
+    {
+        usort(
+            $experiences,
+            static fn(Work $a, Work $b): int => ($b->startDate) <=> ($a->startDate),
+        );
+
+        foreach ($experiences as $experience) {
+            $builder->addWork($experience);
+        }
+
+        return $builder;
     }
 
     public function getLocation(): Location
@@ -282,5 +324,11 @@ abstract class BaseResume implements AbstractResume
      * Return a list of related Resume profiles needed.
      * @return array<\JustSteveKing\Resume\DataObjects\Profile>
      */
-    abstract protected function getRelatedProfiles(): array;
+    protected function getRelatedProfiles(): array
+    {
+        return [
+            new Profile(Network::GitHub, 'rsickenberg', new Url(self::GITHUB_URL)),
+            new Profile(Network::LinkedIn, 'a320rsck', new Url(self::LINKEDIN_URL)),
+        ];
+    }
 }

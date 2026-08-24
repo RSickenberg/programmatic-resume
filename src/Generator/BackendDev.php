@@ -8,40 +8,18 @@ use DateTimeImmutable;
 use JustSteveKing\Resume\Builders\ResumeBuilder;
 use JustSteveKing\Resume\DataObjects\Award;
 use JustSteveKing\Resume\DataObjects\Basics;
-use JustSteveKing\Resume\DataObjects\Profile;
 use JustSteveKing\Resume\DataObjects\Project;
-use JustSteveKing\Resume\DataObjects\Resume;
 use JustSteveKing\Resume\DataObjects\Skill;
-use JustSteveKing\Resume\DataObjects\Work;
-use JustSteveKing\Resume\Enums\Network;
 use JustSteveKing\Resume\Enums\SkillLevel;
 use JustSteveKing\Resume\ValueObjects\Email;
 use JustSteveKing\Resume\ValueObjects\Url;
 
 final class BackendDev extends BaseResume
 {
-    private const string GITHUB_URL = 'https://github.com/rsickenberg';
     private const WorkTypes RELATED_TYPE = WorkTypes::IT;
 
     private const bool ADD_ALL_WORK_EXPERIENCES = true;
     private const bool ADD_CAREER_BRAKES = true;
-
-    #[\Override]
-    public function __invoke(): Resume
-    {
-        /** @var ResumeBuilder $resume */
-        $resume = new ResumeBuilder()
-            ->basics($this->basics())
-            |> $this->addLanguages(...)
-            |> $this->addWorks(...)
-            |> $this->addEducation(...)
-            |> $this->addSkills(...)
-            |> $this->addAwards(...)
-            |> $this->addInterests(...)
-            |> $this->addProjects(...);
-
-        return $resume->build();
-    }
 
     #[\Override]
     public function basics(): Basics
@@ -75,16 +53,7 @@ final class BackendDev extends BaseResume
             array_push($experiences, ...$sectorExperiences);
         }
 
-        usort(
-            $experiences,
-            static fn(Work $a, Work $b): int => ($b->startDate) <=> ($a->startDate),
-        );
-
-        foreach ($experiences as $experience) {
-            $builder->addWork($experience);
-        }
-
-        return $builder;
+        return $this->addSortedWorks($builder, $experiences);
     }
 
     public function addSkills(ResumeBuilder $builder): ResumeBuilder
@@ -192,14 +161,6 @@ final class BackendDev extends BaseResume
             $this->trans('basics.summary_experience'),
             $this->trans('basics.summary_authorization'),
         ]);
-    }
-
-    protected function getRelatedProfiles(): array
-    {
-        return [
-            new Profile(Network::GitHub, 'rsickenberg', new Url(self::GITHUB_URL)),
-            new Profile(Network::LinkedIn, 'a320rsck', new Url(self::LINKEDIN_URL)),
-        ];
     }
 
     public function addProjects(ResumeBuilder $builder): ResumeBuilder

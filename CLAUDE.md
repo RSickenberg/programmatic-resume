@@ -22,14 +22,14 @@ ATS-friendly theme, with English/French localization.
 | Task | Command |
 |---|---|
 | Install deps | `bun install && composer install` |
-| Generate English resume | `make backend` |
-| Generate French resume | `make backend-fr` |
-| Generate all locales | `make backends` |
-| Run generator directly | `php entrypoint.php backend-dev --locale fr -o resume.fr.json` |
+| Generate one profile/locale | `make backend` / `make backend-fr` / `make support-n1n2` / `make support-n1n2-fr` |
+| Generate every profile, every locale | `make all` |
+| Run generator directly | `php entrypoint.php backend-dev --locale fr -o output/resume.fr.json` |
 | Build the theme package | `cd theme/jsonresume-theme-developer-ats && bun run build` |
 | Lint / format PHP | `vendor/bin/php-cs-fixer fix` |
 | Release a new version | `npm run release` |
 
+Generated `resume.json`/`.html`/`.pdf` files are written to `output/`.
 There is no automated test suite in this repo currently.
 
 ## Conventions
