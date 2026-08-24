@@ -14,6 +14,13 @@ use JustSteveKing\Resume\ValueObjects\Url;
 
 final class SupportN1N2 extends BaseResume
 {
+    /**
+     * Set to true to show the exact same work history as BackendDev instead
+     * of the software-engineering placeholder below. Left as a manual
+     * toggle: flip by hand once a decision is made on which reads better.
+     */
+    private const bool USE_BACKEND_DEV_EXPERIENCE = false;
+
     #[\Override]
     public function basics(): Basics
     {
@@ -39,6 +46,10 @@ final class SupportN1N2 extends BaseResume
      */
     public function addWorks(ResumeBuilder $builder): ResumeBuilder
     {
+        if (self::USE_BACKEND_DEV_EXPERIENCE) {
+            return $this->addAllWorkExperiences($builder);
+        }
+
         $itExperiences = $this->getAllWorkExperiences()->get(WorkTypes::IT->value);
 
         $builder->addWork(new Work(
@@ -133,5 +144,31 @@ final class SupportN1N2 extends BaseResume
             $this->trans('basics.support_summary_experience'),
             $this->trans('basics.summary_authorization'),
         ]);
+    }
+
+    /**
+     * Curated for relevance to a general IT Support / hardware profile,
+     * rather than the software-development curation used by BaseResume's
+     * default (see there for the full list of excluded modules).
+     */
+    #[\Override]
+    protected function getRelevantCourses(): array
+    {
+        return [
+            $this->trans('education.courses.small_business_it_infra'), // 117
+            $this->trans('education.courses.server_services'), // 123
+            $this->trans('education.courses.workstation_setup'), // 304
+            $this->trans('education.courses.os_administration'), // 305
+            $this->trans('education.courses.network_components'), // 129
+            $this->trans('education.courses.office_tools'), // 301
+            $this->trans('education.courses.office_advanced'), // 302
+            $this->trans('education.courses.user_instruction'), // 214
+            $this->trans('education.courses.security_encryption'), // 114
+            $this->trans('education.courses.app_security'), // 183
+            $this->trans('education.courses.automation_tasks'), // 121
+            $this->trans('education.courses.scripting'), // 122
+            $this->trans('education.courses.teamwork'), // 213
+            $this->trans('education.courses.small_projects'), // 306
+        ];
     }
 }

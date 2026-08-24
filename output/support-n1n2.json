@@ -6,7 +6,7 @@
         "email": "r.sickenberg@gmail.com",
         "phone": "+41 78 907 32 02",
         "url": "https:\/\/rsickenberg.me",
-        "summary": "IT Support Technician with a Software Engineering background, comfortable handling incidents from first-line triage (N1) through in-depth technical troubleshooting (N2) across workstations, identity\/directory services and networking.\n\nA rigorous, process-driven engineering background paired with strong troubleshooting instincts and a genuine interest in helping end users resolve technical issues.\n\nWork authorization: Swiss Citizen. Available now.",
+        "summary": "IT Support Technician with a Software Engineering background, covering user support and problem management from first-line triage (N1) through in-depth technical troubleshooting (N2) across workstations, identity\/directory services and networking.\n\nA rigorous, process-driven engineering background paired with strong troubleshooting instincts, systems management discipline and a genuine interest in helping end users resolve technical issues.\n\nWork authorization: Swiss Citizen. Available now.",
         "location": {
             "address": "Chemin de la creuse 6",
             "postalCode": "1027",
@@ -45,23 +45,20 @@
             "endDate": "2020-07-01",
             "score": "4.4",
             "courses": [
-                "Publishing a website",
-                "Data modeling",
+                "Establishing the IT and network infrastructure of a small business",
+                "Activating server services",
+                "Installing and configuring a standalone computer",
+                "Installing, configuring and administering an operating system",
+                "Commissioning network components",
+                "Office software tools",
+                "Advanced Office functions",
+                "Instructing users on the proper use of IT resources",
                 "Coding, compression and encryption systems",
-                "Object-oriented programming principles",
-                "Graphical interfaces for applications",
+                "Application security",
                 "Automation tasks",
                 "Scripting and procedure automation",
-                "Client-side web development",
-                "Interactive web pages",
-                "Object-oriented component design",
-                "Data structures and algorithms",
-                "Agile software development",
-                "SQL databases",
-                "Session handling in web applications",
-                "Database integration into web applications",
-                "Application deployment",
-                "Application security"
+                "Developing team spirit",
+                "Carrying out small projects in a professional environment"
             ]
         }
     ],

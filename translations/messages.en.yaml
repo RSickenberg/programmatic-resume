@@ -1,11 +1,11 @@
 basics:
   backend_dev_position: 'Backend-Software Engineer'
   summary_role: "Backend-oriented Software Engineer with 5+ years of professional experience building and maintaining business-critical web applications with PHP, Symfony, Laravel, React and Docker."
-  summary_experience: 'Hands-on experience in CI/CD optimizations, code reviews, production deployments and technical leadership of medium-sized projects.'
+  summary_experience: 'Hands-on experience across application design and development, component integration and solution deployment (CI/CD), including code reviews, production releases and technical leadership of medium-sized projects.'
   summary_authorization: 'Work authorization: Swiss Citizen. Available now.'
   support_position: 'IT Support Technician (N1/N2)'
-  support_summary_role: 'IT Support Technician with a Software Engineering background, comfortable handling incidents from first-line triage (N1) through in-depth technical troubleshooting (N2) across workstations, identity/directory services and networking.'
-  support_summary_experience: 'A rigorous, process-driven engineering background paired with strong troubleshooting instincts and a genuine interest in helping end users resolve technical issues.'
+  support_summary_role: 'IT Support Technician with a Software Engineering background, covering user support and problem management from first-line triage (N1) through in-depth technical troubleshooting (N2) across workstations, identity/directory services and networking.'
+  support_summary_experience: 'A rigorous, process-driven engineering background paired with strong troubleshooting instincts, systems management discipline and a genuine interest in helping end users resolve technical issues.'
 
 languages:
   french: 'French'
@@ -101,6 +101,16 @@ education:
     database_integration: 'Database integration into web applications'
     deployment: 'Application deployment'
     app_security: 'Application security'
+    small_business_it_infra: 'Establishing the IT and network infrastructure of a small business'
+    server_services: 'Activating server services'
+    office_tools: 'Office software tools'
+    office_advanced: 'Advanced Office functions'
+    workstation_setup: 'Installing and configuring a standalone computer'
+    os_administration: 'Installing, configuring and administering an operating system'
+    network_components: 'Commissioning network components'
+    user_instruction: 'Instructing users on the proper use of IT resources'
+    teamwork: 'Developing team spirit'
+    small_projects: 'Carrying out small projects in a professional environment'
 
 skills:
   backend_name: 'Backend'

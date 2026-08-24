@@ -6,7 +6,7 @@
         "email": "r.sickenberg@gmail.com",
         "phone": "+41 78 907 32 02",
         "url": "https:\/\/rsickenberg.me",
-        "summary": "Technicien support informatique avec un profil d'ing\u00e9nieur logiciel, \u00e0 l'aise pour traiter les incidents du premier niveau (N1) jusqu'au d\u00e9pannage technique approfondi (N2), sur postes de travail, services d'annuaire\/identit\u00e9 et r\u00e9seaux.\n\nUn parcours d'ing\u00e9nieur rigoureux et m\u00e9thodique, associ\u00e9 \u00e0 un vrai sens du d\u00e9pannage et \u00e0 l'envie d'aider les utilisateurs \u00e0 r\u00e9soudre leurs probl\u00e8mes techniques.\n\nAutorisation de travail : citoyen suisse. Disponible imm\u00e9diatement.",
+        "summary": "Technicien support informatique avec un profil d'ing\u00e9nieur logiciel, couvrant le support utilisateur et la gestion des probl\u00e8mes, du traitement de premier niveau (N1) jusqu'au d\u00e9pannage technique approfondi (N2), sur postes de travail, services d'annuaire\/identit\u00e9 et r\u00e9seaux.\n\nUn parcours d'ing\u00e9nieur rigoureux et m\u00e9thodique, associ\u00e9 \u00e0 un vrai sens du d\u00e9pannage, \u00e0 la gestion des syst\u00e8mes et \u00e0 l'envie d'aider les utilisateurs \u00e0 r\u00e9soudre leurs probl\u00e8mes techniques.\n\nAutorisation de travail : citoyen suisse. Disponible imm\u00e9diatement.",
         "location": {
             "address": "Chemin de la creuse 6",
             "postalCode": "1027",
@@ -45,23 +45,20 @@
             "endDate": "2020-07-01",
             "score": "4.4",
             "courses": [
-                "Publication de sites web",
-                "Mod\u00e9lisation de donn\u00e9es",
+                "Mise en place de l'infrastructure informatique et r\u00e9seau d'une petite entreprise",
+                "Activation des services serveurs",
+                "Installation et configuration d'un poste de travail",
+                "Installation, configuration et administration d'un syst\u00e8me d'exploitation",
+                "Mise en service de composants r\u00e9seau",
+                "Outils bureautiques",
+                "Fonctions avanc\u00e9es des outils bureautiques",
+                "Instruction des utilisateurs \u00e0 l'usage correct des ressources informatiques",
                 "Codage, compression et syst\u00e8mes de chiffrement",
-                "Principes de programmation orient\u00e9e objet",
-                "Interfaces graphiques pour applications",
+                "S\u00e9curit\u00e9 applicative",
                 "T\u00e2ches d'automatisation",
                 "Scripts et automatisation de proc\u00e9dures",
-                "D\u00e9veloppement web c\u00f4t\u00e9 client",
-                "Pages web interactives",
-                "Conception de composants orient\u00e9s objet",
-                "Structures de donn\u00e9es et algorithmes",
-                "D\u00e9veloppement logiciel agile",
-                "Bases de donn\u00e9es SQL",
-                "Gestion de sessions dans les applications web",
-                "Int\u00e9gration de bases de donn\u00e9es aux applications web",
-                "D\u00e9ploiement d'applications",
-                "S\u00e9curit\u00e9 applicative"
+                "D\u00e9veloppement de l'esprit d'\u00e9quipe",
+                "R\u00e9alisation de petits projets en environnement professionnel"
             ]
         }
     ],
