@@ -5,7 +5,7 @@ PHP_EXEC = php
 # Misc
 .DEFAULT_GOAL = help
 OUTPUT_DIR    = output
-.PHONY        : help deps backend backend-fr support-n1n2 support-n1n2-fr backends supports all
+.PHONY        : help deps backend backend-fr support-n1n2n3 support-n1n2n3-fr backends supports all
 
 ## —— 🎵 🐳 The Makefile 🐳 🎵 ——————————————————————————————————
 help: ## Outputs this help screen
@@ -17,28 +17,28 @@ deps: ## Prepare the output dir, install JS deps and build the theme package
 	@$(BUN_EXEC) i
 
 backend: deps ## Generate the backend-dev resume (English)
-	@$(PHP_EXEC) entrypoint.php backend-dev --locale en -o $(OUTPUT_DIR)/resume.json
-	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/resume.json --language en -o $(OUTPUT_DIR)/resume.html
-	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/resume.json --language en -o $(OUTPUT_DIR)/resume.pdf
+	@$(PHP_EXEC) entrypoint.php backend-dev --locale en -o $(OUTPUT_DIR)/en/resume.json
+	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/en/resume.json --language en -o $(OUTPUT_DIR)/en/resume.html
+	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/en/resume.json --language en -o $(OUTPUT_DIR)/romain-sickenberg-backend-en.pdf
 
 backend-fr: deps ## Generate the backend-dev resume (French)
-	@$(PHP_EXEC) entrypoint.php backend-dev --locale fr -o $(OUTPUT_DIR)/resume.fr.json
-	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/resume.fr.json --language fr -o $(OUTPUT_DIR)/resume.fr.html
-	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/resume.fr.json --language fr -o $(OUTPUT_DIR)/resume.fr.pdf
+	@$(PHP_EXEC) entrypoint.php backend-dev --locale fr -o $(OUTPUT_DIR)/fr/resume.fr.json
+	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/resume.fr.json --language fr -o $(OUTPUT_DIR)/fr/resume.fr.html
+	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/resume.fr.json --language fr -o $(OUTPUT_DIR)/romain-sickenberg-backend-fr.pdf
 
-support-n1n2: deps ## Generate the support-n1n2 resume (English)
-	@$(PHP_EXEC) entrypoint.php support-n1n2 --locale en -o $(OUTPUT_DIR)/support-n1n2.json
-	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/support-n1n2.json --language en -o $(OUTPUT_DIR)/support-n1n2.html
-	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/support-n1n2.json --language en -o $(OUTPUT_DIR)/support-n1n2.pdf
+support-n1n2n3: deps ## Generate the support-n1n2n3 resume (English)
+	@$(PHP_EXEC) entrypoint.php support-n1n2n3 --locale en -o $(OUTPUT_DIR)/en/support-n1n2n3.json
+	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/en/support-n1n2n3.json --language en -o $(OUTPUT_DIR)/en/support-n1n2n3.html
+	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/en/support-n1n2n3.json --language en -o $(OUTPUT_DIR)/romain-sickenberg-n1n2n3-en.pdf
 
-support-n1n2-fr: deps ## Generate the support-n1n2 resume (French)
-	@$(PHP_EXEC) entrypoint.php support-n1n2 --locale fr -o $(OUTPUT_DIR)/support-n1n2.fr.json
-	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/support-n1n2.fr.json --language fr -o $(OUTPUT_DIR)/support-n1n2.fr.html
-	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/support-n1n2.fr.json --language fr -o $(OUTPUT_DIR)/support-n1n2.fr.pdf
+support-n1n2n3-fr: deps ## Generate the support-n1n2n3 resume (French)
+	@$(PHP_EXEC) entrypoint.php support-n1n2n3 --locale fr -o $(OUTPUT_DIR)/fr/support-n1n2n3.fr.json
+	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/support-n1n2n3.fr.json --language fr -o $(OUTPUT_DIR)/fr/support-n1n2n3.fr.html
+	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/support-n1n2n3.fr.json --language fr -o $(OUTPUT_DIR)/romain-sickenberg-n1n2n3-fr.pdf
 
 
 backends: backend backend-fr ## Generate all backend-dev variants (en, fr)
 
-supports: support-n1n2 support-n1n2-fr ## Generate all support-n1n2 variants (en, fr)
+supports: support-n1n2n3 support-n1n2n3-fr ## Generate all support-n1n2n3 variants (en, fr)
 
 all: backends supports ## Generate every profile, every locale

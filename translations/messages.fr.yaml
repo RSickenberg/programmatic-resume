@@ -121,7 +121,7 @@ skills:
   cloud_devops_name: 'Cloud & DevOps'
   tools_name: 'Outils'
   support_os_name: "Systèmes d'exploitation"
-  support_os_linux_basics: 'Linux (avancé)'
+  support_os_linux_advanced: 'Linux (avancé)'
   support_directory_name: "Identité & services d'annuaire"
   support_ticketing_name: 'Ticketing & ITSM'
   support_ticketing_itil: 'Fondamentaux ITIL'

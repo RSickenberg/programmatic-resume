@@ -1,4 +1,4 @@
 /vendor/
 /node_modules/
 .php-cs-fixer.cache
-/output/*.html
+/output/**/*.html

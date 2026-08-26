@@ -12,7 +12,7 @@ use JustSteveKing\Resume\Enums\SkillLevel;
 use JustSteveKing\Resume\ValueObjects\Email;
 use JustSteveKing\Resume\ValueObjects\Url;
 
-final class SupportN1N2 extends BaseResume
+final class SupportN1N2N3 extends BaseResume
 {
     /**
      * Set to true to show the exact same work history as BackendDev instead
@@ -38,7 +38,7 @@ final class SupportN1N2 extends BaseResume
 
     /**
      * None of the individual IT-sector jobs (backend/full-stack development)
-     * are directly relevant to an IT Support N1/N2 role, and the Security
+     * are directly relevant to an IT Support N1/N2/N3 role, and the Security
      * sector (Securitas) isn't either. Rather than listing them with
      * dev-specific highlights, fold them into a single placeholder entry
      * that acknowledges the software engineering background exists without

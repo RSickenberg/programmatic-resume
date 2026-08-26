@@ -43,7 +43,7 @@ catalog and registering it in `GenerateResumeCommand::LOCALES`; adding a new
 resume profile means implementing `AbstractResume` and calling
 `$this->trans('...')` for its content instead of hardcoding strings — see
 [BaseResume.php](src/Generator/BaseResume.php), [BackendDev.php](src/Generator/BackendDev.php)
-and [SupportN1N2.php](src/Generator/SupportN1N2.php) for the pattern.
+and [SupportN1N2.php](src/Generator/SupportN1N2N3.php) for the pattern.
 
 The theme itself localizes its own static chrome (section titles like
 "Experience"/"Skills", and the "Present" label for ongoing roles) based on

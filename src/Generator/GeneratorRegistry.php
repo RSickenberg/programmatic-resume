@@ -16,7 +16,7 @@ final class GeneratorRegistry
     /** @var array<string, class-string<AbstractResume>> */
     private const array PROFILES = [
         'backend-dev' => BackendDev::class,
-        'support-n1n2' => SupportN1N2::class,
+        'support-n1n2n3' => SupportN1N2N3::class,
     ];
 
     /**
