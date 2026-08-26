@@ -2,3 +2,11 @@
 /node_modules/
 .php-cs-fixer.cache
 /output/**/*.html
+
+# Extracted PDF text layers: regenerable from the PDFs, see output/ats/AUDIT.md.
+# AUDIT.md itself is kept.
+/output/ats/*.txt
+
+# macOS and per-machine tooling
+.DS_Store
+/.claude/settings.local.json

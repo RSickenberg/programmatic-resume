@@ -195,8 +195,8 @@ abstract class BaseResume implements AbstractResume
                     position: $this->trans('work.antistatique.position'),
                     location: 'Lausanne',
                     url: new Url('https://antistatique.net/'),
-                    startDate: '2021-10-31',
-                    endDate: '2023-01-31',
+                    startDate: '2021-10-04',
+                    endDate: '2023-02-12',
                     summary: $this->trans('work.antistatique.summary'),
                     highlights: [
                         $this->trans('work.antistatique.highlight_1'),

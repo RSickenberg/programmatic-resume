@@ -93,6 +93,7 @@ final class BackendDev extends BaseResume
                     level: SkillLevel::Advanced,
                     keywords: [
                         'Git',
+                        'GitLab',
                         'Composer',
                         'Jira, Confluence & Scrum',
                         'Sentry',

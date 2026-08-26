@@ -29,17 +29,67 @@
     },
     "work": [
         {
-            "name": "Liip, Ilem Group, Antistatique, Academic Work",
-            "position": "Software Engineer",
-            "startDate": "2016-06-01",
+            "name": "Academic Work SA",
+            "position": "Full-Stack Software Developer",
+            "location": "Lausanne",
+            "url": "https:\/\/www.academicwork.ch\/",
+            "startDate": "2024-03-01",
             "endDate": "2025-12-31",
-            "summary": "Nine years of software engineering across four companies. The parts that carry directly into IT support are below.",
+            "summary": "IT Consulting for diverse clients via Academic Work.",
             "highlights": [
-                "Configured and rolled out a fleet of **44 iPads** and set up CI servers for a retail client operating **20 stores**.",
-                "Ran production incident response with **Sentry** error monitoring, from alert through root cause to fix.",
-                "Secured a business-critical **ERP** and migrated it to a supported **PHP** version for that same 20-store network.",
-                "Deployed and maintained applications on **Linux** servers using **Docker** and **GitHub Actions**, with structured release and rollback processes.",
-                "Built internal tooling for automated testing, monitoring and deployment, and led code reviews across a multidisciplinary team."
+                "Inventoried every business application in the SiL information system for project Atlas, and identified the key points to monitor.",
+                "Built test scenarios with the business teams and wrote the technical documentation, working in **Easyvista** and the **CMDB**.",
+                "Shipped a **React** (**Next.js**) application with **GitHub Actions CI\/CD**, **Docker** containerization and automated deployments to Jelastic."
+            ]
+        },
+        {
+            "name": "Antistatique SA",
+            "position": "Backend Software Engineer",
+            "location": "Lausanne",
+            "url": "https:\/\/antistatique.net\/",
+            "startDate": "2021-10-04",
+            "endDate": "2023-02-12",
+            "summary": "From Junior to mid-level Software Engineer & highest skill jump !",
+            "highlights": [
+                "Deployed and maintained applications on **Linux** servers with **Docker** and **GitHub Actions**, following structured release and rollback processes.",
+                "Cut **GitHub Actions** execution time by **75%** through dependency caching and workflow optimization.",
+                "Led code reviews and owned technical delivery on small to medium-sized projects, including a client platform hosted on **AWS**, enforcing maintainability and development standards."
+            ]
+        },
+        {
+            "name": "Ilem Group",
+            "position": "Junior Backend Software Engineer",
+            "location": "Geneva & Ecublens",
+            "url": "https:\/\/new.ilemgroup.com\/",
+            "startDate": "2021-02-01",
+            "endDate": "2021-10-31",
+            "summary": "IT Consulting to an external client named Berdoz Vision & Audition.",
+            "highlights": [
+                "Configured a fleet of **44 iPads** and set up CI servers running **Codeception** and **Cypress** test suites.",
+                "Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then helped build its **Laravel** replacement.",
+                "Hardened security and developed critical components of the in-house CRM used across that same store network.",
+                "Built internal tooling for automated testing, monitoring and deployment, with **Sentry** for error tracking."
+            ]
+        },
+        {
+            "name": "Liip AG",
+            "position": "Apprentice Software Engineer",
+            "location": "Lausanne",
+            "url": "https:\/\/www.liip.ch",
+            "startDate": "2016-06-01",
+            "endDate": "2020-06-30",
+            "highlights": [
+                "Developed and extended internal web applications in **PHP** and **JavaScript**.",
+                "Shipped features in an **Agile** team using **Git**, **Scrum** and modern web development practices."
+            ]
+        },
+        {
+            "name": "",
+            "position": "Personal Breaks & Side Activities",
+            "highlights": [
+                "Security agent at Securitas AG - part-time, event sector. ||07.2023 - 03.2024",
+                "Planned career break - solo world travel and personal development. ||02.2023 - 06.2023",
+                "Swiss Armed Forces - mandatory military service. ||07.2020 - 11.2020"
             ]
         }
     ],
@@ -93,7 +143,9 @@
             "name": "Ticketing & ITSM",
             "level": "Advanced",
             "keywords": [
-                "Jira Service Management",
+                "Easyvista",
+                "Jira",
+                "CMDB (Configuration Management Database)",
                 "ITIL Fundamentals",
                 "Incident & Problem Management"
             ]
@@ -131,7 +183,7 @@
     "languages": [
         {
             "language": "French",
-            "fluency": "Native"
+            "fluency": "Native (C2)"
         },
         {
             "language": "English",

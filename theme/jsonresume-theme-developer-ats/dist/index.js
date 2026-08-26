@@ -606,7 +606,7 @@ function Languages({ languages = [] }) {
 					className: "font-semibold text-ink",
 					children: renderRichText(lang.language)
 				}),
-				lang.fluency && /* @__PURE__ */ jsxs("span", { children: [" — ", renderRichText(lang.fluency)] })
+				lang.fluency && /* @__PURE__ */ jsxs("span", { children: [": ", renderRichText(lang.fluency)] })
 			] }, index))
 		})
 	});

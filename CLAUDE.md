@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 Guidance for Claude Code when working in this repository. Keep this file
-short and factual — delete any section that doesn't apply, fill in the rest.
+short and factual. Delete any section that doesn't apply, fill in the rest.
 
 ## What this project is
 
@@ -10,8 +10,8 @@ ATS-friendly theme, with English/French localization.
 
 ## Stack
 
-- PHP 8.5 (Symfony Console + Symfony Translation, `juststoveking/resume-php`) — generates `resume.json` from `src/Generator/*` profile classes
-- `theme/jsonresume-theme-developer-ats` — a React 19 + Tailwind CSS 4 (Vite) theme package, built with Bun
+- PHP 8.5 (Symfony Console + Symfony Translation, `juststoveking/resume-php`) generates `resume.json` from `src/Generator/*` profile classes
+- `theme/jsonresume-theme-developer-ats` is a React 19 + Tailwind CSS 4 (Vite) theme package, built with Bun
 - `resuml` (via `bunx`) renders the JSON Resume into HTML/PDF using the theme
 - Composer for PHP deps, Bun for JS deps
 
@@ -26,6 +26,8 @@ ATS-friendly theme, with English/French localization.
 | Generate every profile, every locale | `make all` |
 | Run generator directly | `php entrypoint.php backend-dev --locale fr -o output/resume.fr.json` |
 | Build the theme package | `cd theme/jsonresume-theme-developer-ats && bun run build` |
+| Update dependencies (root + theme) | `make update-deps` |
+| Check the translation files | `make lint-translations` (runs inside `make deps`) |
 | Lint / format PHP | `vendor/bin/php-cs-fixer fix` |
 | Release a new version | `npm run release` |
 
@@ -34,14 +36,44 @@ There is no automated test suite in this repo currently.
 
 ## Conventions
 
-- Commit messages: Conventional Commits (`feat:`, `fix:`, `chore:`, `build(recipe):`, …) — `.release-it.ts` + `auto-changelog` turn these into `CHANGELOG.md` entries automatically.
+- Commit messages: Conventional Commits (`feat:`, `fix:`, `chore:`, `build(recipe):`, …). `.release-it.ts` + `auto-changelog` turn these into `CHANGELOG.md` entries automatically.
 - Branch `main` is what `release-it` requires and pushes tags to; day-to-day work happens on `dev` (or feature branches), merged in via PR.
 - New resume content goes through `AbstractResume` subclasses in `src/Generator/`, registered in `GeneratorRegistry.php`; strings are translated via `$this->trans('...')` against `translations/messages.<locale>.yaml`, never hardcoded.
+- The CV text lives in the YAML, the structure in the generator classes. Never edit a generated PDF: `make all` overwrites it.
+- Removing a bullet means removing **both** the YAML key and its `$this->trans(...)` line. Drop only the key and Symfony Translation prints the raw key into the CV.
+- `messages.en.yaml` and `messages.fr.yaml` must declare exactly the same keys. `make lint-translations` enforces it.
+- Markdown bold in resume strings marks **technology**, never an organisation: `**Symfony**` yes, `SIL` or `Securitas` no.
+- Never write two adjacent bold spans. `**GitHub Actions** **CI/CD**` renders a visible gap but emits no space into the PDF text layer, so a parser reads `ActionsCI/CD` and matches neither keyword. Write `**GitHub Actions CI/CD**`. The lint fails the build on this.
+- No em dash (`—`) anywhere: prose, comments, strings, documentation.
+- Never put a figure in a CV string that is not already in the source or stated by Romain. A fabricated metric is a claim he gets interviewed against.
+
+## Generating and auditing the CVs
+
+`output/` holds four variants: backend and support, each in English and French.
+Two subagents in `.claude/agents/` drive the optimisation loop:
+
+- `ats-reviewer` audits a built PDF and returns ranked fixes addressed to YAML keys. Read-only.
+- `cv-optimizer` applies them to the source, then hands the build back.
+
+Both carry a hard no-invention rule. Metric gaps are reported as questions for
+Romain, never filled with plausible numbers.
+
+`output/ats/` holds the extracted text layer of each CV plus `AUDIT.md`, the
+scored audit. Regenerate them after any content change.
+
+Two notes when measuring a PDF: `extract_text()` sorts by visual position and
+interleaves multi-column blocks, while `''.join(c['text'] for c in page.chars)`
+follows the content stream and preserves reading order. Check both before
+calling a layout defect real. And measure page fill rather than estimating it:
+the white space at the foot of a page always equals the size of the next atomic
+block that did not fit.
 
 ## Guardrails
 
-- Never edit `.env*` files with real secrets in place — only `.env.example`.
+- Never edit `.env*` files with real secrets in place, only `.env.example`.
 - Ask before force-pushing, rewriting history, or touching CI/CD config.
+- No `.bak` files. The project is on git.
+- The theme's component files carry header comments recording pagination invariants (which blocks may split, why a border is a top border, why the coursework is attached but breakable). Read them before changing layout: each one documents a bug that the comment prevents from returning.
 
 ## Think Before Coding
 
