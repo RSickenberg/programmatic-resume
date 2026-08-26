@@ -11,7 +11,7 @@ languages:
   french: 'Français'
   english: 'Anglais'
   german: 'Allemand'
-  fluency_native: 'Langue maternelle'
+  fluency_native: 'Langue maternelle (C2)'
   fluency_fluent_c2: 'Courant (C2)'
   fluency_intermediate_b1: 'Intermédiaire (B1)'
 
@@ -36,7 +36,7 @@ work:
   academic_work:
     position: 'Développeur Full-Stack'
     summary: 'Conseil informatique pour divers clients via Academic Work.'
-    highlight_1: 'Conçu des applications full-stack internes pour les Services Industriels de Lausanne (SIL) - front **Vue** (**Nuxt.js**), back-end **Python** (**Django**).'
+    highlight_1: 'Conçu une architecture découplée backend/frontend pour les Services Industriels de Lausanne (SIL) et développé le socle **Docker** de la majorité de leurs solutions internes (**Python**, **Django**, **Vue**, **React**).'
     highlight_2: 'Livré une application **React** (**Next.js**) avec intégration continue **GitHub Actions**, conteneurisation **Docker** et déploiements automatisés sur Jelastic.'
   antistatique:
     position: 'Ingénieur Logiciel Backend'
@@ -64,15 +64,10 @@ work:
     highlight_securitas: 'Agent de sécurité chez Securitas AG - à temps partiel, secteur événementiel. ||07.2023 - 03.2024'
     highlight_travel: 'Pause de carrière planifiée - voyage en solo autour du monde et développement personnel. ||02.2023 - 06.2023'
     highlight_military: 'Armée suisse - obligations militaires. ||07.2020 - 11.2020'
-  software_engineering_summary:
-    name: 'Liip, Ilem Group, Antistatique, Academic Work'
-    position: 'Ingénieur logiciel'
-    summary: "Neuf ans d'ingénierie logicielle dans quatre entreprises. Ce qui en relève directement du support informatique est détaillé ci-dessous."
-    highlight_1: 'Configuré et déployé une flotte de **44 iPad** et monté des serveurs CI pour un client disposant de **20 magasins**.'
-    highlight_2: "Assuré la réponse aux incidents en production avec le monitoring d'erreurs **Sentry**, de l'alerte à la cause racine puis au correctif."
-    highlight_3: "Sécurisé un **ERP** critique et migré vers une version **PHP** supportée, pour ce même réseau de 20 magasins."
-    highlight_4: 'Déployé et maintenu des applications sur serveurs **Linux** avec **Docker** et **GitHub Actions**, selon des processus structurés de mise en production et de retour arrière.'
-    highlight_5: "Développé l'outillage interne de tests automatisés, de monitoring et de déploiement, et mené les revues de code au sein d'une équipe pluridisciplinaire."
+  support_view:
+    academic_work_atlas: "Recensé l'ensemble des solutions métiers du SI des SiL dans le cadre du projet Atlas, et identifié les points clés à monitorer."
+    academic_work_itsm: "Mis en place des scénarios de tests avec les métiers et rédigé la documentation technique, sous **Easyvista** et **CMDB**."
+    antistatique_operations: 'Déployé et maintenu des applications sur serveurs **Linux** avec **Docker** et **GitHub Actions**, selon des processus structurés de mise en production et de retour arrière.'
 
 education:
   institution: 'Confédération Suisse | EPSIC à Lausanne & CFPT à Genève'

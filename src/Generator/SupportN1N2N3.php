@@ -37,37 +37,71 @@ final class SupportN1N2N3 extends BaseResume
     }
 
     /**
-     * The individual IT-sector jobs are backend/full-stack development, so
-     * listing them with their dev-specific highlights reads as off-target for
-     * an IT Support N1/N2/N3 role. They are folded into one entry instead,
-     * but that entry carries real, support-relevant highlights (device fleet
-     * rollout, incident response, server administration) drawn from the same
-     * history, rather than a disclaimer telling the reader to discount it.
+     * Which highlights each employer shows on the support CV, keyed by company
+     * name so employer, title and dates keep coming from the single definition
+     * in BaseResume and cannot drift.
+     *
+     * Folding the four employers into one entry hid employer, role and period
+     * from a parser, which is exactly what an ATS reconstructs an employment
+     * history from. Each company keeps its own entry; only the selection of
+     * highlights changes, favouring the support-relevant work (device fleet
+     * rollout, incident response, server operations, security hardening).
+     *
+     * Job titles are left exactly as held. Rewriting them to read as support
+     * roles would match more keywords and would be a lie.
+     *
+     * @var array<string, list<string>>
      */
+    private const array SUPPORT_HIGHLIGHTS = [
+        'Academic Work SA' => [
+            'work.support_view.academic_work_atlas',
+            'work.support_view.academic_work_itsm',
+            'work.academic_work.highlight_2',
+        ],
+        'Antistatique SA' => [
+            'work.support_view.antistatique_operations',
+            'work.antistatique.highlight_4',
+            'work.antistatique.highlight_5',
+        ],
+        'Ilem Group' => [
+            'work.ilem.highlight_2',
+            'work.ilem.highlight_1',
+            'work.ilem.highlight_3',
+            'work.ilem.highlight_4',
+        ],
+        'Liip AG' => [
+            'work.liip.highlight_1',
+            'work.liip.highlight_2',
+        ],
+    ];
+
     public function addWorks(ResumeBuilder $builder): ResumeBuilder
     {
         if (self::USE_BACKEND_DEV_EXPERIENCE) {
             return $this->addAllWorkExperiences($builder);
         }
 
-        $itExperiences = $this->getAllWorkExperiences()->get(WorkTypes::IT->value);
+        $experiences = [];
 
-        $builder->addWork(new Work(
-            name: $this->trans('work.software_engineering_summary.name'),
-            position: $this->trans('work.software_engineering_summary.position'),
-            startDate: min(array_map(static fn(Work $w) => $w->startDate, $itExperiences)),
-            endDate: max(array_map(static fn(Work $w) => $w->endDate, $itExperiences)),
-            summary: $this->trans('work.software_engineering_summary.summary'),
-            highlights: [
-                $this->trans('work.software_engineering_summary.highlight_1'),
-                $this->trans('work.software_engineering_summary.highlight_2'),
-                $this->trans('work.software_engineering_summary.highlight_3'),
-                $this->trans('work.software_engineering_summary.highlight_4'),
-                $this->trans('work.software_engineering_summary.highlight_5'),
-            ],
-        ));
+        foreach ($this->getAllWorkExperiences()->get(WorkTypes::IT->value) as $work) {
+            $experiences[] = new Work(
+                name: $work->name,
+                position: $work->position,
+                location: $work->location,
+                url: $work->url,
+                startDate: $work->startDate,
+                endDate: $work->endDate,
+                summary: $work->summary,
+                highlights: array_map(
+                    fn(string $key): string => $this->trans($key),
+                    self::SUPPORT_HIGHLIGHTS[$work->name] ?? [],
+                ),
+            );
+        }
 
-        return $builder;
+        array_push($experiences, ...$this->getAllWorkExperiences()->get(WorkTypes::BREAKS->value));
+
+        return $this->addSortedWorks($builder, $experiences);
     }
 
     public function addSkills(ResumeBuilder $builder): ResumeBuilder
@@ -101,7 +135,9 @@ final class SupportN1N2N3 extends BaseResume
                     name: $this->trans('skills.support_ticketing_name'),
                     level: SkillLevel::Advanced,
                     keywords: [
-                        'Jira Service Management',
+                        'Easyvista',
+                        'Jira',
+                        'CMDB (Configuration Management Database)',
                         $this->trans('skills.support_ticketing_itil'),
                         $this->trans('skills.support_ticketing_incident_mgmt'),
                     ]

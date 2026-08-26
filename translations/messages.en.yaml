@@ -11,7 +11,7 @@ languages:
   french: 'French'
   english: 'English'
   german: 'German'
-  fluency_native: 'Native'
+  fluency_native: 'Native (C2)'
   fluency_fluent_c2: 'Fluent (C2)'
   fluency_intermediate_b1: 'Intermediate (B1)'
 
@@ -36,7 +36,7 @@ work:
   academic_work:
     position: 'Full-Stack Software Developer'
     summary: 'IT Consulting for diverse clients via Academic Work.'
-    highlight_1: 'Built internal full-stack applications for SIL Lausanne staff - **Vue** (**Nuxt.js**) front end on a **Python** (**Django**) back end.'
+    highlight_1: 'Designed a decoupled backend/frontend architecture for **SIL Lausanne** and built the **Docker** base platform underpinning most of their in-house solutions (**Python**, **Django**, **Vue**, **React**).'
     highlight_2: 'Shipped a **React** (**Next.js**) application with **GitHub Actions CI/CD**, **Docker** containerization and automated deployments to Jelastic.'
   antistatique:
     position: 'Backend Software Engineer'
@@ -64,15 +64,10 @@ work:
     highlight_securitas: 'Security agent at Securitas AG - part-time, event sector. ||07.2023 - 03.2024'
     highlight_travel: 'Planned career break - solo world travel and personal development. ||02.2023 - 06.2023'
     highlight_military: 'Swiss Armed Forces - mandatory military service. ||07.2020 - 11.2020'
-  software_engineering_summary:
-    name: 'Liip, Ilem Group, Antistatique, Academic Work'
-    position: 'Software Engineer'
-    summary: 'Nine years of software engineering across four companies. The parts that carry directly into IT support are below.'
-    highlight_1: 'Configured and rolled out a fleet of **44 iPads** and set up CI servers for a retail client operating **20 stores**.'
-    highlight_2: 'Ran production incident response with **Sentry** error monitoring, from alert through root cause to fix.'
-    highlight_3: 'Secured a business-critical **ERP** and migrated it to a supported **PHP** version for that same 20-store network.'
-    highlight_4: 'Deployed and maintained applications on **Linux** servers using **Docker** and **GitHub Actions**, with structured release and rollback processes.'
-    highlight_5: 'Built internal tooling for automated testing, monitoring and deployment, and led code reviews across a multidisciplinary team.'
+  support_view:
+    academic_work_atlas: 'Inventoried every business application in the SiL information system for project Atlas, and identified the key points to monitor.'
+    academic_work_itsm: 'Built test scenarios with the business teams and wrote the technical documentation, working in **Easyvista** and the **CMDB**.'
+    antistatique_operations: 'Deployed and maintained applications on **Linux** servers with **Docker** and **GitHub Actions**, following structured release and rollback processes.'
 
 education:
   institution: 'Swiss Confederation | EPSIC @ Lausanne & CFPT @ Geneva'

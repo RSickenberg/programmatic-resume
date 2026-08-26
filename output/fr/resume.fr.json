@@ -37,7 +37,7 @@
             "endDate": "2025-12-31",
             "summary": "Conseil informatique pour divers clients via Academic Work.",
             "highlights": [
-                "Con\u00e7u des applications full-stack internes pour les Services Industriels de Lausanne (SIL) - front **Vue** (**Nuxt.js**), back-end **Python** (**Django**).",
+                "Con\u00e7u une architecture d\u00e9coupl\u00e9e backend\/frontend pour les Services Industriels de Lausanne (SIL) et d\u00e9velopp\u00e9 le socle **Docker** de la majorit\u00e9 de leurs solutions internes (**Python**, **Django**, **Vue**, **React**).",
                 "Livr\u00e9 une application **React** (**Next.js**) avec int\u00e9gration continue **GitHub Actions**, conteneurisation **Docker** et d\u00e9ploiements automatis\u00e9s sur Jelastic."
             ]
         },
@@ -46,8 +46,8 @@
             "position": "Ing\u00e9nieur Logiciel Backend",
             "location": "Lausanne",
             "url": "https:\/\/antistatique.net\/",
-            "startDate": "2021-10-31",
-            "endDate": "2023-01-31",
+            "startDate": "2021-10-04",
+            "endDate": "2023-02-12",
             "summary": "De d\u00e9veloppeur junior \u00e0 confirm\u00e9 : la plus forte progression de ma carri\u00e8re !",
             "highlights": [
                 "Con\u00e7u et maintenu des applications d'entreprise **Symfony 6** et leurs **API REST** (**API Platform**), sous **PHP 7.4 \/ 8.0**, avec **Doctrine ORM**, **PostgreSQL**, du cache **Redis** et de l'indexation **Elasticsearch**.",
@@ -144,6 +144,7 @@
             "level": "Advanced",
             "keywords": [
                 "Git",
+                "GitLab",
                 "Composer",
                 "Jira, Confluence & Scrum",
                 "Sentry",
@@ -187,7 +188,7 @@
     "languages": [
         {
             "language": "Fran\u00e7ais",
-            "fluency": "Langue maternelle"
+            "fluency": "Langue maternelle (C2)"
         },
         {
             "language": "Anglais",

@@ -18,7 +18,7 @@ export default function Languages ({ languages = [] }) {
           <span key={index}>
             {index > 0 && <span className="text-subtle"> · </span>}
             <span className="font-semibold text-ink">{renderRichText(lang.language)}</span>
-            {lang.fluency && <span> — {renderRichText(lang.fluency)}</span>}
+            {lang.fluency && <span>: {renderRichText(lang.fluency)}</span>}
           </span>
         ))}
       </p>

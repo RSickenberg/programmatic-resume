@@ -37,7 +37,7 @@
             "endDate": "2025-12-31",
             "summary": "IT Consulting for diverse clients via Academic Work.",
             "highlights": [
-                "Built internal full-stack applications for SIL Lausanne staff - **Vue** (**Nuxt.js**) front end on a **Python** (**Django**) back end.",
+                "Designed a decoupled backend\/frontend architecture for **SIL Lausanne** and built the **Docker** base platform underpinning most of their in-house solutions (**Python**, **Django**, **Vue**, **React**).",
                 "Shipped a **React** (**Next.js**) application with **GitHub Actions CI\/CD**, **Docker** containerization and automated deployments to Jelastic."
             ]
         },
@@ -46,8 +46,8 @@
             "position": "Backend Software Engineer",
             "location": "Lausanne",
             "url": "https:\/\/antistatique.net\/",
-            "startDate": "2021-10-31",
-            "endDate": "2023-01-31",
+            "startDate": "2021-10-04",
+            "endDate": "2023-02-12",
             "summary": "From Junior to mid-level Software Engineer & highest skill jump !",
             "highlights": [
                 "Built and maintained enterprise **Symfony 6** applications and their **REST APIs** (**API Platform**), on **PHP 7.4\/8.0** with **Doctrine ORM**, **PostgreSQL**, **Redis** caching and **Elasticsearch** indexing.",
@@ -144,6 +144,7 @@
             "level": "Advanced",
             "keywords": [
                 "Git",
+                "GitLab",
                 "Composer",
                 "Jira, Confluence & Scrum",
                 "Sentry",
@@ -187,7 +188,7 @@
     "languages": [
         {
             "language": "French",
-            "fluency": "Native"
+            "fluency": "Native (C2)"
         },
         {
             "language": "English",
