@@ -24,6 +24,7 @@ interests:
   travel_kw_backpacking: 'Voyage sac à dos'
   travel_kw_solo: 'Aventures en solo'
   travel_kw_diving: 'Plongée'
+  travel_private_pilot: 'Pilote Privé'
   photography_name: 'Photographie'
   photography_kw_drone: 'Drone'
   photography_kw_dslr: 'Reflex numérique'
@@ -113,7 +114,7 @@ skills:
   support_directory_name: "Identité & services d'annuaire"
   support_ticketing_name: 'Ticketing & ITSM'
   support_ticketing_itil: 'Fondamentaux ITIL'
-  support_ticketing_incident_mgmt: 'Gestion des incidents et des problèmes'
+  support_ticketing_incident_mgmt: 'Gestion des incidents'
   support_networking_name: 'Réseau'
   support_networking_wifi_troubleshooting_network_setup: 'Dépannage Wi-Fi & mise en palce réseaux'
   support_hardware_name: 'Matériel & appareils'
