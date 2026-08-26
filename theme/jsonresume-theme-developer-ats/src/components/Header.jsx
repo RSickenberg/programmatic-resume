@@ -7,14 +7,14 @@ export default function Header ({ basics = {} }) {
   const locationStr = formatLocation(location)
 
   return (
-    <header className="mb-6 border-b border-border pb-4">
+    <header className="mb-4 border-b border-border pb-3">
       {name && (
-        <h1 className="font-mono text-[26pt] font-bold leading-none tracking-tight text-ink">{name}</h1>
+        <h1 className="font-mono text-[22pt] font-bold leading-none tracking-tight text-ink">{name}</h1>
       )}
       {label && (
-        <p className="mt-1.5 font-mono text-[12pt] font-semibold text-accent">{renderRichText(label)}</p>
+        <p className="mt-1 font-mono text-[12pt] font-semibold text-accent">{renderRichText(label)}</p>
       )}
-      <div className="mt-3 flex flex-col gap-y-0.5 text-[9pt] text-muted">
+      <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-[9pt] text-muted">
         {locationStr && <span>{locationStr}</span>}
         {email && <Link href={`mailto:${email}`} underline={false}>{email}</Link>}
         {phone && <Link href={`tel:${phone}`} underline={false}>{phone}</Link>}

@@ -37,12 +37,12 @@ final class SupportN1N2N3 extends BaseResume
     }
 
     /**
-     * None of the individual IT-sector jobs (backend/full-stack development)
-     * are directly relevant to an IT Support N1/N2/N3 role, and the Security
-     * sector (Securitas) isn't either. Rather than listing them with
-     * dev-specific highlights, fold them into a single placeholder entry
-     * that acknowledges the software engineering background exists without
-     * claiming support-specific relevance for it.
+     * The individual IT-sector jobs are backend/full-stack development, so
+     * listing them with their dev-specific highlights reads as off-target for
+     * an IT Support N1/N2/N3 role. They are folded into one entry instead,
+     * but that entry carries real, support-relevant highlights (device fleet
+     * rollout, incident response, server administration) drawn from the same
+     * history, rather than a disclaimer telling the reader to discount it.
      */
     public function addWorks(ResumeBuilder $builder): ResumeBuilder
     {
@@ -58,6 +58,13 @@ final class SupportN1N2N3 extends BaseResume
             startDate: min(array_map(static fn(Work $w) => $w->startDate, $itExperiences)),
             endDate: max(array_map(static fn(Work $w) => $w->endDate, $itExperiences)),
             summary: $this->trans('work.software_engineering_summary.summary'),
+            highlights: [
+                $this->trans('work.software_engineering_summary.highlight_1'),
+                $this->trans('work.software_engineering_summary.highlight_2'),
+                $this->trans('work.software_engineering_summary.highlight_3'),
+                $this->trans('work.software_engineering_summary.highlight_4'),
+                $this->trans('work.software_engineering_summary.highlight_5'),
+            ],
         ));
 
         return $builder;

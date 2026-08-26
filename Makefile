@@ -1,17 +1,30 @@
 # Executables (local)
-BUN_EXEC = bun
-PHP_EXEC = php
+BUN_EXEC      = bun
+PHP_EXEC      = php
+COMPOSER_EXEC = composer
 
 # Misc
 .DEFAULT_GOAL = help
 OUTPUT_DIR    = output
-.PHONY        : help deps backend backend-fr support-n1n2n3 support-n1n2n3-fr backends supports all
+.PHONY        : help deps update-deps lint-translations backend backend-fr support-n1n2n3 support-n1n2n3-fr backends supports all
 
 ## —— 🎵 🐳 The Makefile 🐳 🎵 ——————————————————————————————————
 help: ## Outputs this help screen
 	@grep -E '(^[a-zA-Z0-9\./_-]+:.*?##.*$$)|(^##)' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}{printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}' | sed -e 's/\[32m##/[33m/'
 
-deps: ## Prepare the output dir, install JS deps and build the theme package
+update-deps: ## Update Composer and Bun dependencies, at the root and in the theme package
+	@echo "==> composer (root)"
+	@$(COMPOSER_EXEC) update
+	@echo "==> bun (root)"
+	@$(BUN_EXEC) update
+	@echo "==> bun (theme)"
+	@cd theme/jsonresume-theme-developer-ats && $(BUN_EXEC) update
+	@echo "Dependencies updated. Run 'make all' to rebuild the theme and regenerate every CV."
+
+lint-translations: ## Check locale parity and catch bold spans that lose their space in the PDF
+	@$(PHP_EXEC) bin/check-translations.php
+
+deps: lint-translations ## Prepare the output dir, install JS deps and build the theme package
 	@mkdir -p $(OUTPUT_DIR)
 	@cd theme/jsonresume-theme-developer-ats && $(BUN_EXEC) run build
 	@$(BUN_EXEC) i

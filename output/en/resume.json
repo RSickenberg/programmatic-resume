@@ -6,7 +6,7 @@
         "email": "r.sickenberg@gmail.com",
         "phone": "+41 78 907 32 02",
         "url": "https:\/\/rsickenberg.me",
-        "summary": "Backend-oriented Software Engineer with **5+ years** of professional experience building and maintaining business-critical web applications with **PHP**, **Symfony**, **Laravel**, **React** and **Docker**.\n\nHands-on experience across application design and development, component integration and solution deployment (**CI\/CD**), including code reviews, production releases and technical leadership of medium-sized projects.\n\nWork authorization: Swiss Citizen. Available now.",
+        "summary": "Backend Software Engineer with **5+ years** building and maintaining business-critical web applications and **REST APIs** with **PHP**, **Symfony**, **Laravel**, **React** and **Docker**.\n\nHands-on across application design, component integration and deployment (**CI\/CD**), including code review, production releases and technical leadership of medium-sized projects.\n\nWork authorization: Swiss Citizen. Available now.",
         "location": {
             "address": "Chemin de la creuse 6",
             "postalCode": "1027",
@@ -37,25 +37,9 @@
             "endDate": "2025-12-31",
             "summary": "IT Consulting for diverse clients via Academic Work.",
             "highlights": [
-                "Developed full-stack web applications using **Vue** (**Nuxt.JS**) & Backend in **Python** (**Django**) for the SIL in Lausanne.",
-                "Built a **React** (**Next.JS**) application with **GitHub Actions** **CI\/CD**, **Docker** containerization and automated deployments to Jelastic."
+                "Built internal full-stack applications for SIL Lausanne staff - **Vue** (**Nuxt.js**) front end on a **Python** (**Django**) back end.",
+                "Shipped a **React** (**Next.js**) application with **GitHub Actions CI\/CD**, **Docker** containerization and automated deployments to Jelastic."
             ]
-        },
-        {
-            "name": "Securitas AG",
-            "position": "Security Agent",
-            "location": "Lausanne",
-            "url": "https:\/\/www.securitas.ch",
-            "startDate": "2023-07-01",
-            "endDate": "2024-03-31",
-            "summary": "Part-time security agent in the event sector."
-        },
-        {
-            "name": "Personal Break",
-            "position": "Solo World Travel & Personal Development",
-            "startDate": "2023-02-01",
-            "endDate": "2023-06-30",
-            "summary": "Planned career break: Solo travel and personal development."
         },
         {
             "name": "Antistatique SA",
@@ -66,16 +50,12 @@
             "endDate": "2023-01-31",
             "summary": "From Junior to mid-level Software Engineer & highest skill jump !",
             "highlights": [
-                "Developed and maintained enterprise **Symfony 6** applications, using **PHP 7.4\/8.0**, **API Platform**, **Doctrine ORM**, **PostgreSQL** and **GitHub Actions**.",
-                "Involved as **PHP** Lead Developer for a client project in **Symfony** with 4 other devs.",
-                "Built and maintained CMS-based solutions (**Drupal**, **WordPress**).",
-                "Reduced **GitHub Actions** execution time by **75%** through dependency caching and workflow optimization.",
-                "Deployed projects to production using structured deployment processes.",
-                "Led code reviews to improve maintainability and enforce development standards.",
-                "Collaborated within a multidisciplinary development team using **Scrum**.",
-                "Took technical responsibility for small to medium-sized projects.",
-                "Managed and optimized local development environments using **Docker** and modern IDE tooling.",
-                "Analyzed project requirements and contributed to technical estimations."
+                "Built and maintained enterprise **Symfony 6** applications and their **REST APIs** (**API Platform**), on **PHP 7.4\/8.0** with **Doctrine ORM**, **PostgreSQL**, **Redis** caching and **Elasticsearch** indexing.",
+                "Led a five-developer team as **PHP** Lead Developer on a 3-4 month **Symfony** build for Colis du Coeur, shipping v1 of a state-machine-driven workflow for volunteer distribution centres.",
+                "Delivered and maintained six CMS builds - five **Drupal**, one **WordPress**.",
+                "Cut **GitHub Actions** execution time by **75%** through dependency caching and workflow optimization.",
+                "Led code reviews and owned technical delivery on small to medium-sized projects, including a client platform hosted on **AWS**, enforcing maintainability and development standards.",
+                "Built a small internal tool on a **serverless Firebase** backend with a **Vue.js** front end."
             ]
         },
         {
@@ -87,18 +67,11 @@
             "endDate": "2021-10-31",
             "summary": "IT Consulting to an external client named Berdoz Vision & Audition.",
             "highlights": [
-                "Secured a custom highly critical ERP, migrated it to a newer **PHP** version and contributed to the development of its **Laravel** replacement.",
-                "Configured a fleet of **44 iPads** and set up CI servers to run complex test suites with **Codeception** and **Cypress**.",
-                "Improved security and developed critical components of existing in-house CRM solution for multiple shops around Switzerland.",
-                "Built internal tools for automated testing, monitoring, and deployment, while ensuring high-quality standards with **Sentry**."
+                "Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then helped build its **Laravel** replacement.",
+                "Configured a fleet of **44 iPads** and set up CI servers running **Codeception** and **Cypress** test suites.",
+                "Hardened security and developed critical components of the in-house CRM used across that same store network.",
+                "Built internal tooling for automated testing, monitoring and deployment, with **Sentry** for error tracking."
             ]
-        },
-        {
-            "name": "Personal Break",
-            "position": "Swiss Armed Forces",
-            "startDate": "2020-07-01",
-            "endDate": "2020-11-30",
-            "summary": "Mandatory obligations."
         },
         {
             "name": "Liip AG",
@@ -107,12 +80,19 @@
             "url": "https:\/\/www.liip.ch",
             "startDate": "2016-06-01",
             "endDate": "2020-06-30",
-            "summary": "Started my IT career while studying 2 days per week at school.",
             "highlights": [
-                "Developed and enhanced internal web applications using **PHP** and **JavaScript**.",
-                "Collaborated within an **Agile** development team using **Git** and modern web development practices.",
-                "Developed custom **Moodle** plugins with **PHP 5.4**.",
-                "Used **Scrum** in an Holacratic environment."
+                "Developed and extended internal web applications in **PHP** and **JavaScript**.",
+                "Shipped features in an **Agile** team using **Git**, **Scrum** and modern web development practices.",
+                "Developed custom **Moodle** plugins with **PHP 5.4**."
+            ]
+        },
+        {
+            "name": "",
+            "position": "Personal Breaks & Side Activities",
+            "highlights": [
+                "Security agent at Securitas AG - part-time, event sector. ||07.2023 - 03.2024",
+                "Planned career break - solo world travel and personal development. ||02.2023 - 06.2023",
+                "Swiss Armed Forces - mandatory military service. ||07.2020 - 11.2020"
             ]
         }
     ],
@@ -123,26 +103,7 @@
             "area": "Federal VET Diploma in Information Technology (CFC)",
             "startDate": "2016-08-01",
             "endDate": "2020-07-01",
-            "score": "4.4",
-            "courses": [
-                "Publishing a website",
-                "Data modeling",
-                "Coding, compression and encryption systems",
-                "Object-oriented programming principles",
-                "Graphical interfaces for applications",
-                "Automation tasks",
-                "Scripting and procedure automation",
-                "Client-side web development",
-                "Interactive web pages",
-                "Object-oriented component design",
-                "Data structures and algorithms",
-                "Agile software development",
-                "SQL databases",
-                "Session handling in web applications",
-                "Database integration into web applications",
-                "Application deployment",
-                "Application security"
-            ]
+            "score": "4.4"
         }
     ],
     "awards": [
@@ -162,7 +123,46 @@
                 "Python",
                 "Node.js",
                 "C#",
-                "Java"
+                "Java",
+                "REST APIs"
+            ]
+        },
+        {
+            "name": "Databases",
+            "level": "Expert",
+            "keywords": [
+                "PostgreSQL",
+                "MySQL",
+                "MariaDB",
+                "Prisma \/ Supabase",
+                "Redis",
+                "Elasticsearch"
+            ]
+        },
+        {
+            "name": "Tools",
+            "level": "Advanced",
+            "keywords": [
+                "Git",
+                "Composer",
+                "Jira, Confluence & Scrum",
+                "Sentry",
+                "Bash"
+            ]
+        },
+        {
+            "name": "Cloud & DevOps",
+            "level": "Advanced",
+            "keywords": [
+                "Docker",
+                "GitHub Actions",
+                "CI\/CD",
+                "Linux",
+                "Apache & Nginx",
+                "Google Cloud Platform (GCP)",
+                "AWS",
+                "Firebase",
+                "Serverless"
             ]
         },
         {
@@ -177,47 +177,10 @@
             ]
         },
         {
-            "name": "Lower Level",
+            "name": "Mobile",
             "level": "Expert",
             "keywords": [
                 "Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)"
-            ]
-        },
-        {
-            "name": "Databases",
-            "level": "Expert",
-            "keywords": [
-                "PostgreSQL",
-                "MySQL",
-                "MariaDB",
-                "Prisma \/ Supabase",
-                "Redis"
-            ]
-        },
-        {
-            "name": "Cloud & DevOps",
-            "level": "Advanced",
-            "keywords": [
-                "Docker",
-                "GitHub Actions",
-                "CI\/CD",
-                "Linux",
-                "Apache & Nginx",
-                "Google Cloud Platform (GCP)",
-                "AWS",
-                "Serverless"
-            ]
-        },
-        {
-            "name": "Tools",
-            "level": "Advanced",
-            "keywords": [
-                "Git",
-                "Composer",
-                "Jira, Confluence & Scrum",
-                "Rest APIs",
-                "Sentry",
-                "Bash"
             ]
         }
     ],
@@ -233,32 +196,6 @@
         {
             "language": "German",
             "fluency": "Intermediate (B1)"
-        }
-    ],
-    "interests": [
-        {
-            "name": "Video Games, Movies, Music",
-            "keywords": [
-                "PC Gamer",
-                "Sci-Fi",
-                "House"
-            ]
-        },
-        {
-            "name": "Travel",
-            "keywords": [
-                "Backpacking",
-                "Solo Adventures",
-                "Diving"
-            ]
-        },
-        {
-            "name": "Photography",
-            "keywords": [
-                "Drone",
-                "DSLR",
-                "Astro-photography"
-            ]
         }
     ],
     "projects": [

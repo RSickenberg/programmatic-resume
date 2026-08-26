@@ -6,7 +6,7 @@
         "email": "r.sickenberg@gmail.com",
         "phone": "+41 78 907 32 02",
         "url": "https:\/\/rsickenberg.me",
-        "summary": "Ing\u00e9nieur logiciel agile orient\u00e9 backend avec plus de **5 ans** d'exp\u00e9rience professionnelle dans la conception et la maintenance d'applications web critiques pour l'activit\u00e9, avec **PHP**, **Symfony**, **Laravel**, **React** et **Docker**.\n\nExp\u00e9rience concr\u00e8te en conception et d\u00e9veloppement d'applications, int\u00e9gration des composants et d\u00e9ploiement de la solution (**CI\/CD**), incluant revues de code, d\u00e9ploiements en production et leadership technique sur des projets de taille moyenne.\n\nAutorisation de travail : citoyen suisse. Disponible imm\u00e9diatement.",
+        "summary": "Ing\u00e9nieur logiciel backend, plus de **5 ans** \u00e0 concevoir et maintenir des applications web critiques et leurs **API REST** en **PHP**, **Symfony**, **Laravel**, **React** et **Docker**.\n\nConception d'applications, int\u00e9gration de composants et d\u00e9ploiement (**CI\/CD**), avec revues de code, mises en production et leadership technique sur des projets de taille moyenne.\n\nAutorisation de travail : citoyen suisse. Disponible imm\u00e9diatement.",
         "location": {
             "address": "Chemin de la creuse 6",
             "postalCode": "1027",
@@ -37,25 +37,9 @@
             "endDate": "2025-12-31",
             "summary": "Conseil informatique pour divers clients via Academic Work.",
             "highlights": [
-                "D\u00e9velopp\u00e9 des applications web full-stack avec **Vue** (**Nuxt.JS**) et un backend en **Python** (**Django**) pour les Services Industriels (SIL) \u00e0 Lausanne.",
-                "D\u00e9velopp\u00e9 une application **React** (**Next.JS**) avec int\u00e9gration continue **GitHub Actions**, conteneurisation **Docker** et d\u00e9ploiements automatis\u00e9s sur Jelastic."
+                "Con\u00e7u des applications full-stack internes pour les Services Industriels de Lausanne (SIL) - front **Vue** (**Nuxt.js**), back-end **Python** (**Django**).",
+                "Livr\u00e9 une application **React** (**Next.js**) avec int\u00e9gration continue **GitHub Actions**, conteneurisation **Docker** et d\u00e9ploiements automatis\u00e9s sur Jelastic."
             ]
-        },
-        {
-            "name": "Securitas AG",
-            "position": "Agent de s\u00e9curit\u00e9",
-            "location": "Lausanne",
-            "url": "https:\/\/www.securitas.ch",
-            "startDate": "2023-07-01",
-            "endDate": "2024-03-31",
-            "summary": "Agent de s\u00e9curit\u00e9 \u00e0 temps partiel dans le secteur \u00e9v\u00e9nementiel."
-        },
-        {
-            "name": "Pause personnelle",
-            "position": "Voyage en solo autour du monde & d\u00e9veloppement personnel",
-            "startDate": "2023-02-01",
-            "endDate": "2023-06-30",
-            "summary": "Pause de carri\u00e8re planifi\u00e9e : voyage en solo et d\u00e9veloppement personnel."
         },
         {
             "name": "Antistatique SA",
@@ -66,16 +50,12 @@
             "endDate": "2023-01-31",
             "summary": "De d\u00e9veloppeur junior \u00e0 confirm\u00e9 : la plus forte progression de ma carri\u00e8re !",
             "highlights": [
-                "D\u00e9velopp\u00e9 et maintenu des applications d'entreprise sous **Symfony 6**, avec **PHP 7.4 \/ 8.0**, **API Platform**, **Doctrine ORM**, **PostgreSQL** et **GitHub Actions**.",
-                "Intervenu en tant que Lead Developer **PHP** sur un projet client **Symfony** avec 4 autres d\u00e9veloppeurs.",
-                "D\u00e9velopp\u00e9 et maintenu des solutions bas\u00e9es sur des CMS (**Drupal**, **WordPress**).",
-                "R\u00e9duit de **75%** le temps d'ex\u00e9cution des **GitHub Actions** gr\u00e2ce \u00e0 la mise en cache des d\u00e9pendances et \u00e0 l'optimisation des workflows.",
-                "D\u00e9ploy\u00e9 des projets en production selon des processus de d\u00e9ploiement structur\u00e9s.",
-                "Men\u00e9 des revues de code pour am\u00e9liorer la maintenabilit\u00e9 et faire respecter les standards de d\u00e9veloppement.",
-                "Collabor\u00e9 au sein d'une \u00e9quipe de d\u00e9veloppement pluridisciplinaire en m\u00e9thode **Scrum**.",
-                "Assum\u00e9 la responsabilit\u00e9 technique de projets de petite \u00e0 moyenne envergure.",
-                "G\u00e9r\u00e9 et optimis\u00e9 les environnements de d\u00e9veloppement locaux avec **Docker** et des outils IDE modernes.",
-                "Analys\u00e9 les besoins des projets et contribu\u00e9 aux estimations techniques."
+                "Con\u00e7u et maintenu des applications d'entreprise **Symfony 6** et leurs **API REST** (**API Platform**), sous **PHP 7.4 \/ 8.0**, avec **Doctrine ORM**, **PostgreSQL**, du cache **Redis** et de l'indexation **Elasticsearch**.",
+                "Dirig\u00e9 cinq d\u00e9veloppeurs comme Lead **PHP** sur un projet **Symfony** de 3-4 mois pour les Colis du Coeur : livraison de la v1, machines \u00e0 \u00e9tats et workflows pour des centres de distribution b\u00e9n\u00e9voles.",
+                "Livr\u00e9 et maintenu six sites CMS - cinq **Drupal**, un **WordPress**.",
+                "R\u00e9duit de **75%** le temps d'ex\u00e9cution des **GitHub Actions** via la mise en cache des d\u00e9pendances et l'optimisation des workflows.",
+                "Men\u00e9 les revues de code et la responsabilit\u00e9 technique de projets de petite \u00e0 moyenne envergure, dont une plateforme client sur **AWS**, en faisant respecter les standards de maintenabilit\u00e9.",
+                "D\u00e9velopp\u00e9 un petit outil interne sur un back-end **serverless Firebase** avec un front **Vue.js**."
             ]
         },
         {
@@ -87,18 +67,11 @@
             "endDate": "2021-10-31",
             "summary": "Conseil informatique pour un client externe, Berdoz Vision & Audition.",
             "highlights": [
-                "S\u00e9curis\u00e9 un ERP sur mesure hautement critique, migr\u00e9 vers une version **PHP** plus r\u00e9cente, et contribu\u00e9 au d\u00e9veloppement de son rempla\u00e7ant sous **Laravel**.",
-                "Configur\u00e9 une flotte de **44 iPad** et mis en place des serveurs CI pour ex\u00e9cuter des suites de tests complexes avec **Codeception** et **Cypress**.",
-                "Am\u00e9lior\u00e9 la s\u00e9curit\u00e9 et d\u00e9velopp\u00e9 des composants critiques du CRM interne existant pour plusieurs magasins \u00e0 travers la Suisse.",
-                "D\u00e9velopp\u00e9 des outils internes pour les tests automatis\u00e9s, le monitoring et le d\u00e9ploiement, tout en garantissant des standards de qualit\u00e9 \u00e9lev\u00e9s avec **Sentry**."
+                "S\u00e9curis\u00e9 et migr\u00e9 vers une version **PHP** plus r\u00e9cente un ERP critique desservant **20 magasins**, puis particip\u00e9 au d\u00e9veloppement de son rempla\u00e7ant sous **Laravel**.",
+                "Configur\u00e9 une flotte de **44 iPad** et mis en place des serveurs CI ex\u00e9cutant des suites de tests **Codeception** et **Cypress**.",
+                "Renforc\u00e9 la s\u00e9curit\u00e9 et d\u00e9velopp\u00e9 des composants critiques du CRM interne utilis\u00e9 par ce m\u00eame r\u00e9seau de magasins.",
+                "D\u00e9velopp\u00e9 l'outillage interne de tests automatis\u00e9s, de monitoring et de d\u00e9ploiement, avec **Sentry** pour le suivi des erreurs."
             ]
-        },
-        {
-            "name": "Pause personnelle",
-            "position": "Arm\u00e9e suisse",
-            "startDate": "2020-07-01",
-            "endDate": "2020-11-30",
-            "summary": "Obligations militaires."
         },
         {
             "name": "Liip AG",
@@ -107,12 +80,19 @@
             "url": "https:\/\/www.liip.ch",
             "startDate": "2016-06-01",
             "endDate": "2020-06-30",
-            "summary": "D\u00e9but\u00e9 ma carri\u00e8re en informatique tout en \u00e9tudiant 2 jours par semaine \u00e0 l'\u00e9cole.",
             "highlights": [
-                "D\u00e9velopp\u00e9 et am\u00e9lior\u00e9 des applications web internes avec **PHP** et **JavaScript**.",
-                "Collabor\u00e9 au sein d'une \u00e9quipe de d\u00e9veloppement **Agile** avec **Git** et des pratiques modernes de d\u00e9veloppement web.",
-                "D\u00e9velopp\u00e9 des plugins **Moodle** sur mesure avec **PHP 5.4**.",
-                "Travaill\u00e9 en **Scrum** au sein d\u2019un environnement holacratique."
+                "D\u00e9velopp\u00e9 et enrichi des applications web internes avec **PHP** et **JavaScript**.",
+                "Livr\u00e9 des fonctionnalit\u00e9s au sein d'une \u00e9quipe **Agile**, avec **Git**, **Scrum** et des pratiques modernes de d\u00e9veloppement web.",
+                "D\u00e9velopp\u00e9 des plugins **Moodle** sur mesure avec **PHP 5.4**."
+            ]
+        },
+        {
+            "name": "",
+            "position": "Pauses personnelles et activit\u00e9s accessoires",
+            "highlights": [
+                "Agent de s\u00e9curit\u00e9 chez Securitas AG - \u00e0 temps partiel, secteur \u00e9v\u00e9nementiel. ||07.2023 - 03.2024",
+                "Pause de carri\u00e8re planifi\u00e9e - voyage en solo autour du monde et d\u00e9veloppement personnel. ||02.2023 - 06.2023",
+                "Arm\u00e9e suisse - obligations militaires. ||07.2020 - 11.2020"
             ]
         }
     ],
@@ -123,26 +103,7 @@
             "area": "Certificat f\u00e9d\u00e9ral de capacit\u00e9 (CFC) en informatique",
             "startDate": "2016-08-01",
             "endDate": "2020-07-01",
-            "score": "4.4",
-            "courses": [
-                "Publication de sites web",
-                "Mod\u00e9lisation de donn\u00e9es",
-                "Codage, compression et syst\u00e8mes de chiffrement",
-                "Principes de programmation orient\u00e9e objet",
-                "Interfaces graphiques pour applications",
-                "T\u00e2ches d'automatisation",
-                "Scripts et automatisation de proc\u00e9dures",
-                "D\u00e9veloppement web c\u00f4t\u00e9 client",
-                "Pages web interactives",
-                "Conception de composants orient\u00e9s objet",
-                "Structures de donn\u00e9es et algorithmes",
-                "D\u00e9veloppement logiciel agile",
-                "Bases de donn\u00e9es SQL",
-                "Gestion de sessions dans les applications web",
-                "Int\u00e9gration de bases de donn\u00e9es aux applications web",
-                "D\u00e9ploiement d'applications",
-                "S\u00e9curit\u00e9 applicative"
-            ]
+            "score": "4.4"
         }
     ],
     "awards": [
@@ -162,7 +123,46 @@
                 "Python",
                 "Node.js",
                 "C#",
-                "Java"
+                "Java",
+                "REST APIs"
+            ]
+        },
+        {
+            "name": "Bases de donn\u00e9es",
+            "level": "Expert",
+            "keywords": [
+                "PostgreSQL",
+                "MySQL",
+                "MariaDB",
+                "Prisma \/ Supabase",
+                "Redis",
+                "Elasticsearch"
+            ]
+        },
+        {
+            "name": "Outils",
+            "level": "Advanced",
+            "keywords": [
+                "Git",
+                "Composer",
+                "Jira, Confluence & Scrum",
+                "Sentry",
+                "Bash"
+            ]
+        },
+        {
+            "name": "Cloud & DevOps",
+            "level": "Advanced",
+            "keywords": [
+                "Docker",
+                "GitHub Actions",
+                "CI\/CD",
+                "Linux",
+                "Apache & Nginx",
+                "Google Cloud Platform (GCP)",
+                "AWS",
+                "Firebase",
+                "Serverless"
             ]
         },
         {
@@ -177,47 +177,10 @@
             ]
         },
         {
-            "name": "Bas niveau",
+            "name": "Mobile",
             "level": "Expert",
             "keywords": [
                 "Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)"
-            ]
-        },
-        {
-            "name": "Bases de donn\u00e9es",
-            "level": "Expert",
-            "keywords": [
-                "PostgreSQL",
-                "MySQL",
-                "MariaDB",
-                "Prisma \/ Supabase",
-                "Redis"
-            ]
-        },
-        {
-            "name": "Cloud & DevOps",
-            "level": "Advanced",
-            "keywords": [
-                "Docker",
-                "GitHub Actions",
-                "CI\/CD",
-                "Linux",
-                "Apache & Nginx",
-                "Google Cloud Platform (GCP)",
-                "AWS",
-                "Serverless"
-            ]
-        },
-        {
-            "name": "Outils",
-            "level": "Advanced",
-            "keywords": [
-                "Git",
-                "Composer",
-                "Jira, Confluence & Scrum",
-                "Rest APIs",
-                "Sentry",
-                "Bash"
             ]
         }
     ],
@@ -233,32 +196,6 @@
         {
             "language": "Allemand",
             "fluency": "Interm\u00e9diaire (B1)"
-        }
-    ],
-    "interests": [
-        {
-            "name": "Jeux vid\u00e9o, Films, Musique",
-            "keywords": [
-                "Joueur PC",
-                "Science-fiction",
-                "House"
-            ]
-        },
-        {
-            "name": "Voyage",
-            "keywords": [
-                "Voyage sac \u00e0 dos",
-                "Aventures en solo",
-                "Plong\u00e9e"
-            ]
-        },
-        {
-            "name": "Photographie",
-            "keywords": [
-                "Drone",
-                "Reflex num\u00e9rique",
-                "Astrophotographie"
-            ]
         }
     ],
     "projects": [

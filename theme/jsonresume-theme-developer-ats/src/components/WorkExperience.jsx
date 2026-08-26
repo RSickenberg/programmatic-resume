@@ -9,7 +9,7 @@ export default function WorkExperience ({ work = [] }) {
   if (work.length === 0) return null
 
   return (
-    <Section title={title}>
+    <Section title={title} breakable>
       {work.map((job, index) => (
         <Entry
           key={index}

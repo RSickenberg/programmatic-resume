@@ -54,7 +54,7 @@
    */
   @page {
     size: A4;
-    margin: 14mm 16mm;
+    margin: 10mm 13mm;
   }
 
   @media print {
