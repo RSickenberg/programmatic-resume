@@ -74,7 +74,7 @@ final class SupportN1N2 extends BaseResume
                         'Windows 10 / 11',
                         'Windows Server',
                         'macOS',
-                        $this->trans('skills.support_os_linux_basics'),
+                        $this->trans('skills.support_os_linux_advanced'),
                     ]
                 )
             )
@@ -108,7 +108,7 @@ final class SupportN1N2 extends BaseResume
                         'TCP/IP',
                         'DNS & DHCP',
                         'VPN',
-                        $this->trans('skills.support_networking_wifi_troubleshooting'),
+                        $this->trans('skills.support_networking_wifi_troubleshooting_network_setup'),
                     ]
                 )
             )

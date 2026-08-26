@@ -2,11 +2,11 @@
     "$schema": "https:\/\/jsonresume.org\/schema\/schema.json",
     "basics": {
         "name": "Romain Sickenberg",
-        "label": "Technicien Support Informatique (N1\/N2)",
+        "label": "Technicien Support Informatique (N1 \/ N2 \/ N3)",
         "email": "r.sickenberg@gmail.com",
         "phone": "+41 78 907 32 02",
         "url": "https:\/\/rsickenberg.me",
-        "summary": "Technicien support informatique avec un profil d'ing\u00e9nieur logiciel, couvrant le support utilisateur et la gestion des probl\u00e8mes, du traitement de premier niveau (N1) jusqu'au d\u00e9pannage technique approfondi (N2), sur postes de travail, services d'annuaire\/identit\u00e9 et r\u00e9seaux.\n\nUn parcours d'ing\u00e9nieur rigoureux et m\u00e9thodique, associ\u00e9 \u00e0 un vrai sens du d\u00e9pannage, \u00e0 la gestion des syst\u00e8mes et \u00e0 l'envie d'aider les utilisateurs \u00e0 r\u00e9soudre leurs probl\u00e8mes techniques.\n\nAutorisation de travail : citoyen suisse. Disponible imm\u00e9diatement.",
+        "summary": "Technicien support informatique avec un profil d'ing\u00e9nieur logiciel, couvrant le support et la r\u00e9solution d'incidents de N1 \u00e0 N3, sur postes de travail, services d'annuaire\/identit\u00e9 et r\u00e9seaux.\n\nUn parcours d'ing\u00e9nieur rigoureux et m\u00e9thodique, associ\u00e9 \u00e0 un vrai sens du d\u00e9pannage, \u00e0 la gestion des syst\u00e8mes et \u00e0 l'envie d'aider les utilisateurs \u00e0 r\u00e9soudre leurs probl\u00e8mes techniques.\n\nAutorisation de travail : citoyen suisse. Disponible imm\u00e9diatement.",
         "location": {
             "address": "Chemin de la creuse 6",
             "postalCode": "1027",
@@ -70,7 +70,7 @@
                 "Windows 10 \/ 11",
                 "Windows Server",
                 "macOS",
-                "Linux (bases)"
+                "Linux (Advanced)"
             ]
         },
         {
@@ -98,7 +98,7 @@
                 "TCP\/IP",
                 "DNS & DHCP",
                 "VPN",
-                "D\u00e9pannage Wi-Fi"
+                "D\u00e9pannage Wi-Fi & mise en palce r\u00e9seaux"
             ]
         },
         {

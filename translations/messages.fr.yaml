@@ -3,8 +3,8 @@ basics:
   summary_role: "Ingénieur logiciel agile orienté backend avec plus de **5 ans** d'expérience professionnelle dans la conception et la maintenance d'applications web critiques pour l'activité, avec **PHP**, **Symfony**, **Laravel**, **React** et **Docker**."
   summary_experience: "Expérience concrète en conception et développement d'applications, intégration des composants et déploiement de la solution (**CI/CD**), incluant revues de code, déploiements en production et leadership technique sur des projets de taille moyenne."
   summary_authorization: 'Autorisation de travail : citoyen suisse. Disponible immédiatement.'
-  support_position: 'Technicien Support Informatique (N1/N2)'
-  support_summary_role: "Technicien support informatique avec un profil d'ingénieur logiciel, couvrant le support utilisateur et la gestion des problèmes, du traitement de premier niveau (N1) jusqu'au dépannage technique approfondi (N2), sur postes de travail, services d'annuaire/identité et réseaux."
+  support_position: 'Technicien Support Informatique (N1 / N2 / N3)'
+  support_summary_role: "Technicien support informatique avec un profil d'ingénieur logiciel, couvrant le support et la résolution d'incidents de N1 à N3, sur postes de travail, services d'annuaire/identité et réseaux."
   support_summary_experience: "Un parcours d'ingénieur rigoureux et méthodique, associé à un vrai sens du dépannage, à la gestion des systèmes et à l'envie d'aider les utilisateurs à résoudre leurs problèmes techniques."
 
 languages:
@@ -121,13 +121,13 @@ skills:
   cloud_devops_name: 'Cloud & DevOps'
   tools_name: 'Outils'
   support_os_name: "Systèmes d'exploitation"
-  support_os_linux_basics: 'Linux (bases)'
+  support_os_linux_basics: 'Linux (avancé)'
   support_directory_name: "Identité & services d'annuaire"
   support_ticketing_name: 'Ticketing & ITSM'
   support_ticketing_itil: 'Fondamentaux ITIL'
   support_ticketing_incident_mgmt: 'Gestion des incidents et des problèmes'
   support_networking_name: 'Réseau'
-  support_networking_wifi_troubleshooting: 'Dépannage Wi-Fi'
+  support_networking_wifi_troubleshooting_network_setup: 'Dépannage Wi-Fi & mise en palce réseaux'
   support_hardware_name: 'Matériel & appareils'
   support_hardware_workstation_troubleshooting: 'Dépannage postes de travail & périphériques'
   support_hardware_printer_support: 'Support imprimantes & équipements réseau'

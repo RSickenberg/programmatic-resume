@@ -3,8 +3,8 @@ basics:
   summary_role: "Backend-oriented Software Engineer with **5+ years** of professional experience building and maintaining business-critical web applications with **PHP**, **Symfony**, **Laravel**, **React** and **Docker**."
   summary_experience: 'Hands-on experience across application design and development, component integration and solution deployment (**CI/CD**), including code reviews, production releases and technical leadership of medium-sized projects.'
   summary_authorization: 'Work authorization: Swiss Citizen. Available now.'
-  support_position: 'IT Support Technician (N1/N2)'
-  support_summary_role: 'IT Support Technician with a Software Engineering background, covering user support and problem management from first-line triage (N1) through in-depth technical troubleshooting (N2) across workstations, identity/directory services and networking.'
+  support_position: 'IT Support Technician (N1/N2/N3)'
+  support_summary_role: 'IT Support Technician with a Software Engineering background, covering user support and incident resolution from N1 through N3 across workstations, identity/directory services and networking.'
   support_summary_experience: 'A rigorous, process-driven engineering background paired with strong troubleshooting instincts, systems management discipline and a genuine interest in helping end users resolve technical issues.'
 
 languages:
@@ -121,13 +121,13 @@ skills:
   cloud_devops_name: 'Cloud & DevOps'
   tools_name: 'Tools'
   support_os_name: 'Operating Systems'
-  support_os_linux_basics: 'Linux (basics)'
+  support_os_linux_advanced: 'Linux (Advanced)'
   support_directory_name: 'Identity & Directory Services'
   support_ticketing_name: 'Ticketing & ITSM'
   support_ticketing_itil: 'ITIL Fundamentals'
   support_ticketing_incident_mgmt: 'Incident & Problem Management'
   support_networking_name: 'Networking'
-  support_networking_wifi_troubleshooting: 'Wi-Fi troubleshooting'
+  support_networking_wifi_troubleshooting_network_setup: 'Wi-Fi troubleshooting & network setup'
   support_hardware_name: 'Hardware & Devices'
   support_hardware_workstation_troubleshooting: 'Workstation & peripheral troubleshooting'
   support_hardware_printer_support: 'Printer & network device support'
