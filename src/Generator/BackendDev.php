@@ -69,6 +69,51 @@ final class BackendDev extends BaseResume
                         'Node.js',
                         'C#',
                         'Java',
+                        'REST APIs',
+                    ]
+                )
+            )
+            ->addSkill(
+                new Skill(
+                    name: $this->trans('skills.databases_name'),
+                    level: SkillLevel::Expert,
+                    keywords: [
+                        'PostgreSQL',
+                        'MySQL',
+                        'MariaDB',
+                        'Prisma / Supabase',
+                        'Redis',
+                        'Elasticsearch',
+                    ]
+                )
+            )
+            ->addSkill(
+                new Skill(
+                    name: $this->trans('skills.tools_name'),
+                    level: SkillLevel::Advanced,
+                    keywords: [
+                        'Git',
+                        'Composer',
+                        'Jira, Confluence & Scrum',
+                        'Sentry',
+                        'Bash',
+                    ]
+                )
+            )
+            ->addSkill(
+                new Skill(
+                    name: $this->trans('skills.cloud_devops_name'),
+                    level: SkillLevel::Advanced,
+                    keywords: [
+                        'Docker',
+                        'GitHub Actions',
+                        'CI/CD',
+                        'Linux',
+                        'Apache & Nginx',
+                        'Google Cloud Platform (GCP)',
+                        'AWS',
+                        'Firebase',
+                        'Serverless',
                     ]
                 )
             )
@@ -91,49 +136,6 @@ final class BackendDev extends BaseResume
                     level: SkillLevel::Expert,
                     keywords: [
                         'Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)',
-                    ]
-                )
-            )
-            ->addSkill(
-                new Skill(
-                    name: $this->trans('skills.databases_name'),
-                    level: SkillLevel::Expert,
-                    keywords: [
-                        'PostgreSQL',
-                        'MySQL',
-                        'MariaDB',
-                        'Prisma / Supabase',
-                        'Redis',
-                    ]
-                )
-            )
-            ->addSkill(
-                new Skill(
-                    name: $this->trans('skills.cloud_devops_name'),
-                    level: SkillLevel::Advanced,
-                    keywords: [
-                        'Docker',
-                        'GitHub Actions',
-                        'CI/CD',
-                        'Linux',
-                        'Apache & Nginx',
-                        'Google Cloud Platform (GCP)',
-                        'AWS',
-                        'Serverless',
-                    ]
-                )
-            )
-            ->addSkill(
-                new Skill(
-                    name: $this->trans('skills.tools_name'),
-                    level: SkillLevel::Advanced,
-                    keywords: [
-                        'Git',
-                        'Composer',
-                        'Jira, Confluence & Scrum',
-                        'Rest APIs',
-                        'Sentry',
-                        'Bash',
                     ]
                 )
             );
@@ -161,6 +163,38 @@ final class BackendDev extends BaseResume
             $this->trans('basics.summary_experience'),
             $this->trans('basics.summary_authorization'),
         ]);
+    }
+
+    /**
+     * No coursework on the backend CV. Apprenticeship modules from 2020 carry
+     * little weight next to five years of shipped work, and the block costs
+     * ~48pt, the last gap between a two-page and a three-page CV. Return the
+     * commented list below to bring it back.
+     *
+     * @return list<string>
+     */
+    #[\Override]
+    protected function getRelevantCourses(): array
+    {
+        return [
+            // $this->trans('education.courses.data_modeling'), // 104
+            // $this->trans('education.courses.oop_principles'), // 404
+            // $this->trans('education.courses.data_structures_algorithms'), // 411
+            // $this->trans('education.courses.sql_databases'), // 105
+            // $this->trans('education.courses.database_integration'), // 151
+            // $this->trans('education.courses.app_security'), // 183
+        ];
+    }
+
+    /**
+     * Interests carry no ATS signal for a backend role and cost roughly 30mm,
+     * the difference between a two- and a three-page CV. Delete this override
+     * to bring them back.
+     */
+    #[\Override]
+    public function addInterests(ResumeBuilder $builder): ResumeBuilder
+    {
+        return $builder;
     }
 
     public function addProjects(ResumeBuilder $builder): ResumeBuilder

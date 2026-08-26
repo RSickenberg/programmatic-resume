@@ -91,7 +91,14 @@ abstract class BaseResume implements AbstractResume
     {
         usort(
             $experiences,
-            static fn(Work $a, Work $b): int => ($b->startDate) <=> ($a->startDate),
+            static function (Work $a, Work $b): int {
+                // Dateless entries (grouped, non-chronological blocks) sort last.
+                if ($a->startDate === null || $b->startDate === null) {
+                    return ($a->startDate === null ? 1 : 0) <=> ($b->startDate === null ? 1 : 0);
+                }
+
+                return $b->startDate <=> $a->startDate;
+            },
         );
 
         foreach ($experiences as $experience) {
@@ -198,10 +205,6 @@ abstract class BaseResume implements AbstractResume
                         $this->trans('work.antistatique.highlight_4'),
                         $this->trans('work.antistatique.highlight_5'),
                         $this->trans('work.antistatique.highlight_6'),
-                        $this->trans('work.antistatique.highlight_7'),
-                        $this->trans('work.antistatique.highlight_8'),
-                        $this->trans('work.antistatique.highlight_9'),
-                        $this->trans('work.antistatique.highlight_10'),
                     ],
                 ),
                 // Consulting @ Berdoz Vision via Ilem
@@ -229,43 +232,29 @@ abstract class BaseResume implements AbstractResume
                     url: new Url('https://www.liip.ch'),
                     startDate: '2016-06-01',
                     endDate: '2020-06-30',
-                    summary: $this->trans('work.liip.summary'),
                     highlights: [
                         $this->trans('work.liip.highlight_1'),
                         $this->trans('work.liip.highlight_2'),
                         $this->trans('work.liip.highlight_3'),
-                        $this->trans('work.liip.highlight_4'),
                     ],
                 ),
             ],
-            WorkTypes::SECURITY->value => [
-                new Work(
-                    name: 'Securitas AG',
-                    position: $this->trans('work.securitas.position'),
-                    location: 'Lausanne',
-                    url: new Url('https://www.securitas.ch'),
-                    startDate: '2023-07-01',
-                    endDate: '2024-03-31',
-                    summary: $this->trans('work.securitas.summary')
-                ),
-            ],
+            WorkTypes::SECURITY->value => [],
             WorkTypes::PILOT->value => [],
             WorkTypes::MISC->value => [],
+            // Non-engineering periods, grouped into one dateless entry: each item
+            // carries its own date via the `|| <meta>` convention the theme's
+            // HighlightList understands. A single entry-level range would span
+            // 2020-2024 and wrongly imply a four-year gap.
             WorkTypes::BREAKS->value => [
-                // 01.2026 | Studies & Job Search
                 new Work(
-                    name: $this->trans('work.break_travel.name'),
-                    position: $this->trans('work.break_travel.position'),
-                    startDate: '2023-02-01',
-                    endDate: '2023-06-30',
-                    summary: $this->trans('work.break_travel.summary'),
-                ),
-                new Work(
-                    name: $this->trans('work.break_military.name'),
-                    position: $this->trans('work.break_military.position'),
-                    startDate: '2020-07-01',
-                    endDate: '2020-11-30',
-                    summary: $this->trans('work.break_military.summary'),
+                    name: '',
+                    position: $this->trans('work.breaks_and_side.position'),
+                    highlights: [
+                        $this->trans('work.breaks_and_side.highlight_securitas'),
+                        $this->trans('work.breaks_and_side.highlight_travel'),
+                        $this->trans('work.breaks_and_side.highlight_military'),
+                    ],
                 ),
             ],
         ]);

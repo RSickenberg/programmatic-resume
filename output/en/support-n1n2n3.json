@@ -6,7 +6,7 @@
         "email": "r.sickenberg@gmail.com",
         "phone": "+41 78 907 32 02",
         "url": "https:\/\/rsickenberg.me",
-        "summary": "IT Support Technician with a Software Engineering background, covering user support and incident resolution from N1 through N3 across workstations, identity\/directory services and networking.\n\nA rigorous, process-driven engineering background paired with strong troubleshooting instincts, systems management discipline and a genuine interest in helping end users resolve technical issues.\n\nWork authorization: Swiss Citizen. Available now.",
+        "summary": "IT Support Technician with a Software Engineering background, covering user support and incident resolution from N1 through N3 across workstations, identity\/directory services and networking.\n\nCovers the full support chain: ticket triage and escalation in **Jira Service Management**, incident and problem management along **ITIL** lines, **Active Directory** and **Microsoft 365** administration, and hands-on workstation, printer and network troubleshooting.\n\nWork authorization: Swiss Citizen. Available now.",
         "location": {
             "address": "Chemin de la creuse 6",
             "postalCode": "1027",
@@ -29,11 +29,18 @@
     },
     "work": [
         {
-            "name": "Various Companies",
+            "name": "Liip, Ilem Group, Antistatique, Academic Work",
             "position": "Software Engineer",
             "startDate": "2016-06-01",
             "endDate": "2025-12-31",
-            "summary": "Software Engineering experience (backend development, IT consulting, CI\/CD) across multiple companies, included here for career continuity rather than direct support relevance."
+            "summary": "Nine years of software engineering across four companies. The parts that carry directly into IT support are below.",
+            "highlights": [
+                "Configured and rolled out a fleet of **44 iPads** and set up CI servers for a retail client operating **20 stores**.",
+                "Ran production incident response with **Sentry** error monitoring, from alert through root cause to fix.",
+                "Secured a business-critical **ERP** and migrated it to a supported **PHP** version for that same 20-store network.",
+                "Deployed and maintained applications on **Linux** servers using **Docker** and **GitHub Actions**, with structured release and rollback processes.",
+                "Built internal tooling for automated testing, monitoring and deployment, and led code reviews across a multidisciplinary team."
+            ]
         }
     ],
     "education": [

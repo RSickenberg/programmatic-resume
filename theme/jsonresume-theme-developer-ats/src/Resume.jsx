@@ -33,7 +33,7 @@ export default function Resume ({ resume, locale = 'en' }) {
     <LocaleProvider locale={locale}>
       <main
         className={[
-          'mx-auto w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] font-sans text-[10pt] leading-[1.5] text-ink shadow-lg',
+          'mx-auto w-[210mm] min-h-[297mm] bg-white px-[13mm] py-[10mm] font-sans text-[10pt] leading-[1.4] text-ink shadow-lg',
           'print:m-0 print:w-auto print:min-h-0 print:p-0 print:shadow-none',
         ].join(' ')}
       >

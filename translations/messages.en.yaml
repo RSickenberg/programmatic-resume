@@ -1,11 +1,11 @@
 basics:
   backend_dev_position: 'Backend-Software Engineer'
-  summary_role: "Backend-oriented Software Engineer with **5+ years** of professional experience building and maintaining business-critical web applications with **PHP**, **Symfony**, **Laravel**, **React** and **Docker**."
-  summary_experience: 'Hands-on experience across application design and development, component integration and solution deployment (**CI/CD**), including code reviews, production releases and technical leadership of medium-sized projects.'
+  summary_role: "Backend Software Engineer with **5+ years** building and maintaining business-critical web applications and **REST APIs** with **PHP**, **Symfony**, **Laravel**, **React** and **Docker**."
+  summary_experience: 'Hands-on across application design, component integration and deployment (**CI/CD**), including code review, production releases and technical leadership of medium-sized projects.'
   summary_authorization: 'Work authorization: Swiss Citizen. Available now.'
   support_position: 'IT Support Technician (N1/N2/N3)'
   support_summary_role: 'IT Support Technician with a Software Engineering background, covering user support and incident resolution from N1 through N3 across workstations, identity/directory services and networking.'
-  support_summary_experience: 'A rigorous, process-driven engineering background paired with strong troubleshooting instincts, systems management discipline and a genuine interest in helping end users resolve technical issues.'
+  support_summary_experience: 'Covers the full support chain: ticket triage and escalation in **Jira Service Management**, incident and problem management along **ITIL** lines, **Active Directory** and **Microsoft 365** administration, and hands-on workstation, printer and network troubleshooting.'
 
 languages:
   french: 'French'
@@ -36,50 +36,43 @@ work:
   academic_work:
     position: 'Full-Stack Software Developer'
     summary: 'IT Consulting for diverse clients via Academic Work.'
-    highlight_1: 'Developed full-stack web applications using **Vue** (**Nuxt.JS**) & Backend in **Python** (**Django**) for the SIL in Lausanne.'
-    highlight_2: 'Built a **React** (**Next.JS**) application with **GitHub Actions** **CI/CD**, **Docker** containerization and automated deployments to Jelastic.'
+    highlight_1: 'Built internal full-stack applications for SIL Lausanne staff - **Vue** (**Nuxt.js**) front end on a **Python** (**Django**) back end.'
+    highlight_2: 'Shipped a **React** (**Next.js**) application with **GitHub Actions CI/CD**, **Docker** containerization and automated deployments to Jelastic.'
   antistatique:
     position: 'Backend Software Engineer'
     summary: 'From Junior to mid-level Software Engineer & highest skill jump !'
-    highlight_1: 'Developed and maintained enterprise **Symfony 6** applications, using **PHP 7.4/8.0**, **API Platform**, **Doctrine ORM**, **PostgreSQL** and **GitHub Actions**.'
-    highlight_2: 'Involved as **PHP** Lead Developer for a client project in **Symfony** with 4 other devs.'
-    highlight_3: 'Built and maintained CMS-based solutions (**Drupal**, **WordPress**).'
-    highlight_4: 'Reduced **GitHub Actions** execution time by **75%** through dependency caching and workflow optimization.'
-    highlight_5: 'Deployed projects to production using structured deployment processes.'
-    highlight_6: 'Led code reviews to improve maintainability and enforce development standards.'
-    highlight_7: 'Collaborated within a multidisciplinary development team using **Scrum**.'
-    highlight_8: 'Took technical responsibility for small to medium-sized projects.'
-    highlight_9: 'Managed and optimized local development environments using **Docker** and modern IDE tooling.'
-    highlight_10: 'Analyzed project requirements and contributed to technical estimations.'
+    highlight_1: 'Built and maintained enterprise **Symfony 6** applications and their **REST APIs** (**API Platform**), on **PHP 7.4/8.0** with **Doctrine ORM**, **PostgreSQL**, **Redis** caching and **Elasticsearch** indexing.'
+    highlight_2: 'Led a five-developer team as **PHP** Lead Developer on a 3-4 month **Symfony** build for Colis du Coeur, shipping v1 of a state-machine-driven workflow for volunteer distribution centres.'
+    highlight_3: 'Delivered and maintained six CMS builds - five **Drupal**, one **WordPress**.'
+    highlight_4: 'Cut **GitHub Actions** execution time by **75%** through dependency caching and workflow optimization.'
+    highlight_5: 'Led code reviews and owned technical delivery on small to medium-sized projects, including a client platform hosted on **AWS**, enforcing maintainability and development standards.'
+    highlight_6: 'Built a small internal tool on a **serverless Firebase** backend with a **Vue.js** front end.'
   ilem:
     position: 'Junior Backend Software Engineer'
     summary: 'IT Consulting to an external client named Berdoz Vision & Audition.'
-    highlight_1: 'Secured a custom highly critical ERP, migrated it to a newer **PHP** version and contributed to the development of its **Laravel** replacement.'
-    highlight_2: 'Configured a fleet of **44 iPads** and set up CI servers to run complex test suites with **Codeception** and **Cypress**.'
-    highlight_3: 'Improved security and developed critical components of existing in-house CRM solution for multiple shops around Switzerland.'
-    highlight_4: 'Built internal tools for automated testing, monitoring, and deployment, while ensuring high-quality standards with **Sentry**.'
+    highlight_1: 'Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then helped build its **Laravel** replacement.'
+    highlight_2: 'Configured a fleet of **44 iPads** and set up CI servers running **Codeception** and **Cypress** test suites.'
+    highlight_3: 'Hardened security and developed critical components of the in-house CRM used across that same store network.'
+    highlight_4: 'Built internal tooling for automated testing, monitoring and deployment, with **Sentry** for error tracking.'
   liip:
     position: 'Apprentice Software Engineer'
-    summary: 'Started my IT career while studying 2 days per week at school.'
-    highlight_1: 'Developed and enhanced internal web applications using **PHP** and **JavaScript**.'
-    highlight_2: 'Collaborated within an **Agile** development team using **Git** and modern web development practices.'
+    highlight_1: 'Developed and extended internal web applications in **PHP** and **JavaScript**.'
+    highlight_2: 'Shipped features in an **Agile** team using **Git**, **Scrum** and modern web development practices.'
     highlight_3: 'Developed custom **Moodle** plugins with **PHP 5.4**.'
-    highlight_4: 'Used **Scrum** in an Holacratic environment.'
-  securitas:
-    position: 'Security Agent'
-    summary: 'Part-time security agent in the event sector.'
-  break_travel:
-    name: 'Personal Break'
-    position: 'Solo World Travel & Personal Development'
-    summary: 'Planned career break: Solo travel and personal development.'
-  break_military:
-    name: 'Personal Break'
-    position: 'Swiss Armed Forces'
-    summary: 'Mandatory obligations.'
+  breaks_and_side:
+    position: 'Personal Breaks & Side Activities'
+    highlight_securitas: 'Security agent at Securitas AG - part-time, event sector. ||07.2023 - 03.2024'
+    highlight_travel: 'Planned career break - solo world travel and personal development. ||02.2023 - 06.2023'
+    highlight_military: 'Swiss Armed Forces - mandatory military service. ||07.2020 - 11.2020'
   software_engineering_summary:
-    name: 'Various Companies'
+    name: 'Liip, Ilem Group, Antistatique, Academic Work'
     position: 'Software Engineer'
-    summary: 'Software Engineering experience (backend development, IT consulting, CI/CD) across multiple companies, included here for career continuity rather than direct support relevance.'
+    summary: 'Nine years of software engineering across four companies. The parts that carry directly into IT support are below.'
+    highlight_1: 'Configured and rolled out a fleet of **44 iPads** and set up CI servers for a retail client operating **20 stores**.'
+    highlight_2: 'Ran production incident response with **Sentry** error monitoring, from alert through root cause to fix.'
+    highlight_3: 'Secured a business-critical **ERP** and migrated it to a supported **PHP** version for that same 20-store network.'
+    highlight_4: 'Deployed and maintained applications on **Linux** servers using **Docker** and **GitHub Actions**, with structured release and rollback processes.'
+    highlight_5: 'Built internal tooling for automated testing, monitoring and deployment, and led code reviews across a multidisciplinary team.'
 
 education:
   institution: 'Swiss Confederation | EPSIC @ Lausanne & CFPT @ Geneva'
@@ -116,7 +109,7 @@ education:
 skills:
   backend_name: 'Backend'
   frontend_name: 'Frontend'
-  lower_level_name: 'Lower Level'
+  lower_level_name: 'Mobile'
   databases_name: 'Databases'
   cloud_devops_name: 'Cloud & DevOps'
   tools_name: 'Tools'
