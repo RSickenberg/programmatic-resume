@@ -131,6 +131,37 @@ For multi-step tasks, state a brief plan:
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
+### Attribution
+
+**For PR descriptions**, include full attribution:
+
+```
+---
+Generated with [Claude Code](https://claude.ai/code)
+Co-Authored-By: Claude <model-name> <noreply@anthropic.com>
+<XX>% AI / <YY>% Human
+Claude: <what AI did>
+Human: <what human did>
+```
+
+- Use the actual model name (e.g., `Claude Opus 4.5`, `Claude Sonnet 4`)
+- The percentage split should honestly reflect the contribution balance for that specific work
+- This provides a trackable record of AI-assisted development over time
+
+**For issues and comments**, use simplified attribution:
+
+```
+---
+Written by Claude <model-name> via [Claude Code](https://claude.ai/code)
+```
+
+**For commits**, include a Co-Authored-By trailer:
+
+```
+Co-Authored-By: Claude <claude@anthropic.com>
+```
+
+
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
