@@ -37,7 +37,7 @@
             "endDate": "2025-12-31",
             "summary": "IT Consulting for diverse clients via Academic Work.",
             "highlights": [
-                "Designed a decoupled backend\/frontend architecture for **SIL Lausanne** and built the **Docker** base platform underpinning most of their in-house solutions (**Python**, **Django**, **Vue**, **React**).",
+                "Designed a decoupled backend\/frontend architecture for SIL Lausanne and built the **Docker** base platform underpinning most of their in-house solutions (**Python**, **Django**, **Vue**, **React**).",
                 "Shipped a **React** (**Next.js**) application with **GitHub Actions CI\/CD**, **Docker** containerization and automated deployments to Jelastic."
             ]
         },

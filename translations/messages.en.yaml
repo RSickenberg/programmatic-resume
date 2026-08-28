@@ -41,7 +41,7 @@ work:
   academic_work:
     position: 'Full-Stack Software Developer'
     summary: 'IT Consulting for diverse clients via Academic Work.'
-    highlight_1: 'Designed a decoupled backend/frontend architecture for **SIL Lausanne** and built the **Docker** base platform underpinning most of their in-house solutions (**Python**, **Django**, **Vue**, **React**).'
+    highlight_1: 'Designed a decoupled backend/frontend architecture for SIL Lausanne and built the **Docker** base platform underpinning most of their in-house solutions (**Python**, **Django**, **Vue**, **React**).'
     highlight_2: 'Shipped a **React** (**Next.js**) application with **GitHub Actions CI/CD**, **Docker** containerization and automated deployments to Jelastic.'
   antistatique:
     position: 'Backend Software Engineer'
