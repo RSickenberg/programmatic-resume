@@ -116,20 +116,12 @@ function Link({ href, children, className, underline = true, ...rest }) {
 * Renders `**word**` as bold, a minimal Markdown-style convention so resume
 * content (translations) can emphasize a word without the theme needing to
 * know why — e.g. `education.courses.*` or `basics.summary_role` keys.
-*
-* A bolded phrase is always a single named term ("LHC Lausanne", "GitHub
-* Actions CI/CD"), never a full clause, so its internal spaces are replaced
-* with non-breaking spaces: Chromium's PDF text layer silently drops the
-* glyph for a regular space that lands exactly on a visual line-wrap, which
-* glues the two halves of the term together for any parser reading the raw
-* content stream. A non-breaking space can never be a wrap point, so the
-* term either fits or moves to the next line whole.
 */
 function renderRichText(text) {
 	if (typeof text !== "string" || !text.includes("**")) return text;
 	return text.split(/\*\*(.+?)\*\*/g).map((part, index) => index % 2 === 1 ? /* @__PURE__ */ jsx("strong", {
 		className: "font-semibold text-ink",
-		children: part.replace(/ /g, "\xA0")
+		children: part
 	}, index) : part);
 }
 //#endregion
@@ -427,13 +419,13 @@ function Skills({ skills = [] }) {
 		children: /* @__PURE__ */ jsx("div", {
 			className: "grid grid-cols-1 gap-x-5 gap-y-2.5 sm:grid-cols-3",
 			children: skills.map((skill, index) => /* @__PURE__ */ jsxs("div", {
-				className: "flex min-w-0 flex-col print:break-inside-avoid",
+				className: "flex flex-col print:break-inside-avoid",
 				children: [/* @__PURE__ */ jsx("h3", {
 					className: "mb-1 font-mono text-[9pt] font-bold uppercase tracking-wider text-accent",
 					children: renderRichText(skill.name)
 				}), skill.keywords && skill.keywords.length > 0 && /* @__PURE__ */ jsx("p", {
-					className: "flex-1 rounded border-l-2 border-accent bg-surface px-2.5 py-1.5 font-mono text-[9pt] leading-snug text-muted [overflow-wrap:anywhere]",
-					children: renderRichText(skill.keywords.map((keyword) => keyword.replace(/ /g, "\xA0")).join(", "))
+					className: "flex-1 rounded border-l-2 border-accent bg-surface px-2.5 py-1.5 font-mono text-[9pt] leading-snug text-muted",
+					children: renderRichText(skill.keywords.join(", "))
 				})]
 			}, index))
 		})
