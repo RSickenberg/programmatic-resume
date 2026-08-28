@@ -5,7 +5,7 @@
 
 @theme {
   --font-sans: Inter, "Segoe UI", ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 
   --color-ink: #18181b;
   --color-muted: #52525b;
