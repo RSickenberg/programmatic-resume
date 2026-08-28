@@ -136,18 +136,18 @@ skills:
   cx_specialist_guest_relations_name: 'Relation Client'
   cx_specialist_composure_safety_name: 'Sang-froid & Sécurité'
   cx_specialist_professionalism_name: "Professionnalisme & Esprit d'Équipe"
-  cx_specialist_guest_welcoming: 'Accueil & Premier Contact'
-  cx_specialist_active_listening: 'Écoute Active & Identification des Besoins'
-  cx_specialist_multilingual_communication: 'Communication Multilingue (FR/EN/DE)'
-  cx_specialist_composure_under_pressure: 'Sang-froid en Contexte Public'
-  cx_specialist_conflict_deescalation: 'Désamorçage de Conflits'
-  cx_specialist_access_control: 'Contrôle d’Accès & Gestion des Flux'
-  cx_specialist_team_coordination: "Coordination d'Équipe"
-  cx_specialist_professionalism_brand: "Professionnalisme & Représentation de l'Image Client"
-  cx_specialist_adaptability: 'Adaptabilité à Différents Environnements'
-  cx_specialist_attention_to_detail: 'Rigueur & Respect des Procédures'
-  cx_specialist_technical_translation: 'Vulgarisation Technique pour un Public Non-Technique'
-  cx_specialist_discretion: 'Discrétion & Fiabilité'
+  cx_specialist_guest_welcoming: 'Accueil & premier contact'
+  cx_specialist_active_listening: 'Écoute active & identification des besoins'
+  cx_specialist_multilingual_communication: 'Communication multilingue (FR/EN/DE)'
+  cx_specialist_composure_under_pressure: 'Sang-froid en contexte public'
+  cx_specialist_conflict_deescalation: 'Désamorçage de conflits'
+  cx_specialist_access_control: 'Contrôle d’accès & gestion des flux'
+  cx_specialist_team_coordination: "Coordination d'équipe"
+  cx_specialist_professionalism_brand: "Professionnalisme & représentation de l'image client"
+  cx_specialist_adaptability: 'Adaptabilité à différents environnements'
+  cx_specialist_attention_to_detail: 'Rigueur & respect des procédures'
+  cx_specialist_technical_translation: 'Vulgarisation technique pour un public non-technique'
+  cx_specialist_discretion: 'Discrétion & fiabilité'
 
 awards:
   epfl_summary: 'Développé un « musée numérique » en réalité virtuelle. Remporté la **première place** en expériences VR, réalisé avec **SteamVR** et **Unity**.'
