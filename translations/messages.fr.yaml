@@ -6,6 +6,10 @@ basics:
   support_position: 'Technicien Support Informatique (N1 / N2 / N3)'
   support_summary_role: "Technicien support informatique avec un profil d'ingénieur logiciel, couvrant le support et la résolution d'incidents de N1 à N3, sur postes de travail, services d'annuaire/identité et réseaux."
   support_summary_experience: "Couvre toute la chaîne du support : tri et escalade des tickets dans **Jira Service Management**, gestion des incidents et des problèmes selon **ITIL**, administration **Active Directory** et **Microsoft 365**, dépannage des postes, imprimantes et réseaux."
+  cx_specialist_position: "Spécialiste de l'Expérience Client"
+  cx_specialist_summary_role: "Profil orienté client avec un parcours d'ingénieur logiciel, alliant relation client en conseil informatique, expérience de terrain en sécurité événementielle face au public et un intérêt sincère et durable pour Tesla et les véhicules électriques."
+  cx_specialist_summary_experience: "À l'aise pour accompagner un client dès le premier contact, de l'accueil et l'identification du besoin jusqu'à la représentation de l'image d'un client dans des contextes publics très exposés, en français, anglais et allemand."
+  cx_specialist_summary_authorization: 'Autorisation de travail : citoyen suisse. Disponible immédiatement. Permis de conduire valide.'
 
 languages:
   french: 'Français'
@@ -65,6 +69,11 @@ work:
     highlight_securitas: 'Agent de sécurité chez Securitas AG - à temps partiel, secteur événementiel. ||07.2023 - 03.2024'
     highlight_travel: 'Pause de carrière planifiée - voyage en solo autour du monde et développement personnel. ||02.2023 - 06.2023'
     highlight_military: 'Armée suisse - obligations militaires. ||07.2020 - 11.2020'
+  securitas:
+    position: 'Agent de Sécurité Événementiel'
+    highlight_1: 'Accueil, orientation et contrôle d’accès du public lors d’événements sportifs à forte affluence pour le **LHC Lausanne** et **Lausanne-Sport**.'
+    highlight_2: 'Représenté l’image et les standards de sécurité de **Securitas**, du **Musée Olympique** et de la **RTS** (Radio Télévision Suisse), y compris une présence sécuritaire filmée lors de tournages en direct sur la voie publique.'
+    highlight_3: "Coordination des flux de public et de la gestion des incidents au sein d'une équipe de plusieurs agents, sur différents sites."
   support_view:
     academic_work_atlas: "Recensé l'ensemble des solutions métiers du SI des SiL dans le cadre du projet Atlas, et identifié les points clés à monitorer."
     academic_work_itsm: "Mis en place des scénarios de tests avec les métiers et rédigé la documentation technique, sous **Easyvista** et **CMDB**."
@@ -124,6 +133,19 @@ skills:
   support_collaboration_office_tools: 'Outils bureautiques'
   support_collaboration_office_advanced: 'Fonctions avancées des outils bureautiques'
   support_collaboration_remote_tools: 'Outils de prise en main à distance (RDP, TeamViewer)'
+  cx_specialist_soft_name: 'Relation Client & Savoir-être'
+  cx_specialist_guest_welcoming: 'Accueil & Premier Contact'
+  cx_specialist_active_listening: 'Écoute Active & Identification des Besoins'
+  cx_specialist_multilingual_communication: 'Communication Multilingue (FR/EN/DE)'
+  cx_specialist_composure_under_pressure: 'Sang-froid en Contexte Public'
+  cx_specialist_conflict_deescalation: 'Désamorçage de Conflits'
+  cx_specialist_access_control: 'Contrôle d’Accès & Gestion des Flux'
+  cx_specialist_team_coordination: "Coordination d'Équipe"
+  cx_specialist_professionalism_brand: "Professionnalisme & Représentation de l'Image Client"
+  cx_specialist_adaptability: 'Adaptabilité à Différents Environnements'
+  cx_specialist_attention_to_detail: 'Rigueur & Respect des Procédures'
+  cx_specialist_technical_translation: 'Vulgarisation Technique pour un Public Non-Technique'
+  cx_specialist_discretion: 'Discrétion & Fiabilité'
 
 awards:
   epfl_summary: 'Développé un « musée numérique » en réalité virtuelle. Remporté la **première place** en expériences VR, réalisé avec **SteamVR** et **Unity**.'

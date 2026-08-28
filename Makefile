@@ -6,7 +6,7 @@ COMPOSER_EXEC = composer
 # Misc
 .DEFAULT_GOAL = help
 OUTPUT_DIR    = output
-.PHONY        : help deps update-deps lint-translations backend backend-fr support-n1n2n3 support-n1n2n3-fr backends supports all
+.PHONY        : help deps update-deps lint-translations backend backend-fr support-n1n2n3 support-n1n2n3-fr cx-specialist cx-specialist-fr backends supports cx-specialists all
 
 ## —— 🎵 🐳 The Makefile 🐳 🎵 ——————————————————————————————————
 help: ## Outputs this help screen
@@ -50,8 +50,21 @@ support-n1n2n3-fr: deps ## Generate the support-n1n2n3 resume (French)
 	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/support-n1n2n3.fr.json --language fr -o $(OUTPUT_DIR)/romain-sickenberg-n1n2n3-fr.pdf
 
 
+cx-specialist: deps ## Generate the cx-specialist resume (English)
+	@$(PHP_EXEC) entrypoint.php cx-specialist --locale en -o $(OUTPUT_DIR)/en/cx-specialist.json
+	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/en/cx-specialist.json --language en -o $(OUTPUT_DIR)/en/cx-specialist.html
+	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/en/cx-specialist.json --language en -o $(OUTPUT_DIR)/romain-sickenberg-cx-specialist-en.pdf
+
+cx-specialist-fr: deps ## Generate the cx-specialist resume (French)
+	@$(PHP_EXEC) entrypoint.php cx-specialist --locale fr -o $(OUTPUT_DIR)/fr/cx-specialist.fr.json
+	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/cx-specialist.fr.json --language fr -o $(OUTPUT_DIR)/fr/cx-specialist.fr.html
+	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/cx-specialist.fr.json --language fr -o $(OUTPUT_DIR)/romain-sickenberg-cx-specialist-fr.pdf
+
+
 backends: backend backend-fr ## Generate all backend-dev variants (en, fr)
 
 supports: support-n1n2n3 support-n1n2n3-fr ## Generate all support-n1n2n3 variants (en, fr)
 
-all: backends supports ## Generate every profile, every locale
+cx-specialists: cx-specialist cx-specialist-fr ## Generate all cx-specialist variants (en, fr)
+
+all: backends supports cx-specialists ## Generate every profile, every locale

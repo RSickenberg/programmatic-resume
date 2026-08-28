@@ -17,6 +17,7 @@ final class GeneratorRegistry
     private const array PROFILES = [
         'backend-dev' => BackendDev::class,
         'support-n1n2n3' => SupportN1N2N3::class,
+        'cx-specialist' => CustomerExperienceSpecialist::class,
     ];
 
     /**
