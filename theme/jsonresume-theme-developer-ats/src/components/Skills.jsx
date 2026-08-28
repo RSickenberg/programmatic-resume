@@ -23,7 +23,7 @@ export default function Skills ({ skills = [] }) {
               {renderRichText(skill.name)}
             </h3>
             {skill.keywords && skill.keywords.length > 0 && (
-              <p className="flex-1 rounded border-l-2 border-accent bg-surface px-2.5 py-1.5 font-mono text-[9pt] leading-snug text-muted [overflow-wrap:anywhere]">
+              <p className="flex-1 rounded border-l-2 border-accent bg-surface px-2.5 py-1.5 text-[9pt] text-muted">
                 {/*
                   * Non-breaking spaces inside each keyword, same reasoning as
                   * renderRichText's bold-span handling: a keyword is one

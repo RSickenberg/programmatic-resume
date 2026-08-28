@@ -111,8 +111,8 @@ final class BackendDev extends BaseResume
                         'CI/CD',
                         'Linux',
                         'Apache & Nginx',
-                        'Google Cloud Platform (GCP)',
                         'AWS',
+                        'Google Cloud Platform (GCP)',
                         'Firebase',
                         'Serverless',
                     ]
