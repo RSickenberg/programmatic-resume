@@ -169,8 +169,7 @@ final class BackendDev extends BaseResume
     /**
      * No coursework on the backend CV. Apprenticeship modules from 2020 carry
      * little weight next to five years of shipped work, and the block costs
-     * ~48pt, the last gap between a two-page and a three-page CV. Return the
-     * commented list below to bring it back.
+     * ~48pt, the last gap between a two-page and a three-page CV.
      *
      * @return list<string>
      */
@@ -189,8 +188,7 @@ final class BackendDev extends BaseResume
 
     /**
      * Interests carry no ATS signal for a backend role and cost roughly 30mm,
-     * the difference between a two- and a three-page CV. Delete this override
-     * to bring them back.
+     * the difference between a two and a three-page CV.
      */
     #[\Override]
     public function addInterests(ResumeBuilder $builder): ResumeBuilder
