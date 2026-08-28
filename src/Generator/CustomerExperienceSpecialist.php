@@ -16,15 +16,6 @@ use JustSteveKing\Resume\ValueObjects\Url;
 final class CustomerExperienceSpecialist extends BaseResume
 {
     /**
-     * Which highlights each IT employer shows on this CV, keyed by company
-     * name so employer, title and dates keep coming from the single
-     * definition in BaseResume and cannot drift.
-     *
-     * Only genuinely client-facing or client-adjacent material is kept.
-     * Antistatique and Liip have nothing honest to say for this angle, so
-     * they're left with no highlights rather than stretched into a false
-     * customer-service claim.
-     *
      * @var array<string, list<string>>
      */
     private const array CLIENT_FACING_HIGHLIGHTS = [
@@ -104,26 +95,43 @@ final class CustomerExperienceSpecialist extends BaseResume
 
     public function addSkills(ResumeBuilder $builder): ResumeBuilder
     {
-        $builder->addSkill(
-            new Skill(
-                name: $this->trans('skills.cx_specialist_soft_name'),
-                level: SkillLevel::Advanced,
-                keywords: [
-                    $this->trans('skills.cx_specialist_guest_welcoming'),
-                    $this->trans('skills.cx_specialist_active_listening'),
-                    $this->trans('skills.cx_specialist_multilingual_communication'),
-                    $this->trans('skills.cx_specialist_composure_under_pressure'),
-                    $this->trans('skills.cx_specialist_conflict_deescalation'),
-                    $this->trans('skills.cx_specialist_access_control'),
-                    $this->trans('skills.cx_specialist_team_coordination'),
-                    $this->trans('skills.cx_specialist_professionalism_brand'),
-                    $this->trans('skills.cx_specialist_adaptability'),
-                    $this->trans('skills.cx_specialist_attention_to_detail'),
-                    $this->trans('skills.cx_specialist_technical_translation'),
-                    $this->trans('skills.cx_specialist_discretion'),
-                ],
-            ),
-        );
+        $builder
+            ->addSkill(
+                new Skill(
+                    name: $this->trans('skills.cx_specialist_guest_relations_name'),
+                    level: SkillLevel::Advanced,
+                    keywords: [
+                        $this->trans('skills.cx_specialist_guest_welcoming'),
+                        $this->trans('skills.cx_specialist_active_listening'),
+                        $this->trans('skills.cx_specialist_multilingual_communication'),
+                        $this->trans('skills.cx_specialist_technical_translation'),
+                    ],
+                ),
+            )
+            ->addSkill(
+                new Skill(
+                    name: $this->trans('skills.cx_specialist_composure_safety_name'),
+                    level: SkillLevel::Advanced,
+                    keywords: [
+                        $this->trans('skills.cx_specialist_composure_under_pressure'),
+                        $this->trans('skills.cx_specialist_conflict_deescalation'),
+                        $this->trans('skills.cx_specialist_access_control'),
+                        $this->trans('skills.cx_specialist_attention_to_detail'),
+                    ],
+                ),
+            )
+            ->addSkill(
+                new Skill(
+                    name: $this->trans('skills.cx_specialist_professionalism_name'),
+                    level: SkillLevel::Advanced,
+                    keywords: [
+                        $this->trans('skills.cx_specialist_team_coordination'),
+                        $this->trans('skills.cx_specialist_professionalism_brand'),
+                        $this->trans('skills.cx_specialist_adaptability'),
+                        $this->trans('skills.cx_specialist_discretion'),
+                    ],
+                ),
+            );
 
         return $builder;
     }

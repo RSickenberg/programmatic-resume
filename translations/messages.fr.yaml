@@ -71,7 +71,7 @@ work:
     highlight_military: 'Armée suisse - obligations militaires. ||07.2020 - 11.2020'
   securitas:
     position: 'Agent de Sécurité Événementiel'
-    highlight_1: 'Accueil, orientation et contrôle d’accès du public lors d’événements sportifs à forte affluence pour le **LHC Lausanne** et **Lausanne-Sport**.'
+    highlight_1: 'Accueil, orientation et contrôle d’accès du public lors d’événements sportifs à forte affluence pour le **LHC Lausanne** et le **Lausanne-Sport**.'
     highlight_2: 'Représenté l’image et les standards de sécurité de **Securitas**, du **Musée Olympique** et de la **RTS** (Radio Télévision Suisse), y compris une présence sécuritaire filmée lors de tournages en direct sur la voie publique.'
     highlight_3: "Coordination des flux de public et de la gestion des incidents au sein d'une équipe de plusieurs agents, sur différents sites."
   support_view:
@@ -133,7 +133,9 @@ skills:
   support_collaboration_office_tools: 'Outils bureautiques'
   support_collaboration_office_advanced: 'Fonctions avancées des outils bureautiques'
   support_collaboration_remote_tools: 'Outils de prise en main à distance (RDP, TeamViewer)'
-  cx_specialist_soft_name: 'Relation Client & Savoir-être'
+  cx_specialist_guest_relations_name: 'Relation Client'
+  cx_specialist_composure_safety_name: 'Sang-froid & Sécurité'
+  cx_specialist_professionalism_name: "Professionnalisme & Esprit d'Équipe"
   cx_specialist_guest_welcoming: 'Accueil & Premier Contact'
   cx_specialist_active_listening: 'Écoute Active & Identification des Besoins'
   cx_specialist_multilingual_communication: 'Communication Multilingue (FR/EN/DE)'
