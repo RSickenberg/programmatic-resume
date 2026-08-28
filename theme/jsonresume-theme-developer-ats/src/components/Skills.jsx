@@ -18,12 +18,12 @@ export default function Skills ({ skills = [] }) {
     <Section title={title}>
       <div className="grid grid-cols-1 gap-x-5 gap-y-2.5 sm:grid-cols-3">
         {skills.map((skill, index) => (
-          <div key={index} className="flex flex-col print:break-inside-avoid">
+          <div key={index} className="flex min-w-0 flex-col print:break-inside-avoid">
             <h3 className="mb-1 font-mono text-[9pt] font-bold uppercase tracking-wider text-accent">
               {renderRichText(skill.name)}
             </h3>
             {skill.keywords && skill.keywords.length > 0 && (
-              <p className="flex-1 rounded border-l-2 border-accent bg-surface px-2.5 py-1.5 font-mono text-[9pt] leading-snug text-muted">
+              <p className="flex-1 rounded border-l-2 border-accent bg-surface px-2.5 py-1.5 font-mono text-[9pt] leading-snug text-muted [overflow-wrap:anywhere]">
                 {/*
                   * Non-breaking spaces inside each keyword, same reasoning as
                   * renderRichText's bold-span handling: a keyword is one
@@ -32,6 +32,15 @@ export default function Skills ({ skills = [] }) {
                   * the keyword's words together for any parser reading the
                   * raw content stream. The ", " between keywords stays a
                   * normal, breakable space.
+                  *
+                  * min-w-0 on the grid cell and overflow-wrap:anywhere here
+                  * are the escape hatch: a non-breaking run raises this
+                  * paragraph's intrinsic min-content width, which a flex/grid
+                  * item otherwise refuses to shrink below (min-width: auto),
+                  * so without both the keyword bleeds into the next column
+                  * instead of wrapping. overflow-wrap:anywhere additionally
+                  * allows breaking inside a keyword as a last resort, only
+                  * if it's still too wide for the column on its own line.
                   */}
                 {renderRichText(skill.keywords.map((keyword) => keyword.replace(/ /g, ' ')).join(', '))}
               </p>
