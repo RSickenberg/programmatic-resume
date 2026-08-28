@@ -1,0 +1,187 @@
+{
+    "$schema": "https:\/\/jsonresume.org\/schema\/schema.json",
+    "basics": {
+        "name": "Romain Sickenberg",
+        "label": "Customer Experience Specialist",
+        "email": "r.sickenberg@gmail.com",
+        "phone": "+41 78 907 32 02",
+        "url": "https:\/\/rsickenberg.me",
+        "summary": "Client-facing professional with a Software Engineering background, combining IT consulting client relations with hands-on public-facing event security work and a genuine, long-standing interest in Tesla and electric vehicles.\n\nComfortable guiding guests through a first contact, from greeting and needs assessment to representing a client's image in high-visibility public settings, in French, English and German.\n\nWork authorization: Swiss Citizen. Available now. Valid driving licence.",
+        "location": {
+            "address": "Chemin de la creuse 6",
+            "postalCode": "1027",
+            "city": "Lonay",
+            "countryCode": "CH",
+            "region": "VD"
+        },
+        "profiles": [
+            {
+                "network": "github",
+                "username": "rsickenberg",
+                "url": "https:\/\/github.com\/rsickenberg"
+            },
+            {
+                "network": "linkedin",
+                "username": "a320rsck",
+                "url": "https:\/\/linkedin.com\/in\/a320rsck"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Academic Work SA",
+            "position": "Full-Stack Software Developer",
+            "location": "Lausanne",
+            "url": "https:\/\/www.academicwork.ch\/",
+            "startDate": "2024-03-01",
+            "endDate": "2025-12-31",
+            "summary": "IT Consulting for diverse clients via Academic Work."
+        },
+        {
+            "name": "Securitas AG",
+            "position": "Event Security Agent",
+            "location": "Lausanne",
+            "startDate": "2023-07-01",
+            "endDate": "2024-03-31",
+            "highlights": [
+                "Greeted, directed and screened guests through access control at high-attendance sporting events for **LHC Lausanne** and **Lausanne-Sport**.",
+                "Represented client image and security standards on behalf of **Securitas**, the **Olympic Museum** and **RTS** (Radio T\u00e9l\u00e9vision Suisse), including on-camera security presence during live public broadcasts.",
+                "Coordinated crowd flow and incident response as part of a multi-agent security team across venues."
+            ]
+        },
+        {
+            "name": "Antistatique SA",
+            "position": "Backend Software Engineer",
+            "location": "Lausanne",
+            "url": "https:\/\/antistatique.net\/",
+            "startDate": "2021-10-04",
+            "endDate": "2023-02-12",
+            "summary": "From Junior to mid-level Software Engineer & highest skill jump !",
+            "highlights": [
+                "Led code reviews and owned technical delivery on small to medium-sized projects, including a client platform hosted on **AWS**, enforcing maintainability and development standards."
+            ]
+        },
+        {
+            "name": "Ilem Group",
+            "position": "Junior Backend Software Engineer",
+            "location": "Geneva & Ecublens",
+            "url": "https:\/\/new.ilemgroup.com\/",
+            "startDate": "2021-02-01",
+            "endDate": "2021-10-31",
+            "summary": "IT Consulting to an external client named Berdoz Vision & Audition.",
+            "highlights": [
+                "Hardened security and developed critical components of the in-house CRM used across that same store network."
+            ]
+        },
+        {
+            "name": "Liip AG",
+            "position": "Apprentice Software Engineer",
+            "location": "Lausanne",
+            "url": "https:\/\/www.liip.ch",
+            "startDate": "2016-06-01",
+            "endDate": "2020-06-30"
+        },
+        {
+            "name": "",
+            "position": "Personal Breaks & Side Activities",
+            "highlights": [
+                "Planned career break - solo world travel and personal development. ||02.2023 - 06.2023",
+                "Swiss Armed Forces - mandatory military service. ||07.2020 - 11.2020"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Swiss Confederation | EPSIC @ Lausanne & CFPT @ Geneva",
+            "url": "https:\/\/www.bit.admin.ch\/fr\/informaticienne-cfc-developpement-applications",
+            "area": "Federal VET Diploma in Information Technology (CFC)",
+            "startDate": "2016-08-01",
+            "endDate": "2020-07-01",
+            "score": "4.4"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Guest Relations",
+            "level": "Advanced",
+            "keywords": [
+                "Guest welcoming & first contact",
+                "Active listening & needs assessment",
+                "Multilingual communication (FR\/EN\/DE)",
+                "Translating technical concepts for non-technical audiences"
+            ]
+        },
+        {
+            "name": "Composure & Safety",
+            "level": "Advanced",
+            "keywords": [
+                "Composure under pressure in public settings",
+                "Conflict de-escalation",
+                "Access control & crowd management",
+                "Attention to detail & procedure discipline"
+            ]
+        },
+        {
+            "name": "Professionalism & Teamwork",
+            "level": "Advanced",
+            "keywords": [
+                "Team coordination",
+                "Professionalism & brand representation",
+                "Adaptability across environments",
+                "Discretion & trustworthiness"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "French",
+            "fluency": "Native (C2)"
+        },
+        {
+            "language": "English",
+            "fluency": "Fluent (C2)"
+        },
+        {
+            "language": "German",
+            "fluency": "Intermediate (B1)"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Video Games, Movies, Music",
+            "keywords": [
+                "PC Gamer",
+                "Sci-Fi",
+                "House"
+            ]
+        },
+        {
+            "name": "Travel",
+            "keywords": [
+                "Backpacking",
+                "Solo Adventures",
+                "Diving",
+                "Private Pilot"
+            ]
+        },
+        {
+            "name": "Photography",
+            "keywords": [
+                "Drone",
+                "DSLR",
+                "Astro-photography"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Tesla Companion",
+            "startDate": "2018-01-01",
+            "endDate": "2023-01-01",
+            "description": "Paid **iOS** & **WatchOS** App to work around Tesla cars.",
+            "highlights": [
+                "Built and published a commercial **iOS** and **watchOS** application integrating **Tesla APIs** reaching over **1,000 daily active users** and ranking **#5** in the App Store Trips category."
+            ]
+        }
+    ]
+}
