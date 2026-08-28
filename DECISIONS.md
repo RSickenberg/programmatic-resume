@@ -25,18 +25,35 @@ pervasive across plain prose everywhere in the theme, not limited to any one
 component - reproduced it in a CV's own summary paragraph, untouched by any
 content change.
 
-Tried and reverted (2026-08-28): non-breaking spaces inside `**bold**` terms
-and `Skills` keywords, so those specific atomic phrases could never wrap
-internally. Fixed the targeted spots, but a long keyword with nowhere normal
-left to wrap (e.g. `skills.lower_level_name`'s
-`Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)`) fell back to
-breaking mid-word on a narrower layout ("Comb-ine"), which is visible on
-screen, not just to a parser, and copy-pasting text across such a break picks
-up a spurious space ("management" -> "mana gement") - worse than the bug it
-targeted. Reverted in `46b878f`.
+First attempt (2026-08-28) reverted in `46b878f`: non-breaking spaces inside
+`**bold**` terms and `Skills` keywords, so those specific atomic phrases
+could never wrap internally. Fixed the targeted spots, but a long keyword
+with nowhere normal left to wrap (`skills.lower_level_name`'s
+`Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)`, a whole
+comma-separated list crammed into one keyword string) fell back to breaking
+mid-word on a narrower layout ("Comb-ine"), visible on screen, and
+copy-pasting text across such a break picked up a spurious space
+("management" -> "mana gement") - worse than the bug it targeted.
 
-Do not re-attempt a content-level or CSS-level fix without a design that
-handles a keyword/phrase too long to fit its column - protecting every
-multi-word phrase in every sentence recreates this same regression
-everywhere. A real fix would need a different PDF-generation approach, not a
-whitespace patch.
+Root cause of that regression: `Skills.jsx` keywords and `**bold**` terms are
+supposed to be single atomic labels, but three keywords across the codebase
+were actually short comma-separated lists disguised as one string (Frontend's
+`React, Next.js, Nuxt.js, NPM & Bun`, Mobile's Swift entry above, and
+Support's `Microsoft 365 (Outlook, Teams, SharePoint)`). Non-breaking-space
+protection is only safe when every protected string really is one term.
+
+Fixed properly by splitting those three into genuine individual keywords
+(`src/Generator/BackendDev.php`, `src/Generator/SupportN1N2N3.php`) - matching
+how every other skill category was already authored - then re-applying the
+non-breaking-space protection (`richText.jsx`, `Skills.jsx`) with `min-w-0` on
+the grid cell (so it can shrink to its track width instead of stealing space
+from siblings) and `overflow-wrap:anywhere` kept only as a last-resort safety
+net, never expected to trigger in normal content. Verified against the real
+JetBrains Mono font (fetched and installed locally to test faithfully) at
+both the real print width and an artificially tightened one: no glued words,
+no mid-word breaks, no column bleed, across backend, support and
+cx-specialist.
+
+Any future keyword or bolded term must be a genuine single label, not a list
+- split multi-item content into separate keywords instead of one
+comma-separated string, or this regression returns.
