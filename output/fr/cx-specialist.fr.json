@@ -44,8 +44,8 @@
             "startDate": "2023-07-01",
             "endDate": "2024-03-31",
             "highlights": [
-                "Accueil, orientation et contr\u00f4le d\u2019acc\u00e8s du public lors d\u2019\u00e9v\u00e9nements sportifs \u00e0 forte affluence pour le **LHC Lausanne** et le **Lausanne-Sport**.",
-                "Repr\u00e9sent\u00e9 l\u2019image et les standards de s\u00e9curit\u00e9 de **Securitas**, du **Mus\u00e9e Olympique** et de la **RTS** (Radio T\u00e9l\u00e9vision Suisse), y compris une pr\u00e9sence s\u00e9curitaire film\u00e9e lors de tournages en direct sur la voie publique.",
+                "Repr\u00e9sent\u00e9 l'image et les standards de s\u00e9curit\u00e9 de **Securitas**, du **Mus\u00e9e Olympique** et de la **RTS** (Radio T\u00e9l\u00e9vision Suisse), y compris une pr\u00e9sence s\u00e9curitaire film\u00e9e lors de tournages en direct sur la voie publique.",
+                "Accueil, orientation et contr\u00f4le d'acc\u00e8s du public lors d'\u00e9v\u00e9nements sportifs \u00e0 forte affluence pour le **LHC Lausanne** et le **Lausanne-Sport**.",
                 "Coordination des flux de public et de la gestion des incidents au sein d'une \u00e9quipe de plusieurs agents, sur diff\u00e9rents sites."
             ]
         },
@@ -70,16 +70,8 @@
             "endDate": "2021-10-31",
             "summary": "Conseil informatique pour un client externe, Berdoz Vision & Audition.",
             "highlights": [
-                "Renforc\u00e9 la s\u00e9curit\u00e9 et d\u00e9velopp\u00e9 des composants critiques du CRM interne utilis\u00e9 par ce m\u00eame r\u00e9seau de magasins."
+                "Renforc\u00e9 la s\u00e9curit\u00e9 et d\u00e9velopp\u00e9 des composants critiques du CRM interne utilis\u00e9 par ce m\u00eame r\u00e9seau de 20 magasins."
             ]
-        },
-        {
-            "name": "Liip AG",
-            "position": "Apprenti D\u00e9veloppeur de Logiciels",
-            "location": "Lausanne",
-            "url": "https:\/\/www.liip.ch",
-            "startDate": "2016-06-01",
-            "endDate": "2020-06-30"
         },
         {
             "name": "",

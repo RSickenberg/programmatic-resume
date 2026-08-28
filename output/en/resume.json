@@ -48,7 +48,7 @@
             "url": "https:\/\/antistatique.net\/",
             "startDate": "2021-10-04",
             "endDate": "2023-02-12",
-            "summary": "From Junior to mid-level Software Engineer & highest skill jump !",
+            "summary": "From Junior to mid-level Software Engineer & highest skill jump!",
             "highlights": [
                 "Built and maintained enterprise **Symfony 6** applications and their **REST APIs** (**API Platform**), on **PHP 7.4\/8.0** with **Doctrine ORM**, **PostgreSQL**, **Redis** caching and **Elasticsearch** indexing.",
                 "Led a five-developer team as **PHP** Lead Developer on a 3-4 month **Symfony** build for Colis du Coeur, shipping v1 of a state-machine-driven workflow for volunteer distribution centres.",
@@ -69,7 +69,7 @@
             "highlights": [
                 "Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then helped build its **Laravel** replacement.",
                 "Configured a fleet of **44 iPads** and set up CI servers running **Codeception** and **Cypress** test suites.",
-                "Hardened security and developed critical components of the in-house CRM used across that same store network.",
+                "Hardened security and developed critical components of the in-house CRM used across that same 20-store network.",
                 "Built internal tooling for automated testing, monitoring and deployment, with **Sentry** for error tracking."
             ]
         },
