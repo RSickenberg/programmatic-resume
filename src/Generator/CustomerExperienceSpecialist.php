@@ -116,18 +116,6 @@ final class CustomerExperienceSpecialist extends BaseResume
             )
             ->addSkill(
                 new Skill(
-                    name: $this->trans('skills.cx_specialist_composure_safety_name'),
-                    level: SkillLevel::Advanced,
-                    keywords: [
-                        $this->trans('skills.cx_specialist_composure_under_pressure'),
-                        $this->trans('skills.cx_specialist_conflict_deescalation'),
-                        $this->trans('skills.cx_specialist_access_control'),
-                        $this->trans('skills.cx_specialist_attention_to_detail'),
-                    ],
-                ),
-            )
-            ->addSkill(
-                new Skill(
                     name: $this->trans('skills.cx_specialist_professionalism_name'),
                     level: SkillLevel::Advanced,
                     keywords: [
@@ -135,6 +123,18 @@ final class CustomerExperienceSpecialist extends BaseResume
                         $this->trans('skills.cx_specialist_professionalism_brand'),
                         $this->trans('skills.cx_specialist_adaptability'),
                         $this->trans('skills.cx_specialist_discretion'),
+                    ],
+                ),
+            )
+            ->addSkill(
+                new Skill(
+                    name: $this->trans('skills.cx_specialist_composure_safety_name'),
+                    level: SkillLevel::Advanced,
+                    keywords: [
+                        $this->trans('skills.cx_specialist_composure_under_pressure'),
+                        $this->trans('skills.cx_specialist_conflict_deescalation'),
+                        $this->trans('skills.cx_specialist_access_control'),
+                        $this->trans('skills.cx_specialist_attention_to_detail'),
                     ],
                 ),
             );

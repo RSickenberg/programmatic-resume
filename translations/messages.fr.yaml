@@ -71,7 +71,7 @@ work:
     highlight_military: 'Armée suisse - obligations militaires. ||07.2020 - 11.2020'
   securitas:
     position: 'Agent de Sécurité Événementiel'
-    highlight_1: "Accueil, orientation et contrôle d'accès du public lors d'événements sportifs à forte affluence pour le **LHC Lausanne** et le **Lausanne-Sport**."
+    highlight_1: "Accueilli, orienté et contrôlé l'accès du public lors d'événements sportifs à forte affluence pour le **LHC Lausanne** et le **Lausanne-Sport**."
     highlight_2: "Représenté l'image et les standards de sécurité de **Securitas**, du **Musée Olympique** et de la **RTS** (Radio Télévision Suisse), y compris une présence sécuritaire filmée lors de tournages en direct sur la voie publique."
     highlight_3: "Coordination des flux de public et de la gestion des incidents au sein d'une équipe de plusieurs agents, sur différents sites."
   support_view:
@@ -155,7 +155,7 @@ awards:
 projects:
   tesla:
     description: 'Application **iOS** et **watchOS** payante pour interagir avec les véhicules Tesla.'
-    highlight_1: 'Développé et publié une application commerciale **iOS** et **watchOS** intégrant les **API Tesla**, atteignant plus de **1 000 utilisateurs actifs quotidiens** et classée **5e** de la catégorie Voyages de l’App Store.'
+    highlight_1: "Développé et publié une application commerciale **iOS** et **watchOS** intégrant les **API Tesla**, atteignant plus de **1 000 utilisateurs actifs quotidiens** et classée **5e** de la catégorie Voyages de l'App Store."
   fort_to_nite:
     description: 'Wiki **iOS** gratuit dédié à Fortnite avec indications en temps réel de la boutique in-game et un backend **Django**.'
     highlight_1: 'Application compagnon Fortnite avec plus de **100 000 téléchargements**, une note de **4,6★ (340+ avis)** et un classement maximal de **19e** dans la catégorie Référence de l’App Store.'
