@@ -24,7 +24,16 @@ export default function Skills ({ skills = [] }) {
             </h3>
             {skill.keywords && skill.keywords.length > 0 && (
               <p className="flex-1 rounded border-l-2 border-accent bg-surface px-2.5 py-1.5 font-mono text-[9pt] leading-snug text-muted">
-                {renderRichText(skill.keywords.join(', '))}
+                {/*
+                  * Non-breaking spaces inside each keyword, same reasoning as
+                  * renderRichText's bold-span handling: a keyword is one
+                  * atomic term, and a regular space that lands on a visual
+                  * line-wrap loses its glyph in the PDF text layer, gluing
+                  * the keyword's words together for any parser reading the
+                  * raw content stream. The ", " between keywords stays a
+                  * normal, breakable space.
+                  */}
+                {renderRichText(skill.keywords.map((keyword) => keyword.replace(/ /g, ' ')).join(', '))}
               </p>
             )}
           </div>
