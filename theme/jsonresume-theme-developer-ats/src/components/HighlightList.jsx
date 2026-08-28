@@ -29,7 +29,7 @@ export default function HighlightList ({ items, continuation = false }) {
         const [text, meta] = splitMeta(item)
 
         return (
-          <li key={index} className="pl-0.5 text-[10pt] leading-snug text-ink/80 print:break-inside-avoid">
+          <li key={index} className="pl-0.5 text-[10pt] leading-tight text-ink/80 print:break-inside-avoid">
             {meta
               ? (
                 <span className="flex items-baseline justify-between gap-x-4">

@@ -38,16 +38,16 @@ export default function Entry ({ title, titleHref, meta, subtitle, description, 
     <article className={cx('mt-1.5 border-t border-border pt-1.5 [&:first-of-type]:mt-0 [&:first-of-type]:border-t-0 [&:first-of-type]:pt-0', className)}>
       <div className="print:break-inside-avoid">
         <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-          <h3 className="font-mono text-[12pt] font-semibold text-ink">
+          <h3 className="font-mono text-[12pt] font-medium text-ink">
             {titleHref ? <Link href={titleHref} underline={false}>{title}</Link> : renderRichText(title)}
           </h3>
           {meta}
         </div>
         {subtitle && (
-          <p className="mt-0.5 text-[10pt] font-semibold text-subaccent">{renderRichText(subtitle)}</p>
+          <p className="mt-0.5 text-[10pt] font-medium text-subaccent">{renderRichText(subtitle)}</p>
         )}
         {description && (
-          <p className="mt-1 text-[10pt] leading-snug text-ink/80">{renderRichText(description)}</p>
+          <p className="mt-1 text-[10pt] leading-tight text-ink/80">{renderRichText(description)}</p>
         )}
         <HighlightList items={withHeading} />
       </div>

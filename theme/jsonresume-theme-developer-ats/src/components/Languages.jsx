@@ -13,7 +13,7 @@ export default function Languages ({ languages = [] }) {
 
   return (
     <Section title={title}>
-      <p className="text-[10pt] leading-snug text-ink/80">
+      <p className="text-[10pt] leading-tight text-ink/80">
         {languages.map((lang, index) => (
           <span key={index}>
             {index > 0 && <span className="text-subtle"> · </span>}

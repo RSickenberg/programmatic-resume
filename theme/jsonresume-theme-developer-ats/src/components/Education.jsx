@@ -33,7 +33,7 @@ export default function Education ({ education = [] }) {
               */} &&
             <div className="mt-2 print:break-before-avoid">
               <p className="text-[8pt] font-semibold uppercase text-subtle print:break-after-avoid">{courseworkLabel}</p>
-              <p className="mt-1 text-[8pt] leading-snug text-ink/70">
+              <p className="mt-1 text-[8pt] leading-tight text-ink/70">
                 {renderRichText(edu.courses.join(', '))}
               </p>
             </div>
