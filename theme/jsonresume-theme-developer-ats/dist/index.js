@@ -356,12 +356,14 @@ var UI_STRINGS = {
 	en: {
 		present: "Present",
 		coursework: "Relevant Coursework",
-		in: "in"
+		in: "in",
+		gpa: "GPA"
 	},
 	fr: {
 		present: "Présent",
 		coursework: "Cours pertinents",
-		in: "dans"
+		in: "dans",
+		gpa: "Moyenne"
 	}
 };
 function useSectionTitle(key) {
@@ -454,6 +456,7 @@ function Education({ education = [] }) {
 	const title = useSectionTitle("education");
 	const courseworkLabel = useUiString("coursework");
 	const connector = useUiString("in");
+	const gpaLabel = useUiString("gpa");
 	if (education.length === 0) return null;
 	return /* @__PURE__ */ jsx(Section, {
 		title,
@@ -465,7 +468,7 @@ function Education({ education = [] }) {
 				startDate: edu.startDate,
 				endDate: edu.endDate
 			}),
-			description: edu.score ? `GPA: ${edu.score}` : void 0,
+			description: edu.score ? `${gpaLabel}: ${edu.score}` : void 0,
 			children: edu.courses && edu.courses.length > 0 && /* @__PURE__ */ jsxs("div", {
 				className: "mt-2 print:break-before-avoid",
 				children: [/* @__PURE__ */ jsx("p", {

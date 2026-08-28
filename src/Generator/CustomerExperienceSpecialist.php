@@ -19,9 +19,6 @@ final class CustomerExperienceSpecialist extends BaseResume
      * @var array<string, list<string>>
      */
     private const array CLIENT_FACING_HIGHLIGHTS = [
-        'Antistatique SA' => [
-            'work.antistatique.highlight_5',
-        ],
         'Ilem Group' => [
             'work.ilem.highlight_3',
         ],

@@ -33,12 +33,14 @@ const UI_STRINGS = {
   en: {
     present: 'Present',
     coursework: 'Relevant Coursework',
-    in: 'in'
+    in: 'in',
+    gpa: 'GPA'
   },
   fr: {
     present: 'Présent',
     coursework: 'Cours pertinents',
-    in: 'dans'
+    in: 'dans',
+    gpa: 'Moyenne'
   },
 }
 

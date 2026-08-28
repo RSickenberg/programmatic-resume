@@ -8,6 +8,7 @@ export default function Education ({ education = [] }) {
   const title = useSectionTitle('education')
   const courseworkLabel = useUiString('coursework')
   const connector = useUiString('in')
+  const gpaLabel = useUiString('gpa')
 
   if (education.length === 0) return null
 
@@ -20,7 +21,7 @@ export default function Education ({ education = [] }) {
           titleHref={edu.url}
           subtitle={edu.studyType && edu.area ? `${edu.studyType} ${connector} ${edu.area}` : edu.studyType || edu.area}
           meta={<DateRange startDate={edu.startDate} endDate={edu.endDate} />}
-          description={edu.score ? `GPA: ${edu.score}` : undefined}
+          description={edu.score ? `${gpaLabel}: ${edu.score}` : undefined}
         >
           {edu.courses && edu.courses.length > 0 && (
             {/*
