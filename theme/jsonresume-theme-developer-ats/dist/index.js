@@ -205,7 +205,7 @@ function Section({ title, children, className, breakable = false }) {
 	return /* @__PURE__ */ jsxs("section", {
 		className: cx("mb-2.5 last:mb-0", !breakable && "print:break-inside-avoid", className),
 		children: [/* @__PURE__ */ jsx("h2", {
-			className: "mb-1.5 border-b-2 border-accent pb-0.5 font-mono text-[10.5pt] font-bold uppercase tracking-widest text-muted print:break-after-avoid",
+			className: "mb-1.5 border-b-2 border-accent pb-0.5 font-mono text-[10.5pt] font-bold text-muted print:break-after-avoid",
 			children: title
 		}), children]
 	});
@@ -429,7 +429,7 @@ function Skills({ skills = [] }) {
 			children: skills.map((skill, index) => /* @__PURE__ */ jsxs("div", {
 				className: "flex min-w-0 flex-col print:break-inside-avoid",
 				children: [/* @__PURE__ */ jsx("h3", {
-					className: "mb-1 font-mono text-[9pt] font-bold uppercase tracking-wider text-accent",
+					className: "mb-1 font-mono text-[9pt] font-bold text-accent",
 					children: renderRichText(skill.name)
 				}), skill.keywords && skill.keywords.length > 0 && /* @__PURE__ */ jsx("p", {
 					className: "flex-1 rounded border-l-2 border-accent bg-surface px-2.5 py-1.5 text-[9pt] text-muted",
@@ -480,7 +480,7 @@ function Education({ education = [] }) {
 			children: edu.courses && edu.courses.length > 0 && /* @__PURE__ */ jsxs("div", {
 				className: "mt-2 print:break-before-avoid",
 				children: [/* @__PURE__ */ jsx("p", {
-					className: "text-[8pt] font-semibold uppercase tracking-wide text-subtle print:break-after-avoid",
+					className: "text-[8pt] font-semibold uppercase text-subtle print:break-after-avoid",
 					children: courseworkLabel
 				}), /* @__PURE__ */ jsx("p", {
 					className: "mt-1 text-[8pt] leading-snug text-ink/70",

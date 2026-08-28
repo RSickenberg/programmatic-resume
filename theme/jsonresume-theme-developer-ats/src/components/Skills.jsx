@@ -19,7 +19,7 @@ export default function Skills ({ skills = [] }) {
       <div className="grid grid-cols-1 gap-x-5 gap-y-2.5 sm:grid-cols-3">
         {skills.map((skill, index) => (
           <div key={index} className="flex min-w-0 flex-col print:break-inside-avoid">
-            <h3 className="mb-1 font-mono text-[9pt] font-bold uppercase tracking-wider text-accent">
+            <h3 className="mb-1 font-mono text-[9pt] font-bold text-accent">
               {renderRichText(skill.name)}
             </h3>
             {skill.keywords && skill.keywords.length > 0 && (

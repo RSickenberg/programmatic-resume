@@ -158,4 +158,4 @@ projects:
     highlight_1: "Développé et publié une application commerciale **iOS** et **watchOS** intégrant les **API Tesla**, atteignant plus de **1 000 utilisateurs actifs quotidiens** et classée **5e** de la catégorie Voyages de l'App Store."
   fort_to_nite:
     description: 'Wiki **iOS** gratuit dédié à Fortnite avec indications en temps réel de la boutique in-game et un backend **Django**.'
-    highlight_1: 'Application compagnon Fortnite avec plus de **100 000 téléchargements**, une note de **4,6★ (340+ avis)** et un classement maximal de **19e** dans la catégorie Référence de l’App Store.'
+    highlight_1: 'Application compagnon Fortnite avec plus de **100 000 téléchargements**, une note de **4,6 / 5.0★ (340+ avis)** et un classement maximal de **19e** dans la catégorie Référence de l’App Store.'

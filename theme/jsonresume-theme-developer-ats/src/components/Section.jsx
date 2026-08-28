@@ -13,7 +13,7 @@ import { cx } from '../lib/format.js'
 export default function Section ({ title, children, className, breakable = false }) {
   return (
     <section className={cx('mb-2.5 last:mb-0', !breakable && 'print:break-inside-avoid', className)}>
-      <h2 className="mb-1.5 border-b-2 border-accent pb-0.5 font-mono text-[10.5pt] font-bold uppercase tracking-widest text-muted print:break-after-avoid">
+      <h2 className="mb-1.5 border-b-2 border-accent pb-0.5 font-mono text-[10.5pt] font-bold text-muted print:break-after-avoid">
         {title}
       </h2>
       {children}
