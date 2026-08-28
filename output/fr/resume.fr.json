@@ -171,7 +171,10 @@
             "level": "Expert",
             "keywords": [
                 "TypeScript & JavaScript",
-                "React, Next.js, Nuxt.js, NPM & Bun",
+                "React",
+                "Next.js",
+                "Nuxt.js",
+                "NPM & Bun",
                 "HTML5 & CSS, Sass",
                 "Tailwind CSS",
                 "Alpine.js"
@@ -181,7 +184,12 @@
             "name": "Mobile",
             "level": "Expert",
             "keywords": [
-                "Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)"
+                "Swift 5",
+                "iOS",
+                "WatchOS",
+                "Combine",
+                "Intents",
+                "Swift UI"
             ]
         }
     ],

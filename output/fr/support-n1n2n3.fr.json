@@ -173,7 +173,10 @@
             "name": "Outils bureautiques & collaboratifs",
             "level": "Advanced",
             "keywords": [
-                "Microsoft 365 (Outlook, Teams, SharePoint)",
+                "Microsoft 365",
+                "Outlook",
+                "Teams",
+                "SharePoint",
                 "Outils bureautiques",
                 "Fonctions avanc\u00e9es des outils bureautiques",
                 "Outils de prise en main \u00e0 distance (RDP, TeamViewer)"
