@@ -45,7 +45,7 @@
             "endDate": "2024-03-31",
             "highlights": [
                 "Repr\u00e9sent\u00e9 l'image et les standards de s\u00e9curit\u00e9 de **Securitas**, du **Mus\u00e9e Olympique** et de la **RTS** (Radio T\u00e9l\u00e9vision Suisse), y compris une pr\u00e9sence s\u00e9curitaire film\u00e9e lors de tournages en direct sur la voie publique.",
-                "Accueil, orientation et contr\u00f4le d'acc\u00e8s du public lors d'\u00e9v\u00e9nements sportifs \u00e0 forte affluence pour le **LHC Lausanne** et le **Lausanne-Sport**.",
+                "Accueilli, orient\u00e9 et contr\u00f4l\u00e9 l'acc\u00e8s du public lors d'\u00e9v\u00e9nements sportifs \u00e0 forte affluence pour le **LHC Lausanne** et le **Lausanne-Sport**.",
                 "Coordination des flux de public et de la gestion des incidents au sein d'une \u00e9quipe de plusieurs agents, sur diff\u00e9rents sites."
             ]
         },
@@ -56,10 +56,7 @@
             "url": "https:\/\/antistatique.net\/",
             "startDate": "2021-10-04",
             "endDate": "2023-02-12",
-            "summary": "De d\u00e9veloppeur junior \u00e0 confirm\u00e9 : la plus forte progression de ma carri\u00e8re !",
-            "highlights": [
-                "Men\u00e9 les revues de code et la responsabilit\u00e9 technique de projets de petite \u00e0 moyenne envergure, dont une plateforme client sur **AWS**, en faisant respecter les standards de maintenabilit\u00e9."
-            ]
+            "summary": "De d\u00e9veloppeur junior \u00e0 confirm\u00e9 : la plus forte progression de ma carri\u00e8re !"
         },
         {
             "name": "Ilem Group",
@@ -104,16 +101,6 @@
             ]
         },
         {
-            "name": "Sang-froid & S\u00e9curit\u00e9",
-            "level": "Advanced",
-            "keywords": [
-                "Sang-froid en contexte public",
-                "D\u00e9samor\u00e7age de conflits",
-                "Contr\u00f4le d\u2019acc\u00e8s & gestion des flux",
-                "Rigueur & respect des proc\u00e9dures"
-            ]
-        },
-        {
             "name": "Professionnalisme & Esprit d'\u00c9quipe",
             "level": "Advanced",
             "keywords": [
@@ -121,6 +108,16 @@
                 "Professionnalisme & repr\u00e9sentation de l'image client",
                 "Adaptabilit\u00e9 \u00e0 diff\u00e9rents environnements",
                 "Discr\u00e9tion & fiabilit\u00e9"
+            ]
+        },
+        {
+            "name": "Sang-froid & S\u00e9curit\u00e9",
+            "level": "Advanced",
+            "keywords": [
+                "Sang-froid en contexte public",
+                "D\u00e9samor\u00e7age de conflits",
+                "Contr\u00f4le d\u2019acc\u00e8s & gestion des flux",
+                "Rigueur & respect des proc\u00e9dures"
             ]
         }
     ],
@@ -172,7 +169,7 @@
             "endDate": "2023-01-01",
             "description": "Application **iOS** et **watchOS** payante pour interagir avec les v\u00e9hicules Tesla.",
             "highlights": [
-                "D\u00e9velopp\u00e9 et publi\u00e9 une application commerciale **iOS** et **watchOS** int\u00e9grant les **API Tesla**, atteignant plus de **1 000 utilisateurs actifs quotidiens** et class\u00e9e **5e** de la cat\u00e9gorie Voyages de l\u2019App Store."
+                "D\u00e9velopp\u00e9 et publi\u00e9 une application commerciale **iOS** et **watchOS** int\u00e9grant les **API Tesla**, atteignant plus de **1 000 utilisateurs actifs quotidiens** et class\u00e9e **5e** de la cat\u00e9gorie Voyages de l'App Store."
             ]
         }
     ]

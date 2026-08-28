@@ -56,10 +56,7 @@
             "url": "https:\/\/antistatique.net\/",
             "startDate": "2021-10-04",
             "endDate": "2023-02-12",
-            "summary": "From Junior to mid-level Software Engineer & highest skill jump!",
-            "highlights": [
-                "Led code reviews and owned technical delivery on small to medium-sized projects, including a client platform hosted on **AWS**, enforcing maintainability and development standards."
-            ]
+            "summary": "From Junior to mid-level Software Engineer & highest skill jump!"
         },
         {
             "name": "Ilem Group",
@@ -104,16 +101,6 @@
             ]
         },
         {
-            "name": "Composure & Safety",
-            "level": "Advanced",
-            "keywords": [
-                "Composure under pressure in public settings",
-                "Conflict de-escalation",
-                "Access control & crowd management",
-                "Attention to detail & procedure discipline"
-            ]
-        },
-        {
             "name": "Professionalism & Teamwork",
             "level": "Advanced",
             "keywords": [
@@ -121,6 +108,16 @@
                 "Professionalism & brand representation",
                 "Adaptability across environments",
                 "Discretion & trustworthiness"
+            ]
+        },
+        {
+            "name": "Composure & Safety",
+            "level": "Advanced",
+            "keywords": [
+                "Composure under pressure in public settings",
+                "Conflict de-escalation",
+                "Access control & crowd management",
+                "Attention to detail & procedure discipline"
             ]
         }
     ],
