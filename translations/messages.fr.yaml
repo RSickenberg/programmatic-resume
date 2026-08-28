@@ -57,7 +57,7 @@ work:
     summary: 'Conseil informatique pour un client externe, Berdoz Vision & Audition.'
     highlight_1: "Sécurisé et migré vers une version **PHP** plus récente un ERP critique desservant **20 magasins**, puis participé au développement de son remplaçant sous **Laravel**."
     highlight_2: 'Configuré une flotte de **44 iPad** et mis en place des serveurs CI exécutant des suites de tests **Codeception** et **Cypress**.'
-    highlight_3: 'Renforcé la sécurité et développé des composants critiques du CRM interne utilisé par ce même réseau de magasins.'
+    highlight_3: 'Renforcé la sécurité et développé des composants critiques du CRM interne utilisé par ce même réseau de 20 magasins.'
     highlight_4: "Développé l'outillage interne de tests automatisés, de monitoring et de déploiement, avec **Sentry** pour le suivi des erreurs."
   liip:
     position: 'Apprenti Développeur de Logiciels'
@@ -71,8 +71,8 @@ work:
     highlight_military: 'Armée suisse - obligations militaires. ||07.2020 - 11.2020'
   securitas:
     position: 'Agent de Sécurité Événementiel'
-    highlight_1: 'Accueil, orientation et contrôle d’accès du public lors d’événements sportifs à forte affluence pour le **LHC Lausanne** et le **Lausanne-Sport**.'
-    highlight_2: 'Représenté l’image et les standards de sécurité de **Securitas**, du **Musée Olympique** et de la **RTS** (Radio Télévision Suisse), y compris une présence sécuritaire filmée lors de tournages en direct sur la voie publique.'
+    highlight_1: "Accueil, orientation et contrôle d'accès du public lors d'événements sportifs à forte affluence pour le **LHC Lausanne** et le **Lausanne-Sport**."
+    highlight_2: "Représenté l'image et les standards de sécurité de **Securitas**, du **Musée Olympique** et de la **RTS** (Radio Télévision Suisse), y compris une présence sécuritaire filmée lors de tournages en direct sur la voie publique."
     highlight_3: "Coordination des flux de public et de la gestion des incidents au sein d'une équipe de plusieurs agents, sur différents sites."
   support_view:
     academic_work_atlas: "Recensé l'ensemble des solutions métiers du SI des SiL dans le cadre du projet Atlas, et identifié les points clés à monitorer."

@@ -45,7 +45,7 @@ work:
     highlight_2: 'Shipped a **React** (**Next.js**) application with **GitHub Actions CI/CD**, **Docker** containerization and automated deployments to Jelastic.'
   antistatique:
     position: 'Backend Software Engineer'
-    summary: 'From Junior to mid-level Software Engineer & highest skill jump !'
+    summary: 'From Junior to mid-level Software Engineer & highest skill jump!'
     highlight_1: 'Built and maintained enterprise **Symfony 6** applications and their **REST APIs** (**API Platform**), on **PHP 7.4/8.0** with **Doctrine ORM**, **PostgreSQL**, **Redis** caching and **Elasticsearch** indexing.'
     highlight_2: 'Led a five-developer team as **PHP** Lead Developer on a 3-4 month **Symfony** build for Colis du Coeur, shipping v1 of a state-machine-driven workflow for volunteer distribution centres.'
     highlight_3: 'Delivered and maintained six CMS builds - five **Drupal**, one **WordPress**.'
@@ -57,7 +57,7 @@ work:
     summary: 'IT Consulting to an external client named Berdoz Vision & Audition.'
     highlight_1: 'Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then helped build its **Laravel** replacement.'
     highlight_2: 'Configured a fleet of **44 iPads** and set up CI servers running **Codeception** and **Cypress** test suites.'
-    highlight_3: 'Hardened security and developed critical components of the in-house CRM used across that same store network.'
+    highlight_3: 'Hardened security and developed critical components of the in-house CRM used across that same 20-store network.'
     highlight_4: 'Built internal tooling for automated testing, monitoring and deployment, with **Sentry** for error tracking.'
   liip:
     position: 'Apprentice Software Engineer'

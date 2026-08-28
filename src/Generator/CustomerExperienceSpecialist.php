@@ -43,16 +43,22 @@ final class CustomerExperienceSpecialist extends BaseResume
     }
 
     /**
-     * Adds the four IT employers with client-facing highlights only, a
-     * standalone dated entry for the Securitas event-security work (kept
-     * folded into the dateless breaks block for every other profile), and
-     * the breaks block with the Securitas line removed to avoid repeating it.
+     * Adds three of the four IT employers with client-facing highlights only
+     * (Liip is dropped: 2016-2020 apprenticeship, no client-facing content,
+     * least relevant to this profile), a standalone dated entry for the
+     * Securitas event-security work (kept folded into the dateless breaks
+     * block for every other profile), and the breaks block with the
+     * Securitas line removed to avoid repeating it.
      */
     public function addWorks(ResumeBuilder $builder): ResumeBuilder
     {
         $experiences = [];
 
         foreach ($this->getAllWorkExperiences()->get(WorkTypes::IT->value) as $work) {
+            if ('Liip AG' === $work->name) {
+                continue;
+            }
+
             $experiences[] = new Work(
                 name: $work->name,
                 position: $work->position,
@@ -75,8 +81,8 @@ final class CustomerExperienceSpecialist extends BaseResume
             startDate: '2023-07-01',
             endDate: '2024-03-31',
             highlights: [
-                $this->trans('work.securitas.highlight_1'),
                 $this->trans('work.securitas.highlight_2'),
+                $this->trans('work.securitas.highlight_1'),
                 $this->trans('work.securitas.highlight_3'),
             ],
         );
