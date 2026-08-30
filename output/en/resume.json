@@ -37,7 +37,7 @@
             "endDate": "2025-12-31",
             "summary": "IT Consulting for diverse clients via Academic Work.",
             "highlights": [
-                "Designed a decoupled backend\/frontend architecture for **SIL Lausanne** and built the **Docker** base platform underpinning most of their in-house solutions (**Python**, **Django**, **Vue**, **React**).",
+                "Designed a decoupled backend\/frontend architecture for SIL Lausanne and built the **Docker** base platform underpinning most of their in-house solutions (**Python**, **Django**, **Vue**, **React**).",
                 "Shipped a **React** (**Next.js**) application with **GitHub Actions CI\/CD**, **Docker** containerization and automated deployments to Jelastic."
             ]
         },
@@ -48,7 +48,7 @@
             "url": "https:\/\/antistatique.net\/",
             "startDate": "2021-10-04",
             "endDate": "2023-02-12",
-            "summary": "From Junior to mid-level Software Engineer & highest skill jump !",
+            "summary": "From Junior to mid-level Software Engineer & highest skill jump!",
             "highlights": [
                 "Built and maintained enterprise **Symfony 6** applications and their **REST APIs** (**API Platform**), on **PHP 7.4\/8.0** with **Doctrine ORM**, **PostgreSQL**, **Redis** caching and **Elasticsearch** indexing.",
                 "Led a five-developer team as **PHP** Lead Developer on a 3-4 month **Symfony** build for Colis du Coeur, shipping v1 of a state-machine-driven workflow for volunteer distribution centres.",
@@ -69,7 +69,7 @@
             "highlights": [
                 "Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then helped build its **Laravel** replacement.",
                 "Configured a fleet of **44 iPads** and set up CI servers running **Codeception** and **Cypress** test suites.",
-                "Hardened security and developed critical components of the in-house CRM used across that same store network.",
+                "Hardened security and developed critical components of the in-house CRM used across that same 20-store network.",
                 "Built internal tooling for automated testing, monitoring and deployment, with **Sentry** for error tracking."
             ]
         },
@@ -160,8 +160,8 @@
                 "CI\/CD",
                 "Linux",
                 "Apache & Nginx",
-                "Google Cloud Platform (GCP)",
                 "AWS",
+                "Google Cloud Platform (GCP)",
                 "Firebase",
                 "Serverless"
             ]
@@ -171,7 +171,10 @@
             "level": "Expert",
             "keywords": [
                 "TypeScript & JavaScript",
-                "React, Next.js, Nuxt.js, NPM & Bun",
+                "React",
+                "Next.js",
+                "Nuxt.js",
+                "NPM & Bun",
                 "HTML5 & CSS, Sass",
                 "Tailwind CSS",
                 "Alpine.js"
@@ -181,7 +184,12 @@
             "name": "Mobile",
             "level": "Expert",
             "keywords": [
-                "Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)"
+                "Swift 5",
+                "iOS",
+                "WatchOS",
+                "Combine",
+                "Intents",
+                "Swift UI"
             ]
         }
     ],
@@ -215,7 +223,7 @@
             "endDate": "2019-01-01",
             "description": "Free **iOS** wiki around Fortnite with live in-game shop indications and **Django** back-end.",
             "highlights": [
-                "Fortnite companion app with **100,000+ downloads**, **4.6* rating (340+ reviews)** and a peak ranking of **#19** in the App Store Reference category."
+                "Fortnite companion app with **100,000+ downloads**, **4.6\/5.0\u2605 rating (340+ reviews)** and a peak ranking of **#19** in the App Store Reference category."
             ]
         }
     ]

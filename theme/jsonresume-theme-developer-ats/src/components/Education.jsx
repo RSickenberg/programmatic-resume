@@ -8,6 +8,7 @@ export default function Education ({ education = [] }) {
   const title = useSectionTitle('education')
   const courseworkLabel = useUiString('coursework')
   const connector = useUiString('in')
+  const gpaLabel = useUiString('gpa')
 
   if (education.length === 0) return null
 
@@ -20,7 +21,7 @@ export default function Education ({ education = [] }) {
           titleHref={edu.url}
           subtitle={edu.studyType && edu.area ? `${edu.studyType} ${connector} ${edu.area}` : edu.studyType || edu.area}
           meta={<DateRange startDate={edu.startDate} endDate={edu.endDate} />}
-          description={edu.score ? `GPA: ${edu.score}` : undefined}
+          description={edu.score ? `${gpaLabel}: ${edu.score}` : undefined}
         >
           {edu.courses && edu.courses.length > 0 && (
             {/*
@@ -31,8 +32,8 @@ export default function Education ({ education = [] }) {
               * thing on a page either.
               */} &&
             <div className="mt-2 print:break-before-avoid">
-              <p className="text-[8pt] font-semibold uppercase tracking-wide text-subtle print:break-after-avoid">{courseworkLabel}</p>
-              <p className="mt-1 text-[8pt] leading-snug text-ink/70">
+              <p className="text-[8pt] font-semibold uppercase text-subtle print:break-after-avoid">{courseworkLabel}</p>
+              <p className="mt-1 text-[8pt] leading-tight text-ink/70">
                 {renderRichText(edu.courses.join(', '))}
               </p>
             </div>

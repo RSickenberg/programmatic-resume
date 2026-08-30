@@ -49,7 +49,7 @@
             "url": "https:\/\/antistatique.net\/",
             "startDate": "2021-10-04",
             "endDate": "2023-02-12",
-            "summary": "From Junior to mid-level Software Engineer & highest skill jump !",
+            "summary": "From Junior to mid-level Software Engineer & highest skill jump!",
             "highlights": [
                 "Deployed and maintained applications on **Linux** servers with **Docker** and **GitHub Actions**, following structured release and rollback processes.",
                 "Cut **GitHub Actions** execution time by **75%** through dependency caching and workflow optimization.",
@@ -67,7 +67,7 @@
             "highlights": [
                 "Configured a fleet of **44 iPads** and set up CI servers running **Codeception** and **Cypress** test suites.",
                 "Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then helped build its **Laravel** replacement.",
-                "Hardened security and developed critical components of the in-house CRM used across that same store network.",
+                "Hardened security and developed critical components of the in-house CRM used across that same 20-store network.",
                 "Built internal tooling for automated testing, monitoring and deployment, with **Sentry** for error tracking."
             ]
         },
@@ -173,7 +173,10 @@
             "name": "Office & Collaboration Tools",
             "level": "Advanced",
             "keywords": [
-                "Microsoft 365 (Outlook, Teams, SharePoint)",
+                "Microsoft 365",
+                "Outlook",
+                "Teams",
+                "SharePoint",
                 "Office software tools",
                 "Advanced Office functions",
                 "Remote support tools (RDP, TeamViewer)"

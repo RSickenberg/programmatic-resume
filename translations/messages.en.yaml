@@ -6,6 +6,10 @@ basics:
   support_position: 'IT Support Technician (N1/N2/N3)'
   support_summary_role: 'IT Support Technician with a Software Engineering background, covering user support and incident resolution from N1 through N3 across workstations, identity/directory services and networking.'
   support_summary_experience: 'Covers the full support chain: ticket triage and escalation in **Jira Service Management**, incident and problem management along **ITIL** lines, **Active Directory** and **Microsoft 365** administration, and hands-on workstation, printer and network troubleshooting.'
+  cx_specialist_position: 'Customer Experience Specialist'
+  cx_specialist_summary_role: 'Client-facing professional with a Software Engineering background, combining IT consulting client relations with hands-on public-facing event security work and a genuine, long-standing interest in Tesla and electric vehicles.'
+  cx_specialist_summary_experience: "Comfortable guiding guests through a first contact, from greeting and needs assessment to representing a client's image in high-visibility public settings, in French, English and German."
+  cx_specialist_summary_authorization: 'Work authorization: Swiss Citizen. Available now. Valid driving licence.'
 
 languages:
   french: 'French'
@@ -37,11 +41,11 @@ work:
   academic_work:
     position: 'Full-Stack Software Developer'
     summary: 'IT Consulting for diverse clients via Academic Work.'
-    highlight_1: 'Designed a decoupled backend/frontend architecture for **SIL Lausanne** and built the **Docker** base platform underpinning most of their in-house solutions (**Python**, **Django**, **Vue**, **React**).'
+    highlight_1: 'Designed a decoupled backend/frontend architecture for SIL Lausanne and built the **Docker** base platform underpinning most of their in-house solutions (**Python**, **Django**, **Vue**, **React**).'
     highlight_2: 'Shipped a **React** (**Next.js**) application with **GitHub Actions CI/CD**, **Docker** containerization and automated deployments to Jelastic.'
   antistatique:
     position: 'Backend Software Engineer'
-    summary: 'From Junior to mid-level Software Engineer & highest skill jump !'
+    summary: 'From Junior to mid-level Software Engineer & highest skill jump!'
     highlight_1: 'Built and maintained enterprise **Symfony 6** applications and their **REST APIs** (**API Platform**), on **PHP 7.4/8.0** with **Doctrine ORM**, **PostgreSQL**, **Redis** caching and **Elasticsearch** indexing.'
     highlight_2: 'Led a five-developer team as **PHP** Lead Developer on a 3-4 month **Symfony** build for Colis du Coeur, shipping v1 of a state-machine-driven workflow for volunteer distribution centres.'
     highlight_3: 'Delivered and maintained six CMS builds - five **Drupal**, one **WordPress**.'
@@ -53,7 +57,7 @@ work:
     summary: 'IT Consulting to an external client named Berdoz Vision & Audition.'
     highlight_1: 'Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then helped build its **Laravel** replacement.'
     highlight_2: 'Configured a fleet of **44 iPads** and set up CI servers running **Codeception** and **Cypress** test suites.'
-    highlight_3: 'Hardened security and developed critical components of the in-house CRM used across that same store network.'
+    highlight_3: 'Hardened security and developed critical components of the in-house CRM used across that same 20-store network.'
     highlight_4: 'Built internal tooling for automated testing, monitoring and deployment, with **Sentry** for error tracking.'
   liip:
     position: 'Apprentice Software Engineer'
@@ -65,6 +69,11 @@ work:
     highlight_securitas: 'Security agent at Securitas AG - part-time, event sector. ||07.2023 - 03.2024'
     highlight_travel: 'Planned career break - solo world travel and personal development. ||02.2023 - 06.2023'
     highlight_military: 'Swiss Armed Forces - mandatory military service. ||07.2020 - 11.2020'
+  securitas:
+    position: 'Event Security Agent'
+    highlight_1: 'Greeted, directed and screened guests through access control at high-attendance sporting events for **LHC Lausanne** and **Lausanne-Sport**.'
+    highlight_2: "Represented client image and security standards on behalf of **Securitas**, the **Olympic Museum** and **RTS** (Radio Télévision Suisse), including on-camera security presence during live public broadcasts."
+    highlight_3: 'Coordinated crowd flow and incident response as part of a multi-agent security team across venues.'
   support_view:
     academic_work_atlas: 'Inventoried every business application in the SiL information system for project Atlas, and identified the key points to monitor.'
     academic_work_itsm: 'Built test scenarios with the business teams and wrote the technical documentation, working in **Easyvista** and the **CMDB**.'
@@ -124,6 +133,21 @@ skills:
   support_collaboration_office_tools: 'Office software tools'
   support_collaboration_office_advanced: 'Advanced Office functions'
   support_collaboration_remote_tools: 'Remote support tools (RDP, TeamViewer)'
+  cx_specialist_guest_relations_name: 'Guest Relations'
+  cx_specialist_composure_safety_name: 'Composure & Safety'
+  cx_specialist_professionalism_name: 'Professionalism & Teamwork'
+  cx_specialist_guest_welcoming: 'Guest welcoming & first contact'
+  cx_specialist_active_listening: 'Active listening & needs assessment'
+  cx_specialist_multilingual_communication: 'Multilingual communication (FR/EN/DE)'
+  cx_specialist_composure_under_pressure: 'Composure under pressure in public settings'
+  cx_specialist_conflict_deescalation: 'Conflict de-escalation'
+  cx_specialist_access_control: 'Access control & crowd management'
+  cx_specialist_team_coordination: 'Team coordination'
+  cx_specialist_professionalism_brand: 'Professionalism & brand representation'
+  cx_specialist_adaptability: 'Adaptability across environments'
+  cx_specialist_attention_to_detail: 'Attention to detail & procedure discipline'
+  cx_specialist_technical_translation: 'Translating technical concepts for non-technical audiences'
+  cx_specialist_discretion: 'Discretion & trustworthiness'
 
 awards:
   epfl_summary: 'Built a "digital museum" in Virtual reality. Won the **first place** in VR experiences, built with **SteamVR** and **Unity**.'
@@ -134,4 +158,4 @@ projects:
     highlight_1: 'Built and published a commercial **iOS** and **watchOS** application integrating **Tesla APIs** reaching over **1,000 daily active users** and ranking **#5** in the App Store Trips category.'
   fort_to_nite:
     description: 'Free **iOS** wiki around Fortnite with live in-game shop indications and **Django** back-end.'
-    highlight_1: 'Fortnite companion app with **100,000+ downloads**, **4.6* rating (340+ reviews)** and a peak ranking of **#19** in the App Store Reference category.'
+    highlight_1: 'Fortnite companion app with **100,000+ downloads**, **4.6/5.0★ rating (340+ reviews)** and a peak ranking of **#19** in the App Store Reference category.'

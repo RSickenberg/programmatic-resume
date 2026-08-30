@@ -67,7 +67,7 @@
             "highlights": [
                 "Configur\u00e9 une flotte de **44 iPad** et mis en place des serveurs CI ex\u00e9cutant des suites de tests **Codeception** et **Cypress**.",
                 "S\u00e9curis\u00e9 et migr\u00e9 vers une version **PHP** plus r\u00e9cente un ERP critique desservant **20 magasins**, puis particip\u00e9 au d\u00e9veloppement de son rempla\u00e7ant sous **Laravel**.",
-                "Renforc\u00e9 la s\u00e9curit\u00e9 et d\u00e9velopp\u00e9 des composants critiques du CRM interne utilis\u00e9 par ce m\u00eame r\u00e9seau de magasins.",
+                "Renforc\u00e9 la s\u00e9curit\u00e9 et d\u00e9velopp\u00e9 des composants critiques du CRM interne utilis\u00e9 par ce m\u00eame r\u00e9seau de 20 magasins.",
                 "D\u00e9velopp\u00e9 l'outillage interne de tests automatis\u00e9s, de monitoring et de d\u00e9ploiement, avec **Sentry** pour le suivi des erreurs."
             ]
         },
@@ -173,7 +173,10 @@
             "name": "Outils bureautiques & collaboratifs",
             "level": "Advanced",
             "keywords": [
-                "Microsoft 365 (Outlook, Teams, SharePoint)",
+                "Microsoft 365",
+                "Outlook",
+                "Teams",
+                "SharePoint",
                 "Outils bureautiques",
                 "Fonctions avanc\u00e9es des outils bureautiques",
                 "Outils de prise en main \u00e0 distance (RDP, TeamViewer)"

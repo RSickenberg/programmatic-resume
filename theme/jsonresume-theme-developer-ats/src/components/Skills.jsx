@@ -18,13 +18,31 @@ export default function Skills ({ skills = [] }) {
     <Section title={title}>
       <div className="grid grid-cols-1 gap-x-5 gap-y-2.5 sm:grid-cols-3">
         {skills.map((skill, index) => (
-          <div key={index} className="flex flex-col print:break-inside-avoid">
-            <h3 className="mb-1 font-mono text-[9pt] font-bold uppercase tracking-wider text-accent">
+          <div key={index} className="flex min-w-0 flex-col print:break-inside-avoid">
+            <h3 className="mb-1 font-mono text-[9pt] font-bold text-accent">
               {renderRichText(skill.name)}
             </h3>
             {skill.keywords && skill.keywords.length > 0 && (
-              <p className="flex-1 rounded border-l-2 border-accent bg-surface px-2.5 py-1.5 font-mono text-[9pt] leading-snug text-muted">
-                {renderRichText(skill.keywords.join(', '))}
+              <p className="flex-1 rounded border-l-2 border-accent bg-surface px-2.5 py-1.5 text-[9pt] font-mono text-muted">
+                {/*
+                  * Non-breaking spaces inside each keyword, same reasoning as
+                  * renderRichText's bold-span handling: a keyword is one
+                  * atomic term, and a regular space that lands on a visual
+                  * line-wrap loses its glyph in the PDF text layer, gluing
+                  * the keyword's words together for any parser reading the
+                  * raw content stream. The ", " between keywords stays a
+                  * normal, breakable space.
+                  *
+                  * Requires every keyword to be genuinely short (a real
+                  * label, not a comma-separated list crammed into one
+                  * string - split those into their own keywords instead, see
+                  * DECISIONS.md). min-w-0 on the grid cell lets it shrink to
+                  * its track width instead of stealing space from siblings
+                  * to fit an atomic run; overflow-wrap:anywhere is a last
+                  * -resort safety net so an unexpectedly long keyword still
+                  * overflows visibly rather than off-page, never silently.
+                  */}
+                {renderRichText(skill.keywords.map((keyword) => keyword.replace(/ /g, ' ')).join(', '))}
               </p>
             )}
           </div>

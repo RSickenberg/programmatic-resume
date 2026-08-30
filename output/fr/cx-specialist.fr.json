@@ -1,0 +1,176 @@
+{
+    "$schema": "https:\/\/jsonresume.org\/schema\/schema.json",
+    "basics": {
+        "name": "Romain Sickenberg",
+        "label": "Sp\u00e9cialiste de l'Exp\u00e9rience Client",
+        "email": "r.sickenberg@gmail.com",
+        "phone": "+41 78 907 32 02",
+        "url": "https:\/\/rsickenberg.me",
+        "summary": "Profil orient\u00e9 client avec un parcours d'ing\u00e9nieur logiciel, alliant relation client en conseil informatique, exp\u00e9rience de terrain en s\u00e9curit\u00e9 \u00e9v\u00e9nementielle face au public et un int\u00e9r\u00eat sinc\u00e8re et durable pour Tesla et les v\u00e9hicules \u00e9lectriques.\n\n\u00c0 l'aise pour accompagner un client d\u00e8s le premier contact, de l'accueil et l'identification du besoin jusqu'\u00e0 la repr\u00e9sentation de l'image d'un client dans des contextes publics tr\u00e8s expos\u00e9s, en fran\u00e7ais, anglais et allemand.\n\nAutorisation de travail : citoyen suisse. Disponible imm\u00e9diatement. Permis de conduire valide.",
+        "location": {
+            "address": "Chemin de la creuse 6",
+            "postalCode": "1027",
+            "city": "Lonay",
+            "countryCode": "CH",
+            "region": "VD"
+        },
+        "profiles": [
+            {
+                "network": "github",
+                "username": "rsickenberg",
+                "url": "https:\/\/github.com\/rsickenberg"
+            },
+            {
+                "network": "linkedin",
+                "username": "a320rsck",
+                "url": "https:\/\/linkedin.com\/in\/a320rsck"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Academic Work SA",
+            "position": "D\u00e9veloppeur Full-Stack",
+            "location": "Lausanne",
+            "url": "https:\/\/www.academicwork.ch\/",
+            "startDate": "2024-03-01",
+            "endDate": "2025-12-31",
+            "summary": "Conseil informatique pour divers clients via Academic Work."
+        },
+        {
+            "name": "Securitas AG",
+            "position": "Agent de S\u00e9curit\u00e9 \u00c9v\u00e9nementiel",
+            "location": "Lausanne",
+            "startDate": "2023-07-01",
+            "endDate": "2024-03-31",
+            "highlights": [
+                "Repr\u00e9sent\u00e9 l'image et les standards de s\u00e9curit\u00e9 de **Securitas**, du **Mus\u00e9e Olympique** et de la **RTS** (Radio T\u00e9l\u00e9vision Suisse), y compris une pr\u00e9sence s\u00e9curitaire film\u00e9e lors de tournages en direct sur la voie publique.",
+                "Accueilli, orient\u00e9 et contr\u00f4l\u00e9 l'acc\u00e8s du public lors d'\u00e9v\u00e9nements sportifs \u00e0 forte affluence pour le **LHC Lausanne** et le **Lausanne-Sport**.",
+                "Coordination des flux de public et de la gestion des incidents au sein d'une \u00e9quipe de plusieurs agents, sur diff\u00e9rents sites."
+            ]
+        },
+        {
+            "name": "Antistatique SA",
+            "position": "Ing\u00e9nieur Logiciel Backend",
+            "location": "Lausanne",
+            "url": "https:\/\/antistatique.net\/",
+            "startDate": "2021-10-04",
+            "endDate": "2023-02-12",
+            "summary": "De d\u00e9veloppeur junior \u00e0 confirm\u00e9 : la plus forte progression de ma carri\u00e8re !"
+        },
+        {
+            "name": "Ilem Group",
+            "position": "Ing\u00e9nieur Logiciel Backend Junior",
+            "location": "Gen\u00e8ve & Ecublens",
+            "url": "https:\/\/new.ilemgroup.com\/",
+            "startDate": "2021-02-01",
+            "endDate": "2021-10-31",
+            "summary": "Conseil informatique pour un client externe, Berdoz Vision & Audition.",
+            "highlights": [
+                "Renforc\u00e9 la s\u00e9curit\u00e9 et d\u00e9velopp\u00e9 des composants critiques du CRM interne utilis\u00e9 par ce m\u00eame r\u00e9seau de 20 magasins."
+            ]
+        },
+        {
+            "name": "",
+            "position": "Pauses personnelles et activit\u00e9s accessoires",
+            "highlights": [
+                "Pause de carri\u00e8re planifi\u00e9e - voyage en solo autour du monde et d\u00e9veloppement personnel. ||02.2023 - 06.2023",
+                "Arm\u00e9e suisse - obligations militaires. ||07.2020 - 11.2020"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Conf\u00e9d\u00e9ration Suisse | EPSIC \u00e0 Lausanne & CFPT \u00e0 Gen\u00e8ve",
+            "url": "https:\/\/www.bit.admin.ch\/fr\/informaticienne-cfc-developpement-applications",
+            "area": "Certificat f\u00e9d\u00e9ral de capacit\u00e9 (CFC) en informatique",
+            "startDate": "2016-08-01",
+            "endDate": "2020-07-01",
+            "score": "4.4"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Relation Client",
+            "level": "Advanced",
+            "keywords": [
+                "Accueil & premier contact",
+                "\u00c9coute active & identification des besoins",
+                "Communication multilingue (FR\/EN\/DE)",
+                "Vulgarisation technique pour un public non-technique"
+            ]
+        },
+        {
+            "name": "Professionnalisme & Esprit d'\u00c9quipe",
+            "level": "Advanced",
+            "keywords": [
+                "Coordination d'\u00e9quipe",
+                "Professionnalisme & repr\u00e9sentation de l'image client",
+                "Adaptabilit\u00e9 \u00e0 diff\u00e9rents environnements",
+                "Discr\u00e9tion & fiabilit\u00e9"
+            ]
+        },
+        {
+            "name": "Sang-froid & S\u00e9curit\u00e9",
+            "level": "Advanced",
+            "keywords": [
+                "Sang-froid en contexte public",
+                "D\u00e9samor\u00e7age de conflits",
+                "Contr\u00f4le d\u2019acc\u00e8s & gestion des flux",
+                "Rigueur & respect des proc\u00e9dures"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Fran\u00e7ais",
+            "fluency": "Langue maternelle (C2)"
+        },
+        {
+            "language": "Anglais",
+            "fluency": "Courant (C2)"
+        },
+        {
+            "language": "Allemand",
+            "fluency": "Interm\u00e9diaire (B1)"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Jeux vid\u00e9o, Films, Musique",
+            "keywords": [
+                "Joueur PC",
+                "Science-fiction",
+                "House"
+            ]
+        },
+        {
+            "name": "Voyage",
+            "keywords": [
+                "Voyage sac \u00e0 dos",
+                "Aventures en solo",
+                "Plong\u00e9e",
+                "Pilote Priv\u00e9"
+            ]
+        },
+        {
+            "name": "Photographie",
+            "keywords": [
+                "Drone",
+                "Reflex num\u00e9rique",
+                "Astrophotographie"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Tesla Companion",
+            "startDate": "2018-01-01",
+            "endDate": "2023-01-01",
+            "description": "Application **iOS** et **watchOS** payante pour interagir avec les v\u00e9hicules Tesla.",
+            "highlights": [
+                "D\u00e9velopp\u00e9 et publi\u00e9 une application commerciale **iOS** et **watchOS** int\u00e9grant les **API Tesla**, atteignant plus de **1 000 utilisateurs actifs quotidiens** et class\u00e9e **5e** de la cat\u00e9gorie Voyages de l'App Store."
+            ]
+        }
+    ]
+}

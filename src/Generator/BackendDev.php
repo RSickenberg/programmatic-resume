@@ -111,8 +111,8 @@ final class BackendDev extends BaseResume
                         'CI/CD',
                         'Linux',
                         'Apache & Nginx',
-                        'Google Cloud Platform (GCP)',
                         'AWS',
+                        'Google Cloud Platform (GCP)',
                         'Firebase',
                         'Serverless',
                     ]
@@ -124,7 +124,10 @@ final class BackendDev extends BaseResume
                     level: SkillLevel::Expert,
                     keywords: [
                         'TypeScript & JavaScript',
-                        'React, Next.js, Nuxt.js, NPM & Bun',
+                        'React',
+                        'Next.js',
+                        'Nuxt.js',
+                        'NPM & Bun',
                         'HTML5 & CSS, Sass',
                         'Tailwind CSS',
                         'Alpine.js',
@@ -136,7 +139,12 @@ final class BackendDev extends BaseResume
                     name: $this->trans('skills.lower_level_name'),
                     level: SkillLevel::Expert,
                     keywords: [
-                        'Swift 5 (iOS, WatchOS, Combine, Intents, Swift UI, etc.)',
+                        'Swift 5',
+                        'iOS',
+                        'WatchOS',
+                        'Combine',
+                        'Intents',
+                        'Swift UI',
                     ]
                 )
             );

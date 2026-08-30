@@ -1,11 +1,12 @@
 @import "tailwindcss";
+@import "./fonts.css";
 
 @source "../components/**/*.jsx";
 @source "../*.jsx";
 
 @theme {
-  --font-sans: Inter, "Segoe UI", ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --font-sans: "Geist", "Segoe UI", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 
   --color-ink: #18181b;
   --color-muted: #52525b;
@@ -32,6 +33,25 @@
 
   body {
     -webkit-font-smoothing: antialiased;
+    /*
+     * JetBrains Mono (and Inter) substitute "fi"/"fl" letter pairs with a
+     * single ligature glyph by default. Chromium's PDF text layer embeds
+     * that glyph as its own Unicode codepoint (U+FB01/U+FB02) instead of
+     * the two ASCII letters, so any word containing "fi" or "fl" (five,
+     * workflow, Confluence, configured, fleet, first, ...) silently fails
+     * an exact-text ATS keyword match. Ligatures are a print flourish this
+     * theme has no use for; disable them everywhere.
+     */
+    font-variant-ligatures: none;
+    /*
+     * Kerning gives some letter pairs their own positioned glyph run in the
+     * PDF content stream. The word still renders as one unbroken string, but
+     * Apple's PDFKit (Preview.app, macOS "Copy") treats some of those run
+     * boundaries as word breaks when reconstructing copyable text, inserting
+     * a phantom space mid-word ("decoupled" -> "decou pled") that isn't
+     * visible on the page. Disabling kerning keeps each word a single run.
+     */
+    font-kerning: none;
   }
 
   h1,
