@@ -9,12 +9,14 @@
     "react-dom": "^19.2.8"
   },
   "dependencies": {
-    "@jsonresume/utils": "^0.2.2"
+    "@jsonresume/utils": "^0.2.2",
+    "geist": "^1.7.2"
   },
   "scripts": {
+    "build:fonts": "node scripts/build-fonts.mjs",
     "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./src/generated/tailwind.css --minify",
-    "build": "npm run build:css && vite build",
-    "watch": "npm run build:css && vite build -w"
+    "build": "npm run build:fonts && npm run build:css && vite build",
+    "watch": "npm run build:fonts && npm run build:css && vite build -w"
   },
   "exports": {
     ".": "./dist/index.js"
