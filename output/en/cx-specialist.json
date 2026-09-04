@@ -15,11 +15,6 @@
         },
         "profiles": [
             {
-                "network": "github",
-                "username": "rsickenberg",
-                "url": "https:\/\/github.com\/rsickenberg"
-            },
-            {
                 "network": "linkedin",
                 "username": "a320rsck",
                 "url": "https:\/\/linkedin.com\/in\/a320rsck"
@@ -34,7 +29,10 @@
             "url": "https:\/\/www.academicwork.ch\/",
             "startDate": "2024-03-01",
             "endDate": "2025-12-31",
-            "summary": "IT Consulting for diverse clients via Academic Work."
+            "summary": "IT Consulting for diverse clients via Academic Work.",
+            "highlights": [
+                "Designed a decoupled backend\/frontend architecture for SIL Lausanne and built the **Docker** base platform underpinning most of their in-house solutions (**Python**, **Django**, **Vue**, **React**)."
+            ]
         },
         {
             "name": "Securitas AG",
@@ -55,7 +53,11 @@
             "url": "https:\/\/antistatique.net\/",
             "startDate": "2021-10-04",
             "endDate": "2023-02-12",
-            "summary": "From Junior to mid-level Software Engineer & highest skill jump!"
+            "summary": "From Junior to mid-level Software Engineer & highest skill jump!",
+            "highlights": [
+                "Led a five-developer team as **PHP** Lead Developer on a 3-4 month **Symfony** build for Colis du Coeur, shipping v1 of a state-machine-driven workflow for volunteer distribution centres.",
+                "Owned technical delivery and led code reviews on small to medium-sized projects, including a client platform hosted on **AWS**, to enforce maintainability and development standards."
+            ]
         },
         {
             "name": "Ilem Group",
@@ -66,6 +68,7 @@
             "endDate": "2021-10-31",
             "summary": "IT Consulting to an external client named Berdoz Vision & Audition.",
             "highlights": [
+                "Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then co-built its **Laravel** replacement.",
                 "Hardened security and developed critical components of the in-house CRM used across that same 20-store network."
             ]
         },

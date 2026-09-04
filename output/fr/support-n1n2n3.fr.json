@@ -37,8 +37,7 @@
             "summary": "Conseil informatique pour divers clients via Academic Work.",
             "highlights": [
                 "Recens\u00e9 l'ensemble des solutions m\u00e9tiers du SI des SiL dans le cadre du projet Atlas, et identifi\u00e9 les points cl\u00e9s \u00e0 monitorer.",
-                "Mis en place des sc\u00e9narios de tests avec les m\u00e9tiers et r\u00e9dig\u00e9 la documentation technique, sous **Easyvista** et **CMDB**.",
-                "Livr\u00e9 une application **React** (**Next.js**) avec int\u00e9gration continue **GitHub Actions**, conteneurisation **Docker** et d\u00e9ploiements automatis\u00e9s sur Jelastic."
+                "Mis en place des sc\u00e9narios de tests avec les m\u00e9tiers et r\u00e9dig\u00e9 la documentation technique, sous **Easyvista** et **CMDB**."
             ]
         },
         {
@@ -51,8 +50,7 @@
             "summary": "De d\u00e9veloppeur junior \u00e0 confirm\u00e9 : la plus forte progression de ma carri\u00e8re !",
             "highlights": [
                 "D\u00e9ploy\u00e9 et maintenu des applications sur serveurs **Linux** avec **Docker** et **GitHub Actions**, selon des processus structur\u00e9s de mise en production et de retour arri\u00e8re.",
-                "R\u00e9duit de **75%** le temps d'ex\u00e9cution des **GitHub Actions** via la mise en cache des d\u00e9pendances et l'optimisation des workflows.",
-                "Men\u00e9 les revues de code et la responsabilit\u00e9 technique de projets de petite \u00e0 moyenne envergure, dont une plateforme client sur **AWS**, en faisant respecter les standards de maintenabilit\u00e9."
+                "R\u00e9duit de **75%** le temps d'ex\u00e9cution des **GitHub Actions** via la mise en cache des d\u00e9pendances et l'optimisation des workflows."
             ]
         },
         {
@@ -65,9 +63,8 @@
             "summary": "Conseil informatique pour un client externe, Berdoz Vision & Audition.",
             "highlights": [
                 "Configur\u00e9 une flotte de **44 iPad** et mis en place des serveurs CI ex\u00e9cutant des suites de tests **Codeception** et **Cypress**.",
-                "S\u00e9curis\u00e9 et migr\u00e9 vers une version **PHP** plus r\u00e9cente un ERP critique desservant **20 magasins**, puis particip\u00e9 au d\u00e9veloppement de son rempla\u00e7ant sous **Laravel**.",
-                "Renforc\u00e9 la s\u00e9curit\u00e9 et d\u00e9velopp\u00e9 des composants critiques du CRM interne utilis\u00e9 par ce m\u00eame r\u00e9seau de 20 magasins.",
-                "D\u00e9velopp\u00e9 l'outillage interne de tests automatis\u00e9s, de monitoring et de d\u00e9ploiement, avec **Sentry** pour le suivi des erreurs."
+                "S\u00e9curis\u00e9 et migr\u00e9 vers une version **PHP** plus r\u00e9cente un ERP critique desservant **20 magasins**, et particip\u00e9 au d\u00e9veloppement de son rempla\u00e7ant sous **Laravel**.",
+                "Renforc\u00e9 la s\u00e9curit\u00e9 et d\u00e9velopp\u00e9 des composants critiques du CRM interne utilis\u00e9 par ce m\u00eame r\u00e9seau de 20 magasins."
             ]
         },
         {
@@ -153,16 +150,19 @@
             "level": "Advanced",
             "keywords": [
                 "TCP\/IP",
-                "DNS & DHCP",
+                "DNS",
+                "DHCP",
                 "VPN",
-                "D\u00e9pannage Wi-Fi & mise en palce r\u00e9seaux"
+                "D\u00e9pannage Wi-Fi",
+                "Mise en place r\u00e9seau"
             ]
         },
         {
             "name": "Mat\u00e9riel & appareils",
             "level": "Advanced",
             "keywords": [
-                "D\u00e9pannage postes de travail & p\u00e9riph\u00e9riques",
+                "D\u00e9pannage postes de travail",
+                "D\u00e9pannage p\u00e9riph\u00e9riques",
                 "Mobile Device Management (MDM)",
                 "Support imprimantes & \u00e9quipements r\u00e9seau"
             ]

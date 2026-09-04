@@ -54,7 +54,7 @@
                 "Led a five-developer team as **PHP** Lead Developer on a 3-4 month **Symfony** build for Colis du Coeur, shipping v1 of a state-machine-driven workflow for volunteer distribution centres.",
                 "Delivered and maintained six CMS builds - five **Drupal**, one **WordPress**.",
                 "Cut **GitHub Actions** execution time by **75%** through dependency caching and workflow optimization.",
-                "Led code reviews and owned technical delivery on small to medium-sized projects, including a client platform hosted on **AWS**, enforcing maintainability and development standards.",
+                "Owned technical delivery and led code reviews on small to medium-sized projects, including a client platform hosted on **AWS**, to enforce maintainability and development standards.",
                 "Built a small internal tool on a **serverless Firebase** backend with a **Vue.js** front end."
             ]
         },
@@ -67,10 +67,10 @@
             "endDate": "2021-10-31",
             "summary": "IT Consulting to an external client named Berdoz Vision & Audition.",
             "highlights": [
-                "Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then helped build its **Laravel** replacement.",
+                "Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then co-built its **Laravel** replacement.",
                 "Configured a fleet of **44 iPads** and set up CI servers running **Codeception** and **Cypress** test suites.",
                 "Hardened security and developed critical components of the in-house CRM used across that same 20-store network.",
-                "Built internal tooling for automated testing, monitoring and deployment, with **Sentry** for error tracking."
+                "Implemented internal tooling for automated testing, monitoring and deployment, with **Sentry** for error tracking."
             ]
         },
         {
@@ -82,7 +82,7 @@
             "endDate": "2020-06-30",
             "highlights": [
                 "Developed and extended internal web applications in **PHP** and **JavaScript**.",
-                "Shipped features in an **Agile** team using **Git**, **Scrum** and modern web development practices.",
+                "Shipped features in an **Agile** team with **Git** and **Scrum**.",
                 "Developed custom **Moodle** plugins with **PHP 5.4**."
             ]
         },
@@ -119,11 +119,13 @@
             "level": "Expert",
             "keywords": [
                 "PHP",
+                "Symfony",
+                "Laravel",
+                "REST APIs",
                 "Python",
                 "Node.js",
                 "C#",
-                "Java",
-                "REST APIs"
+                "Java"
             ]
         },
         {
@@ -133,21 +135,10 @@
                 "PostgreSQL",
                 "MySQL",
                 "MariaDB",
-                "Prisma \/ Supabase",
+                "Prisma",
+                "Supabase",
                 "Redis",
                 "Elasticsearch"
-            ]
-        },
-        {
-            "name": "Tools",
-            "level": "Advanced",
-            "keywords": [
-                "Git",
-                "GitLab",
-                "Composer",
-                "Jira, Confluence & Scrum",
-                "Sentry",
-                "Bash"
             ]
         },
         {
@@ -158,7 +149,8 @@
                 "GitHub Actions",
                 "CI\/CD",
                 "Linux",
-                "Apache & Nginx",
+                "Apache",
+                "Nginx",
                 "AWS",
                 "Google Cloud Platform (GCP)",
                 "Firebase",
@@ -166,15 +158,34 @@
             ]
         },
         {
+            "name": "Tools",
+            "level": "Advanced",
+            "keywords": [
+                "Git",
+                "GitLab",
+                "Composer",
+                "Jira",
+                "Confluence",
+                "Scrum",
+                "Sentry",
+                "Bash"
+            ]
+        },
+        {
             "name": "Frontend",
             "level": "Expert",
             "keywords": [
-                "TypeScript & JavaScript",
+                "TypeScript",
+                "JavaScript",
                 "React",
+                "Vue.js",
                 "Next.js",
                 "Nuxt.js",
-                "NPM & Bun",
-                "HTML5 & CSS, Sass",
+                "NPM",
+                "Bun",
+                "HTML5",
+                "CSS",
+                "Sass",
                 "Tailwind CSS",
                 "Alpine.js"
             ]

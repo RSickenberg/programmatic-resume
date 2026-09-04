@@ -6,9 +6,11 @@ namespace Romainsickenberg\ProgrammaticResume\Generator;
 
 use JustSteveKing\Resume\Builders\ResumeBuilder;
 use JustSteveKing\Resume\DataObjects\Basics;
+use JustSteveKing\Resume\DataObjects\Profile;
 use JustSteveKing\Resume\DataObjects\Project;
 use JustSteveKing\Resume\DataObjects\Skill;
 use JustSteveKing\Resume\DataObjects\Work;
+use JustSteveKing\Resume\Enums\Network;
 use JustSteveKing\Resume\Enums\SkillLevel;
 use JustSteveKing\Resume\ValueObjects\Email;
 use JustSteveKing\Resume\ValueObjects\Url;
@@ -19,7 +21,15 @@ final class CustomerExperienceSpecialist extends BaseResume
      * @var array<string, list<string>>
      */
     private const array CLIENT_FACING_HIGHLIGHTS = [
+        'Academic Work SA' => [
+            'work.academic_work.highlight_1',
+        ],
+        'Antistatique SA' => [
+            'work.antistatique.highlight_2',
+            'work.antistatique.highlight_5',
+        ],
         'Ilem Group' => [
+            'work.ilem.highlight_1',
             'work.ilem.highlight_3',
         ],
     ];
@@ -172,5 +182,13 @@ final class CustomerExperienceSpecialist extends BaseResume
     protected function getRelevantCourses(): array
     {
         return [];
+    }
+
+    #[\Override]
+    protected function getRelatedProfiles(): array
+    {
+        return [
+            new Profile(Network::LinkedIn, 'a320rsck', new Url(self::LINKEDIN_URL)),
+        ];
     }
 }

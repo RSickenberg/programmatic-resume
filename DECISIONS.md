@@ -57,3 +57,31 @@ cx-specialist.
 Any future keyword or bolded term must be a genuine single label, not a list
 - split multi-item content into separate keywords instead of one
 comma-separated string, or this regression returns.
+
+## Fixed: CSS gap is not text content
+
+Distinct from the line-wrap bug above. `Header.jsx`'s contact row and
+`Entry.jsx`'s title/meta row used `gap-x-*` / `justify-between` to space
+sibling elements apart - a pure layout property. Chromium's PDF text layer
+emits no glyph for it, so adjacent items glue together in the raw content
+stream on a single line, wrap or no wrap (e.g. `CHr.sickenberg@gmail.com`,
+`Full-Stack03.2024`). Confirmed via char x-position: a visible gap on the
+page, zero characters between the elements in the text layer.
+
+Fixed (2026-09-04) by inserting a literal `·` as its own text node between
+items in both components, instead of relying on layout spacing. Verified by
+re-extracting the raw content stream after rebuild: both cases now read
+`...CH·r.sickenberg@gmail.com·...` and `Full-Stack Software Developer·03.2024 - 12.2025`.
+
+This is a narrower, safer fix than the reverted one above: it adds a real
+character where none existed, rather than making an already-present space
+non-breaking, so it carries none of that attempt's mid-word-break risk.
+
+**Not yet fixed, same root cause:** block-level elements (e.g. `Entry`'s meta
+row and the next block's subtitle) still glue on a vertical boundary -
+`12.2025Academic Work SA` in the raw stream - because a CSS margin between
+blocks is exactly as textless as a flex gap. Lower real-world risk than the
+single-line case (most PDF text extractors infer a break from the Y-position
+jump, unlike same-line, same-Y adjacent elements), and not something any CV
+audit has flagged, so left alone rather than fixed speculatively. If it ever
+needs fixing, the same "insert a real character" approach applies.

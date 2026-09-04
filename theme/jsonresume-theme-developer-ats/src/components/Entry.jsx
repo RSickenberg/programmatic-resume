@@ -41,7 +41,20 @@ export default function Entry ({ title, titleHref, meta, subtitle, description, 
           <h3 className="font-mono text-[12pt] font-medium text-ink">
             {titleHref ? <Link href={titleHref} underline={false}>{title}</Link> : renderRichText(title)}
           </h3>
-          {meta}
+          {/*
+            * justify-between spaces title and meta with layout only, no text
+            * content between them, so they glue into one token (e.g.
+            * "Full-Stack03.2024") for anything reading the PDF's raw content
+            * stream. A literal "·" keeps them apart regardless of wrapping -
+            * see Header.jsx and DECISIONS.md for the same fix and why a
+            * space glyph alone can't be trusted here.
+            */}
+          {meta && (
+            <span className="flex items-baseline gap-x-1.5 text-subtle">
+              <span aria-hidden="true" className={'text-white'}> &middot; </span>
+              {meta}
+            </span>
+          )}
         </div>
         {subtitle && (
           <p className="mt-0.5 text-[10pt] font-medium text-subaccent">{renderRichText(subtitle)}</p>

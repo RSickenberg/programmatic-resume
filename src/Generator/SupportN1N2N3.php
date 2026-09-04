@@ -48,18 +48,15 @@ final class SupportN1N2N3 extends BaseResume
         'Academic Work SA' => [
             'work.support_view.academic_work_atlas',
             'work.support_view.academic_work_itsm',
-            'work.academic_work.highlight_2',
         ],
         'Antistatique SA' => [
             'work.support_view.antistatique_operations',
             'work.antistatique.highlight_4',
-            'work.antistatique.highlight_5',
         ],
         'Ilem Group' => [
             'work.ilem.highlight_2',
             'work.ilem.highlight_1',
             'work.ilem.highlight_3',
-            'work.ilem.highlight_4',
         ],
         'Liip AG' => [
             'work.liip.highlight_1',
@@ -137,9 +134,11 @@ final class SupportN1N2N3 extends BaseResume
                     level: SkillLevel::Advanced,
                     keywords: [
                         'TCP/IP',
-                        'DNS & DHCP',
+                        'DNS',
+                        'DHCP',
                         'VPN',
-                        $this->trans('skills.support_networking_wifi_troubleshooting_network_setup'),
+                        $this->trans('skills.support_networking_wifi_troubleshooting'),
+                        $this->trans('skills.support_networking_setup'),
                     ]
                 )
             )
@@ -149,6 +148,7 @@ final class SupportN1N2N3 extends BaseResume
                     level: SkillLevel::Advanced,
                     keywords: [
                         $this->trans('skills.support_hardware_workstation_troubleshooting'),
+                        $this->trans('skills.support_hardware_peripheral_troubleshooting'),
                         'Mobile Device Management (MDM)',
                         $this->trans('skills.support_hardware_printer_support'),
                     ]

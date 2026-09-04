@@ -54,7 +54,7 @@
                 "Dirig\u00e9 cinq d\u00e9veloppeurs comme Lead **PHP** sur un projet **Symfony** de 3-4 mois pour les Colis du Coeur : livraison de la v1, machines \u00e0 \u00e9tats et workflows pour des centres de distribution b\u00e9n\u00e9voles.",
                 "Livr\u00e9 et maintenu six sites CMS - cinq **Drupal**, un **WordPress**.",
                 "R\u00e9duit de **75%** le temps d'ex\u00e9cution des **GitHub Actions** via la mise en cache des d\u00e9pendances et l'optimisation des workflows.",
-                "Men\u00e9 les revues de code et la responsabilit\u00e9 technique de projets de petite \u00e0 moyenne envergure, dont une plateforme client sur **AWS**, en faisant respecter les standards de maintenabilit\u00e9.",
+                "Men\u00e9 les revues de code et assum\u00e9 la responsabilit\u00e9 technique de projets de petite \u00e0 moyenne envergure, dont une plateforme client sur **AWS**, en garantissant leur maintenabilit\u00e9.",
                 "D\u00e9velopp\u00e9 un petit outil interne sur un back-end **serverless Firebase** avec un front **Vue.js**."
             ]
         },
@@ -67,7 +67,7 @@
             "endDate": "2021-10-31",
             "summary": "Conseil informatique pour un client externe, Berdoz Vision & Audition.",
             "highlights": [
-                "S\u00e9curis\u00e9 et migr\u00e9 vers une version **PHP** plus r\u00e9cente un ERP critique desservant **20 magasins**, puis particip\u00e9 au d\u00e9veloppement de son rempla\u00e7ant sous **Laravel**.",
+                "S\u00e9curis\u00e9 et migr\u00e9 vers une version **PHP** plus r\u00e9cente un ERP critique desservant **20 magasins**, et particip\u00e9 au d\u00e9veloppement de son rempla\u00e7ant sous **Laravel**.",
                 "Configur\u00e9 une flotte de **44 iPad** et mis en place des serveurs CI ex\u00e9cutant des suites de tests **Codeception** et **Cypress**.",
                 "Renforc\u00e9 la s\u00e9curit\u00e9 et d\u00e9velopp\u00e9 des composants critiques du CRM interne utilis\u00e9 par ce m\u00eame r\u00e9seau de 20 magasins.",
                 "D\u00e9velopp\u00e9 l'outillage interne de tests automatis\u00e9s, de monitoring et de d\u00e9ploiement, avec **Sentry** pour le suivi des erreurs."
@@ -119,11 +119,13 @@
             "level": "Expert",
             "keywords": [
                 "PHP",
+                "Symfony",
+                "Laravel",
+                "REST APIs",
                 "Python",
                 "Node.js",
                 "C#",
-                "Java",
-                "REST APIs"
+                "Java"
             ]
         },
         {
@@ -133,21 +135,10 @@
                 "PostgreSQL",
                 "MySQL",
                 "MariaDB",
-                "Prisma \/ Supabase",
+                "Prisma",
+                "Supabase",
                 "Redis",
                 "Elasticsearch"
-            ]
-        },
-        {
-            "name": "Outils",
-            "level": "Advanced",
-            "keywords": [
-                "Git",
-                "GitLab",
-                "Composer",
-                "Jira, Confluence & Scrum",
-                "Sentry",
-                "Bash"
             ]
         },
         {
@@ -158,7 +149,8 @@
                 "GitHub Actions",
                 "CI\/CD",
                 "Linux",
-                "Apache & Nginx",
+                "Apache",
+                "Nginx",
                 "AWS",
                 "Google Cloud Platform (GCP)",
                 "Firebase",
@@ -166,15 +158,34 @@
             ]
         },
         {
+            "name": "Outils",
+            "level": "Advanced",
+            "keywords": [
+                "Git",
+                "GitLab",
+                "Composer",
+                "Jira",
+                "Confluence",
+                "Scrum",
+                "Sentry",
+                "Bash"
+            ]
+        },
+        {
             "name": "Frontend",
             "level": "Expert",
             "keywords": [
-                "TypeScript & JavaScript",
+                "TypeScript",
+                "JavaScript",
                 "React",
+                "Vue.js",
                 "Next.js",
                 "Nuxt.js",
-                "NPM & Bun",
-                "HTML5 & CSS, Sass",
+                "NPM",
+                "Bun",
+                "HTML5",
+                "CSS",
+                "Sass",
                 "Tailwind CSS",
                 "Alpine.js"
             ]

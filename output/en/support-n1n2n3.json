@@ -37,8 +37,7 @@
             "summary": "IT Consulting for diverse clients via Academic Work.",
             "highlights": [
                 "Inventoried every business application in the SiL information system for project Atlas, and identified the key points to monitor.",
-                "Built test scenarios with the business teams and wrote the technical documentation, working in **Easyvista** and the **CMDB**.",
-                "Shipped a **React** (**Next.js**) application with **GitHub Actions CI\/CD**, **Docker** containerization and automated deployments to Jelastic."
+                "Built test scenarios with business teams and authored the technical documentation directly in **Easyvista** and the **CMDB**."
             ]
         },
         {
@@ -51,8 +50,7 @@
             "summary": "From Junior to mid-level Software Engineer & highest skill jump!",
             "highlights": [
                 "Deployed and maintained applications on **Linux** servers with **Docker** and **GitHub Actions**, following structured release and rollback processes.",
-                "Cut **GitHub Actions** execution time by **75%** through dependency caching and workflow optimization.",
-                "Led code reviews and owned technical delivery on small to medium-sized projects, including a client platform hosted on **AWS**, enforcing maintainability and development standards."
+                "Cut **GitHub Actions** execution time by **75%** through dependency caching and workflow optimization."
             ]
         },
         {
@@ -65,9 +63,8 @@
             "summary": "IT Consulting to an external client named Berdoz Vision & Audition.",
             "highlights": [
                 "Configured a fleet of **44 iPads** and set up CI servers running **Codeception** and **Cypress** test suites.",
-                "Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then helped build its **Laravel** replacement.",
-                "Hardened security and developed critical components of the in-house CRM used across that same 20-store network.",
-                "Built internal tooling for automated testing, monitoring and deployment, with **Sentry** for error tracking."
+                "Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then co-built its **Laravel** replacement.",
+                "Hardened security and developed critical components of the in-house CRM used across that same 20-store network."
             ]
         },
         {
@@ -79,7 +76,7 @@
             "endDate": "2020-06-30",
             "highlights": [
                 "Developed and extended internal web applications in **PHP** and **JavaScript**.",
-                "Shipped features in an **Agile** team using **Git**, **Scrum** and modern web development practices."
+                "Shipped features in an **Agile** team with **Git** and **Scrum**."
             ]
         },
         {
@@ -153,16 +150,19 @@
             "level": "Advanced",
             "keywords": [
                 "TCP\/IP",
-                "DNS & DHCP",
+                "DNS",
+                "DHCP",
                 "VPN",
-                "Wi-Fi troubleshooting & network setup"
+                "Wi-Fi troubleshooting",
+                "Network setup"
             ]
         },
         {
             "name": "Hardware & Devices",
             "level": "Advanced",
             "keywords": [
-                "Workstation & peripheral troubleshooting",
+                "Workstation troubleshooting",
+                "Peripheral troubleshooting",
                 "Mobile Device Management (MDM)",
                 "Printer & network device support"
             ]

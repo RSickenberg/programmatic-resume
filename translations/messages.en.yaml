@@ -50,19 +50,19 @@ work:
     highlight_2: 'Led a five-developer team as **PHP** Lead Developer on a 3-4 month **Symfony** build for Colis du Coeur, shipping v1 of a state-machine-driven workflow for volunteer distribution centres.'
     highlight_3: 'Delivered and maintained six CMS builds - five **Drupal**, one **WordPress**.'
     highlight_4: 'Cut **GitHub Actions** execution time by **75%** through dependency caching and workflow optimization.'
-    highlight_5: 'Led code reviews and owned technical delivery on small to medium-sized projects, including a client platform hosted on **AWS**, enforcing maintainability and development standards.'
+    highlight_5: 'Owned technical delivery and led code reviews on small to medium-sized projects, including a client platform hosted on **AWS**, to enforce maintainability and development standards.'
     highlight_6: 'Built a small internal tool on a **serverless Firebase** backend with a **Vue.js** front end.'
   ilem:
     position: 'Junior Backend Software Engineer'
     summary: 'IT Consulting to an external client named Berdoz Vision & Audition.'
-    highlight_1: 'Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then helped build its **Laravel** replacement.'
+    highlight_1: 'Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then co-built its **Laravel** replacement.'
     highlight_2: 'Configured a fleet of **44 iPads** and set up CI servers running **Codeception** and **Cypress** test suites.'
     highlight_3: 'Hardened security and developed critical components of the in-house CRM used across that same 20-store network.'
-    highlight_4: 'Built internal tooling for automated testing, monitoring and deployment, with **Sentry** for error tracking.'
+    highlight_4: 'Implemented internal tooling for automated testing, monitoring and deployment, with **Sentry** for error tracking.'
   liip:
     position: 'Apprentice Software Engineer'
     highlight_1: 'Developed and extended internal web applications in **PHP** and **JavaScript**.'
-    highlight_2: 'Shipped features in an **Agile** team using **Git**, **Scrum** and modern web development practices.'
+    highlight_2: 'Shipped features in an **Agile** team with **Git** and **Scrum**.'
     highlight_3: 'Developed custom **Moodle** plugins with **PHP 5.4**.'
   breaks_and_side:
     position: 'Personal Breaks & Side Activities'
@@ -76,7 +76,7 @@ work:
     highlight_3: 'Coordinated crowd flow and incident response as part of a multi-agent security team across venues.'
   support_view:
     academic_work_atlas: 'Inventoried every business application in the SiL information system for project Atlas, and identified the key points to monitor.'
-    academic_work_itsm: 'Built test scenarios with the business teams and wrote the technical documentation, working in **Easyvista** and the **CMDB**.'
+    academic_work_itsm: 'Built test scenarios with business teams and authored the technical documentation directly in **Easyvista** and the **CMDB**.'
     antistatique_operations: 'Deployed and maintained applications on **Linux** servers with **Docker** and **GitHub Actions**, following structured release and rollback processes.'
 
 education:
@@ -125,9 +125,11 @@ skills:
   support_ticketing_itil: 'ITIL Fundamentals'
   support_ticketing_incident_mgmt: 'Incident & Problem Management'
   support_networking_name: 'Networking'
-  support_networking_wifi_troubleshooting_network_setup: 'Wi-Fi troubleshooting & network setup'
+  support_networking_wifi_troubleshooting: 'Wi-Fi troubleshooting'
+  support_networking_setup: 'Network setup'
   support_hardware_name: 'Hardware & Devices'
-  support_hardware_workstation_troubleshooting: 'Workstation & peripheral troubleshooting'
+  support_hardware_workstation_troubleshooting: 'Workstation troubleshooting'
+  support_hardware_peripheral_troubleshooting: 'Peripheral troubleshooting'
   support_hardware_printer_support: 'Printer & network device support'
   support_collaboration_name: 'Office & Collaboration Tools'
   support_collaboration_office_tools: 'Office software tools'

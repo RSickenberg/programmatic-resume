@@ -50,12 +50,12 @@ work:
     highlight_2: "Dirigé cinq développeurs comme Lead **PHP** sur un projet **Symfony** de 3-4 mois pour les Colis du Coeur : livraison de la v1, machines à états et workflows pour des centres de distribution bénévoles."
     highlight_3: 'Livré et maintenu six sites CMS - cinq **Drupal**, un **WordPress**.'
     highlight_4: "Réduit de **75%** le temps d'exécution des **GitHub Actions** via la mise en cache des dépendances et l'optimisation des workflows."
-    highlight_5: 'Mené les revues de code et la responsabilité technique de projets de petite à moyenne envergure, dont une plateforme client sur **AWS**, en faisant respecter les standards de maintenabilité.'
+    highlight_5: 'Mené les revues de code et assumé la responsabilité technique de projets de petite à moyenne envergure, dont une plateforme client sur **AWS**, en garantissant leur maintenabilité.'
     highlight_6: "Développé un petit outil interne sur un back-end **serverless Firebase** avec un front **Vue.js**."
   ilem:
     position: 'Ingénieur Logiciel Backend Junior'
     summary: 'Conseil informatique pour un client externe, Berdoz Vision & Audition.'
-    highlight_1: "Sécurisé et migré vers une version **PHP** plus récente un ERP critique desservant **20 magasins**, puis participé au développement de son remplaçant sous **Laravel**."
+    highlight_1: "Sécurisé et migré vers une version **PHP** plus récente un ERP critique desservant **20 magasins**, et participé au développement de son remplaçant sous **Laravel**."
     highlight_2: 'Configuré une flotte de **44 iPad** et mis en place des serveurs CI exécutant des suites de tests **Codeception** et **Cypress**.'
     highlight_3: 'Renforcé la sécurité et développé des composants critiques du CRM interne utilisé par ce même réseau de 20 magasins.'
     highlight_4: "Développé l'outillage interne de tests automatisés, de monitoring et de déploiement, avec **Sentry** pour le suivi des erreurs."
@@ -73,7 +73,7 @@ work:
     position: 'Agent de Sécurité Événementiel'
     highlight_1: "Accueilli, orienté et contrôlé l'accès du public lors d'événements sportifs à forte affluence pour le **LHC Lausanne** et le **Lausanne-Sport**."
     highlight_2: "Représenté l'image et les standards de sécurité de **Securitas**, du **Musée Olympique** et de la **RTS** (Radio Télévision Suisse), y compris une présence sécuritaire filmée lors de tournages en direct sur la voie publique."
-    highlight_3: "Coordination des flux de public et de la gestion des incidents au sein d'une équipe de plusieurs agents, sur différents sites."
+    highlight_3: "Coordonné les flux de public et la gestion des incidents au sein d'une équipe de plusieurs agents, sur différents sites."
   support_view:
     academic_work_atlas: "Recensé l'ensemble des solutions métiers du SI des SiL dans le cadre du projet Atlas, et identifié les points clés à monitorer."
     academic_work_itsm: "Mis en place des scénarios de tests avec les métiers et rédigé la documentation technique, sous **Easyvista** et **CMDB**."
@@ -125,9 +125,11 @@ skills:
   support_ticketing_itil: 'Fondamentaux ITIL'
   support_ticketing_incident_mgmt: 'Gestion des incidents'
   support_networking_name: 'Réseau'
-  support_networking_wifi_troubleshooting_network_setup: 'Dépannage Wi-Fi & mise en palce réseaux'
+  support_networking_wifi_troubleshooting: 'Dépannage Wi-Fi'
+  support_networking_setup: 'Mise en place réseau'
   support_hardware_name: 'Matériel & appareils'
-  support_hardware_workstation_troubleshooting: 'Dépannage postes de travail & périphériques'
+  support_hardware_workstation_troubleshooting: 'Dépannage postes de travail'
+  support_hardware_peripheral_troubleshooting: 'Dépannage périphériques'
   support_hardware_printer_support: 'Support imprimantes & équipements réseau'
   support_collaboration_name: 'Outils bureautiques & collaboratifs'
   support_collaboration_office_tools: 'Outils bureautiques'

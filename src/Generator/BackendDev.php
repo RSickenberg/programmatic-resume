@@ -65,11 +65,13 @@ final class BackendDev extends BaseResume
                     level: SkillLevel::Expert,
                     keywords: [
                         'PHP',
+                        'Symfony',
+                        'Laravel',
+                        'REST APIs',
                         'Python',
                         'Node.js',
                         'C#',
                         'Java',
-                        'REST APIs',
                     ]
                 )
             )
@@ -81,23 +83,10 @@ final class BackendDev extends BaseResume
                         'PostgreSQL',
                         'MySQL',
                         'MariaDB',
-                        'Prisma / Supabase',
+                        'Prisma',
+                        'Supabase',
                         'Redis',
                         'Elasticsearch',
-                    ]
-                )
-            )
-            ->addSkill(
-                new Skill(
-                    name: $this->trans('skills.tools_name'),
-                    level: SkillLevel::Advanced,
-                    keywords: [
-                        'Git',
-                        'GitLab',
-                        'Composer',
-                        'Jira, Confluence & Scrum',
-                        'Sentry',
-                        'Bash',
                     ]
                 )
             )
@@ -110,7 +99,8 @@ final class BackendDev extends BaseResume
                         'GitHub Actions',
                         'CI/CD',
                         'Linux',
-                        'Apache & Nginx',
+                        'Apache',
+                        'Nginx',
                         'AWS',
                         'Google Cloud Platform (GCP)',
                         'Firebase',
@@ -120,15 +110,36 @@ final class BackendDev extends BaseResume
             )
             ->addSkill(
                 new Skill(
+                    name: $this->trans('skills.tools_name'),
+                    level: SkillLevel::Advanced,
+                    keywords: [
+                        'Git',
+                        'GitLab',
+                        'Composer',
+                        'Jira',
+                        'Confluence',
+                        'Scrum',
+                        'Sentry',
+                        'Bash',
+                    ]
+                )
+            )
+            ->addSkill(
+                new Skill(
                     name: $this->trans('skills.frontend_name'),
                     level: SkillLevel::Expert,
                     keywords: [
-                        'TypeScript & JavaScript',
+                        'TypeScript',
+                        'JavaScript',
                         'React',
+                        'Vue.js',
                         'Next.js',
                         'Nuxt.js',
-                        'NPM & Bun',
-                        'HTML5 & CSS, Sass',
+                        'NPM',
+                        'Bun',
+                        'HTML5',
+                        'CSS',
+                        'Sass',
                         'Tailwind CSS',
                         'Alpine.js',
                     ]
