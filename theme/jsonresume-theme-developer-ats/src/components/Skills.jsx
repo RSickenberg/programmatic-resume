@@ -53,7 +53,7 @@ export default function Skills ({ skills = [] }) {
                   * -resort safety net so an unexpectedly long keyword still
                   * overflows visibly rather than off-page, never silently.
                   */ }
-                { renderRichText(skill.keywords.map((keyword) => keyword.replace(/ /g, ' ')).join(' · ')) }
+                { renderRichText(skill.keywords.map((keyword) => keyword.replace(/ /g, ' ')).join(', ')) }
               </p>
             ) }
           </div>

@@ -63,12 +63,12 @@ work:
     position: 'Apprenti Développeur de Logiciels'
     highlight_1: 'Développé et enrichi des applications web internes avec **PHP** et **JavaScript**.'
     highlight_2: "Livré des fonctionnalités au sein d'une équipe **Agile**, avec **Git**, **Scrum** et des pratiques modernes de développement web."
-    highlight_3: 'Développé des plugins **Moodle** sur mesure avec **PHP 5.4**.'
+    highlight_3: "Également formé au **C#** et à **Java** dans le cadre du programme d'apprentissage en ingénierie logicielle."
   breaks_and_side:
     position: 'Pauses personnelles et activités accessoires'
-    highlight_securitas: 'Agent de sécurité chez Securitas AG - à temps partiel, secteur événementiel. ||07.2023 - 03.2024'
-    highlight_travel: 'Pause de carrière planifiée - voyage en solo autour du monde et développement personnel. ||02.2023 - 06.2023'
-    highlight_military: 'Armée suisse - obligations militaires. ||07.2020 - 11.2020'
+    highlight_securitas: 'Agent de sécurité chez Securitas AG - à temps partiel, secteur événementiel ||07.2023 - 03.2024'
+    highlight_travel: 'Pause de carrière planifiée - voyage en solo autour du monde et développement personnel ||02.2023 - 06.2023'
+    highlight_military: 'Armée suisse - obligations militaires ||07.2020 - 11.2020'
   securitas:
     position: 'Agent de Sécurité Événementiel'
     highlight_1: "Accueilli, orienté et contrôlé l'accès du public lors d'événements sportifs à forte affluence pour le **LHC Lausanne** et le **Lausanne-Sport**."

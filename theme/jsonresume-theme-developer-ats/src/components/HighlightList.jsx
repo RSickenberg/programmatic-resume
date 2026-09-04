@@ -34,6 +34,7 @@ export default function HighlightList ({ items, continuation = false }) {
               ? (
                 <span className="flex items-baseline justify-between gap-x-4">
                   <span className="min-w-0">{renderRichText(text)}</span>
+                  <span aria-hidden="true" className="text-white"> &middot; </span>
                   <span className="shrink-0 whitespace-nowrap font-mono text-[8.5pt] font-medium text-subtle">{meta}</span>
                 </span>
                 )

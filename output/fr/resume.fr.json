@@ -83,16 +83,16 @@
             "highlights": [
                 "D\u00e9velopp\u00e9 et enrichi des applications web internes avec **PHP** et **JavaScript**.",
                 "Livr\u00e9 des fonctionnalit\u00e9s au sein d'une \u00e9quipe **Agile**, avec **Git**, **Scrum** et des pratiques modernes de d\u00e9veloppement web.",
-                "D\u00e9velopp\u00e9 des plugins **Moodle** sur mesure avec **PHP 5.4**."
+                "\u00c9galement form\u00e9 au **C#** et \u00e0 **Java** dans le cadre du programme d'apprentissage en ing\u00e9nierie logicielle."
             ]
         },
         {
             "name": "",
             "position": "Pauses personnelles et activit\u00e9s accessoires",
             "highlights": [
-                "Agent de s\u00e9curit\u00e9 chez Securitas AG - \u00e0 temps partiel, secteur \u00e9v\u00e9nementiel. ||07.2023 - 03.2024",
-                "Pause de carri\u00e8re planifi\u00e9e - voyage en solo autour du monde et d\u00e9veloppement personnel. ||02.2023 - 06.2023",
-                "Arm\u00e9e suisse - obligations militaires. ||07.2020 - 11.2020"
+                "Agent de s\u00e9curit\u00e9 chez Securitas AG - \u00e0 temps partiel, secteur \u00e9v\u00e9nementiel ||07.2023 - 03.2024",
+                "Pause de carri\u00e8re planifi\u00e9e - voyage en solo autour du monde et d\u00e9veloppement personnel ||02.2023 - 06.2023",
+                "Arm\u00e9e suisse - obligations militaires ||07.2020 - 11.2020"
             ]
         }
     ],
@@ -102,14 +102,22 @@
             "url": "https:\/\/www.bit.admin.ch\/fr\/informaticienne-cfc-developpement-applications",
             "area": "Certificat f\u00e9d\u00e9ral de capacit\u00e9 (CFC) en informatique",
             "startDate": "2016-08-01",
-            "endDate": "2020-07-01"
+            "endDate": "2020-07-01",
+            "courses": [
+                "Mod\u00e9lisation de donn\u00e9es",
+                "Principes de programmation orient\u00e9e objet",
+                "Structures de donn\u00e9es et algorithmes",
+                "Bases de donn\u00e9es SQL",
+                "Int\u00e9gration de bases de donn\u00e9es aux applications web",
+                "S\u00e9curit\u00e9 applicative"
+            ]
         }
     ],
     "awards": [
         {
             "title": "EPFL Hackathon AR\/VR Game Experiences",
             "date": "2019-12-24",
-            "awarder": "RA \\ VR Hackathon",
+            "awarder": "AR\/VR Hackathon",
             "summary": "D\u00e9velopp\u00e9 un \u00ab mus\u00e9e num\u00e9rique \u00bb en r\u00e9alit\u00e9 virtuelle. Remport\u00e9 la **premi\u00e8re place** en exp\u00e9riences VR, r\u00e9alis\u00e9 avec **SteamVR** et **Unity**."
         }
     ],
@@ -121,8 +129,8 @@
                 "PHP",
                 "Symfony",
                 "Laravel",
-                "REST APIs",
                 "Python",
+                "REST APIs",
                 "Node.js",
                 "C#",
                 "Java"
@@ -152,9 +160,9 @@
                 "Apache",
                 "Nginx",
                 "AWS",
-                "Google Cloud Platform (GCP)",
                 "Firebase",
-                "Serverless"
+                "Serverless",
+                "Google Cloud Platform (GCP)"
             ]
         },
         {

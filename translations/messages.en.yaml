@@ -41,7 +41,7 @@ work:
   academic_work:
     position: 'Full-Stack Software Developer'
     summary: 'IT Consulting for diverse clients via Academic Work.'
-    highlight_1: 'Designed a decoupled backend/frontend architecture for SIL Lausanne and built the **Docker** base platform underpinning most of their in-house solutions (**Python**, **Django**, **Vue**, **React**).'
+    highlight_1: 'Designed a decoupled backend/frontend architecture for SIL Lausanne, delivering the **Docker** base platform that now underpins most of their in-house solutions (**Python**, **Django**, **Vue**, **React**).'
     highlight_2: 'Shipped a **React** (**Next.js**) application with **GitHub Actions CI/CD**, **Docker** containerization and automated deployments to Jelastic.'
   antistatique:
     position: 'Backend Software Engineer'
@@ -50,7 +50,7 @@ work:
     highlight_2: 'Led a five-developer team as **PHP** Lead Developer on a 3-4 month **Symfony** build for Colis du Coeur, shipping v1 of a state-machine-driven workflow for volunteer distribution centres.'
     highlight_3: 'Delivered and maintained six CMS builds - five **Drupal**, one **WordPress**.'
     highlight_4: 'Cut **GitHub Actions** execution time by **75%** through dependency caching and workflow optimization.'
-    highlight_5: 'Owned technical delivery and led code reviews on small to medium-sized projects, including a client platform hosted on **AWS**, to enforce maintainability and development standards.'
+    highlight_5: 'Owned technical delivery and led code reviews across small to medium-sized projects, including an **AWS**-hosted client platform, raising maintainability and development standards for the team.'
     highlight_6: 'Built a small internal tool on a **serverless Firebase** backend with a **Vue.js** front end.'
   ilem:
     position: 'Junior Backend Software Engineer'
@@ -58,17 +58,17 @@ work:
     highlight_1: 'Secured and migrated a business-critical ERP serving **20 retail stores** to a newer **PHP** version, then co-built its **Laravel** replacement.'
     highlight_2: 'Configured a fleet of **44 iPads** and set up CI servers running **Codeception** and **Cypress** test suites.'
     highlight_3: 'Hardened security and developed critical components of the in-house CRM used across that same 20-store network.'
-    highlight_4: 'Implemented internal tooling for automated testing, monitoring and deployment, with **Sentry** for error tracking.'
+    highlight_4: 'Automated testing, monitoring and deployment with internal tooling, adding **Sentry** for error tracking.'
   liip:
     position: 'Apprentice Software Engineer'
     highlight_1: 'Developed and extended internal web applications in **PHP** and **JavaScript**.'
     highlight_2: 'Shipped features in an **Agile** team with **Git** and **Scrum**.'
-    highlight_3: 'Developed custom **Moodle** plugins with **PHP 5.4**.'
+    highlight_3: 'Also trained in **C#** and **Java** as part of the apprenticeship''s broader software engineering curriculum.'
   breaks_and_side:
     position: 'Personal Breaks & Side Activities'
-    highlight_securitas: 'Security agent at Securitas AG - part-time, event sector. ||07.2023 - 03.2024'
-    highlight_travel: 'Planned career break - solo world travel and personal development. ||02.2023 - 06.2023'
-    highlight_military: 'Swiss Armed Forces - mandatory military service. ||07.2020 - 11.2020'
+    highlight_securitas: 'Security agent at Securitas AG - part-time, event sector ||07.2023 - 03.2024'
+    highlight_travel: 'Planned career break - solo world travel and personal development ||02.2023 - 06.2023'
+    highlight_military: 'Swiss Armed Forces - mandatory military service ||07.2020 - 11.2020'
   securitas:
     position: 'Event Security Agent'
     highlight_1: 'Greeted, directed and screened guests through access control at high-attendance sporting events for **LHC Lausanne** and **Lausanne-Sport**.'

@@ -67,8 +67,8 @@ final class BackendDev extends BaseResume
                         'PHP',
                         'Symfony',
                         'Laravel',
-                        'REST APIs',
                         'Python',
+                        'REST APIs',
                         'Node.js',
                         'C#',
                         'Java',
@@ -102,9 +102,9 @@ final class BackendDev extends BaseResume
                         'Apache',
                         'Nginx',
                         'AWS',
-                        'Google Cloud Platform (GCP)',
                         'Firebase',
                         'Serverless',
+                        'Google Cloud Platform (GCP)',
                     ]
                 )
             )
@@ -169,7 +169,7 @@ final class BackendDev extends BaseResume
             ->addAward(new Award(
                 title: 'EPFL Hackathon AR/VR Game Experiences',
                 date: '2019-12-24',
-                awarder: 'RA \ VR Hackathon',
+                awarder: 'AR/VR Hackathon',
                 summary: $this->trans('awards.epfl_summary')
             ));
 
@@ -196,12 +196,12 @@ final class BackendDev extends BaseResume
     protected function getRelevantCourses(): array
     {
         return [
-            // $this->trans('education.courses.data_modeling'), // 104
-            // $this->trans('education.courses.oop_principles'), // 404
-            // $this->trans('education.courses.data_structures_algorithms'), // 411
-            // $this->trans('education.courses.sql_databases'), // 105
-            // $this->trans('education.courses.database_integration'), // 151
-            // $this->trans('education.courses.app_security'), // 183
+             $this->trans('education.courses.data_modeling'), // 104
+             $this->trans('education.courses.oop_principles'), // 404
+             $this->trans('education.courses.data_structures_algorithms'), // 411
+             $this->trans('education.courses.sql_databases'), // 105
+             $this->trans('education.courses.database_integration'), // 151
+             $this->trans('education.courses.app_security'), // 183
         ];
     }
 

@@ -243,13 +243,21 @@ function HighlightList({ items, continuation = false }) {
 				className: "pl-0.5 text-[10pt] leading-tight text-ink/80 print:break-inside-avoid",
 				children: meta ? /* @__PURE__ */ jsxs("span", {
 					className: "flex items-baseline justify-between gap-x-4",
-					children: [/* @__PURE__ */ jsx("span", {
-						className: "min-w-0",
-						children: renderRichText(text)
-					}), /* @__PURE__ */ jsx("span", {
-						className: "shrink-0 whitespace-nowrap font-mono text-[8.5pt] font-medium text-subtle",
-						children: meta
-					})]
+					children: [
+						/* @__PURE__ */ jsx("span", {
+							className: "min-w-0",
+							children: renderRichText(text)
+						}),
+						/* @__PURE__ */ jsx("span", {
+							"aria-hidden": "true",
+							className: "text-white",
+							children: " · "
+						}),
+						/* @__PURE__ */ jsx("span", {
+							className: "shrink-0 whitespace-nowrap font-mono text-[8.5pt] font-medium text-subtle",
+							children: meta
+						})
+					]
 				}) : renderRichText(text)
 			}, index);
 		})
@@ -444,7 +452,7 @@ function Skills({ skills = [] }) {
 					children: renderRichText(skill.name)
 				}), skill.keywords && skill.keywords.length > 0 && /* @__PURE__ */ jsx("p", {
 					className: "flex-1 rounded border-l-2 border-accent bg-surface px-2.5 py-1.5 text-[9pt] font-mono text-muted wrap-anywhere text-pretty",
-					children: renderRichText(skill.keywords.map((keyword) => keyword.replace(/ /g, "\xA0")).join("\xA0· "))
+					children: renderRichText(skill.keywords.map((keyword) => keyword.replace(/ /g, "\xA0")).join(", "))
 				})]
 			}, index))
 		})

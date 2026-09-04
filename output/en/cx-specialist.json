@@ -31,7 +31,7 @@
             "endDate": "2025-12-31",
             "summary": "IT Consulting for diverse clients via Academic Work.",
             "highlights": [
-                "Designed a decoupled backend\/frontend architecture for SIL Lausanne and built the **Docker** base platform underpinning most of their in-house solutions (**Python**, **Django**, **Vue**, **React**)."
+                "Designed a decoupled backend\/frontend architecture for SIL Lausanne, delivering the **Docker** base platform that now underpins most of their in-house solutions (**Python**, **Django**, **Vue**, **React**)."
             ]
         },
         {
@@ -56,7 +56,7 @@
             "summary": "From Junior to mid-level Software Engineer & highest skill jump!",
             "highlights": [
                 "Led a five-developer team as **PHP** Lead Developer on a 3-4 month **Symfony** build for Colis du Coeur, shipping v1 of a state-machine-driven workflow for volunteer distribution centres.",
-                "Owned technical delivery and led code reviews on small to medium-sized projects, including a client platform hosted on **AWS**, to enforce maintainability and development standards."
+                "Owned technical delivery and led code reviews across small to medium-sized projects, including an **AWS**-hosted client platform, raising maintainability and development standards for the team."
             ]
         },
         {
@@ -76,8 +76,8 @@
             "name": "",
             "position": "Personal Breaks & Side Activities",
             "highlights": [
-                "Planned career break - solo world travel and personal development. ||02.2023 - 06.2023",
-                "Swiss Armed Forces - mandatory military service. ||07.2020 - 11.2020"
+                "Planned career break - solo world travel and personal development ||02.2023 - 06.2023",
+                "Swiss Armed Forces - mandatory military service ||07.2020 - 11.2020"
             ]
         }
     ],
