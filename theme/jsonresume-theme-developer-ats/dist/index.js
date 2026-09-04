@@ -419,7 +419,7 @@ function WorkExperience({ work = [] }) {
 		children: work.map((job, index) => /* @__PURE__ */ jsx(Entry, {
 			title: job.position || job.name,
 			subtitle: job.name,
-			meta: /* @__PURE__ */ jsx(DateRange, {
+			meta: (job.startDate || job.endDate) && /* @__PURE__ */ jsx(DateRange, {
 				startDate: job.startDate,
 				endDate: job.endDate
 			}),

@@ -15,7 +15,9 @@ export default function WorkExperience ({ work = [] }) {
           key={index}
           title={job.position || job.name}
           subtitle={job.name}
-          meta={<DateRange startDate={job.startDate} endDate={job.endDate} />}
+          meta={(job.startDate || job.endDate) && (
+            <DateRange startDate={job.startDate} endDate={job.endDate} />
+          )}
           description={job.summary}
           highlights={job.highlights}
         />
