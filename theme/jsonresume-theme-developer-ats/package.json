@@ -4,14 +4,6 @@
   "description": "Technical, ATS-safe theme with monospace headers and sans-serif body, built from separated components and styled with Tailwind CSS. Single-column, print-optimized layout.",
   "type": "module",
   "main": "./dist/index.js",
-  "peerDependencies": {
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
-  },
-  "dependencies": {
-    "@jsonresume/utils": "^0.2.2",
-    "geist": "^1.7.2"
-  },
   "scripts": {
     "build:fonts": "node scripts/build-fonts.mjs",
     "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./src/generated/tailwind.css --minify",
@@ -20,6 +12,14 @@
   },
   "exports": {
     ".": "./dist/index.js"
+  },
+  "peerDependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "dependencies": {
+    "@jsonresume/utils": "^0.2.2",
+    "geist": "^1.7.2"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",

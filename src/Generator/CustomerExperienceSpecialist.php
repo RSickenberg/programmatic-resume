@@ -32,7 +32,6 @@ final class CustomerExperienceSpecialist extends BaseResume
             label: $this->trans('basics.cx_specialist_position'),
             email: new Email(self::EMAIL),
             phone: self::PHONE,
-            url: new Url(self::URL),
             summary: $this->getSummary(),
             location: $this->getLocation(),
             profiles: $this->getRelatedProfiles(),

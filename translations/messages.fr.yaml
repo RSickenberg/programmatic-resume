@@ -6,7 +6,7 @@ basics:
   support_position: 'Technicien Support Informatique (N1 / N2 / N3)'
   support_summary_role: "Technicien support informatique avec un profil d'ingénieur logiciel, couvrant le support et la résolution d'incidents de N1 à N3, sur postes de travail, services d'annuaire/identité et réseaux."
   support_summary_experience: "Couvre toute la chaîne du support : tri et escalade des tickets dans **Jira Service Management**, gestion des incidents et des problèmes selon **ITIL**, administration **Active Directory** et **Microsoft 365**, dépannage des postes, imprimantes et réseaux."
-  cx_specialist_position: "Spécialiste de l'Expérience Client"
+  cx_specialist_position: "Spécialiste expérience client"
   cx_specialist_summary_role: "Profil orienté client avec un parcours d'ingénieur logiciel, alliant relation client en conseil informatique, expérience de terrain en sécurité événementielle face au public et un intérêt sincère et durable pour Tesla et les véhicules électriques."
   cx_specialist_summary_experience: "À l'aise pour accompagner un client dès le premier contact, de l'accueil et l'identification du besoin jusqu'à la représentation de l'image d'un client dans des contextes publics très exposés, en français, anglais et allemand."
   cx_specialist_summary_authorization: 'Autorisation de travail : citoyen suisse. Disponible immédiatement. Permis de conduire valide.'

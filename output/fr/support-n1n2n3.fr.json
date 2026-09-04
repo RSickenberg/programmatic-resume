@@ -5,7 +5,6 @@
         "label": "Technicien Support Informatique (N1 \/ N2 \/ N3)",
         "email": "r.sickenberg@gmail.com",
         "phone": "+41 78 907 32 02",
-        "url": "https:\/\/rsickenberg.me",
         "summary": "Technicien support informatique avec un profil d'ing\u00e9nieur logiciel, couvrant le support et la r\u00e9solution d'incidents de N1 \u00e0 N3, sur postes de travail, services d'annuaire\/identit\u00e9 et r\u00e9seaux.\n\nCouvre toute la cha\u00eene du support : tri et escalade des tickets dans **Jira Service Management**, gestion des incidents et des probl\u00e8mes selon **ITIL**, administration **Active Directory** et **Microsoft 365**, d\u00e9pannage des postes, imprimantes et r\u00e9seaux.\n\nAutorisation de travail : citoyen suisse. Disponible imm\u00e9diatement.",
         "location": {
             "address": "Chemin de la creuse 6",
@@ -100,7 +99,6 @@
             "area": "Certificat f\u00e9d\u00e9ral de capacit\u00e9 (CFC) en informatique",
             "startDate": "2016-08-01",
             "endDate": "2020-07-01",
-            "score": "4.4",
             "courses": [
                 "Mise en place de l'infrastructure informatique et r\u00e9seau d'une petite entreprise",
                 "Activation des services serveurs",

@@ -32,7 +32,8 @@ abstract class BaseResume implements AbstractResume
     public function __construct(
         protected readonly TranslatorInterface $translator,
         protected readonly string $locale = 'en',
-    ) {}
+    ) {
+    }
 
     protected function trans(string $id): string
     {
@@ -43,14 +44,14 @@ abstract class BaseResume implements AbstractResume
     {
         /** @var ResumeBuilder $resume */
         $resume = new ResumeBuilder()
-            ->basics($this->basics())
-            |> $this->addLanguages(...)
-            |> $this->addWorks(...)
-            |> $this->addEducation(...)
-            |> $this->addSkills(...)
-            |> $this->addAwards(...)
-            |> $this->addInterests(...)
-            |> $this->addProjects(...);
+                ->basics($this->basics())
+                |> $this->addLanguages(...)
+                |> $this->addWorks(...)
+                |> $this->addEducation(...)
+                |> $this->addSkills(...)
+                |> $this->addAwards(...)
+                |> $this->addInterests(...)
+                |> $this->addProjects(...);
 
         return $resume->build();
     }
@@ -270,7 +271,7 @@ abstract class BaseResume implements AbstractResume
                 area: $this->trans('education.area'),
                 startDate: '2016-08-01',
                 endDate: '2020-06-31',
-                score: '4.4',
+//                score: '4.4',
                 courses: $this->getRelevantCourses(),
             ));
 

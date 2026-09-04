@@ -4,22 +4,17 @@
   "scripts": {
     "release": "dotenv release-it"
   },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "dotenv-cli": "^11.0.0",
-    "release-it": "^21.0.2"
-  },
   "peerDependencies": {
     "typescript": "^5.9.3"
   },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "dotenv-cli": "^11.0.0",
+    "release-it": "latest"
+  },
   "dependencies": {
     "@jsonresume/core": "^0.3.2",
-    "jsonresume-theme-class": "^0.1.2",
-    "jsonresume-theme-claude": "^1.0.0",
     "jsonresume-theme-developer-ats": "file:theme/jsonresume-theme-developer-ats",
-    "jsonresume-theme-engineering": "^0.8.37",
-    "jsonresume-theme-stackoverflow": "^3.3.0",
-    "jsonresume-theme-straightforward-extra": "^0.1.4",
     "playwright": "^1.62.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",

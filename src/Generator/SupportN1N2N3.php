@@ -14,13 +14,6 @@ use JustSteveKing\Resume\ValueObjects\Url;
 
 final class SupportN1N2N3 extends BaseResume
 {
-    /**
-     * Set to true to show the exact same work history as BackendDev instead
-     * of the software-engineering placeholder below. Left as a manual
-     * toggle: flip by hand once a decision is made on which reads better.
-     */
-    private const bool USE_BACKEND_DEV_EXPERIENCE = false;
-
     #[\Override]
     public function basics(): Basics
     {
@@ -29,7 +22,6 @@ final class SupportN1N2N3 extends BaseResume
             label: $this->trans('basics.support_position'),
             email: new Email(self::EMAIL),
             phone: self::PHONE,
-            url: new Url(self::URL),
             summary: $this->getSummary(),
             location: $this->getLocation(),
             profiles: $this->getRelatedProfiles(),
@@ -77,10 +69,6 @@ final class SupportN1N2N3 extends BaseResume
 
     public function addWorks(ResumeBuilder $builder): ResumeBuilder
     {
-        if (self::USE_BACKEND_DEV_EXPERIENCE) {
-            return $this->addAllWorkExperiences($builder);
-        }
-
         $experiences = [];
 
         foreach ($this->getAllWorkExperiences()->get(WorkTypes::IT->value) as $work) {

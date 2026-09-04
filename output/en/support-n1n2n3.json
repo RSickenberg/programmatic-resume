@@ -5,7 +5,6 @@
         "label": "IT Support Technician (N1\/N2\/N3)",
         "email": "r.sickenberg@gmail.com",
         "phone": "+41 78 907 32 02",
-        "url": "https:\/\/rsickenberg.me",
         "summary": "IT Support Technician with a Software Engineering background, covering user support and incident resolution from N1 through N3 across workstations, identity\/directory services and networking.\n\nCovers the full support chain: ticket triage and escalation in **Jira Service Management**, incident and problem management along **ITIL** lines, **Active Directory** and **Microsoft 365** administration, and hands-on workstation, printer and network troubleshooting.\n\nWork authorization: Swiss Citizen. Available now.",
         "location": {
             "address": "Chemin de la creuse 6",
@@ -100,7 +99,6 @@
             "area": "Federal VET Diploma in Information Technology (CFC)",
             "startDate": "2016-08-01",
             "endDate": "2020-07-01",
-            "score": "4.4",
             "courses": [
                 "Establishing the IT and network infrastructure of a small business",
                 "Activating server services",
