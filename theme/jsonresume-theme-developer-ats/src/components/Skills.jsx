@@ -16,7 +16,7 @@ export default function Skills ({ skills = [] }) {
 
   return (
     <Section title={ title }>
-      <div className='grid grid-cols-1 gap-x-5 gap-y-2.5 sm:grid-cols-3'>
+      <div className='grid grid-cols-1 gap-x-5 gap-y-2.5 sm:grid-cols-2'>
         { skills.map((skill, index) => (
           <div key={ index } className='flex min-w-0 flex-col print:break-inside-avoid'>
             <h3 className='mb-1 font-mono text-[9pt] font-bold text-accent'>

@@ -32,6 +32,7 @@ final class GenerateResumeCommand extends Command
                 \sprintf('Profile to generate (%s). Omit to be prompted.', implode(', ', array_keys(GeneratorRegistry::all()))),
             )
             ->addOption('output', 'o', InputOption::VALUE_REQUIRED, 'Write JSON to this file instead of stdout.')
+            ->addOption('sensitive', 's', InputOption::VALUE_OPTIONAL, 'Show sensitive information.', true)
             ->addOption(
                 'locale',
                 'l',
@@ -66,15 +67,20 @@ final class GenerateResumeCommand extends Command
         try {
             $generator = GeneratorRegistry::resolve($slug, $this->createTranslator(), $locale);
         } catch (\InvalidArgumentException $exception) {
-            $io->error($exception->getMessage());
+            $io->outlineError($exception->getMessage());
 
             return Command::FAILURE;
         }
 
-        $resume = $generator();
+        $hideSensitive = (bool)$input->getOption('sensitive');
+        if ($hideSensitive) {
+            $io->outlineNote('Removing sensitive information.');
+        }
+
+        $resume = $generator($hideSensitive);
 
         if (!$resume->validate()) {
-            $io->error(\sprintf('Resume validation failed for profile "%s".', $slug));
+            $io->outlineError(\sprintf('Resume validation failed for profile "%s".', $slug));
 
             return Command::FAILURE;
         }
@@ -84,7 +90,7 @@ final class GenerateResumeCommand extends Command
         $outputFile = $input->getOption('output');
         if (null !== $outputFile) {
             file_put_contents($outputFile, $json . PHP_EOL);
-            $io->success(\sprintf('Wrote "%s" resume to %s', $slug, $outputFile));
+            $io->outlineSuccess(\sprintf('Wrote "%s" resume to %s', $slug, $outputFile));
 
             return Command::SUCCESS;
         }

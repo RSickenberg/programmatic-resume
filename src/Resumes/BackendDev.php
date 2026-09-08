@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace Romainsickenberg\ProgrammaticResume\Generator;
+namespace Romainsickenberg\ProgrammaticResume\Resumes;
 
-use DateTimeImmutable;
 use JustSteveKing\Resume\Builders\ResumeBuilder;
 use JustSteveKing\Resume\DataObjects\Award;
 use JustSteveKing\Resume\DataObjects\Basics;
@@ -13,6 +12,7 @@ use JustSteveKing\Resume\DataObjects\Skill;
 use JustSteveKing\Resume\Enums\SkillLevel;
 use JustSteveKing\Resume\ValueObjects\Email;
 use JustSteveKing\Resume\ValueObjects\Url;
+use Romainsickenberg\ProgrammaticResume\Enums\WorkTypes;
 
 final class BackendDev extends BaseResume
 {
@@ -22,13 +22,13 @@ final class BackendDev extends BaseResume
     private const bool ADD_CAREER_BRAKES = true;
 
     #[\Override]
-    public function basics(): Basics
+    public function basics(bool $hideSensitives): Basics
     {
         return new Basics(
             name: self::FULL_NAME,
             label: $this->trans('basics.backend_dev_position'),
             email: new Email(self::EMAIL),
-            phone: self::PHONE,
+            phone: $hideSensitives ? null : self::PHONE,
             url: new Url(self::URL),
             summary: $this->getSummary(),
             location: $this->getLocation(),

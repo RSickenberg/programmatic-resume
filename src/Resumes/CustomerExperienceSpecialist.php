@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Romainsickenberg\ProgrammaticResume\Generator;
+namespace Romainsickenberg\ProgrammaticResume\Resumes;
 
 use JustSteveKing\Resume\Builders\ResumeBuilder;
 use JustSteveKing\Resume\DataObjects\Basics;
@@ -14,6 +14,7 @@ use JustSteveKing\Resume\Enums\Network;
 use JustSteveKing\Resume\Enums\SkillLevel;
 use JustSteveKing\Resume\ValueObjects\Email;
 use JustSteveKing\Resume\ValueObjects\Url;
+use Romainsickenberg\ProgrammaticResume\Enums\WorkTypes;
 
 final class CustomerExperienceSpecialist extends BaseResume
 {
@@ -35,13 +36,13 @@ final class CustomerExperienceSpecialist extends BaseResume
     ];
 
     #[\Override]
-    public function basics(): Basics
+    public function basics(bool $hideSensitives): Basics
     {
         return new Basics(
             name: self::FULL_NAME,
             label: $this->trans('basics.cx_specialist_position'),
             email: new Email(self::EMAIL),
-            phone: self::PHONE,
+            phone: $hideSensitives ? null : self::PHONE,
             summary: $this->getSummary(),
             location: $this->getLocation(),
             profiles: $this->getRelatedProfiles(),

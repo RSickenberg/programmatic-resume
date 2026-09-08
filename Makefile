@@ -6,6 +6,7 @@ COMPOSER_EXEC = composer
 # Misc
 .DEFAULT_GOAL = help
 OUTPUT_DIR    = output
+ARGS          =
 .PHONY        : help deps update-deps lint-translations backend backend-fr support-n1n2n3 support-n1n2n3-fr cx-specialist cx-specialist-fr backends supports cx-specialists all
 
 ## —— 🎵 🐳 The Makefile 🐳 🎵 ——————————————————————————————————
@@ -30,33 +31,33 @@ deps: lint-translations ## Prepare the output dir, install JS deps and build the
 	@$(BUN_EXEC) i
 
 backend: deps ## Generate the backend-dev resume (English)
-	@$(PHP_EXEC) entrypoint.php backend-dev --locale en -o $(OUTPUT_DIR)/en/resume.json
+	@$(PHP_EXEC) entrypoint.php backend-dev --locale en -o $(OUTPUT_DIR)/en/resume.json $(ARGS)
 	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/en/resume.json --language en -o $(OUTPUT_DIR)/en/resume.html
 	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/en/resume.json --language en -o $(OUTPUT_DIR)/romain-sickenberg-backend-en.pdf
 
 backend-fr: deps ## Generate the backend-dev resume (French)
-	@$(PHP_EXEC) entrypoint.php backend-dev --locale fr -o $(OUTPUT_DIR)/fr/resume.fr.json
+	@$(PHP_EXEC) entrypoint.php backend-dev --locale fr -o $(OUTPUT_DIR)/fr/resume.fr.json $(ARGS)
 	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/resume.fr.json --language fr -o $(OUTPUT_DIR)/fr/resume.fr.html
 	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/resume.fr.json --language fr -o $(OUTPUT_DIR)/romain-sickenberg-backend-fr.pdf
 
 support-n1n2n3: deps ## Generate the support-n1n2n3 resume (English)
-	@$(PHP_EXEC) entrypoint.php support-n1n2n3 --locale en -o $(OUTPUT_DIR)/en/support-n1n2n3.json
+	@$(PHP_EXEC) entrypoint.php support-n1n2n3 --locale en -o $(OUTPUT_DIR)/en/support-n1n2n3.json $(ARGS)
 	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/en/support-n1n2n3.json --language en -o $(OUTPUT_DIR)/en/support-n1n2n3.html
 	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/en/support-n1n2n3.json --language en -o $(OUTPUT_DIR)/romain-sickenberg-n1n2n3-en.pdf
 
 support-n1n2n3-fr: deps ## Generate the support-n1n2n3 resume (French)
-	@$(PHP_EXEC) entrypoint.php support-n1n2n3 --locale fr -o $(OUTPUT_DIR)/fr/support-n1n2n3.fr.json
+	@$(PHP_EXEC) entrypoint.php support-n1n2n3 --locale fr -o $(OUTPUT_DIR)/fr/support-n1n2n3.fr.json $(ARGS)
 	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/support-n1n2n3.fr.json --language fr -o $(OUTPUT_DIR)/fr/support-n1n2n3.fr.html
 	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/support-n1n2n3.fr.json --language fr -o $(OUTPUT_DIR)/romain-sickenberg-n1n2n3-fr.pdf
 
 
 cx-specialist: deps ## Generate the cx-specialist resume (English)
-	@$(PHP_EXEC) entrypoint.php cx-specialist --locale en -o $(OUTPUT_DIR)/en/cx-specialist.json
+	@$(PHP_EXEC) entrypoint.php cx-specialist --locale en -o $(OUTPUT_DIR)/en/cx-specialist.json $(ARGS)
 	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/en/cx-specialist.json --language en -o $(OUTPUT_DIR)/en/cx-specialist.html
 	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/en/cx-specialist.json --language en -o $(OUTPUT_DIR)/romain-sickenberg-cx-specialist-en.pdf
 
 cx-specialist-fr: deps ## Generate the cx-specialist resume (French)
-	@$(PHP_EXEC) entrypoint.php cx-specialist --locale fr -o $(OUTPUT_DIR)/fr/cx-specialist.fr.json
+	@$(PHP_EXEC) entrypoint.php cx-specialist --locale fr -o $(OUTPUT_DIR)/fr/cx-specialist.fr.json $(ARGS)
 	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/cx-specialist.fr.json --language fr -o $(OUTPUT_DIR)/fr/cx-specialist.fr.html
 	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/cx-specialist.fr.json --language fr -o $(OUTPUT_DIR)/romain-sickenberg-cx-specialist-fr.pdf
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Romainsickenberg\ProgrammaticResume\Generator;
+namespace Romainsickenberg\ProgrammaticResume\Resumes;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -15,9 +15,9 @@ use JustSteveKing\Resume\DataObjects\Location;
 use JustSteveKing\Resume\DataObjects\Profile;
 use JustSteveKing\Resume\DataObjects\Resume;
 use JustSteveKing\Resume\DataObjects\Work;
-use JustSteveKing\Resume\Enums\EducationLevel;
 use JustSteveKing\Resume\Enums\Network;
 use JustSteveKing\Resume\ValueObjects\Url;
+use Romainsickenberg\ProgrammaticResume\Enums\WorkTypes;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 abstract class BaseResume implements AbstractResume
@@ -40,11 +40,11 @@ abstract class BaseResume implements AbstractResume
         return $this->translator->trans($id, locale: $this->locale);
     }
 
-    public function __invoke(): Resume
+    public function __invoke(bool $hideSensitives = true): Resume
     {
         /** @var ResumeBuilder $resume */
         $resume = new ResumeBuilder()
-                ->basics($this->basics())
+                ->basics($this->basics($hideSensitives))
                 |> $this->addLanguages(...)
                 |> $this->addWorks(...)
                 |> $this->addEducation(...)
@@ -56,7 +56,7 @@ abstract class BaseResume implements AbstractResume
         return $resume->build();
     }
 
-    public function basics(): Basics
+    public function basics(bool $hideSensitives): Basics
     {
         throw new \RuntimeException(\sprintf('Cannot invoke %s resume on its own.', __FUNCTION__));
     }
@@ -172,7 +172,7 @@ abstract class BaseResume implements AbstractResume
     }
 
     /**
-     * @return \Doctrine\Common\Collections\Collection<\Romainsickenberg\ProgrammaticResume\Generator\WorkTypes, array<Work>
+     * @return \Doctrine\Common\Collections\Collection<\Romainsickenberg\ProgrammaticResume\Enums\WorkTypes, array<Work>
      */
     public function getAllWorkExperiences(): Collection
     {

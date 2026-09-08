@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Romainsickenberg\ProgrammaticResume\Generator;
 
+use Romainsickenberg\ProgrammaticResume\Resumes\AbstractResume;
+use Romainsickenberg\ProgrammaticResume\Resumes\BackendDev;
+use Romainsickenberg\ProgrammaticResume\Resumes\CustomerExperienceSpecialist;
+use Romainsickenberg\ProgrammaticResume\Resumes\SupportN1N2N3;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**

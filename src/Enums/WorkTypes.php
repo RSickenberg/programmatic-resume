@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Romainsickenberg\ProgrammaticResume\Generator;
+namespace Romainsickenberg\ProgrammaticResume\Enums;
 
 enum WorkTypes: string
 {

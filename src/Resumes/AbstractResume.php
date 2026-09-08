@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Romainsickenberg\ProgrammaticResume\Generator;
+namespace Romainsickenberg\ProgrammaticResume\Resumes;
 
 use JustSteveKing\Resume\Builders\ResumeBuilder;
 use JustSteveKing\Resume\DataObjects\Basics;
@@ -13,10 +13,11 @@ interface AbstractResume
     /**
      * Build the résumé. Callers (the console command) are responsible for
      * validating and encoding the result.
+     * @param bool $hideSensitives Remove sensitives data (phone, email).
      */
-    public function __invoke(): Resume;
+    public function __invoke(bool $hideSensitives = true): Resume;
 
-    public function basics(): Basics;
+    public function basics(bool $hideSensitives): Basics;
 
     /**
      * Add languages.
