@@ -17,7 +17,7 @@
     "jsonresume-theme-developer-ats": "file:theme/jsonresume-theme-developer-ats",
     "playwright": "^1.63.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8",
+    "react-dom": "^19.3.0",
     "resuml": "^3.2.0",
     "styled-components": "^6.5.3"
   },
