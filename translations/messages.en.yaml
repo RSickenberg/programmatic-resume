@@ -6,6 +6,9 @@ basics:
   support_position: 'IT Support Technician (N1/N2/N3)'
   support_summary_role: 'IT Support Technician with a Software Engineering background, covering user support and incident resolution from N1 through N3 across workstations, identity/directory services and networking.'
   support_summary_experience: 'Covers the full support chain: ticket triage and escalation in **Jira Service Management**, incident and problem management along **ITIL** lines, **Active Directory** and **Microsoft 365** administration, and hands-on workstation, printer and network troubleshooting.'
+  app_admin_position: 'Application Administrator & Integrator'
+  app_admin_summary_role: 'Software Engineer with **5+ years** of professional experience deploying, maintaining and upgrading business applications, working with business teams.'
+  app_admin_summary_experience: 'User rights and access management in **Active Directory**, **SharePoint** use (API calls, page management), **Microsoft 365** tooling setup, technical documentation in **Easyvista** and the **CMDB**, on **Linux** and **Docker** environments.'
   cx_specialist_position: 'Customer Experience Specialist'
   cx_specialist_summary_role: 'Client-facing professional with a Software Engineering background, combining IT consulting client relations with hands-on public-facing event security work and a genuine, long-standing interest in Tesla and electric vehicles.'
   cx_specialist_summary_experience: "Comfortable guiding guests through a first contact, from greeting and needs assessment to representing a client's image in high-visibility public settings, in French, English and German."
@@ -78,6 +81,8 @@ work:
     academic_work_atlas: 'Inventoried every business application in the SiL information system for project Atlas, and identified the key points to monitor.'
     academic_work_itsm: 'Built test scenarios with business teams and authored the technical documentation directly in **Easyvista** and the **CMDB**.'
     antistatique_operations: 'Deployed and maintained applications on **Linux** servers with **Docker** and **GitHub Actions**, following structured release and rollback processes.'
+  app_admin_view:
+    academic_work_directory: 'Used **SharePoint** (API calls, page management) and managed user rights and access in **Active Directory**.'
 
 education:
   institution: 'Swiss Confederation | EPSIC @ Lausanne & CFPT @ Geneva'
@@ -135,6 +140,7 @@ skills:
   support_collaboration_office_tools: 'Office software tools'
   support_collaboration_office_advanced: 'Advanced Office functions'
   support_collaboration_remote_tools: 'Remote support tools (RDP, TeamViewer)'
+  app_admin_microsoft_name: 'Administration & Microsoft tools'
   cx_specialist_guest_relations_name: 'Guest Relations'
   cx_specialist_composure_safety_name: 'Composure & Safety'
   cx_specialist_professionalism_name: 'Professionalism & Teamwork'

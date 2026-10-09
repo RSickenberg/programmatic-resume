@@ -1,0 +1,170 @@
+{
+    "$schema": "https:\/\/jsonresume.org\/schema\/schema.json",
+    "basics": {
+        "name": "Romain Sickenberg",
+        "label": "Administrateur et Int\u00e9grateur d'Applications",
+        "email": "r.sickenberg@gmail.com",
+        "summary": "Ing\u00e9nieur logiciel avec plus de **5 ans** d'exp\u00e9rience professionnelle, qui d\u00e9ploie, maintient et met \u00e0 jour des applications d'entreprise en lien avec les \u00e9quipes m\u00e9tiers.\n\nGestion des droits et des acc\u00e8s sous **Active Directory**, utilisation de **SharePoint** (appels d'API, gestion de pages), mise en place d'outils **Microsoft 365**, documentation technique dans **Easyvista** et la **CMDB**, sur des environnements **Linux** et **Docker**.\n\nAutorisation de travail : citoyen suisse. Disponible imm\u00e9diatement.",
+        "location": {
+            "address": "Chemin de la creuse 6",
+            "postalCode": "1027",
+            "city": "Lonay",
+            "countryCode": "CH",
+            "region": "VD"
+        },
+        "profiles": [
+            {
+                "network": "github",
+                "username": "rsickenberg",
+                "url": "https:\/\/github.com\/rsickenberg"
+            },
+            {
+                "network": "linkedin",
+                "username": "a320rsck",
+                "url": "https:\/\/linkedin.com\/in\/a320rsck"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Academic Work SA",
+            "position": "D\u00e9veloppeur Full-Stack",
+            "location": "Lausanne",
+            "url": "https:\/\/www.academicwork.ch\/",
+            "startDate": "2024-03-01",
+            "endDate": "2025-12-31",
+            "summary": "Conseil informatique pour divers clients via Academic Work.",
+            "highlights": [
+                "Utilis\u00e9 **SharePoint** (appels d'API, gestion de pages) et g\u00e9r\u00e9 les droits et les acc\u00e8s des utilisateurs dans **Active Directory**.",
+                "Recens\u00e9 l'ensemble des solutions m\u00e9tiers du SI des SiL dans le cadre du projet Atlas, et identifi\u00e9 les points cl\u00e9s \u00e0 monitorer.",
+                "Mis en place des sc\u00e9narios de tests avec les m\u00e9tiers et r\u00e9dig\u00e9 la documentation technique, sous **Easyvista** et **CMDB**.",
+                "Con\u00e7u une architecture d\u00e9coupl\u00e9e backend\/frontend pour les Services Industriels de Lausanne (SIL) et d\u00e9velopp\u00e9 le socle **Docker** de la majorit\u00e9 de leurs solutions internes (**Python**, **Django**, **Vue**, **React**)."
+            ]
+        },
+        {
+            "name": "Antistatique SA",
+            "position": "Ing\u00e9nieur Logiciel Backend",
+            "location": "Lausanne",
+            "url": "https:\/\/antistatique.net\/",
+            "startDate": "2021-10-04",
+            "endDate": "2023-02-12",
+            "summary": "De d\u00e9veloppeur junior \u00e0 confirm\u00e9 : la plus forte progression de ma carri\u00e8re !",
+            "highlights": [
+                "D\u00e9ploy\u00e9 et maintenu des applications sur serveurs **Linux** avec **Docker** et **GitHub Actions**, selon des processus structur\u00e9s de mise en production et de retour arri\u00e8re.",
+                "Men\u00e9 les revues de code et assum\u00e9 la responsabilit\u00e9 technique de projets de petite \u00e0 moyenne envergure, dont une plateforme client sur **AWS**, en garantissant leur maintenabilit\u00e9.",
+                "Livr\u00e9 et maintenu six sites CMS - cinq **Drupal**, un **WordPress**."
+            ]
+        },
+        {
+            "name": "Ilem Group",
+            "position": "Ing\u00e9nieur Logiciel Backend Junior",
+            "location": "Gen\u00e8ve & Ecublens",
+            "url": "https:\/\/new.ilemgroup.com\/",
+            "startDate": "2021-02-01",
+            "endDate": "2021-10-31",
+            "summary": "Conseil informatique pour un client externe, Berdoz Vision & Audition.",
+            "highlights": [
+                "S\u00e9curis\u00e9 et migr\u00e9 vers une version **PHP** plus r\u00e9cente un ERP critique desservant **20 magasins**, et particip\u00e9 au d\u00e9veloppement de son rempla\u00e7ant sous **Laravel**.",
+                "Configur\u00e9 une flotte de **44 iPad** et mis en place des serveurs CI ex\u00e9cutant des suites de tests **Codeception** et **Cypress**.",
+                "D\u00e9velopp\u00e9 l'outillage interne de tests automatis\u00e9s, de monitoring et de d\u00e9ploiement, avec **Sentry** pour le suivi des erreurs."
+            ]
+        },
+        {
+            "name": "Liip AG",
+            "position": "Apprenti D\u00e9veloppeur de Logiciels",
+            "location": "Lausanne",
+            "url": "https:\/\/www.liip.ch",
+            "startDate": "2016-06-01",
+            "endDate": "2020-06-30",
+            "highlights": [
+                "D\u00e9velopp\u00e9 et enrichi des applications web internes avec **PHP** et **JavaScript**.",
+                "Livr\u00e9 des fonctionnalit\u00e9s au sein d'une \u00e9quipe **Agile**, avec **Git**, **Scrum** et des pratiques modernes de d\u00e9veloppement web."
+            ]
+        },
+        {
+            "name": "",
+            "position": "Pauses personnelles et activit\u00e9s accessoires",
+            "highlights": [
+                "Agent de s\u00e9curit\u00e9 chez Securitas AG - \u00e0 temps partiel, secteur \u00e9v\u00e9nementiel ||07.2023 - 03.2024",
+                "Pause de carri\u00e8re planifi\u00e9e - voyage en solo autour du monde et d\u00e9veloppement personnel ||02.2023 - 06.2023",
+                "Arm\u00e9e suisse - obligations militaires ||07.2020 - 11.2020"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Conf\u00e9d\u00e9ration Suisse | EPSIC \u00e0 Lausanne & CFPT \u00e0 Gen\u00e8ve",
+            "url": "https:\/\/www.bit.admin.ch\/fr\/informaticienne-cfc-developpement-applications",
+            "area": "Certificat f\u00e9d\u00e9ral de capacit\u00e9 (CFC) en informatique",
+            "startDate": "2016-08-01",
+            "endDate": "2020-07-01",
+            "courses": [
+                "Installation, configuration et administration d'un syst\u00e8me d'exploitation",
+                "Activation des services serveurs",
+                "Codage, compression et syst\u00e8mes de chiffrement",
+                "S\u00e9curit\u00e9 applicative",
+                "Instruction des utilisateurs \u00e0 l'usage correct des ressources informatiques",
+                "Scripts et automatisation de proc\u00e9dures"
+            ]
+        }
+    ],
+    "skills": [
+        {
+            "name": "Administration & outils Microsoft",
+            "level": "Intermediate",
+            "keywords": [
+                "Active Directory",
+                "Microsoft 365",
+                "SharePoint"
+            ]
+        },
+        {
+            "name": "Outils",
+            "level": "Advanced",
+            "keywords": [
+                "Jira",
+                "Confluence",
+                "Easyvista",
+                "CMDB (Configuration Management Database)",
+                "Git",
+                "GitLab"
+            ]
+        },
+        {
+            "name": "Cloud & DevOps",
+            "level": "Advanced",
+            "keywords": [
+                "Linux",
+                "Docker",
+                "GitHub Actions",
+                "CI\/CD",
+                "AWS"
+            ]
+        },
+        {
+            "name": "Backend",
+            "level": "Expert",
+            "keywords": [
+                "PHP",
+                "Symfony",
+                "Laravel",
+                "Python",
+                "REST APIs"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Fran\u00e7ais",
+            "fluency": "Langue maternelle (C2)"
+        },
+        {
+            "language": "Anglais",
+            "fluency": "Courant (C2)"
+        },
+        {
+            "language": "Allemand",
+            "fluency": "Interm\u00e9diaire (B1)"
+        }
+    ]
+}
