@@ -6,6 +6,9 @@ basics:
   support_position: 'Technicien Support Informatique (N1 / N2 / N3)'
   support_summary_role: "Technicien support informatique avec un profil d'ingénieur logiciel, couvrant le support et la résolution d'incidents de N1 à N3, sur postes de travail, services d'annuaire/identité et réseaux."
   support_summary_experience: "Couvre toute la chaîne du support : tri et escalade des tickets dans **Jira Service Management**, gestion des incidents et des problèmes selon **ITIL**, administration **Active Directory** et **Microsoft 365**, dépannage des postes, imprimantes et réseaux."
+  app_admin_position: "Administrateur et Intégrateur d'Applications"
+  app_admin_summary_role: "Ingénieur logiciel avec plus de **5 ans** d'expérience professionnelle, qui déploie, maintient et met à jour des applications d'entreprise en lien avec les équipes métiers."
+  app_admin_summary_experience: "Gestion des droits et des accès sous **Active Directory**, utilisation de **SharePoint** (appels d'API, gestion de pages), mise en place d'outils **Microsoft 365**, documentation technique dans **Easyvista** et la **CMDB**, sur des environnements **Linux** et **Docker**."
   cx_specialist_position: "Spécialiste expérience client"
   cx_specialist_summary_role: "Profil orienté client avec un parcours d'ingénieur logiciel, alliant relation client en conseil informatique, expérience de terrain en sécurité événementielle face au public et un intérêt sincère et durable pour Tesla et les véhicules électriques."
   cx_specialist_summary_experience: "À l'aise pour accompagner un client dès le premier contact, de l'accueil et l'identification du besoin jusqu'à la représentation de l'image d'un client dans des contextes publics très exposés, en français, anglais et allemand."
@@ -78,6 +81,8 @@ work:
     academic_work_atlas: "Recensé l'ensemble des solutions métiers du SI des SiL dans le cadre du projet Atlas, et identifié les points clés à monitorer."
     academic_work_itsm: "Mis en place des scénarios de tests avec les métiers et rédigé la documentation technique, sous **Easyvista** et **CMDB**."
     antistatique_operations: 'Déployé et maintenu des applications sur serveurs **Linux** avec **Docker** et **GitHub Actions**, selon des processus structurés de mise en production et de retour arrière.'
+  app_admin_view:
+    academic_work_directory: "Utilisé **SharePoint** (appels d'API, gestion de pages) et géré les droits et les accès des utilisateurs dans **Active Directory**."
 
 education:
   institution: 'Confédération Suisse | EPSIC à Lausanne & CFPT à Genève'
@@ -135,6 +140,7 @@ skills:
   support_collaboration_office_tools: 'Outils bureautiques'
   support_collaboration_office_advanced: 'Fonctions avancées des outils bureautiques'
   support_collaboration_remote_tools: 'Outils de prise en main à distance (RDP, TeamViewer)'
+  app_admin_microsoft_name: 'Administration & outils Microsoft'
   cx_specialist_guest_relations_name: 'Relation Client'
   cx_specialist_composure_safety_name: 'Sang-froid & Sécurité'
   cx_specialist_professionalism_name: "Professionnalisme & Esprit d'Équipe"

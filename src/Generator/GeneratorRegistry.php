@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Romainsickenberg\ProgrammaticResume\Generator;
 
 use Romainsickenberg\ProgrammaticResume\Resumes\AbstractResume;
+use Romainsickenberg\ProgrammaticResume\Resumes\ApplicationAdministrator;
 use Romainsickenberg\ProgrammaticResume\Resumes\BackendDev;
 use Romainsickenberg\ProgrammaticResume\Resumes\CustomerExperienceSpecialist;
 use Romainsickenberg\ProgrammaticResume\Resumes\SupportN1N2N3;
@@ -22,6 +23,7 @@ final class GeneratorRegistry
         'backend-dev' => BackendDev::class,
         'support-n1n2n3' => SupportN1N2N3::class,
         'cx-specialist' => CustomerExperienceSpecialist::class,
+        'app-admin' => ApplicationAdministrator::class,
     ];
 
     /**
