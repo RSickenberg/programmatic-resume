@@ -14,8 +14,8 @@
     ".": "./dist/index.js"
   },
   "peerDependencies": {
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
   },
   "dependencies": {
     "@jsonresume/utils": "^0.2.2",
@@ -23,8 +23,8 @@
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
-    "@vitejs/plugin-react": "^6.1.1",
+    "@vitejs/plugin-react": "^6.1.2",
     "tailwindcss": "^4.3.3",
-    "vite": "^8.2.2"
+    "vite": "^8.3.4"
   }
 }
