@@ -15,7 +15,7 @@
   "dependencies": {
     "@jsonresume/core": "^0.3.2",
     "jsonresume-theme-developer-ats": "file:theme/jsonresume-theme-developer-ats",
-    "playwright": "^1.64.0",
+    "playwright": "^1.64.1",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "resuml": "^3.2.0",
