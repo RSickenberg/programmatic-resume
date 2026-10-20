@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@jsonresume/utils": "^0.2.2",
-    "geist": "^1.7.2"
+    "geist": "^1.8.1"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
