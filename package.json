@@ -19,7 +19,7 @@
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "resuml": "^3.2.0",
-    "styled-components": "^6.5.3"
+    "styled-components": "^6.6.0"
   },
   "version": "1.4.2"
 }
