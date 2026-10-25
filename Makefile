@@ -7,7 +7,7 @@ COMPOSER_EXEC = composer
 .DEFAULT_GOAL = help
 OUTPUT_DIR    = output
 ARGS          =
-.PHONY        : help deps update-deps lint-translations backend backend-fr support-n1n2n3 support-n1n2n3-fr cx-specialist cx-specialist-fr backends supports cx-specialists all
+.PHONY        : help deps update-deps lint-translations backend backend-fr support-n1n2n3 support-n1n2n3-fr cx-specialist cx-specialist-fr app-admin app-admin-fr backends supports cx-specialists app-admins all
 
 ## —— 🎵 🐳 The Makefile 🐳 🎵 ——————————————————————————————————
 help: ## Outputs this help screen
@@ -62,10 +62,22 @@ cx-specialist-fr: deps ## Generate the cx-specialist resume (French)
 	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/cx-specialist.fr.json --language fr -o $(OUTPUT_DIR)/romain-sickenberg-cx-specialist-fr.pdf
 
 
+app-admin: deps ## Generate the app-admin resume (English)
+	@$(PHP_EXEC) entrypoint.php app-admin --locale en -o $(OUTPUT_DIR)/en/app-admin.json $(ARGS)
+	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/en/app-admin.json --language en -o $(OUTPUT_DIR)/en/app-admin.html
+	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/en/app-admin.json --language en -o $(OUTPUT_DIR)/romain-sickenberg-app-admin-en.pdf
+
+app-admin-fr: deps ## Generate the app-admin resume (French)
+	@$(PHP_EXEC) entrypoint.php app-admin --locale fr -o $(OUTPUT_DIR)/fr/app-admin.fr.json $(ARGS)
+	@bunx resuml render -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/app-admin.fr.json --language fr -o $(OUTPUT_DIR)/fr/app-admin.fr.html
+	@bunx resuml pdf -t jsonresume-theme-developer-ats -r $(OUTPUT_DIR)/fr/app-admin.fr.json --language fr -o $(OUTPUT_DIR)/romain-sickenberg-app-admin-fr.pdf
+
 backends: backend backend-fr ## Generate all backend-dev variants (en, fr)
 
 supports: support-n1n2n3 support-n1n2n3-fr ## Generate all support-n1n2n3 variants (en, fr)
 
 cx-specialists: cx-specialist cx-specialist-fr ## Generate all cx-specialist variants (en, fr)
 
-all: backends supports cx-specialists ## Generate every profile, every locale
+app-admins: app-admin app-admin-fr ## Generate all app-admin variants (en, fr)
+
+all: backends supports cx-specialists app-admins ## Generate every profile, every locale
