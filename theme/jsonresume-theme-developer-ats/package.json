@@ -18,7 +18,7 @@
     "react-dom": "^19.3.0"
   },
   "dependencies": {
-    "@jsonresume/utils": "^0.2.2",
+    "@jsonresume/utils": "^0.4.0",
     "geist": "^1.7.2"
   },
   "devDependencies": {

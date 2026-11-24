@@ -5,7 +5,7 @@
     "": {
       "name": "jsonresume-theme-developer-ats",
       "dependencies": {
-        "@jsonresume/utils": "^0.2.2",
+        "@jsonresume/utils": "^0.4.0",
         "geist": "^1.7.2",
       },
       "devDependencies": {
@@ -87,7 +87,7 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.31", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw=="],
 
-    "@jsonresume/utils": ["@jsonresume/utils@0.2.2", "", {}, "sha512-vHr4NvWCYc5im7nnBNoepC/YR6o0tPQtfE5UymLLxZezJPQvOYYFEpewGMv7m7GmjpbSlgqYmiIf2sSgIoN+ng=="],
+    "@jsonresume/utils": ["@jsonresume/utils@0.4.0", "", {}, "sha512-nEGI9zUXxu5yhLrbYibJ5bBy2yolRfWvrngMplMXvOIj8kl5zX950eOJw1UZ2ymKMdNRy2cR7tanRTpQ4/KOYQ=="],
 
     "@next/env": ["@next/env@16.4.0", "", {}, "sha512-pyLlT5oafGlX8X7xjgGNXz5dNIDSxREm+qD6i9VLSZiZFopA/XWl8NM/KPmLx/8EG/++c49iid3gNWSQW1+2dQ=="],
 
